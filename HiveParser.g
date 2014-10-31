@@ -27,6 +27,7 @@ k=3;
 import IdentifiersParser,SelectClauseParser, FromClauseParser;
 
 tokens {
+TOK_INCRE ;
 TOK_INSERT;
 TOK_QUERY;
 TOK_SELECT;
