@@ -16,7 +16,7 @@
 */
 lexer grammar HiveLexer;
 
-@lexer::header {package parse;}
+@lexer::header {package org.apache.hadoop.hive.ql.parse;}
 
 // Keywords
 
@@ -31,6 +31,9 @@ KW_LIKE : 'LIKE';
 KW_IF : 'IF';
 KW_EXISTS : 'EXISTS';
 
+KW_DURING : 'DURING';
+KW_EACH : 'EACH';
+KW_INCREFREQUENCY : 'INCRE';
 KW_INCRE : 'INCREMENTAL';
 KW_ASC : 'ASC';
 KW_DESC : 'DESC';
@@ -318,6 +321,13 @@ Digit
     :
     '0'..'9'
     ;
+    
+fragment
+Nonzero
+    :
+    '1'..'9'
+    ;
+    
 
 fragment
 Exponent
@@ -330,7 +340,78 @@ RegexComponent
     : 'a'..'z' | 'A'..'Z' | '0'..'9' | '_'
     | PLUS | STAR | QUESTION | MINUS | DOT
     | LPAREN | RPAREN | LSQUARE | RSQUARE | LCURLY | RCURLY
-    | BITWISEXOR | BITWISEOR | DOLLAR
+    | BITWISEXOR | BITWISEOR | DOLLAR | MOD  
+
+    ;
+
+Year
+    :
+    Nonzero Digit  Digit Digit 'Y'  
+    ;
+    
+//1..12 
+Month
+    :
+    Nonzero Nonzero 'm' 
+    {
+       int month = Integer.parseInt(getText().substring(0, (getText().length())-2));
+       // do your check here
+       if( month < 1 || month > 12){
+         System.out.println("Beyond the range of Month");
+       }
+    } 
+    ;
+
+//1..31
+Day
+    :
+    Nonzero (Digit)? 'd' 
+    {
+       int day =  Integer.parseInt(getText().substring(0, (getText().length())-2));
+       // do your check here
+       if( day < 1 || day > 31){
+         System.out.println("Beyond the range of Day");
+       }
+    } 
+    ;
+
+//1..12
+Hour
+    :
+    Nonzero (Digit)? 'H' 
+    {
+       int hour =   Integer.parseInt(getText().substring(0, (getText().length())-2));
+       // do your check here
+       if( hour < 1 || hour > 12){
+         System.out.println("Beyond the range of hour");
+       }
+    }  
+    ;
+
+//0..59
+Minute
+    :
+    Nonzero (Digit)? 'M'  
+    {
+       int minute =  Integer.parseInt(getText().substring(0, (getText().length())-2));
+       // do your check here
+       if( minute < 0 || minute > 59){
+         System.out.println("Beyond the range of minute");
+       }
+    }  
+    ;
+
+//0..59 
+Second
+    :
+    Nonzero (Digit)? 'S' 
+    {
+       int second =  Integer.parseInt(getText().substring(0, (getText().length())-2));
+       // do your check here
+       if( second < 0 || second > 59){
+         System.out.println("Beyond the range of second");
+       }
+    } 
     ;
 
 StringLiteral

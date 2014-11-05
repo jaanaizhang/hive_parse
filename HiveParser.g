@@ -27,7 +27,18 @@ k=3;
 import IdentifiersParser,SelectClauseParser, FromClauseParser;
 
 tokens {
-TOK_INCRE ;
+
+TOK_YEAR;
+TOK_MONTH;
+TOK_DAY;
+TOK_HOUR ;
+TOK_MINUTE;
+TOK_SECOND;
+TOK_STARTTIME;
+TOK_STOPTIME;
+TOK_INCREFREQUENCY;
+TOK_INCRE;
+
 TOK_INSERT;
 TOK_QUERY;
 TOK_SELECT;
@@ -308,7 +319,7 @@ TOK_EXCHANGEPARTITION;
 
 // Package headers
 @header {
-package parse;
+package org.apache.hadoop.hive.ql.parse;
 
 import java.util.Collection;
 import java.util.HashMap;

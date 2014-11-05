@@ -103,6 +103,7 @@ hintName
 @after { gParent.msgs.pop(); }
     :
     KW_MAPJOIN -> TOK_MAPJOIN
+    | KW_INCRE -> TOK_INCRE
     | KW_STREAMTABLE -> TOK_STREAMTABLE
     | KW_HOLD_DDLTIME -> TOK_HOLD_DDLTIME
     ;
@@ -155,6 +156,43 @@ selectExpressionList
 @after { gParent.msgs.pop(); }
     :
     selectExpression (COMMA selectExpression)* -> ^(TOK_EXPLIST selectExpression+)
+    ;
+
+//---------------------- Rules for incremental  -------------------------------
+
+incrementalClause
+@init { gParent.msgs.push("incremental clause"); }
+@after { gParent.msgs.pop(); }
+    :
+    DIVIDE STAR PLUS KW_INCRE LPAREN incrementalArgs RPAREN STAR DIVIDE 
+    	->  ^(TOK_INCRE incrementalArgs?)
+    ;
+
+incrementalArgs
+@init { gParent.msgs.push("incremental arguments"); }
+@after { gParent.msgs.pop(); }
+    :
+    date=incrementalDate
+     -> ^(TOK_DATE $date)
+    |
+     KW_EACH KW_INCREFREQUENCY (incre=Number) KW_DURING (date=incrementalDate)
+     -> ^(TOK_DATE $date TOK_INCREFREQUENCY $incre)
+    ;
+    
+incrementalDate
+@init { gParent.msgs.push("incremental date"); }
+@after { gParent.msgs.pop(); }
+    :
+    stime=dateArgs MINUS  etime=dateArgs
+    ->^(TOK_STARTTIME $stime  TOK_STOPTIME $etime)
+    ;
+
+date
+@init { gParent.msgs.push("date argument name"); }
+@after { gParent.msgs.pop(); }
+    :
+     date+=Year (date+=Month)? (date+=Day)?
+      ->$date* 
     ;
 
 //---------------------- Rules for windowing clauses -------------------------------
