@@ -31,9 +31,8 @@ KW_LIKE : 'LIKE';
 KW_IF : 'IF';
 KW_EXISTS : 'EXISTS';
 
-KW_DURING : 'DURING';
-KW_EACH : 'EACH';
-KW_INCREFREQUENCY : 'INCRE';
+
+KW_INTERVAL : 'INTERVAL';
 KW_INCRE : 'INCREMENTAL';
 KW_ASC : 'ASC';
 KW_DESC : 'DESC';
@@ -305,6 +304,43 @@ BITWISEXOR : '^';
 QUESTION : '?';
 DOLLAR : '$';
 
+
+
+// ********** date rules ********** 
+
+JANUARY   : 'january'   's'?  | 'jan' DOT?;
+FEBRUARY  : 'february'  's'?  | 'feb' DOT?;
+MARCH     : 'march'     'es'? | 'mar' DOT?;
+APRIL     : 'april'     's'?  | 'apr' DOT?;
+MAY       : 'may'       's'?;
+JUNE      : 'june'      's'?  | 'jun' DOT?;
+JULY      : 'july'      's'?  | 'jul' DOT?;
+AUGUST    : 'august'    's'?  | 'aug' DOT?;
+SEPTEMBER : 'september' 's'?  | 'sep' DOT? | 'sept' DOT?;
+OCTOBER   : 'october'   's'?  | 'oct' DOT?;
+NOVEMBER  : 'november'  's'?  | 'nov' DOT?;
+DECEMBER  : 'december'  's'?  | 'dec' DOT?;
+  
+SUNDAY    : 'sunday'    's'?  | 'sun' DOT?  | 'suns' DOT?;
+MONDAY    : 'monday'    's'?  | 'mon' DOT?  | 'mons' DOT?;
+TUESDAY   : 'tuesday'   's'?  | 'tues' DOT? | 'tue' DOT?;
+WEDNESDAY : 'wednesday' 's'?  | 'wed' DOT?  | 'weds' DOT?;
+THURSDAY  : 'thursday'  's'?  | 'thur' DOT? | 'thu' DOT?   | 'thus' DOT? | 'thurs' DOT?;
+FRIDAY    : 'friday'    's'?  | 'fri' DOT?  | 'fris' DOT?;
+SATURDAY  : 'saturday'  's'?  | 'sat' DOT?  | 'sats' DOT?  | 'weekend';
+
+HOUR   : 'hour'   | 'hours'   | 'hr' DOT?  | 'hrs' DOT?;
+MINUTE : 'minute' | 'minutes' | 'min' DOT? | 'mins' DOT?;
+DAY    : 'day'    | 'days' ;
+WEEK   : 'week'   | 'weeks'   | 'wks' DOT?;
+MONTH  : 'month'  | 'months';
+YEAR   : 'year'   | 'years' | 'yrs' DOT?;
+
+TODAY     : 'today';
+TOMORROW  : 'tomorow'   | 'tomorrow'   | 'tommorow' | 'tommorrow';
+TONIGHT   : 'tonight'; 
+YESTERDAY : 'yesterday';
+
 // LITERALS
 fragment
 Letter
@@ -321,13 +357,6 @@ Digit
     :
     '0'..'9'
     ;
-    
-fragment
-Nonzero
-    :
-    '1'..'9'
-    ;
-    
 
 fragment
 Exponent
@@ -340,78 +369,7 @@ RegexComponent
     : 'a'..'z' | 'A'..'Z' | '0'..'9' | '_'
     | PLUS | STAR | QUESTION | MINUS | DOT
     | LPAREN | RPAREN | LSQUARE | RSQUARE | LCURLY | RCURLY
-    | BITWISEXOR | BITWISEOR | DOLLAR | MOD  
-
-    ;
-
-Year
-    :
-    Nonzero Digit  Digit Digit 'Y'  
-    ;
-    
-//1..12 
-Month
-    :
-    Nonzero Nonzero 'm' 
-    {
-       int month = Integer.parseInt(getText().substring(0, (getText().length())-2));
-       // do your check here
-       if( month < 1 || month > 12){
-         System.out.println("Beyond the range of Month");
-       }
-    } 
-    ;
-
-//1..31
-Day
-    :
-    Nonzero (Digit)? 'd' 
-    {
-       int day =  Integer.parseInt(getText().substring(0, (getText().length())-2));
-       // do your check here
-       if( day < 1 || day > 31){
-         System.out.println("Beyond the range of Day");
-       }
-    } 
-    ;
-
-//1..12
-Hour
-    :
-    Nonzero (Digit)? 'H' 
-    {
-       int hour =   Integer.parseInt(getText().substring(0, (getText().length())-2));
-       // do your check here
-       if( hour < 1 || hour > 12){
-         System.out.println("Beyond the range of hour");
-       }
-    }  
-    ;
-
-//0..59
-Minute
-    :
-    Nonzero (Digit)? 'M'  
-    {
-       int minute =  Integer.parseInt(getText().substring(0, (getText().length())-2));
-       // do your check here
-       if( minute < 0 || minute > 59){
-         System.out.println("Beyond the range of minute");
-       }
-    }  
-    ;
-
-//0..59 
-Second
-    :
-    Nonzero (Digit)? 'S' 
-    {
-       int second =  Integer.parseInt(getText().substring(0, (getText().length())-2));
-       // do your check here
-       if( second < 0 || second > 59){
-         System.out.println("Beyond the range of second");
-       }
-    } 
+    | BITWISEXOR | BITWISEOR | DOLLAR
     ;
 
 StringLiteral

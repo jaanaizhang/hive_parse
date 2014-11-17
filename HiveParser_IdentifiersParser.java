@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 IdentifiersParser.g 2014-10-31 18:14:08
+// $ANTLR 3.5.2 IdentifiersParser.g 2014-11-15 17:07:30
 
 package parse;
 
@@ -36,567 +36,726 @@ import org.antlr.runtime.tree.*;
 public class HiveParser_IdentifiersParser extends Parser {
 	public static final int EOF=-1;
 	public static final int AMPERSAND=4;
-	public static final int BITWISEOR=5;
-	public static final int BITWISEXOR=6;
-	public static final int BigintLiteral=7;
-	public static final int ByteLengthLiteral=8;
-	public static final int COLON=9;
-	public static final int COMMA=10;
-	public static final int COMMENT=11;
-	public static final int CharSetLiteral=12;
-	public static final int CharSetName=13;
-	public static final int DIV=14;
-	public static final int DIVIDE=15;
-	public static final int DOLLAR=16;
-	public static final int DOT=17;
-	public static final int DecimalLiteral=18;
-	public static final int Digit=19;
-	public static final int EQUAL=20;
-	public static final int EQUAL_NS=21;
-	public static final int Exponent=22;
-	public static final int GREATERTHAN=23;
-	public static final int GREATERTHANOREQUALTO=24;
-	public static final int HexDigit=25;
-	public static final int Identifier=26;
-	public static final int KW_ADD=27;
-	public static final int KW_AFTER=28;
-	public static final int KW_ALL=29;
-	public static final int KW_ALTER=30;
-	public static final int KW_ANALYZE=31;
-	public static final int KW_AND=32;
-	public static final int KW_ARCHIVE=33;
-	public static final int KW_ARRAY=34;
-	public static final int KW_AS=35;
-	public static final int KW_ASC=36;
-	public static final int KW_BEFORE=37;
-	public static final int KW_BETWEEN=38;
-	public static final int KW_BIGINT=39;
-	public static final int KW_BINARY=40;
-	public static final int KW_BOOLEAN=41;
-	public static final int KW_BOTH=42;
-	public static final int KW_BUCKET=43;
-	public static final int KW_BUCKETS=44;
-	public static final int KW_BY=45;
-	public static final int KW_CASCADE=46;
-	public static final int KW_CASE=47;
-	public static final int KW_CAST=48;
-	public static final int KW_CHANGE=49;
-	public static final int KW_CLUSTER=50;
-	public static final int KW_CLUSTERED=51;
-	public static final int KW_CLUSTERSTATUS=52;
-	public static final int KW_COLLECTION=53;
-	public static final int KW_COLUMN=54;
-	public static final int KW_COLUMNS=55;
-	public static final int KW_COMMENT=56;
-	public static final int KW_COMPUTE=57;
-	public static final int KW_CONCATENATE=58;
-	public static final int KW_CONTINUE=59;
-	public static final int KW_CREATE=60;
-	public static final int KW_CROSS=61;
-	public static final int KW_CUBE=62;
-	public static final int KW_CURRENT=63;
-	public static final int KW_CURSOR=64;
-	public static final int KW_DATA=65;
-	public static final int KW_DATABASE=66;
-	public static final int KW_DATABASES=67;
-	public static final int KW_DATE=68;
-	public static final int KW_DATETIME=69;
-	public static final int KW_DBPROPERTIES=70;
-	public static final int KW_DECIMAL=71;
-	public static final int KW_DEFERRED=72;
-	public static final int KW_DELETE=73;
-	public static final int KW_DELIMITED=74;
-	public static final int KW_DEPENDENCY=75;
-	public static final int KW_DESC=76;
-	public static final int KW_DESCRIBE=77;
-	public static final int KW_DIRECTORIES=78;
-	public static final int KW_DIRECTORY=79;
-	public static final int KW_DISABLE=80;
-	public static final int KW_DISTINCT=81;
-	public static final int KW_DISTRIBUTE=82;
-	public static final int KW_DOUBLE=83;
-	public static final int KW_DROP=84;
-	public static final int KW_ELEM_TYPE=85;
-	public static final int KW_ELSE=86;
-	public static final int KW_ENABLE=87;
-	public static final int KW_END=88;
-	public static final int KW_ESCAPED=89;
-	public static final int KW_EXCHANGE=90;
-	public static final int KW_EXCLUSIVE=91;
-	public static final int KW_EXISTS=92;
-	public static final int KW_EXPLAIN=93;
-	public static final int KW_EXPORT=94;
-	public static final int KW_EXTENDED=95;
-	public static final int KW_EXTERNAL=96;
-	public static final int KW_FALSE=97;
-	public static final int KW_FETCH=98;
-	public static final int KW_FIELDS=99;
-	public static final int KW_FILEFORMAT=100;
-	public static final int KW_FIRST=101;
-	public static final int KW_FLOAT=102;
-	public static final int KW_FOLLOWING=103;
-	public static final int KW_FOR=104;
-	public static final int KW_FORMAT=105;
-	public static final int KW_FORMATTED=106;
-	public static final int KW_FROM=107;
-	public static final int KW_FULL=108;
-	public static final int KW_FUNCTION=109;
-	public static final int KW_FUNCTIONS=110;
-	public static final int KW_GRANT=111;
-	public static final int KW_GROUP=112;
-	public static final int KW_GROUPING=113;
-	public static final int KW_HAVING=114;
-	public static final int KW_HOLD_DDLTIME=115;
-	public static final int KW_IDXPROPERTIES=116;
-	public static final int KW_IF=117;
-	public static final int KW_IGNORE=118;
-	public static final int KW_IMPORT=119;
-	public static final int KW_IN=120;
-	public static final int KW_INCRE=121;
-	public static final int KW_INDEX=122;
-	public static final int KW_INDEXES=123;
-	public static final int KW_INNER=124;
-	public static final int KW_INPATH=125;
-	public static final int KW_INPUTDRIVER=126;
-	public static final int KW_INPUTFORMAT=127;
-	public static final int KW_INSERT=128;
-	public static final int KW_INT=129;
-	public static final int KW_INTERSECT=130;
-	public static final int KW_INTO=131;
-	public static final int KW_IS=132;
-	public static final int KW_ITEMS=133;
-	public static final int KW_JOIN=134;
-	public static final int KW_KEYS=135;
-	public static final int KW_KEY_TYPE=136;
-	public static final int KW_LATERAL=137;
-	public static final int KW_LEFT=138;
-	public static final int KW_LESS=139;
-	public static final int KW_LIKE=140;
-	public static final int KW_LIMIT=141;
-	public static final int KW_LINES=142;
-	public static final int KW_LOAD=143;
-	public static final int KW_LOCAL=144;
-	public static final int KW_LOCATION=145;
-	public static final int KW_LOCK=146;
-	public static final int KW_LOCKS=147;
-	public static final int KW_LOGICAL=148;
-	public static final int KW_LONG=149;
-	public static final int KW_MACRO=150;
-	public static final int KW_MAP=151;
-	public static final int KW_MAPJOIN=152;
-	public static final int KW_MATERIALIZED=153;
-	public static final int KW_MINUS=154;
-	public static final int KW_MORE=155;
-	public static final int KW_MSCK=156;
-	public static final int KW_NOSCAN=157;
-	public static final int KW_NOT=158;
-	public static final int KW_NO_DROP=159;
-	public static final int KW_NULL=160;
-	public static final int KW_OF=161;
-	public static final int KW_OFFLINE=162;
-	public static final int KW_ON=163;
-	public static final int KW_OPTION=164;
-	public static final int KW_OR=165;
-	public static final int KW_ORCFILE=166;
-	public static final int KW_ORDER=167;
-	public static final int KW_OUT=168;
-	public static final int KW_OUTER=169;
-	public static final int KW_OUTPUTDRIVER=170;
-	public static final int KW_OUTPUTFORMAT=171;
-	public static final int KW_OVER=172;
-	public static final int KW_OVERWRITE=173;
-	public static final int KW_PARTIALSCAN=174;
-	public static final int KW_PARTITION=175;
-	public static final int KW_PARTITIONED=176;
-	public static final int KW_PARTITIONS=177;
-	public static final int KW_PERCENT=178;
-	public static final int KW_PLUS=179;
-	public static final int KW_PRECEDING=180;
-	public static final int KW_PRESERVE=181;
-	public static final int KW_PRETTY=182;
-	public static final int KW_PROCEDURE=183;
-	public static final int KW_PROTECTION=184;
-	public static final int KW_PURGE=185;
-	public static final int KW_RANGE=186;
-	public static final int KW_RCFILE=187;
-	public static final int KW_READ=188;
-	public static final int KW_READONLY=189;
-	public static final int KW_READS=190;
-	public static final int KW_REBUILD=191;
-	public static final int KW_RECORDREADER=192;
-	public static final int KW_RECORDWRITER=193;
-	public static final int KW_REDUCE=194;
-	public static final int KW_REGEXP=195;
-	public static final int KW_RENAME=196;
-	public static final int KW_REPAIR=197;
-	public static final int KW_REPLACE=198;
-	public static final int KW_RESTRICT=199;
-	public static final int KW_REVOKE=200;
-	public static final int KW_RIGHT=201;
-	public static final int KW_RLIKE=202;
-	public static final int KW_ROLE=203;
-	public static final int KW_ROLLUP=204;
-	public static final int KW_ROW=205;
-	public static final int KW_ROWS=206;
-	public static final int KW_SCHEMA=207;
-	public static final int KW_SCHEMAS=208;
-	public static final int KW_SELECT=209;
-	public static final int KW_SEMI=210;
-	public static final int KW_SEQUENCEFILE=211;
-	public static final int KW_SERDE=212;
-	public static final int KW_SERDEPROPERTIES=213;
-	public static final int KW_SET=214;
-	public static final int KW_SETS=215;
-	public static final int KW_SHARED=216;
-	public static final int KW_SHOW=217;
-	public static final int KW_SHOW_DATABASE=218;
-	public static final int KW_SKEWED=219;
-	public static final int KW_SMALLINT=220;
-	public static final int KW_SORT=221;
-	public static final int KW_SORTED=222;
-	public static final int KW_SSL=223;
-	public static final int KW_STATISTICS=224;
-	public static final int KW_STORED=225;
-	public static final int KW_STREAMTABLE=226;
-	public static final int KW_STRING=227;
-	public static final int KW_STRUCT=228;
-	public static final int KW_TABLE=229;
-	public static final int KW_TABLES=230;
-	public static final int KW_TABLESAMPLE=231;
-	public static final int KW_TBLPROPERTIES=232;
-	public static final int KW_TEMPORARY=233;
-	public static final int KW_TERMINATED=234;
-	public static final int KW_TEXTFILE=235;
-	public static final int KW_THEN=236;
-	public static final int KW_TIMESTAMP=237;
-	public static final int KW_TINYINT=238;
-	public static final int KW_TO=239;
-	public static final int KW_TOUCH=240;
-	public static final int KW_TRANSFORM=241;
-	public static final int KW_TRIGGER=242;
-	public static final int KW_TRUE=243;
-	public static final int KW_TRUNCATE=244;
-	public static final int KW_UNARCHIVE=245;
-	public static final int KW_UNBOUNDED=246;
-	public static final int KW_UNDO=247;
-	public static final int KW_UNION=248;
-	public static final int KW_UNIONTYPE=249;
-	public static final int KW_UNIQUEJOIN=250;
-	public static final int KW_UNLOCK=251;
-	public static final int KW_UNSET=252;
-	public static final int KW_UNSIGNED=253;
-	public static final int KW_UPDATE=254;
-	public static final int KW_USE=255;
-	public static final int KW_USER=256;
-	public static final int KW_USING=257;
-	public static final int KW_UTC=258;
-	public static final int KW_UTCTIMESTAMP=259;
-	public static final int KW_VALUE_TYPE=260;
-	public static final int KW_VARCHAR=261;
-	public static final int KW_VIEW=262;
-	public static final int KW_WHEN=263;
-	public static final int KW_WHERE=264;
-	public static final int KW_WHILE=265;
-	public static final int KW_WINDOW=266;
-	public static final int KW_WITH=267;
-	public static final int LCURLY=268;
-	public static final int LESSTHAN=269;
-	public static final int LESSTHANOREQUALTO=270;
-	public static final int LPAREN=271;
-	public static final int LSQUARE=272;
-	public static final int Letter=273;
-	public static final int MINUS=274;
-	public static final int MOD=275;
-	public static final int NOTEQUAL=276;
-	public static final int Number=277;
-	public static final int PLUS=278;
-	public static final int QUESTION=279;
-	public static final int RCURLY=280;
-	public static final int RPAREN=281;
-	public static final int RSQUARE=282;
-	public static final int RegexComponent=283;
-	public static final int SEMICOLON=284;
-	public static final int STAR=285;
-	public static final int SmallintLiteral=286;
-	public static final int StringLiteral=287;
-	public static final int TILDE=288;
-	public static final int TinyintLiteral=289;
-	public static final int WS=290;
-	public static final int TOK_ALIASLIST=554;
-	public static final int TOK_ALLCOLREF=555;
-	public static final int TOK_ALTERDATABASE_PROPERTIES=556;
-	public static final int TOK_ALTERINDEX_PROPERTIES=557;
-	public static final int TOK_ALTERINDEX_REBUILD=558;
-	public static final int TOK_ALTERTABLE_ADDCOLS=559;
-	public static final int TOK_ALTERTABLE_ADDPARTS=560;
-	public static final int TOK_ALTERTABLE_ALTERPARTS=561;
-	public static final int TOK_ALTERTABLE_ALTERPARTS_MERGEFILES=562;
-	public static final int TOK_ALTERTABLE_ALTERPARTS_PROTECTMODE=563;
-	public static final int TOK_ALTERTABLE_ARCHIVE=564;
-	public static final int TOK_ALTERTABLE_CHANGECOL_AFTER_POSITION=565;
-	public static final int TOK_ALTERTABLE_CLUSTER_SORT=566;
-	public static final int TOK_ALTERTABLE_DROPPARTS=567;
-	public static final int TOK_ALTERTABLE_FILEFORMAT=568;
-	public static final int TOK_ALTERTABLE_LOCATION=569;
-	public static final int TOK_ALTERTABLE_PARTITION=570;
-	public static final int TOK_ALTERTABLE_PROPERTIES=571;
-	public static final int TOK_ALTERTABLE_RENAME=572;
-	public static final int TOK_ALTERTABLE_RENAMECOL=573;
-	public static final int TOK_ALTERTABLE_RENAMEPART=574;
-	public static final int TOK_ALTERTABLE_REPLACECOLS=575;
-	public static final int TOK_ALTERTABLE_SERDEPROPERTIES=576;
-	public static final int TOK_ALTERTABLE_SERIALIZER=577;
-	public static final int TOK_ALTERTABLE_SKEWED=578;
-	public static final int TOK_ALTERTABLE_TOUCH=579;
-	public static final int TOK_ALTERTABLE_UNARCHIVE=580;
-	public static final int TOK_ALTERTBLPART_SKEWED_LOCATION=581;
-	public static final int TOK_ALTERVIEW_ADDPARTS=582;
-	public static final int TOK_ALTERVIEW_AS=583;
-	public static final int TOK_ALTERVIEW_DROPPARTS=584;
-	public static final int TOK_ALTERVIEW_PROPERTIES=585;
-	public static final int TOK_ALTERVIEW_RENAME=586;
-	public static final int TOK_ANALYZE=587;
-	public static final int TOK_BIGINT=588;
-	public static final int TOK_BINARY=589;
-	public static final int TOK_BOOLEAN=590;
-	public static final int TOK_CASCADE=591;
-	public static final int TOK_CHARSETLITERAL=592;
-	public static final int TOK_CLUSTERBY=593;
-	public static final int TOK_COLTYPELIST=594;
-	public static final int TOK_CREATEDATABASE=595;
-	public static final int TOK_CREATEFUNCTION=596;
-	public static final int TOK_CREATEINDEX=597;
-	public static final int TOK_CREATEINDEX_INDEXTBLNAME=598;
-	public static final int TOK_CREATEMACRO=599;
-	public static final int TOK_CREATEROLE=600;
-	public static final int TOK_CREATETABLE=601;
-	public static final int TOK_CREATEVIEW=602;
-	public static final int TOK_CROSSJOIN=603;
-	public static final int TOK_CUBE_GROUPBY=604;
-	public static final int TOK_DATABASECOMMENT=605;
-	public static final int TOK_DATABASELOCATION=606;
-	public static final int TOK_DATABASEPROPERTIES=607;
-	public static final int TOK_DATE=608;
-	public static final int TOK_DATELITERAL=609;
-	public static final int TOK_DATETIME=610;
-	public static final int TOK_DBPROPLIST=611;
-	public static final int TOK_DECIMAL=612;
-	public static final int TOK_DEFERRED_REBUILDINDEX=613;
-	public static final int TOK_DESCDATABASE=614;
-	public static final int TOK_DESCFUNCTION=615;
-	public static final int TOK_DESCTABLE=616;
-	public static final int TOK_DESTINATION=617;
-	public static final int TOK_DIR=618;
-	public static final int TOK_DISABLE=619;
-	public static final int TOK_DISTRIBUTEBY=620;
-	public static final int TOK_DOUBLE=621;
-	public static final int TOK_DROPDATABASE=622;
-	public static final int TOK_DROPFUNCTION=623;
-	public static final int TOK_DROPINDEX=624;
-	public static final int TOK_DROPMACRO=625;
-	public static final int TOK_DROPROLE=626;
-	public static final int TOK_DROPTABLE=627;
-	public static final int TOK_DROPTABLE_PROPERTIES=628;
-	public static final int TOK_DROPVIEW=629;
-	public static final int TOK_DROPVIEW_PROPERTIES=630;
-	public static final int TOK_ENABLE=631;
-	public static final int TOK_EXCHANGEPARTITION=632;
-	public static final int TOK_EXPLAIN=633;
-	public static final int TOK_EXPLIST=634;
-	public static final int TOK_EXPORT=635;
-	public static final int TOK_FALSE=636;
-	public static final int TOK_FILEFORMAT_GENERIC=637;
-	public static final int TOK_FLOAT=638;
-	public static final int TOK_FROM=639;
-	public static final int TOK_FULLOUTERJOIN=640;
-	public static final int TOK_FUNCTION=641;
-	public static final int TOK_FUNCTIONDI=642;
-	public static final int TOK_FUNCTIONSTAR=643;
-	public static final int TOK_GRANT=644;
-	public static final int TOK_GRANT_ROLE=645;
-	public static final int TOK_GRANT_WITH_OPTION=646;
-	public static final int TOK_GROUP=647;
-	public static final int TOK_GROUPBY=648;
-	public static final int TOK_GROUPING_SETS=649;
-	public static final int TOK_GROUPING_SETS_EXPRESSION=650;
-	public static final int TOK_HAVING=651;
-	public static final int TOK_HINT=652;
-	public static final int TOK_HINTARGLIST=653;
-	public static final int TOK_HINTLIST=654;
-	public static final int TOK_HOLD_DDLTIME=655;
-	public static final int TOK_IFEXISTS=656;
-	public static final int TOK_IFNOTEXISTS=657;
-	public static final int TOK_IGNOREPROTECTION=658;
-	public static final int TOK_IMPORT=659;
-	public static final int TOK_INCRE=660;
-	public static final int TOK_INDEXCOMMENT=661;
-	public static final int TOK_INDEXPROPERTIES=662;
-	public static final int TOK_INDEXPROPLIST=663;
-	public static final int TOK_INSERT=664;
-	public static final int TOK_INSERT_INTO=665;
-	public static final int TOK_INT=666;
-	public static final int TOK_ISNOTNULL=667;
-	public static final int TOK_ISNULL=668;
-	public static final int TOK_JOIN=669;
-	public static final int TOK_LATERAL_VIEW=670;
-	public static final int TOK_LATERAL_VIEW_OUTER=671;
-	public static final int TOK_LEFTOUTERJOIN=672;
-	public static final int TOK_LEFTSEMIJOIN=673;
-	public static final int TOK_LENGTH=674;
-	public static final int TOK_LIKETABLE=675;
-	public static final int TOK_LIMIT=676;
-	public static final int TOK_LIST=677;
-	public static final int TOK_LOAD=678;
-	public static final int TOK_LOCAL_DIR=679;
-	public static final int TOK_LOCKTABLE=680;
-	public static final int TOK_MAP=681;
-	public static final int TOK_MAPJOIN=682;
-	public static final int TOK_MSCK=683;
-	public static final int TOK_NOT_CLUSTERED=684;
-	public static final int TOK_NOT_SORTED=685;
-	public static final int TOK_NO_DROP=686;
-	public static final int TOK_NULL=687;
-	public static final int TOK_OFFLINE=688;
-	public static final int TOK_OP_ADD=689;
-	public static final int TOK_OP_AND=690;
-	public static final int TOK_OP_BITAND=691;
-	public static final int TOK_OP_BITNOT=692;
-	public static final int TOK_OP_BITOR=693;
-	public static final int TOK_OP_BITXOR=694;
-	public static final int TOK_OP_DIV=695;
-	public static final int TOK_OP_EQ=696;
-	public static final int TOK_OP_GE=697;
-	public static final int TOK_OP_GT=698;
-	public static final int TOK_OP_LE=699;
-	public static final int TOK_OP_LIKE=700;
-	public static final int TOK_OP_LT=701;
-	public static final int TOK_OP_MOD=702;
-	public static final int TOK_OP_MUL=703;
-	public static final int TOK_OP_NE=704;
-	public static final int TOK_OP_NOT=705;
-	public static final int TOK_OP_OR=706;
-	public static final int TOK_OP_SUB=707;
-	public static final int TOK_ORDERBY=708;
-	public static final int TOK_ORREPLACE=709;
-	public static final int TOK_PARTITIONINGSPEC=710;
-	public static final int TOK_PARTITIONLOCATION=711;
-	public static final int TOK_PARTSPEC=712;
-	public static final int TOK_PARTVAL=713;
-	public static final int TOK_PERCENT=714;
-	public static final int TOK_PRINCIPAL_NAME=715;
-	public static final int TOK_PRIVILEGE=716;
-	public static final int TOK_PRIVILEGE_LIST=717;
-	public static final int TOK_PRIV_ALL=718;
-	public static final int TOK_PRIV_ALTER_DATA=719;
-	public static final int TOK_PRIV_ALTER_METADATA=720;
-	public static final int TOK_PRIV_CREATE=721;
-	public static final int TOK_PRIV_DROP=722;
-	public static final int TOK_PRIV_INDEX=723;
-	public static final int TOK_PRIV_LOCK=724;
-	public static final int TOK_PRIV_OBJECT=725;
-	public static final int TOK_PRIV_OBJECT_COL=726;
-	public static final int TOK_PRIV_SELECT=727;
-	public static final int TOK_PRIV_SHOW_DATABASE=728;
-	public static final int TOK_PTBLFUNCTION=729;
-	public static final int TOK_QUERY=730;
-	public static final int TOK_READONLY=731;
-	public static final int TOK_RECORDREADER=732;
-	public static final int TOK_RECORDWRITER=733;
-	public static final int TOK_RESTRICT=734;
-	public static final int TOK_REVOKE=735;
-	public static final int TOK_REVOKE_ROLE=736;
-	public static final int TOK_RIGHTOUTERJOIN=737;
-	public static final int TOK_ROLE=738;
-	public static final int TOK_ROLLUP_GROUPBY=739;
-	public static final int TOK_ROWCOUNT=740;
-	public static final int TOK_SELECT=741;
-	public static final int TOK_SELECTDI=742;
-	public static final int TOK_SELEXPR=743;
-	public static final int TOK_SERDE=744;
-	public static final int TOK_SERDENAME=745;
-	public static final int TOK_SERDEPROPS=746;
-	public static final int TOK_SHOWCOLUMNS=747;
-	public static final int TOK_SHOWDATABASES=748;
-	public static final int TOK_SHOWFUNCTIONS=749;
-	public static final int TOK_SHOWINDEXES=750;
-	public static final int TOK_SHOWLOCKS=751;
-	public static final int TOK_SHOWPARTITIONS=752;
-	public static final int TOK_SHOWTABLES=753;
-	public static final int TOK_SHOW_CREATETABLE=754;
-	public static final int TOK_SHOW_GRANT=755;
-	public static final int TOK_SHOW_ROLE_GRANT=756;
-	public static final int TOK_SHOW_TABLESTATUS=757;
-	public static final int TOK_SHOW_TBLPROPERTIES=758;
-	public static final int TOK_SKEWED_LOCATIONS=759;
-	public static final int TOK_SKEWED_LOCATION_LIST=760;
-	public static final int TOK_SKEWED_LOCATION_MAP=761;
-	public static final int TOK_SMALLINT=762;
-	public static final int TOK_SORTBY=763;
-	public static final int TOK_STORAGEHANDLER=764;
-	public static final int TOK_STOREDASDIRS=765;
-	public static final int TOK_STREAMTABLE=766;
-	public static final int TOK_STRING=767;
-	public static final int TOK_STRINGLITERALSEQUENCE=768;
-	public static final int TOK_STRUCT=769;
-	public static final int TOK_SUBQUERY=770;
-	public static final int TOK_SWITCHDATABASE=771;
-	public static final int TOK_TAB=772;
-	public static final int TOK_TABALIAS=773;
-	public static final int TOK_TABCOL=774;
-	public static final int TOK_TABCOLLIST=775;
-	public static final int TOK_TABCOLNAME=776;
-	public static final int TOK_TABCOLVALUE=777;
-	public static final int TOK_TABCOLVALUES=778;
-	public static final int TOK_TABCOLVALUE_PAIR=779;
-	public static final int TOK_TABLEBUCKETS=780;
-	public static final int TOK_TABLEBUCKETSAMPLE=781;
-	public static final int TOK_TABLECOMMENT=782;
-	public static final int TOK_TABLEFILEFORMAT=783;
-	public static final int TOK_TABLELOCATION=784;
-	public static final int TOK_TABLEPARTCOLS=785;
-	public static final int TOK_TABLEPROPERTIES=786;
-	public static final int TOK_TABLEPROPERTY=787;
-	public static final int TOK_TABLEPROPLIST=788;
-	public static final int TOK_TABLEROWFORMAT=789;
-	public static final int TOK_TABLEROWFORMATCOLLITEMS=790;
-	public static final int TOK_TABLEROWFORMATFIELD=791;
-	public static final int TOK_TABLEROWFORMATLINES=792;
-	public static final int TOK_TABLEROWFORMATMAPKEYS=793;
-	public static final int TOK_TABLESERIALIZER=794;
-	public static final int TOK_TABLESKEWED=795;
-	public static final int TOK_TABLESPLITSAMPLE=796;
-	public static final int TOK_TABLE_OR_COL=797;
-	public static final int TOK_TABLE_PARTITION=798;
-	public static final int TOK_TABNAME=799;
-	public static final int TOK_TABREF=800;
-	public static final int TOK_TABSORTCOLNAMEASC=801;
-	public static final int TOK_TABSORTCOLNAMEDESC=802;
-	public static final int TOK_TABSRC=803;
-	public static final int TOK_TABTYPE=804;
-	public static final int TOK_TBLORCFILE=805;
-	public static final int TOK_TBLRCFILE=806;
-	public static final int TOK_TBLSEQUENCEFILE=807;
-	public static final int TOK_TBLTEXTFILE=808;
-	public static final int TOK_TIMESTAMP=809;
-	public static final int TOK_TINYINT=810;
-	public static final int TOK_TMP_FILE=811;
-	public static final int TOK_TRANSFORM=812;
-	public static final int TOK_TRUE=813;
-	public static final int TOK_TRUNCATETABLE=814;
-	public static final int TOK_UNION=815;
-	public static final int TOK_UNIONTYPE=816;
-	public static final int TOK_UNIQUEJOIN=817;
-	public static final int TOK_UNLOCKTABLE=818;
-	public static final int TOK_USER=819;
-	public static final int TOK_USERSCRIPTCOLNAMES=820;
-	public static final int TOK_USERSCRIPTCOLSCHEMA=821;
-	public static final int TOK_VARCHAR=822;
-	public static final int TOK_VIEWPARTCOLS=823;
-	public static final int TOK_WHERE=824;
-	public static final int TOK_WINDOWDEF=825;
-	public static final int TOK_WINDOWRANGE=826;
-	public static final int TOK_WINDOWSPEC=827;
-	public static final int TOK_WINDOWVALUES=828;
+	public static final int APRIL=5;
+	public static final int AUGUST=6;
+	public static final int BITWISEOR=7;
+	public static final int BITWISEXOR=8;
+	public static final int BigintLiteral=9;
+	public static final int ByteLengthLiteral=10;
+	public static final int COLON=11;
+	public static final int COMMA=12;
+	public static final int COMMENT=13;
+	public static final int CharSetLiteral=14;
+	public static final int CharSetName=15;
+	public static final int DAY=16;
+	public static final int DECEMBER=17;
+	public static final int DIV=18;
+	public static final int DIVIDE=19;
+	public static final int DOLLAR=20;
+	public static final int DOT=21;
+	public static final int DecimalLiteral=22;
+	public static final int Digit=23;
+	public static final int EQUAL=24;
+	public static final int EQUAL_NS=25;
+	public static final int Exponent=26;
+	public static final int FEBRUARY=27;
+	public static final int FRIDAY=28;
+	public static final int GREATERTHAN=29;
+	public static final int GREATERTHANOREQUALTO=30;
+	public static final int HOUR=31;
+	public static final int HexDigit=32;
+	public static final int INT_0=33;
+	public static final int INT_00=34;
+	public static final int INT_01=35;
+	public static final int INT_02=36;
+	public static final int INT_03=37;
+	public static final int INT_04=38;
+	public static final int INT_05=39;
+	public static final int INT_06=40;
+	public static final int INT_07=41;
+	public static final int INT_08=42;
+	public static final int INT_09=43;
+	public static final int INT_1=44;
+	public static final int INT_10=45;
+	public static final int INT_11=46;
+	public static final int INT_12=47;
+	public static final int INT_13=48;
+	public static final int INT_14=49;
+	public static final int INT_15=50;
+	public static final int INT_16=51;
+	public static final int INT_17=52;
+	public static final int INT_18=53;
+	public static final int INT_19=54;
+	public static final int INT_2=55;
+	public static final int INT_20=56;
+	public static final int INT_21=57;
+	public static final int INT_22=58;
+	public static final int INT_23=59;
+	public static final int INT_24=60;
+	public static final int INT_25=61;
+	public static final int INT_26=62;
+	public static final int INT_27=63;
+	public static final int INT_28=64;
+	public static final int INT_29=65;
+	public static final int INT_3=66;
+	public static final int INT_30=67;
+	public static final int INT_31=68;
+	public static final int INT_32=69;
+	public static final int INT_33=70;
+	public static final int INT_34=71;
+	public static final int INT_35=72;
+	public static final int INT_36=73;
+	public static final int INT_37=74;
+	public static final int INT_38=75;
+	public static final int INT_39=76;
+	public static final int INT_4=77;
+	public static final int INT_40=78;
+	public static final int INT_41=79;
+	public static final int INT_42=80;
+	public static final int INT_43=81;
+	public static final int INT_44=82;
+	public static final int INT_45=83;
+	public static final int INT_46=84;
+	public static final int INT_47=85;
+	public static final int INT_48=86;
+	public static final int INT_49=87;
+	public static final int INT_5=88;
+	public static final int INT_50=89;
+	public static final int INT_51=90;
+	public static final int INT_52=91;
+	public static final int INT_53=92;
+	public static final int INT_54=93;
+	public static final int INT_55=94;
+	public static final int INT_56=95;
+	public static final int INT_57=96;
+	public static final int INT_58=97;
+	public static final int INT_59=98;
+	public static final int INT_6=99;
+	public static final int INT_60=100;
+	public static final int INT_61=101;
+	public static final int INT_62=102;
+	public static final int INT_63=103;
+	public static final int INT_64=104;
+	public static final int INT_65=105;
+	public static final int INT_66=106;
+	public static final int INT_67=107;
+	public static final int INT_68=108;
+	public static final int INT_69=109;
+	public static final int INT_7=110;
+	public static final int INT_70=111;
+	public static final int INT_71=112;
+	public static final int INT_72=113;
+	public static final int INT_73=114;
+	public static final int INT_74=115;
+	public static final int INT_75=116;
+	public static final int INT_76=117;
+	public static final int INT_77=118;
+	public static final int INT_78=119;
+	public static final int INT_79=120;
+	public static final int INT_8=121;
+	public static final int INT_80=122;
+	public static final int INT_81=123;
+	public static final int INT_82=124;
+	public static final int INT_83=125;
+	public static final int INT_84=126;
+	public static final int INT_85=127;
+	public static final int INT_86=128;
+	public static final int INT_87=129;
+	public static final int INT_88=130;
+	public static final int INT_89=131;
+	public static final int INT_9=132;
+	public static final int INT_90=133;
+	public static final int INT_91=134;
+	public static final int INT_92=135;
+	public static final int INT_93=136;
+	public static final int INT_94=137;
+	public static final int INT_95=138;
+	public static final int INT_96=139;
+	public static final int INT_97=140;
+	public static final int INT_98=141;
+	public static final int INT_99=142;
+	public static final int Identifier=143;
+	public static final int JANUARY=144;
+	public static final int JULY=145;
+	public static final int JUNE=146;
+	public static final int KW_ADD=147;
+	public static final int KW_AFTER=148;
+	public static final int KW_ALL=149;
+	public static final int KW_ALTER=150;
+	public static final int KW_ANALYZE=151;
+	public static final int KW_AND=152;
+	public static final int KW_ARCHIVE=153;
+	public static final int KW_ARRAY=154;
+	public static final int KW_AS=155;
+	public static final int KW_ASC=156;
+	public static final int KW_BEFORE=157;
+	public static final int KW_BETWEEN=158;
+	public static final int KW_BIGINT=159;
+	public static final int KW_BINARY=160;
+	public static final int KW_BOOLEAN=161;
+	public static final int KW_BOTH=162;
+	public static final int KW_BUCKET=163;
+	public static final int KW_BUCKETS=164;
+	public static final int KW_BY=165;
+	public static final int KW_CASCADE=166;
+	public static final int KW_CASE=167;
+	public static final int KW_CAST=168;
+	public static final int KW_CHANGE=169;
+	public static final int KW_CLUSTER=170;
+	public static final int KW_CLUSTERED=171;
+	public static final int KW_CLUSTERSTATUS=172;
+	public static final int KW_COLLECTION=173;
+	public static final int KW_COLUMN=174;
+	public static final int KW_COLUMNS=175;
+	public static final int KW_COMMENT=176;
+	public static final int KW_COMPUTE=177;
+	public static final int KW_CONCATENATE=178;
+	public static final int KW_CONTINUE=179;
+	public static final int KW_CREATE=180;
+	public static final int KW_CROSS=181;
+	public static final int KW_CUBE=182;
+	public static final int KW_CURRENT=183;
+	public static final int KW_CURSOR=184;
+	public static final int KW_DATA=185;
+	public static final int KW_DATABASE=186;
+	public static final int KW_DATABASES=187;
+	public static final int KW_DATE=188;
+	public static final int KW_DATETIME=189;
+	public static final int KW_DBPROPERTIES=190;
+	public static final int KW_DECIMAL=191;
+	public static final int KW_DEFERRED=192;
+	public static final int KW_DELETE=193;
+	public static final int KW_DELIMITED=194;
+	public static final int KW_DEPENDENCY=195;
+	public static final int KW_DESC=196;
+	public static final int KW_DESCRIBE=197;
+	public static final int KW_DIRECTORIES=198;
+	public static final int KW_DIRECTORY=199;
+	public static final int KW_DISABLE=200;
+	public static final int KW_DISTINCT=201;
+	public static final int KW_DISTRIBUTE=202;
+	public static final int KW_DOUBLE=203;
+	public static final int KW_DROP=204;
+	public static final int KW_DURING=205;
+	public static final int KW_EACH=206;
+	public static final int KW_ELEM_TYPE=207;
+	public static final int KW_ELSE=208;
+	public static final int KW_ENABLE=209;
+	public static final int KW_END=210;
+	public static final int KW_ESCAPED=211;
+	public static final int KW_EXCHANGE=212;
+	public static final int KW_EXCLUSIVE=213;
+	public static final int KW_EXISTS=214;
+	public static final int KW_EXPLAIN=215;
+	public static final int KW_EXPORT=216;
+	public static final int KW_EXTENDED=217;
+	public static final int KW_EXTERNAL=218;
+	public static final int KW_FALSE=219;
+	public static final int KW_FETCH=220;
+	public static final int KW_FIELDS=221;
+	public static final int KW_FILEFORMAT=222;
+	public static final int KW_FIRST=223;
+	public static final int KW_FLOAT=224;
+	public static final int KW_FOLLOWING=225;
+	public static final int KW_FOR=226;
+	public static final int KW_FORMAT=227;
+	public static final int KW_FORMATTED=228;
+	public static final int KW_FROM=229;
+	public static final int KW_FULL=230;
+	public static final int KW_FUNCTION=231;
+	public static final int KW_FUNCTIONS=232;
+	public static final int KW_GRANT=233;
+	public static final int KW_GROUP=234;
+	public static final int KW_GROUPING=235;
+	public static final int KW_HAVING=236;
+	public static final int KW_HOLD_DDLTIME=237;
+	public static final int KW_IDXPROPERTIES=238;
+	public static final int KW_IF=239;
+	public static final int KW_IGNORE=240;
+	public static final int KW_IMPORT=241;
+	public static final int KW_IN=242;
+	public static final int KW_INCRE=243;
+	public static final int KW_INCREFREQUENCY=244;
+	public static final int KW_INDEX=245;
+	public static final int KW_INDEXES=246;
+	public static final int KW_INNER=247;
+	public static final int KW_INPATH=248;
+	public static final int KW_INPUTDRIVER=249;
+	public static final int KW_INPUTFORMAT=250;
+	public static final int KW_INSERT=251;
+	public static final int KW_INT=252;
+	public static final int KW_INTERSECT=253;
+	public static final int KW_INTO=254;
+	public static final int KW_IS=255;
+	public static final int KW_ITEMS=256;
+	public static final int KW_JOIN=257;
+	public static final int KW_KEYS=258;
+	public static final int KW_KEY_TYPE=259;
+	public static final int KW_LATERAL=260;
+	public static final int KW_LEFT=261;
+	public static final int KW_LESS=262;
+	public static final int KW_LIKE=263;
+	public static final int KW_LIMIT=264;
+	public static final int KW_LINES=265;
+	public static final int KW_LOAD=266;
+	public static final int KW_LOCAL=267;
+	public static final int KW_LOCATION=268;
+	public static final int KW_LOCK=269;
+	public static final int KW_LOCKS=270;
+	public static final int KW_LOGICAL=271;
+	public static final int KW_LONG=272;
+	public static final int KW_MACRO=273;
+	public static final int KW_MAP=274;
+	public static final int KW_MAPJOIN=275;
+	public static final int KW_MATERIALIZED=276;
+	public static final int KW_MINUS=277;
+	public static final int KW_MORE=278;
+	public static final int KW_MSCK=279;
+	public static final int KW_NOSCAN=280;
+	public static final int KW_NOT=281;
+	public static final int KW_NO_DROP=282;
+	public static final int KW_NULL=283;
+	public static final int KW_OF=284;
+	public static final int KW_OFFLINE=285;
+	public static final int KW_ON=286;
+	public static final int KW_OPTION=287;
+	public static final int KW_OR=288;
+	public static final int KW_ORCFILE=289;
+	public static final int KW_ORDER=290;
+	public static final int KW_OUT=291;
+	public static final int KW_OUTER=292;
+	public static final int KW_OUTPUTDRIVER=293;
+	public static final int KW_OUTPUTFORMAT=294;
+	public static final int KW_OVER=295;
+	public static final int KW_OVERWRITE=296;
+	public static final int KW_PARTIALSCAN=297;
+	public static final int KW_PARTITION=298;
+	public static final int KW_PARTITIONED=299;
+	public static final int KW_PARTITIONS=300;
+	public static final int KW_PERCENT=301;
+	public static final int KW_PLUS=302;
+	public static final int KW_PRECEDING=303;
+	public static final int KW_PRESERVE=304;
+	public static final int KW_PRETTY=305;
+	public static final int KW_PROCEDURE=306;
+	public static final int KW_PROTECTION=307;
+	public static final int KW_PURGE=308;
+	public static final int KW_RANGE=309;
+	public static final int KW_RCFILE=310;
+	public static final int KW_READ=311;
+	public static final int KW_READONLY=312;
+	public static final int KW_READS=313;
+	public static final int KW_REBUILD=314;
+	public static final int KW_RECORDREADER=315;
+	public static final int KW_RECORDWRITER=316;
+	public static final int KW_REDUCE=317;
+	public static final int KW_REGEXP=318;
+	public static final int KW_RENAME=319;
+	public static final int KW_REPAIR=320;
+	public static final int KW_REPLACE=321;
+	public static final int KW_RESTRICT=322;
+	public static final int KW_REVOKE=323;
+	public static final int KW_RIGHT=324;
+	public static final int KW_RLIKE=325;
+	public static final int KW_ROLE=326;
+	public static final int KW_ROLLUP=327;
+	public static final int KW_ROW=328;
+	public static final int KW_ROWS=329;
+	public static final int KW_SCHEMA=330;
+	public static final int KW_SCHEMAS=331;
+	public static final int KW_SELECT=332;
+	public static final int KW_SEMI=333;
+	public static final int KW_SEQUENCEFILE=334;
+	public static final int KW_SERDE=335;
+	public static final int KW_SERDEPROPERTIES=336;
+	public static final int KW_SET=337;
+	public static final int KW_SETS=338;
+	public static final int KW_SHARED=339;
+	public static final int KW_SHOW=340;
+	public static final int KW_SHOW_DATABASE=341;
+	public static final int KW_SKEWED=342;
+	public static final int KW_SMALLINT=343;
+	public static final int KW_SORT=344;
+	public static final int KW_SORTED=345;
+	public static final int KW_SSL=346;
+	public static final int KW_STATISTICS=347;
+	public static final int KW_STORED=348;
+	public static final int KW_STREAMTABLE=349;
+	public static final int KW_STRING=350;
+	public static final int KW_STRUCT=351;
+	public static final int KW_TABLE=352;
+	public static final int KW_TABLES=353;
+	public static final int KW_TABLESAMPLE=354;
+	public static final int KW_TBLPROPERTIES=355;
+	public static final int KW_TEMPORARY=356;
+	public static final int KW_TERMINATED=357;
+	public static final int KW_TEXTFILE=358;
+	public static final int KW_THEN=359;
+	public static final int KW_TIMESTAMP=360;
+	public static final int KW_TINYINT=361;
+	public static final int KW_TO=362;
+	public static final int KW_TOUCH=363;
+	public static final int KW_TRANSFORM=364;
+	public static final int KW_TRIGGER=365;
+	public static final int KW_TRUE=366;
+	public static final int KW_TRUNCATE=367;
+	public static final int KW_UNARCHIVE=368;
+	public static final int KW_UNBOUNDED=369;
+	public static final int KW_UNDO=370;
+	public static final int KW_UNION=371;
+	public static final int KW_UNIONTYPE=372;
+	public static final int KW_UNIQUEJOIN=373;
+	public static final int KW_UNLOCK=374;
+	public static final int KW_UNSET=375;
+	public static final int KW_UNSIGNED=376;
+	public static final int KW_UPDATE=377;
+	public static final int KW_USE=378;
+	public static final int KW_USER=379;
+	public static final int KW_USING=380;
+	public static final int KW_UTC=381;
+	public static final int KW_UTCTIMESTAMP=382;
+	public static final int KW_VALUE_TYPE=383;
+	public static final int KW_VARCHAR=384;
+	public static final int KW_VIEW=385;
+	public static final int KW_WHEN=386;
+	public static final int KW_WHERE=387;
+	public static final int KW_WHILE=388;
+	public static final int KW_WINDOW=389;
+	public static final int KW_WITH=390;
+	public static final int LCURLY=391;
+	public static final int LESSTHAN=392;
+	public static final int LESSTHANOREQUALTO=393;
+	public static final int LPAREN=394;
+	public static final int LSQUARE=395;
+	public static final int Letter=396;
+	public static final int MARCH=397;
+	public static final int MAY=398;
+	public static final int MINUS=399;
+	public static final int MINUTE=400;
+	public static final int MOD=401;
+	public static final int MONDAY=402;
+	public static final int MONTH=403;
+	public static final int NOTEQUAL=404;
+	public static final int NOVEMBER=405;
+	public static final int Number=406;
+	public static final int OCTOBER=407;
+	public static final int PLUS=408;
+	public static final int QUESTION=409;
+	public static final int RCURLY=410;
+	public static final int RPAREN=411;
+	public static final int RSQUARE=412;
+	public static final int RegexComponent=413;
+	public static final int SATURDAY=414;
+	public static final int SEMICOLON=415;
+	public static final int SEPTEMBER=416;
+	public static final int STAR=417;
+	public static final int SUNDAY=418;
+	public static final int SmallintLiteral=419;
+	public static final int StringLiteral=420;
+	public static final int THURSDAY=421;
+	public static final int TILDE=422;
+	public static final int TODAY=423;
+	public static final int TOMORROW=424;
+	public static final int TONIGHT=425;
+	public static final int TUESDAY=426;
+	public static final int TinyintLiteral=427;
+	public static final int WEDNESDAY=428;
+	public static final int WEEK=429;
+	public static final int WS=430;
+	public static final int YEAR=431;
+	public static final int YESTERDAY=432;
+	public static final int Day=445;
+	public static final int Hour=451;
+	public static final int INT=452;
+	public static final int Minute=804;
+	public static final int Month=805;
+	public static final int Second=812;
+	public static final int TOK_ALIASLIST=816;
+	public static final int TOK_ALLCOLREF=817;
+	public static final int TOK_ALTERDATABASE_PROPERTIES=818;
+	public static final int TOK_ALTERINDEX_PROPERTIES=819;
+	public static final int TOK_ALTERINDEX_REBUILD=820;
+	public static final int TOK_ALTERTABLE_ADDCOLS=821;
+	public static final int TOK_ALTERTABLE_ADDPARTS=822;
+	public static final int TOK_ALTERTABLE_ALTERPARTS=823;
+	public static final int TOK_ALTERTABLE_ALTERPARTS_MERGEFILES=824;
+	public static final int TOK_ALTERTABLE_ALTERPARTS_PROTECTMODE=825;
+	public static final int TOK_ALTERTABLE_ARCHIVE=826;
+	public static final int TOK_ALTERTABLE_CHANGECOL_AFTER_POSITION=827;
+	public static final int TOK_ALTERTABLE_CLUSTER_SORT=828;
+	public static final int TOK_ALTERTABLE_DROPPARTS=829;
+	public static final int TOK_ALTERTABLE_FILEFORMAT=830;
+	public static final int TOK_ALTERTABLE_LOCATION=831;
+	public static final int TOK_ALTERTABLE_PARTITION=832;
+	public static final int TOK_ALTERTABLE_PROPERTIES=833;
+	public static final int TOK_ALTERTABLE_RENAME=834;
+	public static final int TOK_ALTERTABLE_RENAMECOL=835;
+	public static final int TOK_ALTERTABLE_RENAMEPART=836;
+	public static final int TOK_ALTERTABLE_REPLACECOLS=837;
+	public static final int TOK_ALTERTABLE_SERDEPROPERTIES=838;
+	public static final int TOK_ALTERTABLE_SERIALIZER=839;
+	public static final int TOK_ALTERTABLE_SKEWED=840;
+	public static final int TOK_ALTERTABLE_TOUCH=841;
+	public static final int TOK_ALTERTABLE_UNARCHIVE=842;
+	public static final int TOK_ALTERTBLPART_SKEWED_LOCATION=843;
+	public static final int TOK_ALTERVIEW_ADDPARTS=844;
+	public static final int TOK_ALTERVIEW_AS=845;
+	public static final int TOK_ALTERVIEW_DROPPARTS=846;
+	public static final int TOK_ALTERVIEW_PROPERTIES=847;
+	public static final int TOK_ALTERVIEW_RENAME=848;
+	public static final int TOK_ANALYZE=849;
+	public static final int TOK_BIGINT=850;
+	public static final int TOK_BINARY=851;
+	public static final int TOK_BOOLEAN=852;
+	public static final int TOK_CASCADE=853;
+	public static final int TOK_CHARSETLITERAL=854;
+	public static final int TOK_CLUSTERBY=855;
+	public static final int TOK_COLTYPELIST=856;
+	public static final int TOK_CREATEDATABASE=857;
+	public static final int TOK_CREATEFUNCTION=858;
+	public static final int TOK_CREATEINDEX=859;
+	public static final int TOK_CREATEINDEX_INDEXTBLNAME=860;
+	public static final int TOK_CREATEMACRO=861;
+	public static final int TOK_CREATEROLE=862;
+	public static final int TOK_CREATETABLE=863;
+	public static final int TOK_CREATEVIEW=864;
+	public static final int TOK_CROSSJOIN=865;
+	public static final int TOK_CUBE_GROUPBY=866;
+	public static final int TOK_DATABASECOMMENT=867;
+	public static final int TOK_DATABASELOCATION=868;
+	public static final int TOK_DATABASEPROPERTIES=869;
+	public static final int TOK_DATE=870;
+	public static final int TOK_DATELITERAL=871;
+	public static final int TOK_DATETIME=872;
+	public static final int TOK_DAY=873;
+	public static final int TOK_DBPROPLIST=874;
+	public static final int TOK_DECIMAL=875;
+	public static final int TOK_DEFERRED_REBUILDINDEX=876;
+	public static final int TOK_DESCDATABASE=877;
+	public static final int TOK_DESCFUNCTION=878;
+	public static final int TOK_DESCTABLE=879;
+	public static final int TOK_DESTINATION=880;
+	public static final int TOK_DIR=881;
+	public static final int TOK_DISABLE=882;
+	public static final int TOK_DISTRIBUTEBY=883;
+	public static final int TOK_DOUBLE=884;
+	public static final int TOK_DROPDATABASE=885;
+	public static final int TOK_DROPFUNCTION=886;
+	public static final int TOK_DROPINDEX=887;
+	public static final int TOK_DROPMACRO=888;
+	public static final int TOK_DROPROLE=889;
+	public static final int TOK_DROPTABLE=890;
+	public static final int TOK_DROPTABLE_PROPERTIES=891;
+	public static final int TOK_DROPVIEW=892;
+	public static final int TOK_DROPVIEW_PROPERTIES=893;
+	public static final int TOK_ENABLE=894;
+	public static final int TOK_EXCHANGEPARTITION=895;
+	public static final int TOK_EXPLAIN=896;
+	public static final int TOK_EXPLIST=897;
+	public static final int TOK_EXPORT=898;
+	public static final int TOK_FALSE=899;
+	public static final int TOK_FILEFORMAT_GENERIC=900;
+	public static final int TOK_FLOAT=901;
+	public static final int TOK_FROM=902;
+	public static final int TOK_FULLOUTERJOIN=903;
+	public static final int TOK_FUNCTION=904;
+	public static final int TOK_FUNCTIONDI=905;
+	public static final int TOK_FUNCTIONSTAR=906;
+	public static final int TOK_GRANT=907;
+	public static final int TOK_GRANT_ROLE=908;
+	public static final int TOK_GRANT_WITH_OPTION=909;
+	public static final int TOK_GROUP=910;
+	public static final int TOK_GROUPBY=911;
+	public static final int TOK_GROUPING_SETS=912;
+	public static final int TOK_GROUPING_SETS_EXPRESSION=913;
+	public static final int TOK_HAVING=914;
+	public static final int TOK_HINT=915;
+	public static final int TOK_HINTARGLIST=916;
+	public static final int TOK_HINTLIST=917;
+	public static final int TOK_HOLD_DDLTIME=918;
+	public static final int TOK_HOUR=919;
+	public static final int TOK_IFEXISTS=920;
+	public static final int TOK_IFNOTEXISTS=921;
+	public static final int TOK_IGNOREPROTECTION=922;
+	public static final int TOK_IMPORT=923;
+	public static final int TOK_INCRE=924;
+	public static final int TOK_INCREFREQUENCY=925;
+	public static final int TOK_INDEXCOMMENT=926;
+	public static final int TOK_INDEXPROPERTIES=927;
+	public static final int TOK_INDEXPROPLIST=928;
+	public static final int TOK_INSERT=929;
+	public static final int TOK_INSERT_INTO=930;
+	public static final int TOK_INT=931;
+	public static final int TOK_ISNOTNULL=932;
+	public static final int TOK_ISNULL=933;
+	public static final int TOK_JOIN=934;
+	public static final int TOK_LATERAL_VIEW=935;
+	public static final int TOK_LATERAL_VIEW_OUTER=936;
+	public static final int TOK_LEFTOUTERJOIN=937;
+	public static final int TOK_LEFTSEMIJOIN=938;
+	public static final int TOK_LENGTH=939;
+	public static final int TOK_LIKETABLE=940;
+	public static final int TOK_LIMIT=941;
+	public static final int TOK_LIST=942;
+	public static final int TOK_LOAD=943;
+	public static final int TOK_LOCAL_DIR=944;
+	public static final int TOK_LOCKTABLE=945;
+	public static final int TOK_MAP=946;
+	public static final int TOK_MAPJOIN=947;
+	public static final int TOK_MINUTE=948;
+	public static final int TOK_MONTH=949;
+	public static final int TOK_MSCK=950;
+	public static final int TOK_NOT_CLUSTERED=951;
+	public static final int TOK_NOT_SORTED=952;
+	public static final int TOK_NO_DROP=953;
+	public static final int TOK_NULL=954;
+	public static final int TOK_OFFLINE=955;
+	public static final int TOK_OP_ADD=956;
+	public static final int TOK_OP_AND=957;
+	public static final int TOK_OP_BITAND=958;
+	public static final int TOK_OP_BITNOT=959;
+	public static final int TOK_OP_BITOR=960;
+	public static final int TOK_OP_BITXOR=961;
+	public static final int TOK_OP_DIV=962;
+	public static final int TOK_OP_EQ=963;
+	public static final int TOK_OP_GE=964;
+	public static final int TOK_OP_GT=965;
+	public static final int TOK_OP_LE=966;
+	public static final int TOK_OP_LIKE=967;
+	public static final int TOK_OP_LT=968;
+	public static final int TOK_OP_MOD=969;
+	public static final int TOK_OP_MUL=970;
+	public static final int TOK_OP_NE=971;
+	public static final int TOK_OP_NOT=972;
+	public static final int TOK_OP_OR=973;
+	public static final int TOK_OP_SUB=974;
+	public static final int TOK_ORDERBY=975;
+	public static final int TOK_ORREPLACE=976;
+	public static final int TOK_PARTITIONINGSPEC=977;
+	public static final int TOK_PARTITIONLOCATION=978;
+	public static final int TOK_PARTSPEC=979;
+	public static final int TOK_PARTVAL=980;
+	public static final int TOK_PERCENT=981;
+	public static final int TOK_PRINCIPAL_NAME=982;
+	public static final int TOK_PRIVILEGE=983;
+	public static final int TOK_PRIVILEGE_LIST=984;
+	public static final int TOK_PRIV_ALL=985;
+	public static final int TOK_PRIV_ALTER_DATA=986;
+	public static final int TOK_PRIV_ALTER_METADATA=987;
+	public static final int TOK_PRIV_CREATE=988;
+	public static final int TOK_PRIV_DROP=989;
+	public static final int TOK_PRIV_INDEX=990;
+	public static final int TOK_PRIV_LOCK=991;
+	public static final int TOK_PRIV_OBJECT=992;
+	public static final int TOK_PRIV_OBJECT_COL=993;
+	public static final int TOK_PRIV_SELECT=994;
+	public static final int TOK_PRIV_SHOW_DATABASE=995;
+	public static final int TOK_PTBLFUNCTION=996;
+	public static final int TOK_QUERY=997;
+	public static final int TOK_READONLY=998;
+	public static final int TOK_RECORDREADER=999;
+	public static final int TOK_RECORDWRITER=1000;
+	public static final int TOK_RESTRICT=1001;
+	public static final int TOK_REVOKE=1002;
+	public static final int TOK_REVOKE_ROLE=1003;
+	public static final int TOK_RIGHTOUTERJOIN=1004;
+	public static final int TOK_ROLE=1005;
+	public static final int TOK_ROLLUP_GROUPBY=1006;
+	public static final int TOK_ROWCOUNT=1007;
+	public static final int TOK_SECOND=1008;
+	public static final int TOK_SELECT=1009;
+	public static final int TOK_SELECTDI=1010;
+	public static final int TOK_SELEXPR=1011;
+	public static final int TOK_SERDE=1012;
+	public static final int TOK_SERDENAME=1013;
+	public static final int TOK_SERDEPROPS=1014;
+	public static final int TOK_SHOWCOLUMNS=1015;
+	public static final int TOK_SHOWDATABASES=1016;
+	public static final int TOK_SHOWFUNCTIONS=1017;
+	public static final int TOK_SHOWINDEXES=1018;
+	public static final int TOK_SHOWLOCKS=1019;
+	public static final int TOK_SHOWPARTITIONS=1020;
+	public static final int TOK_SHOWTABLES=1021;
+	public static final int TOK_SHOW_CREATETABLE=1022;
+	public static final int TOK_SHOW_GRANT=1023;
+	public static final int TOK_SHOW_ROLE_GRANT=1024;
+	public static final int TOK_SHOW_TABLESTATUS=1025;
+	public static final int TOK_SHOW_TBLPROPERTIES=1026;
+	public static final int TOK_SKEWED_LOCATIONS=1027;
+	public static final int TOK_SKEWED_LOCATION_LIST=1028;
+	public static final int TOK_SKEWED_LOCATION_MAP=1029;
+	public static final int TOK_SMALLINT=1030;
+	public static final int TOK_SORTBY=1031;
+	public static final int TOK_STARTTIME=1032;
+	public static final int TOK_STOPTIME=1033;
+	public static final int TOK_STORAGEHANDLER=1034;
+	public static final int TOK_STOREDASDIRS=1035;
+	public static final int TOK_STREAMTABLE=1036;
+	public static final int TOK_STRING=1037;
+	public static final int TOK_STRINGLITERALSEQUENCE=1038;
+	public static final int TOK_STRUCT=1039;
+	public static final int TOK_SUBQUERY=1040;
+	public static final int TOK_SWITCHDATABASE=1041;
+	public static final int TOK_TAB=1042;
+	public static final int TOK_TABALIAS=1043;
+	public static final int TOK_TABCOL=1044;
+	public static final int TOK_TABCOLLIST=1045;
+	public static final int TOK_TABCOLNAME=1046;
+	public static final int TOK_TABCOLVALUE=1047;
+	public static final int TOK_TABCOLVALUES=1048;
+	public static final int TOK_TABCOLVALUE_PAIR=1049;
+	public static final int TOK_TABLEBUCKETS=1050;
+	public static final int TOK_TABLEBUCKETSAMPLE=1051;
+	public static final int TOK_TABLECOMMENT=1052;
+	public static final int TOK_TABLEFILEFORMAT=1053;
+	public static final int TOK_TABLELOCATION=1054;
+	public static final int TOK_TABLEPARTCOLS=1055;
+	public static final int TOK_TABLEPROPERTIES=1056;
+	public static final int TOK_TABLEPROPERTY=1057;
+	public static final int TOK_TABLEPROPLIST=1058;
+	public static final int TOK_TABLEROWFORMAT=1059;
+	public static final int TOK_TABLEROWFORMATCOLLITEMS=1060;
+	public static final int TOK_TABLEROWFORMATFIELD=1061;
+	public static final int TOK_TABLEROWFORMATLINES=1062;
+	public static final int TOK_TABLEROWFORMATMAPKEYS=1063;
+	public static final int TOK_TABLESERIALIZER=1064;
+	public static final int TOK_TABLESKEWED=1065;
+	public static final int TOK_TABLESPLITSAMPLE=1066;
+	public static final int TOK_TABLE_OR_COL=1067;
+	public static final int TOK_TABLE_PARTITION=1068;
+	public static final int TOK_TABNAME=1069;
+	public static final int TOK_TABREF=1070;
+	public static final int TOK_TABSORTCOLNAMEASC=1071;
+	public static final int TOK_TABSORTCOLNAMEDESC=1072;
+	public static final int TOK_TABSRC=1073;
+	public static final int TOK_TABTYPE=1074;
+	public static final int TOK_TBLORCFILE=1075;
+	public static final int TOK_TBLRCFILE=1076;
+	public static final int TOK_TBLSEQUENCEFILE=1077;
+	public static final int TOK_TBLTEXTFILE=1078;
+	public static final int TOK_TIME=1079;
+	public static final int TOK_TIMESTAMP=1080;
+	public static final int TOK_TINYINT=1081;
+	public static final int TOK_TMP_FILE=1082;
+	public static final int TOK_TRANSFORM=1083;
+	public static final int TOK_TRUE=1084;
+	public static final int TOK_TRUNCATETABLE=1085;
+	public static final int TOK_UNION=1086;
+	public static final int TOK_UNIONTYPE=1087;
+	public static final int TOK_UNIQUEJOIN=1088;
+	public static final int TOK_UNLOCKTABLE=1089;
+	public static final int TOK_USER=1090;
+	public static final int TOK_USERSCRIPTCOLNAMES=1091;
+	public static final int TOK_USERSCRIPTCOLSCHEMA=1092;
+	public static final int TOK_VARCHAR=1093;
+	public static final int TOK_VIEWPARTCOLS=1094;
+	public static final int TOK_WHERE=1095;
+	public static final int TOK_WINDOWDEF=1096;
+	public static final int TOK_WINDOWRANGE=1097;
+	public static final int TOK_WINDOWSPEC=1098;
+	public static final int TOK_WINDOWVALUES=1099;
+	public static final int TOK_YEAR=1100;
+	public static final int Year=1102;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -853,7 +1012,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: groupByExpression, groupByExpression, groupingSetExpression, groupByExpression, groupByExpression
+			// elements: groupByExpression, groupByExpression, groupByExpression, groupingSetExpression, groupByExpression
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -1445,7 +1604,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					if ( (LA9_2==LPAREN) ) {
 						alt9=1;
 					}
-					else if ( (LA9_2==BigintLiteral||LA9_2==CharSetName||LA9_2==DecimalLiteral||(LA9_2 >= Identifier && LA9_2 <= KW_AFTER)||(LA9_2 >= KW_ALTER && LA9_2 <= KW_ANALYZE)||(LA9_2 >= KW_ARCHIVE && LA9_2 <= KW_COLLECTION)||(LA9_2 >= KW_COLUMNS && LA9_2 <= KW_CREATE)||LA9_2==KW_CUBE||(LA9_2 >= KW_CURSOR && LA9_2 <= KW_DATA)||(LA9_2 >= KW_DATABASES && LA9_2 <= KW_DISABLE)||(LA9_2 >= KW_DISTRIBUTE && LA9_2 <= KW_ELEM_TYPE)||LA9_2==KW_ENABLE||LA9_2==KW_ESCAPED||(LA9_2 >= KW_EXCLUSIVE && LA9_2 <= KW_EXPORT)||(LA9_2 >= KW_EXTERNAL && LA9_2 <= KW_FLOAT)||(LA9_2 >= KW_FOR && LA9_2 <= KW_FORMATTED)||LA9_2==KW_FULL||(LA9_2 >= KW_FUNCTIONS && LA9_2 <= KW_GROUPING)||(LA9_2 >= KW_HOLD_DDLTIME && LA9_2 <= KW_ITEMS)||(LA9_2 >= KW_KEYS && LA9_2 <= KW_LEFT)||(LA9_2 >= KW_LIKE && LA9_2 <= KW_LONG)||(LA9_2 >= KW_MAP && LA9_2 <= KW_MINUS)||(LA9_2 >= KW_MSCK && LA9_2 <= KW_OFFLINE)||LA9_2==KW_OPTION||(LA9_2 >= KW_ORCFILE && LA9_2 <= KW_OUTPUTFORMAT)||LA9_2==KW_OVERWRITE||(LA9_2 >= KW_PARTITION && LA9_2 <= KW_PLUS)||(LA9_2 >= KW_PRETTY && LA9_2 <= KW_RECORDWRITER)||(LA9_2 >= KW_REGEXP && LA9_2 <= KW_SCHEMAS)||(LA9_2 >= KW_SEMI && LA9_2 <= KW_TABLES)||(LA9_2 >= KW_TBLPROPERTIES && LA9_2 <= KW_TEXTFILE)||(LA9_2 >= KW_TIMESTAMP && LA9_2 <= KW_TOUCH)||(LA9_2 >= KW_TRIGGER && LA9_2 <= KW_UNARCHIVE)||(LA9_2 >= KW_UNDO && LA9_2 <= KW_UNIONTYPE)||(LA9_2 >= KW_UNLOCK && LA9_2 <= KW_VALUE_TYPE)||LA9_2==KW_VIEW||LA9_2==KW_WHILE||LA9_2==KW_WITH||LA9_2==MINUS||(LA9_2 >= Number && LA9_2 <= PLUS)||(LA9_2 >= SmallintLiteral && LA9_2 <= TinyintLiteral)) ) {
+					else if ( (LA9_2==BigintLiteral||LA9_2==CharSetName||LA9_2==DecimalLiteral||LA9_2==Identifier||(LA9_2 >= KW_ADD && LA9_2 <= KW_AFTER)||(LA9_2 >= KW_ALTER && LA9_2 <= KW_ANALYZE)||(LA9_2 >= KW_ARCHIVE && LA9_2 <= KW_COLLECTION)||(LA9_2 >= KW_COLUMNS && LA9_2 <= KW_CREATE)||LA9_2==KW_CUBE||(LA9_2 >= KW_CURSOR && LA9_2 <= KW_DATA)||(LA9_2 >= KW_DATABASES && LA9_2 <= KW_DISABLE)||(LA9_2 >= KW_DISTRIBUTE && LA9_2 <= KW_DROP)||LA9_2==KW_ELEM_TYPE||LA9_2==KW_ENABLE||LA9_2==KW_ESCAPED||(LA9_2 >= KW_EXCLUSIVE && LA9_2 <= KW_EXPORT)||(LA9_2 >= KW_EXTERNAL && LA9_2 <= KW_FLOAT)||(LA9_2 >= KW_FOR && LA9_2 <= KW_FORMATTED)||LA9_2==KW_FULL||(LA9_2 >= KW_FUNCTIONS && LA9_2 <= KW_GROUPING)||(LA9_2 >= KW_HOLD_DDLTIME && LA9_2 <= KW_INCRE)||(LA9_2 >= KW_INDEX && LA9_2 <= KW_ITEMS)||(LA9_2 >= KW_KEYS && LA9_2 <= KW_LEFT)||(LA9_2 >= KW_LIKE && LA9_2 <= KW_LONG)||(LA9_2 >= KW_MAP && LA9_2 <= KW_MINUS)||(LA9_2 >= KW_MSCK && LA9_2 <= KW_OFFLINE)||LA9_2==KW_OPTION||(LA9_2 >= KW_ORCFILE && LA9_2 <= KW_OUTPUTFORMAT)||LA9_2==KW_OVERWRITE||(LA9_2 >= KW_PARTITION && LA9_2 <= KW_PLUS)||(LA9_2 >= KW_PRETTY && LA9_2 <= KW_RECORDWRITER)||(LA9_2 >= KW_REGEXP && LA9_2 <= KW_SCHEMAS)||(LA9_2 >= KW_SEMI && LA9_2 <= KW_TABLES)||(LA9_2 >= KW_TBLPROPERTIES && LA9_2 <= KW_TEXTFILE)||(LA9_2 >= KW_TIMESTAMP && LA9_2 <= KW_TOUCH)||(LA9_2 >= KW_TRIGGER && LA9_2 <= KW_UNARCHIVE)||(LA9_2 >= KW_UNDO && LA9_2 <= KW_UNIONTYPE)||(LA9_2 >= KW_UNLOCK && LA9_2 <= KW_VALUE_TYPE)||LA9_2==KW_VIEW||LA9_2==KW_WHILE||LA9_2==KW_WITH||LA9_2==MINUS||LA9_2==Number||LA9_2==PLUS||(LA9_2 >= SmallintLiteral && LA9_2 <= StringLiteral)||LA9_2==TILDE||LA9_2==TinyintLiteral||LA9_2==Day||LA9_2==Hour||(LA9_2 >= Minute && LA9_2 <= Month)||LA9_2==Second||LA9_2==Year) ) {
 						alt9=2;
 					}
 
@@ -1733,7 +1892,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					if ( (LA12_2==LPAREN) ) {
 						alt12=1;
 					}
-					else if ( (LA12_2==BigintLiteral||LA12_2==CharSetName||LA12_2==DecimalLiteral||(LA12_2 >= Identifier && LA12_2 <= KW_AFTER)||(LA12_2 >= KW_ALTER && LA12_2 <= KW_ANALYZE)||(LA12_2 >= KW_ARCHIVE && LA12_2 <= KW_COLLECTION)||(LA12_2 >= KW_COLUMNS && LA12_2 <= KW_CREATE)||LA12_2==KW_CUBE||(LA12_2 >= KW_CURSOR && LA12_2 <= KW_DATA)||(LA12_2 >= KW_DATABASES && LA12_2 <= KW_DISABLE)||(LA12_2 >= KW_DISTRIBUTE && LA12_2 <= KW_ELEM_TYPE)||LA12_2==KW_ENABLE||LA12_2==KW_ESCAPED||(LA12_2 >= KW_EXCLUSIVE && LA12_2 <= KW_EXPORT)||(LA12_2 >= KW_EXTERNAL && LA12_2 <= KW_FLOAT)||(LA12_2 >= KW_FOR && LA12_2 <= KW_FORMATTED)||LA12_2==KW_FULL||(LA12_2 >= KW_FUNCTIONS && LA12_2 <= KW_GROUPING)||(LA12_2 >= KW_HOLD_DDLTIME && LA12_2 <= KW_ITEMS)||(LA12_2 >= KW_KEYS && LA12_2 <= KW_LEFT)||(LA12_2 >= KW_LIKE && LA12_2 <= KW_LONG)||(LA12_2 >= KW_MAP && LA12_2 <= KW_MINUS)||(LA12_2 >= KW_MSCK && LA12_2 <= KW_OFFLINE)||LA12_2==KW_OPTION||(LA12_2 >= KW_ORCFILE && LA12_2 <= KW_OUTPUTFORMAT)||LA12_2==KW_OVERWRITE||(LA12_2 >= KW_PARTITION && LA12_2 <= KW_PLUS)||(LA12_2 >= KW_PRETTY && LA12_2 <= KW_RECORDWRITER)||(LA12_2 >= KW_REGEXP && LA12_2 <= KW_SCHEMAS)||(LA12_2 >= KW_SEMI && LA12_2 <= KW_TABLES)||(LA12_2 >= KW_TBLPROPERTIES && LA12_2 <= KW_TEXTFILE)||(LA12_2 >= KW_TIMESTAMP && LA12_2 <= KW_TOUCH)||(LA12_2 >= KW_TRIGGER && LA12_2 <= KW_UNARCHIVE)||(LA12_2 >= KW_UNDO && LA12_2 <= KW_UNIONTYPE)||(LA12_2 >= KW_UNLOCK && LA12_2 <= KW_VALUE_TYPE)||LA12_2==KW_VIEW||LA12_2==KW_WHILE||LA12_2==KW_WITH||LA12_2==MINUS||(LA12_2 >= Number && LA12_2 <= PLUS)||(LA12_2 >= SmallintLiteral && LA12_2 <= TinyintLiteral)) ) {
+					else if ( (LA12_2==BigintLiteral||LA12_2==CharSetName||LA12_2==DecimalLiteral||LA12_2==Identifier||(LA12_2 >= KW_ADD && LA12_2 <= KW_AFTER)||(LA12_2 >= KW_ALTER && LA12_2 <= KW_ANALYZE)||(LA12_2 >= KW_ARCHIVE && LA12_2 <= KW_COLLECTION)||(LA12_2 >= KW_COLUMNS && LA12_2 <= KW_CREATE)||LA12_2==KW_CUBE||(LA12_2 >= KW_CURSOR && LA12_2 <= KW_DATA)||(LA12_2 >= KW_DATABASES && LA12_2 <= KW_DISABLE)||(LA12_2 >= KW_DISTRIBUTE && LA12_2 <= KW_DROP)||LA12_2==KW_ELEM_TYPE||LA12_2==KW_ENABLE||LA12_2==KW_ESCAPED||(LA12_2 >= KW_EXCLUSIVE && LA12_2 <= KW_EXPORT)||(LA12_2 >= KW_EXTERNAL && LA12_2 <= KW_FLOAT)||(LA12_2 >= KW_FOR && LA12_2 <= KW_FORMATTED)||LA12_2==KW_FULL||(LA12_2 >= KW_FUNCTIONS && LA12_2 <= KW_GROUPING)||(LA12_2 >= KW_HOLD_DDLTIME && LA12_2 <= KW_INCRE)||(LA12_2 >= KW_INDEX && LA12_2 <= KW_ITEMS)||(LA12_2 >= KW_KEYS && LA12_2 <= KW_LEFT)||(LA12_2 >= KW_LIKE && LA12_2 <= KW_LONG)||(LA12_2 >= KW_MAP && LA12_2 <= KW_MINUS)||(LA12_2 >= KW_MSCK && LA12_2 <= KW_OFFLINE)||LA12_2==KW_OPTION||(LA12_2 >= KW_ORCFILE && LA12_2 <= KW_OUTPUTFORMAT)||LA12_2==KW_OVERWRITE||(LA12_2 >= KW_PARTITION && LA12_2 <= KW_PLUS)||(LA12_2 >= KW_PRETTY && LA12_2 <= KW_RECORDWRITER)||(LA12_2 >= KW_REGEXP && LA12_2 <= KW_SCHEMAS)||(LA12_2 >= KW_SEMI && LA12_2 <= KW_TABLES)||(LA12_2 >= KW_TBLPROPERTIES && LA12_2 <= KW_TEXTFILE)||(LA12_2 >= KW_TIMESTAMP && LA12_2 <= KW_TOUCH)||(LA12_2 >= KW_TRIGGER && LA12_2 <= KW_UNARCHIVE)||(LA12_2 >= KW_UNDO && LA12_2 <= KW_UNIONTYPE)||(LA12_2 >= KW_UNLOCK && LA12_2 <= KW_VALUE_TYPE)||LA12_2==KW_VIEW||LA12_2==KW_WHILE||LA12_2==KW_WITH||LA12_2==MINUS||LA12_2==Number||LA12_2==PLUS||(LA12_2 >= SmallintLiteral && LA12_2 <= StringLiteral)||LA12_2==TILDE||LA12_2==TinyintLiteral||LA12_2==Day||LA12_2==Hour||(LA12_2 >= Minute && LA12_2 <= Month)||LA12_2==Second||LA12_2==Year) ) {
 						alt12=2;
 					}
 
@@ -2021,7 +2180,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					if ( (LA15_2==LPAREN) ) {
 						alt15=1;
 					}
-					else if ( (LA15_2==BigintLiteral||LA15_2==CharSetName||LA15_2==DecimalLiteral||(LA15_2 >= Identifier && LA15_2 <= KW_AFTER)||(LA15_2 >= KW_ALTER && LA15_2 <= KW_ANALYZE)||(LA15_2 >= KW_ARCHIVE && LA15_2 <= KW_COLLECTION)||(LA15_2 >= KW_COLUMNS && LA15_2 <= KW_CREATE)||LA15_2==KW_CUBE||(LA15_2 >= KW_CURSOR && LA15_2 <= KW_DATA)||(LA15_2 >= KW_DATABASES && LA15_2 <= KW_DISABLE)||(LA15_2 >= KW_DISTRIBUTE && LA15_2 <= KW_ELEM_TYPE)||LA15_2==KW_ENABLE||LA15_2==KW_ESCAPED||(LA15_2 >= KW_EXCLUSIVE && LA15_2 <= KW_EXPORT)||(LA15_2 >= KW_EXTERNAL && LA15_2 <= KW_FLOAT)||(LA15_2 >= KW_FOR && LA15_2 <= KW_FORMATTED)||LA15_2==KW_FULL||(LA15_2 >= KW_FUNCTIONS && LA15_2 <= KW_GROUPING)||(LA15_2 >= KW_HOLD_DDLTIME && LA15_2 <= KW_ITEMS)||(LA15_2 >= KW_KEYS && LA15_2 <= KW_LEFT)||(LA15_2 >= KW_LIKE && LA15_2 <= KW_LONG)||(LA15_2 >= KW_MAP && LA15_2 <= KW_MINUS)||(LA15_2 >= KW_MSCK && LA15_2 <= KW_OFFLINE)||LA15_2==KW_OPTION||(LA15_2 >= KW_ORCFILE && LA15_2 <= KW_OUTPUTFORMAT)||LA15_2==KW_OVERWRITE||(LA15_2 >= KW_PARTITION && LA15_2 <= KW_PLUS)||(LA15_2 >= KW_PRETTY && LA15_2 <= KW_RECORDWRITER)||(LA15_2 >= KW_REGEXP && LA15_2 <= KW_SCHEMAS)||(LA15_2 >= KW_SEMI && LA15_2 <= KW_TABLES)||(LA15_2 >= KW_TBLPROPERTIES && LA15_2 <= KW_TEXTFILE)||(LA15_2 >= KW_TIMESTAMP && LA15_2 <= KW_TOUCH)||(LA15_2 >= KW_TRIGGER && LA15_2 <= KW_UNARCHIVE)||(LA15_2 >= KW_UNDO && LA15_2 <= KW_UNIONTYPE)||(LA15_2 >= KW_UNLOCK && LA15_2 <= KW_VALUE_TYPE)||LA15_2==KW_VIEW||LA15_2==KW_WHILE||LA15_2==KW_WITH||LA15_2==MINUS||(LA15_2 >= Number && LA15_2 <= PLUS)||(LA15_2 >= SmallintLiteral && LA15_2 <= TinyintLiteral)) ) {
+					else if ( (LA15_2==BigintLiteral||LA15_2==CharSetName||LA15_2==DecimalLiteral||LA15_2==Identifier||(LA15_2 >= KW_ADD && LA15_2 <= KW_AFTER)||(LA15_2 >= KW_ALTER && LA15_2 <= KW_ANALYZE)||(LA15_2 >= KW_ARCHIVE && LA15_2 <= KW_COLLECTION)||(LA15_2 >= KW_COLUMNS && LA15_2 <= KW_CREATE)||LA15_2==KW_CUBE||(LA15_2 >= KW_CURSOR && LA15_2 <= KW_DATA)||(LA15_2 >= KW_DATABASES && LA15_2 <= KW_DISABLE)||(LA15_2 >= KW_DISTRIBUTE && LA15_2 <= KW_DROP)||LA15_2==KW_ELEM_TYPE||LA15_2==KW_ENABLE||LA15_2==KW_ESCAPED||(LA15_2 >= KW_EXCLUSIVE && LA15_2 <= KW_EXPORT)||(LA15_2 >= KW_EXTERNAL && LA15_2 <= KW_FLOAT)||(LA15_2 >= KW_FOR && LA15_2 <= KW_FORMATTED)||LA15_2==KW_FULL||(LA15_2 >= KW_FUNCTIONS && LA15_2 <= KW_GROUPING)||(LA15_2 >= KW_HOLD_DDLTIME && LA15_2 <= KW_INCRE)||(LA15_2 >= KW_INDEX && LA15_2 <= KW_ITEMS)||(LA15_2 >= KW_KEYS && LA15_2 <= KW_LEFT)||(LA15_2 >= KW_LIKE && LA15_2 <= KW_LONG)||(LA15_2 >= KW_MAP && LA15_2 <= KW_MINUS)||(LA15_2 >= KW_MSCK && LA15_2 <= KW_OFFLINE)||LA15_2==KW_OPTION||(LA15_2 >= KW_ORCFILE && LA15_2 <= KW_OUTPUTFORMAT)||LA15_2==KW_OVERWRITE||(LA15_2 >= KW_PARTITION && LA15_2 <= KW_PLUS)||(LA15_2 >= KW_PRETTY && LA15_2 <= KW_RECORDWRITER)||(LA15_2 >= KW_REGEXP && LA15_2 <= KW_SCHEMAS)||(LA15_2 >= KW_SEMI && LA15_2 <= KW_TABLES)||(LA15_2 >= KW_TBLPROPERTIES && LA15_2 <= KW_TEXTFILE)||(LA15_2 >= KW_TIMESTAMP && LA15_2 <= KW_TOUCH)||(LA15_2 >= KW_TRIGGER && LA15_2 <= KW_UNARCHIVE)||(LA15_2 >= KW_UNDO && LA15_2 <= KW_UNIONTYPE)||(LA15_2 >= KW_UNLOCK && LA15_2 <= KW_VALUE_TYPE)||LA15_2==KW_VIEW||LA15_2==KW_WHILE||LA15_2==KW_WITH||LA15_2==MINUS||LA15_2==Number||LA15_2==PLUS||(LA15_2 >= SmallintLiteral && LA15_2 <= StringLiteral)||LA15_2==TILDE||LA15_2==TinyintLiteral||LA15_2==Day||LA15_2==Hour||(LA15_2 >= Minute && LA15_2 <= Month)||LA15_2==Second||LA15_2==Year) ) {
 						alt15=2;
 					}
 
@@ -2309,7 +2468,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					if ( (LA18_2==LPAREN) ) {
 						alt18=1;
 					}
-					else if ( (LA18_2==BigintLiteral||LA18_2==CharSetName||LA18_2==DecimalLiteral||(LA18_2 >= Identifier && LA18_2 <= KW_AFTER)||(LA18_2 >= KW_ALTER && LA18_2 <= KW_ANALYZE)||(LA18_2 >= KW_ARCHIVE && LA18_2 <= KW_COLLECTION)||(LA18_2 >= KW_COLUMNS && LA18_2 <= KW_CREATE)||LA18_2==KW_CUBE||(LA18_2 >= KW_CURSOR && LA18_2 <= KW_DATA)||(LA18_2 >= KW_DATABASES && LA18_2 <= KW_DISABLE)||(LA18_2 >= KW_DISTRIBUTE && LA18_2 <= KW_ELEM_TYPE)||LA18_2==KW_ENABLE||LA18_2==KW_ESCAPED||(LA18_2 >= KW_EXCLUSIVE && LA18_2 <= KW_EXPORT)||(LA18_2 >= KW_EXTERNAL && LA18_2 <= KW_FLOAT)||(LA18_2 >= KW_FOR && LA18_2 <= KW_FORMATTED)||LA18_2==KW_FULL||(LA18_2 >= KW_FUNCTIONS && LA18_2 <= KW_GROUPING)||(LA18_2 >= KW_HOLD_DDLTIME && LA18_2 <= KW_ITEMS)||(LA18_2 >= KW_KEYS && LA18_2 <= KW_LEFT)||(LA18_2 >= KW_LIKE && LA18_2 <= KW_LONG)||(LA18_2 >= KW_MAP && LA18_2 <= KW_MINUS)||(LA18_2 >= KW_MSCK && LA18_2 <= KW_OFFLINE)||LA18_2==KW_OPTION||(LA18_2 >= KW_ORCFILE && LA18_2 <= KW_OUTPUTFORMAT)||LA18_2==KW_OVERWRITE||(LA18_2 >= KW_PARTITION && LA18_2 <= KW_PLUS)||(LA18_2 >= KW_PRETTY && LA18_2 <= KW_RECORDWRITER)||(LA18_2 >= KW_REGEXP && LA18_2 <= KW_SCHEMAS)||(LA18_2 >= KW_SEMI && LA18_2 <= KW_TABLES)||(LA18_2 >= KW_TBLPROPERTIES && LA18_2 <= KW_TEXTFILE)||(LA18_2 >= KW_TIMESTAMP && LA18_2 <= KW_TOUCH)||(LA18_2 >= KW_TRIGGER && LA18_2 <= KW_UNARCHIVE)||(LA18_2 >= KW_UNDO && LA18_2 <= KW_UNIONTYPE)||(LA18_2 >= KW_UNLOCK && LA18_2 <= KW_VALUE_TYPE)||LA18_2==KW_VIEW||LA18_2==KW_WHILE||LA18_2==KW_WITH||LA18_2==MINUS||(LA18_2 >= Number && LA18_2 <= PLUS)||(LA18_2 >= SmallintLiteral && LA18_2 <= TinyintLiteral)) ) {
+					else if ( (LA18_2==BigintLiteral||LA18_2==CharSetName||LA18_2==DecimalLiteral||LA18_2==Identifier||(LA18_2 >= KW_ADD && LA18_2 <= KW_AFTER)||(LA18_2 >= KW_ALTER && LA18_2 <= KW_ANALYZE)||(LA18_2 >= KW_ARCHIVE && LA18_2 <= KW_COLLECTION)||(LA18_2 >= KW_COLUMNS && LA18_2 <= KW_CREATE)||LA18_2==KW_CUBE||(LA18_2 >= KW_CURSOR && LA18_2 <= KW_DATA)||(LA18_2 >= KW_DATABASES && LA18_2 <= KW_DISABLE)||(LA18_2 >= KW_DISTRIBUTE && LA18_2 <= KW_DROP)||LA18_2==KW_ELEM_TYPE||LA18_2==KW_ENABLE||LA18_2==KW_ESCAPED||(LA18_2 >= KW_EXCLUSIVE && LA18_2 <= KW_EXPORT)||(LA18_2 >= KW_EXTERNAL && LA18_2 <= KW_FLOAT)||(LA18_2 >= KW_FOR && LA18_2 <= KW_FORMATTED)||LA18_2==KW_FULL||(LA18_2 >= KW_FUNCTIONS && LA18_2 <= KW_GROUPING)||(LA18_2 >= KW_HOLD_DDLTIME && LA18_2 <= KW_INCRE)||(LA18_2 >= KW_INDEX && LA18_2 <= KW_ITEMS)||(LA18_2 >= KW_KEYS && LA18_2 <= KW_LEFT)||(LA18_2 >= KW_LIKE && LA18_2 <= KW_LONG)||(LA18_2 >= KW_MAP && LA18_2 <= KW_MINUS)||(LA18_2 >= KW_MSCK && LA18_2 <= KW_OFFLINE)||LA18_2==KW_OPTION||(LA18_2 >= KW_ORCFILE && LA18_2 <= KW_OUTPUTFORMAT)||LA18_2==KW_OVERWRITE||(LA18_2 >= KW_PARTITION && LA18_2 <= KW_PLUS)||(LA18_2 >= KW_PRETTY && LA18_2 <= KW_RECORDWRITER)||(LA18_2 >= KW_REGEXP && LA18_2 <= KW_SCHEMAS)||(LA18_2 >= KW_SEMI && LA18_2 <= KW_TABLES)||(LA18_2 >= KW_TBLPROPERTIES && LA18_2 <= KW_TEXTFILE)||(LA18_2 >= KW_TIMESTAMP && LA18_2 <= KW_TOUCH)||(LA18_2 >= KW_TRIGGER && LA18_2 <= KW_UNARCHIVE)||(LA18_2 >= KW_UNDO && LA18_2 <= KW_UNIONTYPE)||(LA18_2 >= KW_UNLOCK && LA18_2 <= KW_VALUE_TYPE)||LA18_2==KW_VIEW||LA18_2==KW_WHILE||LA18_2==KW_WITH||LA18_2==MINUS||LA18_2==Number||LA18_2==PLUS||(LA18_2 >= SmallintLiteral && LA18_2 <= StringLiteral)||LA18_2==TILDE||LA18_2==TinyintLiteral||LA18_2==Day||LA18_2==Hour||(LA18_2 >= Minute && LA18_2 <= Month)||LA18_2==Second||LA18_2==Year) ) {
 						alt18=2;
 					}
 
@@ -2597,7 +2756,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					if ( (LA21_2==LPAREN) ) {
 						alt21=1;
 					}
-					else if ( (LA21_2==BigintLiteral||LA21_2==CharSetName||LA21_2==DecimalLiteral||(LA21_2 >= Identifier && LA21_2 <= KW_AFTER)||(LA21_2 >= KW_ALTER && LA21_2 <= KW_ANALYZE)||(LA21_2 >= KW_ARCHIVE && LA21_2 <= KW_COLLECTION)||(LA21_2 >= KW_COLUMNS && LA21_2 <= KW_CREATE)||LA21_2==KW_CUBE||(LA21_2 >= KW_CURSOR && LA21_2 <= KW_DATA)||(LA21_2 >= KW_DATABASES && LA21_2 <= KW_DISABLE)||(LA21_2 >= KW_DISTRIBUTE && LA21_2 <= KW_ELEM_TYPE)||LA21_2==KW_ENABLE||LA21_2==KW_ESCAPED||(LA21_2 >= KW_EXCLUSIVE && LA21_2 <= KW_EXPORT)||(LA21_2 >= KW_EXTERNAL && LA21_2 <= KW_FLOAT)||(LA21_2 >= KW_FOR && LA21_2 <= KW_FORMATTED)||LA21_2==KW_FULL||(LA21_2 >= KW_FUNCTIONS && LA21_2 <= KW_GROUPING)||(LA21_2 >= KW_HOLD_DDLTIME && LA21_2 <= KW_ITEMS)||(LA21_2 >= KW_KEYS && LA21_2 <= KW_LEFT)||(LA21_2 >= KW_LIKE && LA21_2 <= KW_LONG)||(LA21_2 >= KW_MAP && LA21_2 <= KW_MINUS)||(LA21_2 >= KW_MSCK && LA21_2 <= KW_OFFLINE)||LA21_2==KW_OPTION||(LA21_2 >= KW_ORCFILE && LA21_2 <= KW_OUTPUTFORMAT)||LA21_2==KW_OVERWRITE||(LA21_2 >= KW_PARTITION && LA21_2 <= KW_PLUS)||(LA21_2 >= KW_PRETTY && LA21_2 <= KW_RECORDWRITER)||(LA21_2 >= KW_REGEXP && LA21_2 <= KW_SCHEMAS)||(LA21_2 >= KW_SEMI && LA21_2 <= KW_TABLES)||(LA21_2 >= KW_TBLPROPERTIES && LA21_2 <= KW_TEXTFILE)||(LA21_2 >= KW_TIMESTAMP && LA21_2 <= KW_TOUCH)||(LA21_2 >= KW_TRIGGER && LA21_2 <= KW_UNARCHIVE)||(LA21_2 >= KW_UNDO && LA21_2 <= KW_UNIONTYPE)||(LA21_2 >= KW_UNLOCK && LA21_2 <= KW_VALUE_TYPE)||LA21_2==KW_VIEW||LA21_2==KW_WHILE||LA21_2==KW_WITH||LA21_2==MINUS||(LA21_2 >= Number && LA21_2 <= PLUS)||(LA21_2 >= SmallintLiteral && LA21_2 <= TinyintLiteral)) ) {
+					else if ( (LA21_2==BigintLiteral||LA21_2==CharSetName||LA21_2==DecimalLiteral||LA21_2==Identifier||(LA21_2 >= KW_ADD && LA21_2 <= KW_AFTER)||(LA21_2 >= KW_ALTER && LA21_2 <= KW_ANALYZE)||(LA21_2 >= KW_ARCHIVE && LA21_2 <= KW_COLLECTION)||(LA21_2 >= KW_COLUMNS && LA21_2 <= KW_CREATE)||LA21_2==KW_CUBE||(LA21_2 >= KW_CURSOR && LA21_2 <= KW_DATA)||(LA21_2 >= KW_DATABASES && LA21_2 <= KW_DISABLE)||(LA21_2 >= KW_DISTRIBUTE && LA21_2 <= KW_DROP)||LA21_2==KW_ELEM_TYPE||LA21_2==KW_ENABLE||LA21_2==KW_ESCAPED||(LA21_2 >= KW_EXCLUSIVE && LA21_2 <= KW_EXPORT)||(LA21_2 >= KW_EXTERNAL && LA21_2 <= KW_FLOAT)||(LA21_2 >= KW_FOR && LA21_2 <= KW_FORMATTED)||LA21_2==KW_FULL||(LA21_2 >= KW_FUNCTIONS && LA21_2 <= KW_GROUPING)||(LA21_2 >= KW_HOLD_DDLTIME && LA21_2 <= KW_INCRE)||(LA21_2 >= KW_INDEX && LA21_2 <= KW_ITEMS)||(LA21_2 >= KW_KEYS && LA21_2 <= KW_LEFT)||(LA21_2 >= KW_LIKE && LA21_2 <= KW_LONG)||(LA21_2 >= KW_MAP && LA21_2 <= KW_MINUS)||(LA21_2 >= KW_MSCK && LA21_2 <= KW_OFFLINE)||LA21_2==KW_OPTION||(LA21_2 >= KW_ORCFILE && LA21_2 <= KW_OUTPUTFORMAT)||LA21_2==KW_OVERWRITE||(LA21_2 >= KW_PARTITION && LA21_2 <= KW_PLUS)||(LA21_2 >= KW_PRETTY && LA21_2 <= KW_RECORDWRITER)||(LA21_2 >= KW_REGEXP && LA21_2 <= KW_SCHEMAS)||(LA21_2 >= KW_SEMI && LA21_2 <= KW_TABLES)||(LA21_2 >= KW_TBLPROPERTIES && LA21_2 <= KW_TEXTFILE)||(LA21_2 >= KW_TIMESTAMP && LA21_2 <= KW_TOUCH)||(LA21_2 >= KW_TRIGGER && LA21_2 <= KW_UNARCHIVE)||(LA21_2 >= KW_UNDO && LA21_2 <= KW_UNIONTYPE)||(LA21_2 >= KW_UNLOCK && LA21_2 <= KW_VALUE_TYPE)||LA21_2==KW_VIEW||LA21_2==KW_WHILE||LA21_2==KW_WITH||LA21_2==MINUS||LA21_2==Number||LA21_2==PLUS||(LA21_2 >= SmallintLiteral && LA21_2 <= StringLiteral)||LA21_2==TILDE||LA21_2==TinyintLiteral||LA21_2==Day||LA21_2==Hour||(LA21_2 >= Minute && LA21_2 <= Month)||LA21_2==Second||LA21_2==Year) ) {
 						alt21=2;
 					}
 
@@ -2891,7 +3050,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 			if ( (LA25_0==STAR) ) {
 				alt25=1;
 			}
-			else if ( (LA25_0==BigintLiteral||LA25_0==CharSetName||LA25_0==DecimalLiteral||(LA25_0 >= Identifier && LA25_0 <= KW_AFTER)||(LA25_0 >= KW_ALTER && LA25_0 <= KW_ANALYZE)||(LA25_0 >= KW_ARCHIVE && LA25_0 <= KW_COLLECTION)||(LA25_0 >= KW_COLUMNS && LA25_0 <= KW_CREATE)||LA25_0==KW_CUBE||(LA25_0 >= KW_CURSOR && LA25_0 <= KW_DATA)||(LA25_0 >= KW_DATABASES && LA25_0 <= KW_ELEM_TYPE)||LA25_0==KW_ENABLE||LA25_0==KW_ESCAPED||(LA25_0 >= KW_EXCLUSIVE && LA25_0 <= KW_EXPORT)||(LA25_0 >= KW_EXTERNAL && LA25_0 <= KW_FLOAT)||(LA25_0 >= KW_FOR && LA25_0 <= KW_FORMATTED)||LA25_0==KW_FULL||(LA25_0 >= KW_FUNCTIONS && LA25_0 <= KW_GROUPING)||(LA25_0 >= KW_HOLD_DDLTIME && LA25_0 <= KW_ITEMS)||(LA25_0 >= KW_KEYS && LA25_0 <= KW_LEFT)||(LA25_0 >= KW_LIKE && LA25_0 <= KW_LONG)||(LA25_0 >= KW_MAP && LA25_0 <= KW_MINUS)||(LA25_0 >= KW_MSCK && LA25_0 <= KW_OFFLINE)||LA25_0==KW_OPTION||(LA25_0 >= KW_ORCFILE && LA25_0 <= KW_OUTPUTFORMAT)||LA25_0==KW_OVERWRITE||(LA25_0 >= KW_PARTITION && LA25_0 <= KW_PLUS)||(LA25_0 >= KW_PRETTY && LA25_0 <= KW_RECORDWRITER)||(LA25_0 >= KW_REGEXP && LA25_0 <= KW_SCHEMAS)||(LA25_0 >= KW_SEMI && LA25_0 <= KW_TABLES)||(LA25_0 >= KW_TBLPROPERTIES && LA25_0 <= KW_TEXTFILE)||(LA25_0 >= KW_TIMESTAMP && LA25_0 <= KW_TOUCH)||(LA25_0 >= KW_TRIGGER && LA25_0 <= KW_UNARCHIVE)||(LA25_0 >= KW_UNDO && LA25_0 <= KW_UNIONTYPE)||(LA25_0 >= KW_UNLOCK && LA25_0 <= KW_VALUE_TYPE)||LA25_0==KW_VIEW||LA25_0==KW_WHILE||LA25_0==KW_WITH||LA25_0==LPAREN||LA25_0==MINUS||(LA25_0 >= Number && LA25_0 <= PLUS)||LA25_0==RPAREN||(LA25_0 >= SmallintLiteral && LA25_0 <= TinyintLiteral)) ) {
+			else if ( (LA25_0==BigintLiteral||LA25_0==CharSetName||LA25_0==DecimalLiteral||LA25_0==Identifier||(LA25_0 >= KW_ADD && LA25_0 <= KW_AFTER)||(LA25_0 >= KW_ALTER && LA25_0 <= KW_ANALYZE)||(LA25_0 >= KW_ARCHIVE && LA25_0 <= KW_COLLECTION)||(LA25_0 >= KW_COLUMNS && LA25_0 <= KW_CREATE)||LA25_0==KW_CUBE||(LA25_0 >= KW_CURSOR && LA25_0 <= KW_DATA)||(LA25_0 >= KW_DATABASES && LA25_0 <= KW_DROP)||LA25_0==KW_ELEM_TYPE||LA25_0==KW_ENABLE||LA25_0==KW_ESCAPED||(LA25_0 >= KW_EXCLUSIVE && LA25_0 <= KW_EXPORT)||(LA25_0 >= KW_EXTERNAL && LA25_0 <= KW_FLOAT)||(LA25_0 >= KW_FOR && LA25_0 <= KW_FORMATTED)||LA25_0==KW_FULL||(LA25_0 >= KW_FUNCTIONS && LA25_0 <= KW_GROUPING)||(LA25_0 >= KW_HOLD_DDLTIME && LA25_0 <= KW_INCRE)||(LA25_0 >= KW_INDEX && LA25_0 <= KW_ITEMS)||(LA25_0 >= KW_KEYS && LA25_0 <= KW_LEFT)||(LA25_0 >= KW_LIKE && LA25_0 <= KW_LONG)||(LA25_0 >= KW_MAP && LA25_0 <= KW_MINUS)||(LA25_0 >= KW_MSCK && LA25_0 <= KW_OFFLINE)||LA25_0==KW_OPTION||(LA25_0 >= KW_ORCFILE && LA25_0 <= KW_OUTPUTFORMAT)||LA25_0==KW_OVERWRITE||(LA25_0 >= KW_PARTITION && LA25_0 <= KW_PLUS)||(LA25_0 >= KW_PRETTY && LA25_0 <= KW_RECORDWRITER)||(LA25_0 >= KW_REGEXP && LA25_0 <= KW_SCHEMAS)||(LA25_0 >= KW_SEMI && LA25_0 <= KW_TABLES)||(LA25_0 >= KW_TBLPROPERTIES && LA25_0 <= KW_TEXTFILE)||(LA25_0 >= KW_TIMESTAMP && LA25_0 <= KW_TOUCH)||(LA25_0 >= KW_TRIGGER && LA25_0 <= KW_UNARCHIVE)||(LA25_0 >= KW_UNDO && LA25_0 <= KW_UNIONTYPE)||(LA25_0 >= KW_UNLOCK && LA25_0 <= KW_VALUE_TYPE)||LA25_0==KW_VIEW||LA25_0==KW_WHILE||LA25_0==KW_WITH||LA25_0==LPAREN||LA25_0==MINUS||LA25_0==Number||LA25_0==PLUS||LA25_0==RPAREN||(LA25_0 >= SmallintLiteral && LA25_0 <= StringLiteral)||LA25_0==TILDE||LA25_0==TinyintLiteral||LA25_0==Day||LA25_0==Hour||(LA25_0 >= Minute && LA25_0 <= Month)||LA25_0==Second||LA25_0==Year) ) {
 				alt25=2;
 			}
 
@@ -2940,7 +3099,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					// IdentifiersParser.g:174:31: ( selectExpression ( COMMA selectExpression )* )?
 					int alt24=2;
 					int LA24_0 = input.LA(1);
-					if ( (LA24_0==BigintLiteral||LA24_0==CharSetName||LA24_0==DecimalLiteral||(LA24_0 >= Identifier && LA24_0 <= KW_AFTER)||(LA24_0 >= KW_ALTER && LA24_0 <= KW_ANALYZE)||(LA24_0 >= KW_ARCHIVE && LA24_0 <= KW_COLLECTION)||(LA24_0 >= KW_COLUMNS && LA24_0 <= KW_CREATE)||LA24_0==KW_CUBE||(LA24_0 >= KW_CURSOR && LA24_0 <= KW_DATA)||(LA24_0 >= KW_DATABASES && LA24_0 <= KW_DISABLE)||(LA24_0 >= KW_DISTRIBUTE && LA24_0 <= KW_ELEM_TYPE)||LA24_0==KW_ENABLE||LA24_0==KW_ESCAPED||(LA24_0 >= KW_EXCLUSIVE && LA24_0 <= KW_EXPORT)||(LA24_0 >= KW_EXTERNAL && LA24_0 <= KW_FLOAT)||(LA24_0 >= KW_FOR && LA24_0 <= KW_FORMATTED)||LA24_0==KW_FULL||(LA24_0 >= KW_FUNCTIONS && LA24_0 <= KW_GROUPING)||(LA24_0 >= KW_HOLD_DDLTIME && LA24_0 <= KW_ITEMS)||(LA24_0 >= KW_KEYS && LA24_0 <= KW_LEFT)||(LA24_0 >= KW_LIKE && LA24_0 <= KW_LONG)||(LA24_0 >= KW_MAP && LA24_0 <= KW_MINUS)||(LA24_0 >= KW_MSCK && LA24_0 <= KW_OFFLINE)||LA24_0==KW_OPTION||(LA24_0 >= KW_ORCFILE && LA24_0 <= KW_OUTPUTFORMAT)||LA24_0==KW_OVERWRITE||(LA24_0 >= KW_PARTITION && LA24_0 <= KW_PLUS)||(LA24_0 >= KW_PRETTY && LA24_0 <= KW_RECORDWRITER)||(LA24_0 >= KW_REGEXP && LA24_0 <= KW_SCHEMAS)||(LA24_0 >= KW_SEMI && LA24_0 <= KW_TABLES)||(LA24_0 >= KW_TBLPROPERTIES && LA24_0 <= KW_TEXTFILE)||(LA24_0 >= KW_TIMESTAMP && LA24_0 <= KW_TOUCH)||(LA24_0 >= KW_TRIGGER && LA24_0 <= KW_UNARCHIVE)||(LA24_0 >= KW_UNDO && LA24_0 <= KW_UNIONTYPE)||(LA24_0 >= KW_UNLOCK && LA24_0 <= KW_VALUE_TYPE)||LA24_0==KW_VIEW||LA24_0==KW_WHILE||LA24_0==KW_WITH||LA24_0==LPAREN||LA24_0==MINUS||(LA24_0 >= Number && LA24_0 <= PLUS)||(LA24_0 >= STAR && LA24_0 <= TinyintLiteral)) ) {
+					if ( (LA24_0==BigintLiteral||LA24_0==CharSetName||LA24_0==DecimalLiteral||LA24_0==Identifier||(LA24_0 >= KW_ADD && LA24_0 <= KW_AFTER)||(LA24_0 >= KW_ALTER && LA24_0 <= KW_ANALYZE)||(LA24_0 >= KW_ARCHIVE && LA24_0 <= KW_COLLECTION)||(LA24_0 >= KW_COLUMNS && LA24_0 <= KW_CREATE)||LA24_0==KW_CUBE||(LA24_0 >= KW_CURSOR && LA24_0 <= KW_DATA)||(LA24_0 >= KW_DATABASES && LA24_0 <= KW_DISABLE)||(LA24_0 >= KW_DISTRIBUTE && LA24_0 <= KW_DROP)||LA24_0==KW_ELEM_TYPE||LA24_0==KW_ENABLE||LA24_0==KW_ESCAPED||(LA24_0 >= KW_EXCLUSIVE && LA24_0 <= KW_EXPORT)||(LA24_0 >= KW_EXTERNAL && LA24_0 <= KW_FLOAT)||(LA24_0 >= KW_FOR && LA24_0 <= KW_FORMATTED)||LA24_0==KW_FULL||(LA24_0 >= KW_FUNCTIONS && LA24_0 <= KW_GROUPING)||(LA24_0 >= KW_HOLD_DDLTIME && LA24_0 <= KW_INCRE)||(LA24_0 >= KW_INDEX && LA24_0 <= KW_ITEMS)||(LA24_0 >= KW_KEYS && LA24_0 <= KW_LEFT)||(LA24_0 >= KW_LIKE && LA24_0 <= KW_LONG)||(LA24_0 >= KW_MAP && LA24_0 <= KW_MINUS)||(LA24_0 >= KW_MSCK && LA24_0 <= KW_OFFLINE)||LA24_0==KW_OPTION||(LA24_0 >= KW_ORCFILE && LA24_0 <= KW_OUTPUTFORMAT)||LA24_0==KW_OVERWRITE||(LA24_0 >= KW_PARTITION && LA24_0 <= KW_PLUS)||(LA24_0 >= KW_PRETTY && LA24_0 <= KW_RECORDWRITER)||(LA24_0 >= KW_REGEXP && LA24_0 <= KW_SCHEMAS)||(LA24_0 >= KW_SEMI && LA24_0 <= KW_TABLES)||(LA24_0 >= KW_TBLPROPERTIES && LA24_0 <= KW_TEXTFILE)||(LA24_0 >= KW_TIMESTAMP && LA24_0 <= KW_TOUCH)||(LA24_0 >= KW_TRIGGER && LA24_0 <= KW_UNARCHIVE)||(LA24_0 >= KW_UNDO && LA24_0 <= KW_UNIONTYPE)||(LA24_0 >= KW_UNLOCK && LA24_0 <= KW_VALUE_TYPE)||LA24_0==KW_VIEW||LA24_0==KW_WHILE||LA24_0==KW_WITH||LA24_0==LPAREN||LA24_0==MINUS||LA24_0==Number||LA24_0==PLUS||LA24_0==STAR||(LA24_0 >= SmallintLiteral && LA24_0 <= StringLiteral)||LA24_0==TILDE||LA24_0==TinyintLiteral||LA24_0==Day||LA24_0==Hour||(LA24_0 >= Minute && LA24_0 <= Month)||LA24_0==Second||LA24_0==Year) ) {
 						alt24=1;
 					}
 					switch (alt24) {
@@ -3015,7 +3174,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: ws, selectExpression, selectExpression, ws, functionName, functionName, functionName
+			// elements: selectExpression, functionName, ws, functionName, functionName, selectExpression, ws
 			// token labels: 
 			// rule labels: retval, ws
 			// token list labels: 
@@ -3966,7 +4125,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "constant"
-	// IdentifiersParser.g:221:1: constant : ( Number | dateLiteral | StringLiteral | stringLiteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue );
+	// IdentifiersParser.g:221:1: constant : ( Number | Year | Month | Day | Hour | Minute | Second | dateLiteral | StringLiteral | stringLiteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue );
 	public final HiveParser_IdentifiersParser.constant_return constant() throws RecognitionException {
 		HiveParser_IdentifiersParser.constant_return retval = new HiveParser_IdentifiersParser.constant_return();
 		retval.start = input.LT(1);
@@ -3974,27 +4133,39 @@ public class HiveParser_IdentifiersParser extends Parser {
 		CommonTree root_0 = null;
 
 		Token Number122=null;
-		Token StringLiteral124=null;
-		Token BigintLiteral126=null;
-		Token SmallintLiteral127=null;
-		Token TinyintLiteral128=null;
-		Token DecimalLiteral129=null;
-		ParserRuleReturnScope dateLiteral123 =null;
-		ParserRuleReturnScope stringLiteralSequence125 =null;
-		ParserRuleReturnScope charSetStringLiteral130 =null;
-		ParserRuleReturnScope booleanValue131 =null;
+		Token Year123=null;
+		Token Month124=null;
+		Token Day125=null;
+		Token Hour126=null;
+		Token Minute127=null;
+		Token Second128=null;
+		Token StringLiteral130=null;
+		Token BigintLiteral132=null;
+		Token SmallintLiteral133=null;
+		Token TinyintLiteral134=null;
+		Token DecimalLiteral135=null;
+		ParserRuleReturnScope dateLiteral129 =null;
+		ParserRuleReturnScope stringLiteralSequence131 =null;
+		ParserRuleReturnScope charSetStringLiteral136 =null;
+		ParserRuleReturnScope booleanValue137 =null;
 
 		CommonTree Number122_tree=null;
-		CommonTree StringLiteral124_tree=null;
-		CommonTree BigintLiteral126_tree=null;
-		CommonTree SmallintLiteral127_tree=null;
-		CommonTree TinyintLiteral128_tree=null;
-		CommonTree DecimalLiteral129_tree=null;
+		CommonTree Year123_tree=null;
+		CommonTree Month124_tree=null;
+		CommonTree Day125_tree=null;
+		CommonTree Hour126_tree=null;
+		CommonTree Minute127_tree=null;
+		CommonTree Second128_tree=null;
+		CommonTree StringLiteral130_tree=null;
+		CommonTree BigintLiteral132_tree=null;
+		CommonTree SmallintLiteral133_tree=null;
+		CommonTree TinyintLiteral134_tree=null;
+		CommonTree DecimalLiteral135_tree=null;
 
 		 gParent.msgs.push("constant"); 
 		try {
-			// IdentifiersParser.g:224:5: ( Number | dateLiteral | StringLiteral | stringLiteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue )
-			int alt32=10;
+			// IdentifiersParser.g:224:5: ( Number | Year | Month | Day | Hour | Minute | Second | dateLiteral | StringLiteral | stringLiteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue )
+			int alt32=16;
 			alt32 = dfa32.predict(input);
 			switch (alt32) {
 				case 1 :
@@ -4012,128 +4183,212 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:226:7: dateLiteral
+					// IdentifiersParser.g:226:7: Year
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_dateLiteral_in_constant1486);
-					dateLiteral123=dateLiteral();
-					state._fsp--;
-					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, dateLiteral123.getTree());
+					Year123=(Token)match(input,Year,FOLLOW_Year_in_constant1486); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					Year123_tree = (CommonTree)adaptor.create(Year123);
+					adaptor.addChild(root_0, Year123_tree);
+					}
 
 					}
 					break;
 				case 3 :
-					// IdentifiersParser.g:227:7: StringLiteral
+					// IdentifiersParser.g:227:7: Month
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					StringLiteral124=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_constant1494); if (state.failed) return retval;
+					Month124=(Token)match(input,Month,FOLLOW_Month_in_constant1494); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					StringLiteral124_tree = (CommonTree)adaptor.create(StringLiteral124);
-					adaptor.addChild(root_0, StringLiteral124_tree);
+					Month124_tree = (CommonTree)adaptor.create(Month124);
+					adaptor.addChild(root_0, Month124_tree);
 					}
 
 					}
 					break;
 				case 4 :
-					// IdentifiersParser.g:228:7: stringLiteralSequence
+					// IdentifiersParser.g:228:7: Day
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_stringLiteralSequence_in_constant1502);
-					stringLiteralSequence125=stringLiteralSequence();
-					state._fsp--;
-					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, stringLiteralSequence125.getTree());
+					Day125=(Token)match(input,Day,FOLLOW_Day_in_constant1502); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					Day125_tree = (CommonTree)adaptor.create(Day125);
+					adaptor.addChild(root_0, Day125_tree);
+					}
 
 					}
 					break;
 				case 5 :
-					// IdentifiersParser.g:229:7: BigintLiteral
+					// IdentifiersParser.g:229:7: Hour
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					BigintLiteral126=(Token)match(input,BigintLiteral,FOLLOW_BigintLiteral_in_constant1510); if (state.failed) return retval;
+					Hour126=(Token)match(input,Hour,FOLLOW_Hour_in_constant1510); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					BigintLiteral126_tree = (CommonTree)adaptor.create(BigintLiteral126);
-					adaptor.addChild(root_0, BigintLiteral126_tree);
+					Hour126_tree = (CommonTree)adaptor.create(Hour126);
+					adaptor.addChild(root_0, Hour126_tree);
 					}
 
 					}
 					break;
 				case 6 :
-					// IdentifiersParser.g:230:7: SmallintLiteral
+					// IdentifiersParser.g:230:7: Minute
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					SmallintLiteral127=(Token)match(input,SmallintLiteral,FOLLOW_SmallintLiteral_in_constant1518); if (state.failed) return retval;
+					Minute127=(Token)match(input,Minute,FOLLOW_Minute_in_constant1518); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					SmallintLiteral127_tree = (CommonTree)adaptor.create(SmallintLiteral127);
-					adaptor.addChild(root_0, SmallintLiteral127_tree);
+					Minute127_tree = (CommonTree)adaptor.create(Minute127);
+					adaptor.addChild(root_0, Minute127_tree);
 					}
 
 					}
 					break;
 				case 7 :
-					// IdentifiersParser.g:231:7: TinyintLiteral
+					// IdentifiersParser.g:231:7: Second
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					TinyintLiteral128=(Token)match(input,TinyintLiteral,FOLLOW_TinyintLiteral_in_constant1526); if (state.failed) return retval;
+					Second128=(Token)match(input,Second,FOLLOW_Second_in_constant1526); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					TinyintLiteral128_tree = (CommonTree)adaptor.create(TinyintLiteral128);
-					adaptor.addChild(root_0, TinyintLiteral128_tree);
+					Second128_tree = (CommonTree)adaptor.create(Second128);
+					adaptor.addChild(root_0, Second128_tree);
 					}
 
 					}
 					break;
 				case 8 :
-					// IdentifiersParser.g:232:7: DecimalLiteral
+					// IdentifiersParser.g:232:7: dateLiteral
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					DecimalLiteral129=(Token)match(input,DecimalLiteral,FOLLOW_DecimalLiteral_in_constant1534); if (state.failed) return retval;
-					if ( state.backtracking==0 ) {
-					DecimalLiteral129_tree = (CommonTree)adaptor.create(DecimalLiteral129);
-					adaptor.addChild(root_0, DecimalLiteral129_tree);
-					}
+					pushFollow(FOLLOW_dateLiteral_in_constant1534);
+					dateLiteral129=dateLiteral();
+					state._fsp--;
+					if (state.failed) return retval;
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, dateLiteral129.getTree());
 
 					}
 					break;
 				case 9 :
-					// IdentifiersParser.g:233:7: charSetStringLiteral
+					// IdentifiersParser.g:233:7: StringLiteral
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_charSetStringLiteral_in_constant1542);
-					charSetStringLiteral130=charSetStringLiteral();
-					state._fsp--;
-					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, charSetStringLiteral130.getTree());
+					StringLiteral130=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_constant1542); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					StringLiteral130_tree = (CommonTree)adaptor.create(StringLiteral130);
+					adaptor.addChild(root_0, StringLiteral130_tree);
+					}
 
 					}
 					break;
 				case 10 :
-					// IdentifiersParser.g:234:7: booleanValue
+					// IdentifiersParser.g:234:7: stringLiteralSequence
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_booleanValue_in_constant1550);
-					booleanValue131=booleanValue();
+					pushFollow(FOLLOW_stringLiteralSequence_in_constant1550);
+					stringLiteralSequence131=stringLiteralSequence();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, booleanValue131.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, stringLiteralSequence131.getTree());
+
+					}
+					break;
+				case 11 :
+					// IdentifiersParser.g:235:7: BigintLiteral
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					BigintLiteral132=(Token)match(input,BigintLiteral,FOLLOW_BigintLiteral_in_constant1558); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					BigintLiteral132_tree = (CommonTree)adaptor.create(BigintLiteral132);
+					adaptor.addChild(root_0, BigintLiteral132_tree);
+					}
+
+					}
+					break;
+				case 12 :
+					// IdentifiersParser.g:236:7: SmallintLiteral
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					SmallintLiteral133=(Token)match(input,SmallintLiteral,FOLLOW_SmallintLiteral_in_constant1566); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					SmallintLiteral133_tree = (CommonTree)adaptor.create(SmallintLiteral133);
+					adaptor.addChild(root_0, SmallintLiteral133_tree);
+					}
+
+					}
+					break;
+				case 13 :
+					// IdentifiersParser.g:237:7: TinyintLiteral
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					TinyintLiteral134=(Token)match(input,TinyintLiteral,FOLLOW_TinyintLiteral_in_constant1574); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					TinyintLiteral134_tree = (CommonTree)adaptor.create(TinyintLiteral134);
+					adaptor.addChild(root_0, TinyintLiteral134_tree);
+					}
+
+					}
+					break;
+				case 14 :
+					// IdentifiersParser.g:238:7: DecimalLiteral
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					DecimalLiteral135=(Token)match(input,DecimalLiteral,FOLLOW_DecimalLiteral_in_constant1582); if (state.failed) return retval;
+					if ( state.backtracking==0 ) {
+					DecimalLiteral135_tree = (CommonTree)adaptor.create(DecimalLiteral135);
+					adaptor.addChild(root_0, DecimalLiteral135_tree);
+					}
+
+					}
+					break;
+				case 15 :
+					// IdentifiersParser.g:239:7: charSetStringLiteral
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					pushFollow(FOLLOW_charSetStringLiteral_in_constant1590);
+					charSetStringLiteral136=charSetStringLiteral();
+					state._fsp--;
+					if (state.failed) return retval;
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, charSetStringLiteral136.getTree());
+
+					}
+					break;
+				case 16 :
+					// IdentifiersParser.g:240:7: booleanValue
+					{
+					root_0 = (CommonTree)adaptor.nil();
+
+
+					pushFollow(FOLLOW_booleanValue_in_constant1598);
+					booleanValue137=booleanValue();
+					state._fsp--;
+					if (state.failed) return retval;
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, booleanValue137.getTree());
 
 					}
 					break;
@@ -4168,28 +4423,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "stringLiteralSequence"
-	// IdentifiersParser.g:237:1: stringLiteralSequence : StringLiteral ( StringLiteral )+ -> ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ ) ;
+	// IdentifiersParser.g:243:1: stringLiteralSequence : StringLiteral ( StringLiteral )+ -> ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ ) ;
 	public final HiveParser_IdentifiersParser.stringLiteralSequence_return stringLiteralSequence() throws RecognitionException {
 		HiveParser_IdentifiersParser.stringLiteralSequence_return retval = new HiveParser_IdentifiersParser.stringLiteralSequence_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token StringLiteral132=null;
-		Token StringLiteral133=null;
+		Token StringLiteral138=null;
+		Token StringLiteral139=null;
 
-		CommonTree StringLiteral132_tree=null;
-		CommonTree StringLiteral133_tree=null;
+		CommonTree StringLiteral138_tree=null;
+		CommonTree StringLiteral139_tree=null;
 		RewriteRuleTokenStream stream_StringLiteral=new RewriteRuleTokenStream(adaptor,"token StringLiteral");
 
 		try {
-			// IdentifiersParser.g:238:5: ( StringLiteral ( StringLiteral )+ -> ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ ) )
-			// IdentifiersParser.g:239:5: StringLiteral ( StringLiteral )+
+			// IdentifiersParser.g:244:5: ( StringLiteral ( StringLiteral )+ -> ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ ) )
+			// IdentifiersParser.g:245:5: StringLiteral ( StringLiteral )+
 			{
-			StringLiteral132=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_stringLiteralSequence1571); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_StringLiteral.add(StringLiteral132);
+			StringLiteral138=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_stringLiteralSequence1619); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_StringLiteral.add(StringLiteral138);
 
-			// IdentifiersParser.g:239:19: ( StringLiteral )+
+			// IdentifiersParser.g:245:19: ( StringLiteral )+
 			int cnt33=0;
 			loop33:
 			while (true) {
@@ -4197,10 +4452,10 @@ public class HiveParser_IdentifiersParser extends Parser {
 				alt33 = dfa33.predict(input);
 				switch (alt33) {
 				case 1 :
-					// IdentifiersParser.g:239:19: StringLiteral
+					// IdentifiersParser.g:245:19: StringLiteral
 					{
-					StringLiteral133=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_stringLiteralSequence1573); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_StringLiteral.add(StringLiteral133);
+					StringLiteral139=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_stringLiteralSequence1621); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_StringLiteral.add(StringLiteral139);
 
 					}
 					break;
@@ -4226,9 +4481,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 239:34: -> ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ )
+			// 245:34: -> ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ )
 			{
-				// IdentifiersParser.g:239:37: ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ )
+				// IdentifiersParser.g:245:37: ^( TOK_STRINGLITERALSEQUENCE StringLiteral ( StringLiteral )+ )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_STRINGLITERALSEQUENCE, "TOK_STRINGLITERALSEQUENCE"), root_1);
@@ -4280,7 +4535,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "charSetStringLiteral"
-	// IdentifiersParser.g:242:1: charSetStringLiteral : csName= CharSetName csLiteral= CharSetLiteral -> ^( TOK_CHARSETLITERAL $csName $csLiteral) ;
+	// IdentifiersParser.g:248:1: charSetStringLiteral : csName= CharSetName csLiteral= CharSetLiteral -> ^( TOK_CHARSETLITERAL $csName $csLiteral) ;
 	public final HiveParser_IdentifiersParser.charSetStringLiteral_return charSetStringLiteral() throws RecognitionException {
 		HiveParser_IdentifiersParser.charSetStringLiteral_return retval = new HiveParser_IdentifiersParser.charSetStringLiteral_return();
 		retval.start = input.LT(1);
@@ -4297,17 +4552,17 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 		 gParent.msgs.push("character string literal"); 
 		try {
-			// IdentifiersParser.g:245:5: (csName= CharSetName csLiteral= CharSetLiteral -> ^( TOK_CHARSETLITERAL $csName $csLiteral) )
-			// IdentifiersParser.g:246:5: csName= CharSetName csLiteral= CharSetLiteral
+			// IdentifiersParser.g:251:5: (csName= CharSetName csLiteral= CharSetLiteral -> ^( TOK_CHARSETLITERAL $csName $csLiteral) )
+			// IdentifiersParser.g:252:5: csName= CharSetName csLiteral= CharSetLiteral
 			{
-			csName=(Token)match(input,CharSetName,FOLLOW_CharSetName_in_charSetStringLiteral1618); if (state.failed) return retval; 
+			csName=(Token)match(input,CharSetName,FOLLOW_CharSetName_in_charSetStringLiteral1666); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_CharSetName.add(csName);
 
-			csLiteral=(Token)match(input,CharSetLiteral,FOLLOW_CharSetLiteral_in_charSetStringLiteral1622); if (state.failed) return retval; 
+			csLiteral=(Token)match(input,CharSetLiteral,FOLLOW_CharSetLiteral_in_charSetStringLiteral1670); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_CharSetLiteral.add(csLiteral);
 
 			// AST REWRITE
-			// elements: csName, csLiteral
+			// elements: csLiteral, csName
 			// token labels: csName, csLiteral
 			// rule labels: retval
 			// token list labels: 
@@ -4320,9 +4575,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 246:49: -> ^( TOK_CHARSETLITERAL $csName $csLiteral)
+			// 252:49: -> ^( TOK_CHARSETLITERAL $csName $csLiteral)
 			{
-				// IdentifiersParser.g:246:52: ^( TOK_CHARSETLITERAL $csName $csLiteral)
+				// IdentifiersParser.g:252:52: ^( TOK_CHARSETLITERAL $csName $csLiteral)
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_CHARSETLITERAL, "TOK_CHARSETLITERAL"), root_1);
@@ -4368,30 +4623,30 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "dateLiteral"
-	// IdentifiersParser.g:249:1: dateLiteral : KW_DATE StringLiteral ->;
+	// IdentifiersParser.g:255:1: dateLiteral : KW_DATE StringLiteral ->;
 	public final HiveParser_IdentifiersParser.dateLiteral_return dateLiteral() throws RecognitionException {
 		HiveParser_IdentifiersParser.dateLiteral_return retval = new HiveParser_IdentifiersParser.dateLiteral_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_DATE134=null;
-		Token StringLiteral135=null;
+		Token KW_DATE140=null;
+		Token StringLiteral141=null;
 
-		CommonTree KW_DATE134_tree=null;
-		CommonTree StringLiteral135_tree=null;
+		CommonTree KW_DATE140_tree=null;
+		CommonTree StringLiteral141_tree=null;
 		RewriteRuleTokenStream stream_StringLiteral=new RewriteRuleTokenStream(adaptor,"token StringLiteral");
 		RewriteRuleTokenStream stream_KW_DATE=new RewriteRuleTokenStream(adaptor,"token KW_DATE");
 
 		try {
-			// IdentifiersParser.g:250:5: ( KW_DATE StringLiteral ->)
-			// IdentifiersParser.g:251:5: KW_DATE StringLiteral
+			// IdentifiersParser.g:256:5: ( KW_DATE StringLiteral ->)
+			// IdentifiersParser.g:257:5: KW_DATE StringLiteral
 			{
-			KW_DATE134=(Token)match(input,KW_DATE,FOLLOW_KW_DATE_in_dateLiteral1655); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_KW_DATE.add(KW_DATE134);
+			KW_DATE140=(Token)match(input,KW_DATE,FOLLOW_KW_DATE_in_dateLiteral1703); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_KW_DATE.add(KW_DATE140);
 
-			StringLiteral135=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_dateLiteral1657); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_StringLiteral.add(StringLiteral135);
+			StringLiteral141=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_dateLiteral1705); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_StringLiteral.add(StringLiteral141);
 
 			// AST REWRITE
 			// elements: 
@@ -4405,12 +4660,12 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 251:27: ->
+			// 257:27: ->
 			{
 				adaptor.addChild(root_0, 
 				      // Create DateLiteral token, but with the text of the string value
 				      // This makes the dateLiteral more consistent with the other type literals.
-				      adaptor.create(TOK_DATELITERAL, (StringLiteral135!=null?StringLiteral135.getText():null))
+				      adaptor.create(TOK_DATELITERAL, (StringLiteral141!=null?StringLiteral141.getText():null))
 				    );
 			}
 
@@ -4448,29 +4703,29 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "expression"
-	// IdentifiersParser.g:259:1: expression : precedenceOrExpression ;
+	// IdentifiersParser.g:265:1: expression : precedenceOrExpression ;
 	public final HiveParser_IdentifiersParser.expression_return expression() throws RecognitionException {
 		HiveParser_IdentifiersParser.expression_return retval = new HiveParser_IdentifiersParser.expression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceOrExpression136 =null;
+		ParserRuleReturnScope precedenceOrExpression142 =null;
 
 
 		 gParent.msgs.push("expression specification"); 
 		try {
-			// IdentifiersParser.g:262:5: ( precedenceOrExpression )
-			// IdentifiersParser.g:263:5: precedenceOrExpression
+			// IdentifiersParser.g:268:5: ( precedenceOrExpression )
+			// IdentifiersParser.g:269:5: precedenceOrExpression
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceOrExpression_in_expression1696);
-			precedenceOrExpression136=precedenceOrExpression();
+			pushFollow(FOLLOW_precedenceOrExpression_in_expression1744);
+			precedenceOrExpression142=precedenceOrExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceOrExpression136.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceOrExpression142.getTree());
 
 			}
 
@@ -4503,40 +4758,40 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "atomExpression"
-	// IdentifiersParser.g:266:1: atomExpression : ( KW_NULL -> TOK_NULL | dateLiteral | constant | function | castExpression | caseExpression | whenExpression | tableOrColumn | LPAREN ! expression RPAREN !);
+	// IdentifiersParser.g:272:1: atomExpression : ( KW_NULL -> TOK_NULL | dateLiteral | constant | function | castExpression | caseExpression | whenExpression | tableOrColumn | LPAREN ! expression RPAREN !);
 	public final HiveParser_IdentifiersParser.atomExpression_return atomExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.atomExpression_return retval = new HiveParser_IdentifiersParser.atomExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_NULL137=null;
-		Token LPAREN145=null;
-		Token RPAREN147=null;
-		ParserRuleReturnScope dateLiteral138 =null;
-		ParserRuleReturnScope constant139 =null;
-		ParserRuleReturnScope function140 =null;
-		ParserRuleReturnScope castExpression141 =null;
-		ParserRuleReturnScope caseExpression142 =null;
-		ParserRuleReturnScope whenExpression143 =null;
-		ParserRuleReturnScope tableOrColumn144 =null;
-		ParserRuleReturnScope expression146 =null;
+		Token KW_NULL143=null;
+		Token LPAREN151=null;
+		Token RPAREN153=null;
+		ParserRuleReturnScope dateLiteral144 =null;
+		ParserRuleReturnScope constant145 =null;
+		ParserRuleReturnScope function146 =null;
+		ParserRuleReturnScope castExpression147 =null;
+		ParserRuleReturnScope caseExpression148 =null;
+		ParserRuleReturnScope whenExpression149 =null;
+		ParserRuleReturnScope tableOrColumn150 =null;
+		ParserRuleReturnScope expression152 =null;
 
-		CommonTree KW_NULL137_tree=null;
-		CommonTree LPAREN145_tree=null;
-		CommonTree RPAREN147_tree=null;
+		CommonTree KW_NULL143_tree=null;
+		CommonTree LPAREN151_tree=null;
+		CommonTree RPAREN153_tree=null;
 		RewriteRuleTokenStream stream_KW_NULL=new RewriteRuleTokenStream(adaptor,"token KW_NULL");
 
 		try {
-			// IdentifiersParser.g:267:5: ( KW_NULL -> TOK_NULL | dateLiteral | constant | function | castExpression | caseExpression | whenExpression | tableOrColumn | LPAREN ! expression RPAREN !)
+			// IdentifiersParser.g:273:5: ( KW_NULL -> TOK_NULL | dateLiteral | constant | function | castExpression | caseExpression | whenExpression | tableOrColumn | LPAREN ! expression RPAREN !)
 			int alt34=9;
 			alt34 = dfa34.predict(input);
 			switch (alt34) {
 				case 1 :
-					// IdentifiersParser.g:268:5: KW_NULL
+					// IdentifiersParser.g:274:5: KW_NULL
 					{
-					KW_NULL137=(Token)match(input,KW_NULL,FOLLOW_KW_NULL_in_atomExpression1717); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NULL.add(KW_NULL137);
+					KW_NULL143=(Token)match(input,KW_NULL,FOLLOW_KW_NULL_in_atomExpression1765); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NULL.add(KW_NULL143);
 
 					// AST REWRITE
 					// elements: 
@@ -4550,7 +4805,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 268:13: -> TOK_NULL
+					// 274:13: -> TOK_NULL
 					{
 						adaptor.addChild(root_0, (CommonTree)adaptor.create(TOK_NULL, "TOK_NULL"));
 					}
@@ -4562,117 +4817,117 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:269:7: dateLiteral
+					// IdentifiersParser.g:275:7: dateLiteral
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_dateLiteral_in_atomExpression1729);
-					dateLiteral138=dateLiteral();
+					pushFollow(FOLLOW_dateLiteral_in_atomExpression1777);
+					dateLiteral144=dateLiteral();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, dateLiteral138.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, dateLiteral144.getTree());
 
 					}
 					break;
 				case 3 :
-					// IdentifiersParser.g:270:7: constant
+					// IdentifiersParser.g:276:7: constant
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_constant_in_atomExpression1737);
-					constant139=constant();
+					pushFollow(FOLLOW_constant_in_atomExpression1785);
+					constant145=constant();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, constant139.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, constant145.getTree());
 
 					}
 					break;
 				case 4 :
-					// IdentifiersParser.g:271:7: function
+					// IdentifiersParser.g:277:7: function
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_function_in_atomExpression1745);
-					function140=function();
+					pushFollow(FOLLOW_function_in_atomExpression1793);
+					function146=function();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, function140.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, function146.getTree());
 
 					}
 					break;
 				case 5 :
-					// IdentifiersParser.g:272:7: castExpression
+					// IdentifiersParser.g:278:7: castExpression
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_castExpression_in_atomExpression1753);
-					castExpression141=castExpression();
+					pushFollow(FOLLOW_castExpression_in_atomExpression1801);
+					castExpression147=castExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, castExpression141.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, castExpression147.getTree());
 
 					}
 					break;
 				case 6 :
-					// IdentifiersParser.g:273:7: caseExpression
+					// IdentifiersParser.g:279:7: caseExpression
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_caseExpression_in_atomExpression1761);
-					caseExpression142=caseExpression();
+					pushFollow(FOLLOW_caseExpression_in_atomExpression1809);
+					caseExpression148=caseExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, caseExpression142.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, caseExpression148.getTree());
 
 					}
 					break;
 				case 7 :
-					// IdentifiersParser.g:274:7: whenExpression
+					// IdentifiersParser.g:280:7: whenExpression
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_whenExpression_in_atomExpression1769);
-					whenExpression143=whenExpression();
+					pushFollow(FOLLOW_whenExpression_in_atomExpression1817);
+					whenExpression149=whenExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, whenExpression143.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, whenExpression149.getTree());
 
 					}
 					break;
 				case 8 :
-					// IdentifiersParser.g:275:7: tableOrColumn
+					// IdentifiersParser.g:281:7: tableOrColumn
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_tableOrColumn_in_atomExpression1777);
-					tableOrColumn144=gHiveParser.tableOrColumn();
+					pushFollow(FOLLOW_tableOrColumn_in_atomExpression1825);
+					tableOrColumn150=gHiveParser.tableOrColumn();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, tableOrColumn144.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, tableOrColumn150.getTree());
 
 					}
 					break;
 				case 9 :
-					// IdentifiersParser.g:276:7: LPAREN ! expression RPAREN !
+					// IdentifiersParser.g:282:7: LPAREN ! expression RPAREN !
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					LPAREN145=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_atomExpression1785); if (state.failed) return retval;
-					pushFollow(FOLLOW_expression_in_atomExpression1788);
-					expression146=expression();
+					LPAREN151=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_atomExpression1833); if (state.failed) return retval;
+					pushFollow(FOLLOW_expression_in_atomExpression1836);
+					expression152=expression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, expression146.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, expression152.getTree());
 
-					RPAREN147=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_atomExpression1790); if (state.failed) return retval;
+					RPAREN153=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_atomExpression1838); if (state.failed) return retval;
 					}
 					break;
 
@@ -4705,83 +4960,83 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceFieldExpression"
-	// IdentifiersParser.g:280:1: precedenceFieldExpression : atomExpression ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )* ;
+	// IdentifiersParser.g:286:1: precedenceFieldExpression : atomExpression ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )* ;
 	public final HiveParser_IdentifiersParser.precedenceFieldExpression_return precedenceFieldExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceFieldExpression_return retval = new HiveParser_IdentifiersParser.precedenceFieldExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token LSQUARE149=null;
-		Token RSQUARE151=null;
-		Token DOT152=null;
-		ParserRuleReturnScope atomExpression148 =null;
-		ParserRuleReturnScope expression150 =null;
-		ParserRuleReturnScope identifier153 =null;
+		Token LSQUARE155=null;
+		Token RSQUARE157=null;
+		Token DOT158=null;
+		ParserRuleReturnScope atomExpression154 =null;
+		ParserRuleReturnScope expression156 =null;
+		ParserRuleReturnScope identifier159 =null;
 
-		CommonTree LSQUARE149_tree=null;
-		CommonTree RSQUARE151_tree=null;
-		CommonTree DOT152_tree=null;
+		CommonTree LSQUARE155_tree=null;
+		CommonTree RSQUARE157_tree=null;
+		CommonTree DOT158_tree=null;
 
 		try {
-			// IdentifiersParser.g:281:5: ( atomExpression ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )* )
-			// IdentifiersParser.g:282:5: atomExpression ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*
+			// IdentifiersParser.g:287:5: ( atomExpression ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )* )
+			// IdentifiersParser.g:288:5: atomExpression ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_atomExpression_in_precedenceFieldExpression1813);
-			atomExpression148=atomExpression();
+			pushFollow(FOLLOW_atomExpression_in_precedenceFieldExpression1861);
+			atomExpression154=atomExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, atomExpression148.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, atomExpression154.getTree());
 
-			// IdentifiersParser.g:282:20: ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*
+			// IdentifiersParser.g:288:20: ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*
 			loop35:
 			while (true) {
 				int alt35=3;
 				alt35 = dfa35.predict(input);
 				switch (alt35) {
 				case 1 :
-					// IdentifiersParser.g:282:21: ( LSQUARE ^ expression RSQUARE !)
+					// IdentifiersParser.g:288:21: ( LSQUARE ^ expression RSQUARE !)
 					{
-					// IdentifiersParser.g:282:21: ( LSQUARE ^ expression RSQUARE !)
-					// IdentifiersParser.g:282:22: LSQUARE ^ expression RSQUARE !
+					// IdentifiersParser.g:288:21: ( LSQUARE ^ expression RSQUARE !)
+					// IdentifiersParser.g:288:22: LSQUARE ^ expression RSQUARE !
 					{
-					LSQUARE149=(Token)match(input,LSQUARE,FOLLOW_LSQUARE_in_precedenceFieldExpression1817); if (state.failed) return retval;
+					LSQUARE155=(Token)match(input,LSQUARE,FOLLOW_LSQUARE_in_precedenceFieldExpression1865); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					LSQUARE149_tree = (CommonTree)adaptor.create(LSQUARE149);
-					root_0 = (CommonTree)adaptor.becomeRoot(LSQUARE149_tree, root_0);
+					LSQUARE155_tree = (CommonTree)adaptor.create(LSQUARE155);
+					root_0 = (CommonTree)adaptor.becomeRoot(LSQUARE155_tree, root_0);
 					}
 
-					pushFollow(FOLLOW_expression_in_precedenceFieldExpression1820);
-					expression150=expression();
+					pushFollow(FOLLOW_expression_in_precedenceFieldExpression1868);
+					expression156=expression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, expression150.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, expression156.getTree());
 
-					RSQUARE151=(Token)match(input,RSQUARE,FOLLOW_RSQUARE_in_precedenceFieldExpression1822); if (state.failed) return retval;
+					RSQUARE157=(Token)match(input,RSQUARE,FOLLOW_RSQUARE_in_precedenceFieldExpression1870); if (state.failed) return retval;
 					}
 
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:282:54: ( DOT ^ identifier )
+					// IdentifiersParser.g:288:54: ( DOT ^ identifier )
 					{
-					// IdentifiersParser.g:282:54: ( DOT ^ identifier )
-					// IdentifiersParser.g:282:55: DOT ^ identifier
+					// IdentifiersParser.g:288:54: ( DOT ^ identifier )
+					// IdentifiersParser.g:288:55: DOT ^ identifier
 					{
-					DOT152=(Token)match(input,DOT,FOLLOW_DOT_in_precedenceFieldExpression1829); if (state.failed) return retval;
+					DOT158=(Token)match(input,DOT,FOLLOW_DOT_in_precedenceFieldExpression1877); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					DOT152_tree = (CommonTree)adaptor.create(DOT152);
-					root_0 = (CommonTree)adaptor.becomeRoot(DOT152_tree, root_0);
+					DOT158_tree = (CommonTree)adaptor.create(DOT158);
+					root_0 = (CommonTree)adaptor.becomeRoot(DOT158_tree, root_0);
 					}
 
-					pushFollow(FOLLOW_identifier_in_precedenceFieldExpression1832);
-					identifier153=identifier();
+					pushFollow(FOLLOW_identifier_in_precedenceFieldExpression1880);
+					identifier159=identifier();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier153.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier159.getTree());
 
 					}
 
@@ -4823,28 +5078,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceUnaryOperator"
-	// IdentifiersParser.g:285:1: precedenceUnaryOperator : ( PLUS | MINUS | TILDE );
+	// IdentifiersParser.g:291:1: precedenceUnaryOperator : ( PLUS | MINUS | TILDE );
 	public final HiveParser_IdentifiersParser.precedenceUnaryOperator_return precedenceUnaryOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceUnaryOperator_return retval = new HiveParser_IdentifiersParser.precedenceUnaryOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set154=null;
+		Token set160=null;
 
-		CommonTree set154_tree=null;
+		CommonTree set160_tree=null;
 
 		try {
-			// IdentifiersParser.g:286:5: ( PLUS | MINUS | TILDE )
+			// IdentifiersParser.g:292:5: ( PLUS | MINUS | TILDE )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set154=input.LT(1);
+			set160=input.LT(1);
 			if ( input.LA(1)==MINUS||input.LA(1)==PLUS||input.LA(1)==TILDE ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set154));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set160));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -4883,25 +5138,25 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "nullCondition"
-	// IdentifiersParser.g:290:1: nullCondition : ( KW_NULL -> ^( TOK_ISNULL ) | KW_NOT KW_NULL -> ^( TOK_ISNOTNULL ) );
+	// IdentifiersParser.g:296:1: nullCondition : ( KW_NULL -> ^( TOK_ISNULL ) | KW_NOT KW_NULL -> ^( TOK_ISNOTNULL ) );
 	public final HiveParser_IdentifiersParser.nullCondition_return nullCondition() throws RecognitionException {
 		HiveParser_IdentifiersParser.nullCondition_return retval = new HiveParser_IdentifiersParser.nullCondition_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_NULL155=null;
-		Token KW_NOT156=null;
-		Token KW_NULL157=null;
+		Token KW_NULL161=null;
+		Token KW_NOT162=null;
+		Token KW_NULL163=null;
 
-		CommonTree KW_NULL155_tree=null;
-		CommonTree KW_NOT156_tree=null;
-		CommonTree KW_NULL157_tree=null;
+		CommonTree KW_NULL161_tree=null;
+		CommonTree KW_NOT162_tree=null;
+		CommonTree KW_NULL163_tree=null;
 		RewriteRuleTokenStream stream_KW_NULL=new RewriteRuleTokenStream(adaptor,"token KW_NULL");
 		RewriteRuleTokenStream stream_KW_NOT=new RewriteRuleTokenStream(adaptor,"token KW_NOT");
 
 		try {
-			// IdentifiersParser.g:291:5: ( KW_NULL -> ^( TOK_ISNULL ) | KW_NOT KW_NULL -> ^( TOK_ISNOTNULL ) )
+			// IdentifiersParser.g:297:5: ( KW_NULL -> ^( TOK_ISNULL ) | KW_NOT KW_NULL -> ^( TOK_ISNOTNULL ) )
 			int alt36=2;
 			int LA36_0 = input.LA(1);
 			if ( (LA36_0==KW_NULL) ) {
@@ -4920,10 +5175,10 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 			switch (alt36) {
 				case 1 :
-					// IdentifiersParser.g:292:5: KW_NULL
+					// IdentifiersParser.g:298:5: KW_NULL
 					{
-					KW_NULL155=(Token)match(input,KW_NULL,FOLLOW_KW_NULL_in_nullCondition1885); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NULL.add(KW_NULL155);
+					KW_NULL161=(Token)match(input,KW_NULL,FOLLOW_KW_NULL_in_nullCondition1933); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NULL.add(KW_NULL161);
 
 					// AST REWRITE
 					// elements: 
@@ -4937,9 +5192,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 292:13: -> ^( TOK_ISNULL )
+					// 298:13: -> ^( TOK_ISNULL )
 					{
-						// IdentifiersParser.g:292:16: ^( TOK_ISNULL )
+						// IdentifiersParser.g:298:16: ^( TOK_ISNULL )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_ISNULL, "TOK_ISNULL"), root_1);
@@ -4955,13 +5210,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:293:7: KW_NOT KW_NULL
+					// IdentifiersParser.g:299:7: KW_NOT KW_NULL
 					{
-					KW_NOT156=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_nullCondition1899); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT156);
+					KW_NOT162=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_nullCondition1947); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT162);
 
-					KW_NULL157=(Token)match(input,KW_NULL,FOLLOW_KW_NULL_in_nullCondition1901); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NULL.add(KW_NULL157);
+					KW_NULL163=(Token)match(input,KW_NULL,FOLLOW_KW_NULL_in_nullCondition1949); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NULL.add(KW_NULL163);
 
 					// AST REWRITE
 					// elements: 
@@ -4975,9 +5230,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 293:22: -> ^( TOK_ISNOTNULL )
+					// 299:22: -> ^( TOK_ISNOTNULL )
 					{
-						// IdentifiersParser.g:293:25: ^( TOK_ISNOTNULL )
+						// IdentifiersParser.g:299:25: ^( TOK_ISNOTNULL )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_ISNOTNULL, "TOK_ISNOTNULL"), root_1);
@@ -5022,25 +5277,25 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceUnaryPrefixExpression"
-	// IdentifiersParser.g:296:1: precedenceUnaryPrefixExpression : ( precedenceUnaryOperator ^)* precedenceFieldExpression ;
+	// IdentifiersParser.g:302:1: precedenceUnaryPrefixExpression : ( precedenceUnaryOperator ^)* precedenceFieldExpression ;
 	public final HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression_return precedenceUnaryPrefixExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression_return retval = new HiveParser_IdentifiersParser.precedenceUnaryPrefixExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceUnaryOperator158 =null;
-		ParserRuleReturnScope precedenceFieldExpression159 =null;
+		ParserRuleReturnScope precedenceUnaryOperator164 =null;
+		ParserRuleReturnScope precedenceFieldExpression165 =null;
 
 
 		try {
-			// IdentifiersParser.g:297:5: ( ( precedenceUnaryOperator ^)* precedenceFieldExpression )
-			// IdentifiersParser.g:298:5: ( precedenceUnaryOperator ^)* precedenceFieldExpression
+			// IdentifiersParser.g:303:5: ( ( precedenceUnaryOperator ^)* precedenceFieldExpression )
+			// IdentifiersParser.g:304:5: ( precedenceUnaryOperator ^)* precedenceFieldExpression
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			// IdentifiersParser.g:298:5: ( precedenceUnaryOperator ^)*
+			// IdentifiersParser.g:304:5: ( precedenceUnaryOperator ^)*
 			loop37:
 			while (true) {
 				int alt37=2;
@@ -5051,13 +5306,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt37) {
 				case 1 :
-					// IdentifiersParser.g:298:6: precedenceUnaryOperator ^
+					// IdentifiersParser.g:304:6: precedenceUnaryOperator ^
 					{
-					pushFollow(FOLLOW_precedenceUnaryOperator_in_precedenceUnaryPrefixExpression1929);
-					precedenceUnaryOperator158=precedenceUnaryOperator();
+					pushFollow(FOLLOW_precedenceUnaryOperator_in_precedenceUnaryPrefixExpression1977);
+					precedenceUnaryOperator164=precedenceUnaryOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceUnaryOperator158.getTree(), root_0);
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceUnaryOperator164.getTree(), root_0);
 					}
 					break;
 
@@ -5066,11 +5321,11 @@ public class HiveParser_IdentifiersParser extends Parser {
 				}
 			}
 
-			pushFollow(FOLLOW_precedenceFieldExpression_in_precedenceUnaryPrefixExpression1934);
-			precedenceFieldExpression159=precedenceFieldExpression();
+			pushFollow(FOLLOW_precedenceFieldExpression_in_precedenceUnaryPrefixExpression1982);
+			precedenceFieldExpression165=precedenceFieldExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceFieldExpression159.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceFieldExpression165.getTree());
 
 			}
 
@@ -5102,7 +5357,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceUnarySuffixExpression"
-	// IdentifiersParser.g:301:1: precedenceUnarySuffixExpression : precedenceUnaryPrefixExpression (a= KW_IS nullCondition )? -> {$a != null}? ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression ) -> precedenceUnaryPrefixExpression ;
+	// IdentifiersParser.g:307:1: precedenceUnarySuffixExpression : precedenceUnaryPrefixExpression (a= KW_IS nullCondition )? -> {$a != null}? ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression ) -> precedenceUnaryPrefixExpression ;
 	public final HiveParser_IdentifiersParser.precedenceUnarySuffixExpression_return precedenceUnarySuffixExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceUnarySuffixExpression_return retval = new HiveParser_IdentifiersParser.precedenceUnarySuffixExpression_return();
 		retval.start = input.LT(1);
@@ -5110,8 +5365,8 @@ public class HiveParser_IdentifiersParser extends Parser {
 		CommonTree root_0 = null;
 
 		Token a=null;
-		ParserRuleReturnScope precedenceUnaryPrefixExpression160 =null;
-		ParserRuleReturnScope nullCondition161 =null;
+		ParserRuleReturnScope precedenceUnaryPrefixExpression166 =null;
+		ParserRuleReturnScope nullCondition167 =null;
 
 		CommonTree a_tree=null;
 		RewriteRuleTokenStream stream_KW_IS=new RewriteRuleTokenStream(adaptor,"token KW_IS");
@@ -5119,29 +5374,29 @@ public class HiveParser_IdentifiersParser extends Parser {
 		RewriteRuleSubtreeStream stream_nullCondition=new RewriteRuleSubtreeStream(adaptor,"rule nullCondition");
 
 		try {
-			// IdentifiersParser.g:302:5: ( precedenceUnaryPrefixExpression (a= KW_IS nullCondition )? -> {$a != null}? ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression ) -> precedenceUnaryPrefixExpression )
-			// IdentifiersParser.g:302:7: precedenceUnaryPrefixExpression (a= KW_IS nullCondition )?
+			// IdentifiersParser.g:308:5: ( precedenceUnaryPrefixExpression (a= KW_IS nullCondition )? -> {$a != null}? ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression ) -> precedenceUnaryPrefixExpression )
+			// IdentifiersParser.g:308:7: precedenceUnaryPrefixExpression (a= KW_IS nullCondition )?
 			{
-			pushFollow(FOLLOW_precedenceUnaryPrefixExpression_in_precedenceUnarySuffixExpression1951);
-			precedenceUnaryPrefixExpression160=precedenceUnaryPrefixExpression();
+			pushFollow(FOLLOW_precedenceUnaryPrefixExpression_in_precedenceUnarySuffixExpression1999);
+			precedenceUnaryPrefixExpression166=precedenceUnaryPrefixExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_precedenceUnaryPrefixExpression.add(precedenceUnaryPrefixExpression160.getTree());
-			// IdentifiersParser.g:302:39: (a= KW_IS nullCondition )?
+			if ( state.backtracking==0 ) stream_precedenceUnaryPrefixExpression.add(precedenceUnaryPrefixExpression166.getTree());
+			// IdentifiersParser.g:308:39: (a= KW_IS nullCondition )?
 			int alt38=2;
 			alt38 = dfa38.predict(input);
 			switch (alt38) {
 				case 1 :
-					// IdentifiersParser.g:302:40: a= KW_IS nullCondition
+					// IdentifiersParser.g:308:40: a= KW_IS nullCondition
 					{
-					a=(Token)match(input,KW_IS,FOLLOW_KW_IS_in_precedenceUnarySuffixExpression1956); if (state.failed) return retval; 
+					a=(Token)match(input,KW_IS,FOLLOW_KW_IS_in_precedenceUnarySuffixExpression2004); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_KW_IS.add(a);
 
-					pushFollow(FOLLOW_nullCondition_in_precedenceUnarySuffixExpression1958);
-					nullCondition161=nullCondition();
+					pushFollow(FOLLOW_nullCondition_in_precedenceUnarySuffixExpression2006);
+					nullCondition167=nullCondition();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_nullCondition.add(nullCondition161.getTree());
+					if ( state.backtracking==0 ) stream_nullCondition.add(nullCondition167.getTree());
 					}
 					break;
 
@@ -5159,9 +5414,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 303:5: -> {$a != null}? ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression )
+			// 309:5: -> {$a != null}? ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression )
 			if (a != null) {
-				// IdentifiersParser.g:303:22: ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression )
+				// IdentifiersParser.g:309:22: ^( TOK_FUNCTION nullCondition precedenceUnaryPrefixExpression )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_FUNCTION, "TOK_FUNCTION"), root_1);
@@ -5172,7 +5427,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 			}
 
-			else // 304:5: -> precedenceUnaryPrefixExpression
+			else // 310:5: -> precedenceUnaryPrefixExpression
 			{
 				adaptor.addChild(root_0, stream_precedenceUnaryPrefixExpression.nextTree());
 			}
@@ -5211,28 +5466,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceBitwiseXorOperator"
-	// IdentifiersParser.g:308:1: precedenceBitwiseXorOperator : BITWISEXOR ;
+	// IdentifiersParser.g:314:1: precedenceBitwiseXorOperator : BITWISEXOR ;
 	public final HiveParser_IdentifiersParser.precedenceBitwiseXorOperator_return precedenceBitwiseXorOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceBitwiseXorOperator_return retval = new HiveParser_IdentifiersParser.precedenceBitwiseXorOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token BITWISEXOR162=null;
+		Token BITWISEXOR168=null;
 
-		CommonTree BITWISEXOR162_tree=null;
+		CommonTree BITWISEXOR168_tree=null;
 
 		try {
-			// IdentifiersParser.g:309:5: ( BITWISEXOR )
-			// IdentifiersParser.g:310:5: BITWISEXOR
+			// IdentifiersParser.g:315:5: ( BITWISEXOR )
+			// IdentifiersParser.g:316:5: BITWISEXOR
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			BITWISEXOR162=(Token)match(input,BITWISEXOR,FOLLOW_BITWISEXOR_in_precedenceBitwiseXorOperator2006); if (state.failed) return retval;
+			BITWISEXOR168=(Token)match(input,BITWISEXOR,FOLLOW_BITWISEXOR_in_precedenceBitwiseXorOperator2054); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
-			BITWISEXOR162_tree = (CommonTree)adaptor.create(BITWISEXOR162);
-			adaptor.addChild(root_0, BITWISEXOR162_tree);
+			BITWISEXOR168_tree = (CommonTree)adaptor.create(BITWISEXOR168);
+			adaptor.addChild(root_0, BITWISEXOR168_tree);
 			}
 
 			}
@@ -5265,50 +5520,50 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceBitwiseXorExpression"
-	// IdentifiersParser.g:313:1: precedenceBitwiseXorExpression : precedenceUnarySuffixExpression ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )* ;
+	// IdentifiersParser.g:319:1: precedenceBitwiseXorExpression : precedenceUnarySuffixExpression ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )* ;
 	public final HiveParser_IdentifiersParser.precedenceBitwiseXorExpression_return precedenceBitwiseXorExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceBitwiseXorExpression_return retval = new HiveParser_IdentifiersParser.precedenceBitwiseXorExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceUnarySuffixExpression163 =null;
-		ParserRuleReturnScope precedenceBitwiseXorOperator164 =null;
-		ParserRuleReturnScope precedenceUnarySuffixExpression165 =null;
+		ParserRuleReturnScope precedenceUnarySuffixExpression169 =null;
+		ParserRuleReturnScope precedenceBitwiseXorOperator170 =null;
+		ParserRuleReturnScope precedenceUnarySuffixExpression171 =null;
 
 
 		try {
-			// IdentifiersParser.g:314:5: ( precedenceUnarySuffixExpression ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )* )
-			// IdentifiersParser.g:315:5: precedenceUnarySuffixExpression ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )*
+			// IdentifiersParser.g:320:5: ( precedenceUnarySuffixExpression ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )* )
+			// IdentifiersParser.g:321:5: precedenceUnarySuffixExpression ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2027);
-			precedenceUnarySuffixExpression163=precedenceUnarySuffixExpression();
+			pushFollow(FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2075);
+			precedenceUnarySuffixExpression169=precedenceUnarySuffixExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceUnarySuffixExpression163.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceUnarySuffixExpression169.getTree());
 
-			// IdentifiersParser.g:315:37: ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )*
+			// IdentifiersParser.g:321:37: ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )*
 			loop39:
 			while (true) {
 				int alt39=2;
 				alt39 = dfa39.predict(input);
 				switch (alt39) {
 				case 1 :
-					// IdentifiersParser.g:315:38: precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression
+					// IdentifiersParser.g:321:38: precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression
 					{
-					pushFollow(FOLLOW_precedenceBitwiseXorOperator_in_precedenceBitwiseXorExpression2030);
-					precedenceBitwiseXorOperator164=precedenceBitwiseXorOperator();
+					pushFollow(FOLLOW_precedenceBitwiseXorOperator_in_precedenceBitwiseXorExpression2078);
+					precedenceBitwiseXorOperator170=precedenceBitwiseXorOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceBitwiseXorOperator164.getTree(), root_0);
-					pushFollow(FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2033);
-					precedenceUnarySuffixExpression165=precedenceUnarySuffixExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceBitwiseXorOperator170.getTree(), root_0);
+					pushFollow(FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2081);
+					precedenceUnarySuffixExpression171=precedenceUnarySuffixExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceUnarySuffixExpression165.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceUnarySuffixExpression171.getTree());
 
 					}
 					break;
@@ -5348,28 +5603,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceStarOperator"
-	// IdentifiersParser.g:319:1: precedenceStarOperator : ( STAR | DIVIDE | MOD | DIV );
+	// IdentifiersParser.g:325:1: precedenceStarOperator : ( STAR | DIVIDE | MOD | DIV );
 	public final HiveParser_IdentifiersParser.precedenceStarOperator_return precedenceStarOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceStarOperator_return retval = new HiveParser_IdentifiersParser.precedenceStarOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set166=null;
+		Token set172=null;
 
-		CommonTree set166_tree=null;
+		CommonTree set172_tree=null;
 
 		try {
-			// IdentifiersParser.g:320:5: ( STAR | DIVIDE | MOD | DIV )
+			// IdentifiersParser.g:326:5: ( STAR | DIVIDE | MOD | DIV )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set166=input.LT(1);
+			set172=input.LT(1);
 			if ( (input.LA(1) >= DIV && input.LA(1) <= DIVIDE)||input.LA(1)==MOD||input.LA(1)==STAR ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set166));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set172));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -5408,50 +5663,50 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceStarExpression"
-	// IdentifiersParser.g:324:1: precedenceStarExpression : precedenceBitwiseXorExpression ( precedenceStarOperator ^ precedenceBitwiseXorExpression )* ;
+	// IdentifiersParser.g:330:1: precedenceStarExpression : precedenceBitwiseXorExpression ( precedenceStarOperator ^ precedenceBitwiseXorExpression )* ;
 	public final HiveParser_IdentifiersParser.precedenceStarExpression_return precedenceStarExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceStarExpression_return retval = new HiveParser_IdentifiersParser.precedenceStarExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceBitwiseXorExpression167 =null;
-		ParserRuleReturnScope precedenceStarOperator168 =null;
-		ParserRuleReturnScope precedenceBitwiseXorExpression169 =null;
+		ParserRuleReturnScope precedenceBitwiseXorExpression173 =null;
+		ParserRuleReturnScope precedenceStarOperator174 =null;
+		ParserRuleReturnScope precedenceBitwiseXorExpression175 =null;
 
 
 		try {
-			// IdentifiersParser.g:325:5: ( precedenceBitwiseXorExpression ( precedenceStarOperator ^ precedenceBitwiseXorExpression )* )
-			// IdentifiersParser.g:326:5: precedenceBitwiseXorExpression ( precedenceStarOperator ^ precedenceBitwiseXorExpression )*
+			// IdentifiersParser.g:331:5: ( precedenceBitwiseXorExpression ( precedenceStarOperator ^ precedenceBitwiseXorExpression )* )
+			// IdentifiersParser.g:332:5: precedenceBitwiseXorExpression ( precedenceStarOperator ^ precedenceBitwiseXorExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2090);
-			precedenceBitwiseXorExpression167=precedenceBitwiseXorExpression();
+			pushFollow(FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2138);
+			precedenceBitwiseXorExpression173=precedenceBitwiseXorExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceBitwiseXorExpression167.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceBitwiseXorExpression173.getTree());
 
-			// IdentifiersParser.g:326:36: ( precedenceStarOperator ^ precedenceBitwiseXorExpression )*
+			// IdentifiersParser.g:332:36: ( precedenceStarOperator ^ precedenceBitwiseXorExpression )*
 			loop40:
 			while (true) {
 				int alt40=2;
 				alt40 = dfa40.predict(input);
 				switch (alt40) {
 				case 1 :
-					// IdentifiersParser.g:326:37: precedenceStarOperator ^ precedenceBitwiseXorExpression
+					// IdentifiersParser.g:332:37: precedenceStarOperator ^ precedenceBitwiseXorExpression
 					{
-					pushFollow(FOLLOW_precedenceStarOperator_in_precedenceStarExpression2093);
-					precedenceStarOperator168=precedenceStarOperator();
+					pushFollow(FOLLOW_precedenceStarOperator_in_precedenceStarExpression2141);
+					precedenceStarOperator174=precedenceStarOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceStarOperator168.getTree(), root_0);
-					pushFollow(FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2096);
-					precedenceBitwiseXorExpression169=precedenceBitwiseXorExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceStarOperator174.getTree(), root_0);
+					pushFollow(FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2144);
+					precedenceBitwiseXorExpression175=precedenceBitwiseXorExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceBitwiseXorExpression169.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceBitwiseXorExpression175.getTree());
 
 					}
 					break;
@@ -5491,28 +5746,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedencePlusOperator"
-	// IdentifiersParser.g:330:1: precedencePlusOperator : ( PLUS | MINUS );
+	// IdentifiersParser.g:336:1: precedencePlusOperator : ( PLUS | MINUS );
 	public final HiveParser_IdentifiersParser.precedencePlusOperator_return precedencePlusOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedencePlusOperator_return retval = new HiveParser_IdentifiersParser.precedencePlusOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set170=null;
+		Token set176=null;
 
-		CommonTree set170_tree=null;
+		CommonTree set176_tree=null;
 
 		try {
-			// IdentifiersParser.g:331:5: ( PLUS | MINUS )
+			// IdentifiersParser.g:337:5: ( PLUS | MINUS )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set170=input.LT(1);
+			set176=input.LT(1);
 			if ( input.LA(1)==MINUS||input.LA(1)==PLUS ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set170));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set176));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -5551,32 +5806,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedencePlusExpression"
-	// IdentifiersParser.g:335:1: precedencePlusExpression : precedenceStarExpression ( precedencePlusOperator ^ precedenceStarExpression )* ;
+	// IdentifiersParser.g:341:1: precedencePlusExpression : precedenceStarExpression ( precedencePlusOperator ^ precedenceStarExpression )* ;
 	public final HiveParser_IdentifiersParser.precedencePlusExpression_return precedencePlusExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedencePlusExpression_return retval = new HiveParser_IdentifiersParser.precedencePlusExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceStarExpression171 =null;
-		ParserRuleReturnScope precedencePlusOperator172 =null;
-		ParserRuleReturnScope precedenceStarExpression173 =null;
+		ParserRuleReturnScope precedenceStarExpression177 =null;
+		ParserRuleReturnScope precedencePlusOperator178 =null;
+		ParserRuleReturnScope precedenceStarExpression179 =null;
 
 
 		try {
-			// IdentifiersParser.g:336:5: ( precedenceStarExpression ( precedencePlusOperator ^ precedenceStarExpression )* )
-			// IdentifiersParser.g:337:5: precedenceStarExpression ( precedencePlusOperator ^ precedenceStarExpression )*
+			// IdentifiersParser.g:342:5: ( precedenceStarExpression ( precedencePlusOperator ^ precedenceStarExpression )* )
+			// IdentifiersParser.g:343:5: precedenceStarExpression ( precedencePlusOperator ^ precedenceStarExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceStarExpression_in_precedencePlusExpression2145);
-			precedenceStarExpression171=precedenceStarExpression();
+			pushFollow(FOLLOW_precedenceStarExpression_in_precedencePlusExpression2193);
+			precedenceStarExpression177=precedenceStarExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceStarExpression171.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceStarExpression177.getTree());
 
-			// IdentifiersParser.g:337:30: ( precedencePlusOperator ^ precedenceStarExpression )*
+			// IdentifiersParser.g:343:30: ( precedencePlusOperator ^ precedenceStarExpression )*
 			loop41:
 			while (true) {
 				int alt41=2;
@@ -5587,18 +5842,18 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt41) {
 				case 1 :
-					// IdentifiersParser.g:337:31: precedencePlusOperator ^ precedenceStarExpression
+					// IdentifiersParser.g:343:31: precedencePlusOperator ^ precedenceStarExpression
 					{
-					pushFollow(FOLLOW_precedencePlusOperator_in_precedencePlusExpression2148);
-					precedencePlusOperator172=precedencePlusOperator();
+					pushFollow(FOLLOW_precedencePlusOperator_in_precedencePlusExpression2196);
+					precedencePlusOperator178=precedencePlusOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedencePlusOperator172.getTree(), root_0);
-					pushFollow(FOLLOW_precedenceStarExpression_in_precedencePlusExpression2151);
-					precedenceStarExpression173=precedenceStarExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedencePlusOperator178.getTree(), root_0);
+					pushFollow(FOLLOW_precedenceStarExpression_in_precedencePlusExpression2199);
+					precedenceStarExpression179=precedenceStarExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceStarExpression173.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceStarExpression179.getTree());
 
 					}
 					break;
@@ -5638,28 +5893,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceAmpersandOperator"
-	// IdentifiersParser.g:341:1: precedenceAmpersandOperator : AMPERSAND ;
+	// IdentifiersParser.g:347:1: precedenceAmpersandOperator : AMPERSAND ;
 	public final HiveParser_IdentifiersParser.precedenceAmpersandOperator_return precedenceAmpersandOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceAmpersandOperator_return retval = new HiveParser_IdentifiersParser.precedenceAmpersandOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token AMPERSAND174=null;
+		Token AMPERSAND180=null;
 
-		CommonTree AMPERSAND174_tree=null;
+		CommonTree AMPERSAND180_tree=null;
 
 		try {
-			// IdentifiersParser.g:342:5: ( AMPERSAND )
-			// IdentifiersParser.g:343:5: AMPERSAND
+			// IdentifiersParser.g:348:5: ( AMPERSAND )
+			// IdentifiersParser.g:349:5: AMPERSAND
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			AMPERSAND174=(Token)match(input,AMPERSAND,FOLLOW_AMPERSAND_in_precedenceAmpersandOperator2175); if (state.failed) return retval;
+			AMPERSAND180=(Token)match(input,AMPERSAND,FOLLOW_AMPERSAND_in_precedenceAmpersandOperator2223); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
-			AMPERSAND174_tree = (CommonTree)adaptor.create(AMPERSAND174);
-			adaptor.addChild(root_0, AMPERSAND174_tree);
+			AMPERSAND180_tree = (CommonTree)adaptor.create(AMPERSAND180);
+			adaptor.addChild(root_0, AMPERSAND180_tree);
 			}
 
 			}
@@ -5692,32 +5947,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceAmpersandExpression"
-	// IdentifiersParser.g:346:1: precedenceAmpersandExpression : precedencePlusExpression ( precedenceAmpersandOperator ^ precedencePlusExpression )* ;
+	// IdentifiersParser.g:352:1: precedenceAmpersandExpression : precedencePlusExpression ( precedenceAmpersandOperator ^ precedencePlusExpression )* ;
 	public final HiveParser_IdentifiersParser.precedenceAmpersandExpression_return precedenceAmpersandExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceAmpersandExpression_return retval = new HiveParser_IdentifiersParser.precedenceAmpersandExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedencePlusExpression175 =null;
-		ParserRuleReturnScope precedenceAmpersandOperator176 =null;
-		ParserRuleReturnScope precedencePlusExpression177 =null;
+		ParserRuleReturnScope precedencePlusExpression181 =null;
+		ParserRuleReturnScope precedenceAmpersandOperator182 =null;
+		ParserRuleReturnScope precedencePlusExpression183 =null;
 
 
 		try {
-			// IdentifiersParser.g:347:5: ( precedencePlusExpression ( precedenceAmpersandOperator ^ precedencePlusExpression )* )
-			// IdentifiersParser.g:348:5: precedencePlusExpression ( precedenceAmpersandOperator ^ precedencePlusExpression )*
+			// IdentifiersParser.g:353:5: ( precedencePlusExpression ( precedenceAmpersandOperator ^ precedencePlusExpression )* )
+			// IdentifiersParser.g:354:5: precedencePlusExpression ( precedenceAmpersandOperator ^ precedencePlusExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2196);
-			precedencePlusExpression175=precedencePlusExpression();
+			pushFollow(FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2244);
+			precedencePlusExpression181=precedencePlusExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedencePlusExpression175.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedencePlusExpression181.getTree());
 
-			// IdentifiersParser.g:348:30: ( precedenceAmpersandOperator ^ precedencePlusExpression )*
+			// IdentifiersParser.g:354:30: ( precedenceAmpersandOperator ^ precedencePlusExpression )*
 			loop42:
 			while (true) {
 				int alt42=2;
@@ -5728,18 +5983,18 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt42) {
 				case 1 :
-					// IdentifiersParser.g:348:31: precedenceAmpersandOperator ^ precedencePlusExpression
+					// IdentifiersParser.g:354:31: precedenceAmpersandOperator ^ precedencePlusExpression
 					{
-					pushFollow(FOLLOW_precedenceAmpersandOperator_in_precedenceAmpersandExpression2199);
-					precedenceAmpersandOperator176=precedenceAmpersandOperator();
+					pushFollow(FOLLOW_precedenceAmpersandOperator_in_precedenceAmpersandExpression2247);
+					precedenceAmpersandOperator182=precedenceAmpersandOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceAmpersandOperator176.getTree(), root_0);
-					pushFollow(FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2202);
-					precedencePlusExpression177=precedencePlusExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceAmpersandOperator182.getTree(), root_0);
+					pushFollow(FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2250);
+					precedencePlusExpression183=precedencePlusExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedencePlusExpression177.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedencePlusExpression183.getTree());
 
 					}
 					break;
@@ -5779,28 +6034,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceBitwiseOrOperator"
-	// IdentifiersParser.g:352:1: precedenceBitwiseOrOperator : BITWISEOR ;
+	// IdentifiersParser.g:358:1: precedenceBitwiseOrOperator : BITWISEOR ;
 	public final HiveParser_IdentifiersParser.precedenceBitwiseOrOperator_return precedenceBitwiseOrOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceBitwiseOrOperator_return retval = new HiveParser_IdentifiersParser.precedenceBitwiseOrOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token BITWISEOR178=null;
+		Token BITWISEOR184=null;
 
-		CommonTree BITWISEOR178_tree=null;
+		CommonTree BITWISEOR184_tree=null;
 
 		try {
-			// IdentifiersParser.g:353:5: ( BITWISEOR )
-			// IdentifiersParser.g:354:5: BITWISEOR
+			// IdentifiersParser.g:359:5: ( BITWISEOR )
+			// IdentifiersParser.g:360:5: BITWISEOR
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			BITWISEOR178=(Token)match(input,BITWISEOR,FOLLOW_BITWISEOR_in_precedenceBitwiseOrOperator2226); if (state.failed) return retval;
+			BITWISEOR184=(Token)match(input,BITWISEOR,FOLLOW_BITWISEOR_in_precedenceBitwiseOrOperator2274); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
-			BITWISEOR178_tree = (CommonTree)adaptor.create(BITWISEOR178);
-			adaptor.addChild(root_0, BITWISEOR178_tree);
+			BITWISEOR184_tree = (CommonTree)adaptor.create(BITWISEOR184);
+			adaptor.addChild(root_0, BITWISEOR184_tree);
 			}
 
 			}
@@ -5833,32 +6088,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceBitwiseOrExpression"
-	// IdentifiersParser.g:357:1: precedenceBitwiseOrExpression : precedenceAmpersandExpression ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )* ;
+	// IdentifiersParser.g:363:1: precedenceBitwiseOrExpression : precedenceAmpersandExpression ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )* ;
 	public final HiveParser_IdentifiersParser.precedenceBitwiseOrExpression_return precedenceBitwiseOrExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceBitwiseOrExpression_return retval = new HiveParser_IdentifiersParser.precedenceBitwiseOrExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceAmpersandExpression179 =null;
-		ParserRuleReturnScope precedenceBitwiseOrOperator180 =null;
-		ParserRuleReturnScope precedenceAmpersandExpression181 =null;
+		ParserRuleReturnScope precedenceAmpersandExpression185 =null;
+		ParserRuleReturnScope precedenceBitwiseOrOperator186 =null;
+		ParserRuleReturnScope precedenceAmpersandExpression187 =null;
 
 
 		try {
-			// IdentifiersParser.g:358:5: ( precedenceAmpersandExpression ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )* )
-			// IdentifiersParser.g:359:5: precedenceAmpersandExpression ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )*
+			// IdentifiersParser.g:364:5: ( precedenceAmpersandExpression ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )* )
+			// IdentifiersParser.g:365:5: precedenceAmpersandExpression ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2247);
-			precedenceAmpersandExpression179=precedenceAmpersandExpression();
+			pushFollow(FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2295);
+			precedenceAmpersandExpression185=precedenceAmpersandExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAmpersandExpression179.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAmpersandExpression185.getTree());
 
-			// IdentifiersParser.g:359:35: ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )*
+			// IdentifiersParser.g:365:35: ( precedenceBitwiseOrOperator ^ precedenceAmpersandExpression )*
 			loop43:
 			while (true) {
 				int alt43=2;
@@ -5869,18 +6124,18 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt43) {
 				case 1 :
-					// IdentifiersParser.g:359:36: precedenceBitwiseOrOperator ^ precedenceAmpersandExpression
+					// IdentifiersParser.g:365:36: precedenceBitwiseOrOperator ^ precedenceAmpersandExpression
 					{
-					pushFollow(FOLLOW_precedenceBitwiseOrOperator_in_precedenceBitwiseOrExpression2250);
-					precedenceBitwiseOrOperator180=precedenceBitwiseOrOperator();
+					pushFollow(FOLLOW_precedenceBitwiseOrOperator_in_precedenceBitwiseOrExpression2298);
+					precedenceBitwiseOrOperator186=precedenceBitwiseOrOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceBitwiseOrOperator180.getTree(), root_0);
-					pushFollow(FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2253);
-					precedenceAmpersandExpression181=precedenceAmpersandExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceBitwiseOrOperator186.getTree(), root_0);
+					pushFollow(FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2301);
+					precedenceAmpersandExpression187=precedenceAmpersandExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAmpersandExpression181.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAmpersandExpression187.getTree());
 
 					}
 					break;
@@ -5920,28 +6175,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceEqualNegatableOperator"
-	// IdentifiersParser.g:364:1: precedenceEqualNegatableOperator : ( KW_LIKE | KW_RLIKE | KW_REGEXP );
+	// IdentifiersParser.g:370:1: precedenceEqualNegatableOperator : ( KW_LIKE | KW_RLIKE | KW_REGEXP );
 	public final HiveParser_IdentifiersParser.precedenceEqualNegatableOperator_return precedenceEqualNegatableOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceEqualNegatableOperator_return retval = new HiveParser_IdentifiersParser.precedenceEqualNegatableOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set182=null;
+		Token set188=null;
 
-		CommonTree set182_tree=null;
+		CommonTree set188_tree=null;
 
 		try {
-			// IdentifiersParser.g:365:5: ( KW_LIKE | KW_RLIKE | KW_REGEXP )
+			// IdentifiersParser.g:371:5: ( KW_LIKE | KW_RLIKE | KW_REGEXP )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set182=input.LT(1);
+			set188=input.LT(1);
 			if ( input.LA(1)==KW_LIKE||input.LA(1)==KW_REGEXP||input.LA(1)==KW_RLIKE ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set182));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set188));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -5980,32 +6235,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceEqualOperator"
-	// IdentifiersParser.g:369:1: precedenceEqualOperator : ( precedenceEqualNegatableOperator | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN );
+	// IdentifiersParser.g:375:1: precedenceEqualOperator : ( precedenceEqualNegatableOperator | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN );
 	public final HiveParser_IdentifiersParser.precedenceEqualOperator_return precedenceEqualOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceEqualOperator_return retval = new HiveParser_IdentifiersParser.precedenceEqualOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token EQUAL184=null;
-		Token EQUAL_NS185=null;
-		Token NOTEQUAL186=null;
-		Token LESSTHANOREQUALTO187=null;
-		Token LESSTHAN188=null;
-		Token GREATERTHANOREQUALTO189=null;
-		Token GREATERTHAN190=null;
-		ParserRuleReturnScope precedenceEqualNegatableOperator183 =null;
+		Token EQUAL190=null;
+		Token EQUAL_NS191=null;
+		Token NOTEQUAL192=null;
+		Token LESSTHANOREQUALTO193=null;
+		Token LESSTHAN194=null;
+		Token GREATERTHANOREQUALTO195=null;
+		Token GREATERTHAN196=null;
+		ParserRuleReturnScope precedenceEqualNegatableOperator189 =null;
 
-		CommonTree EQUAL184_tree=null;
-		CommonTree EQUAL_NS185_tree=null;
-		CommonTree NOTEQUAL186_tree=null;
-		CommonTree LESSTHANOREQUALTO187_tree=null;
-		CommonTree LESSTHAN188_tree=null;
-		CommonTree GREATERTHANOREQUALTO189_tree=null;
-		CommonTree GREATERTHAN190_tree=null;
+		CommonTree EQUAL190_tree=null;
+		CommonTree EQUAL_NS191_tree=null;
+		CommonTree NOTEQUAL192_tree=null;
+		CommonTree LESSTHANOREQUALTO193_tree=null;
+		CommonTree LESSTHAN194_tree=null;
+		CommonTree GREATERTHANOREQUALTO195_tree=null;
+		CommonTree GREATERTHAN196_tree=null;
 
 		try {
-			// IdentifiersParser.g:370:5: ( precedenceEqualNegatableOperator | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN )
+			// IdentifiersParser.g:376:5: ( precedenceEqualNegatableOperator | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN )
 			int alt44=8;
 			switch ( input.LA(1) ) {
 			case KW_LIKE:
@@ -6058,113 +6313,113 @@ public class HiveParser_IdentifiersParser extends Parser {
 			}
 			switch (alt44) {
 				case 1 :
-					// IdentifiersParser.g:371:5: precedenceEqualNegatableOperator
+					// IdentifiersParser.g:377:5: precedenceEqualNegatableOperator
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualOperator2307);
-					precedenceEqualNegatableOperator183=precedenceEqualNegatableOperator();
+					pushFollow(FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualOperator2355);
+					precedenceEqualNegatableOperator189=precedenceEqualNegatableOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceEqualNegatableOperator183.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceEqualNegatableOperator189.getTree());
 
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:371:40: EQUAL
+					// IdentifiersParser.g:377:40: EQUAL
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					EQUAL184=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_precedenceEqualOperator2311); if (state.failed) return retval;
+					EQUAL190=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_precedenceEqualOperator2359); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					EQUAL184_tree = (CommonTree)adaptor.create(EQUAL184);
-					adaptor.addChild(root_0, EQUAL184_tree);
+					EQUAL190_tree = (CommonTree)adaptor.create(EQUAL190);
+					adaptor.addChild(root_0, EQUAL190_tree);
 					}
 
 					}
 					break;
 				case 3 :
-					// IdentifiersParser.g:371:48: EQUAL_NS
+					// IdentifiersParser.g:377:48: EQUAL_NS
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					EQUAL_NS185=(Token)match(input,EQUAL_NS,FOLLOW_EQUAL_NS_in_precedenceEqualOperator2315); if (state.failed) return retval;
+					EQUAL_NS191=(Token)match(input,EQUAL_NS,FOLLOW_EQUAL_NS_in_precedenceEqualOperator2363); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					EQUAL_NS185_tree = (CommonTree)adaptor.create(EQUAL_NS185);
-					adaptor.addChild(root_0, EQUAL_NS185_tree);
+					EQUAL_NS191_tree = (CommonTree)adaptor.create(EQUAL_NS191);
+					adaptor.addChild(root_0, EQUAL_NS191_tree);
 					}
 
 					}
 					break;
 				case 4 :
-					// IdentifiersParser.g:371:59: NOTEQUAL
+					// IdentifiersParser.g:377:59: NOTEQUAL
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					NOTEQUAL186=(Token)match(input,NOTEQUAL,FOLLOW_NOTEQUAL_in_precedenceEqualOperator2319); if (state.failed) return retval;
+					NOTEQUAL192=(Token)match(input,NOTEQUAL,FOLLOW_NOTEQUAL_in_precedenceEqualOperator2367); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					NOTEQUAL186_tree = (CommonTree)adaptor.create(NOTEQUAL186);
-					adaptor.addChild(root_0, NOTEQUAL186_tree);
+					NOTEQUAL192_tree = (CommonTree)adaptor.create(NOTEQUAL192);
+					adaptor.addChild(root_0, NOTEQUAL192_tree);
 					}
 
 					}
 					break;
 				case 5 :
-					// IdentifiersParser.g:371:70: LESSTHANOREQUALTO
+					// IdentifiersParser.g:377:70: LESSTHANOREQUALTO
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					LESSTHANOREQUALTO187=(Token)match(input,LESSTHANOREQUALTO,FOLLOW_LESSTHANOREQUALTO_in_precedenceEqualOperator2323); if (state.failed) return retval;
+					LESSTHANOREQUALTO193=(Token)match(input,LESSTHANOREQUALTO,FOLLOW_LESSTHANOREQUALTO_in_precedenceEqualOperator2371); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					LESSTHANOREQUALTO187_tree = (CommonTree)adaptor.create(LESSTHANOREQUALTO187);
-					adaptor.addChild(root_0, LESSTHANOREQUALTO187_tree);
+					LESSTHANOREQUALTO193_tree = (CommonTree)adaptor.create(LESSTHANOREQUALTO193);
+					adaptor.addChild(root_0, LESSTHANOREQUALTO193_tree);
 					}
 
 					}
 					break;
 				case 6 :
-					// IdentifiersParser.g:371:90: LESSTHAN
+					// IdentifiersParser.g:377:90: LESSTHAN
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					LESSTHAN188=(Token)match(input,LESSTHAN,FOLLOW_LESSTHAN_in_precedenceEqualOperator2327); if (state.failed) return retval;
+					LESSTHAN194=(Token)match(input,LESSTHAN,FOLLOW_LESSTHAN_in_precedenceEqualOperator2375); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					LESSTHAN188_tree = (CommonTree)adaptor.create(LESSTHAN188);
-					adaptor.addChild(root_0, LESSTHAN188_tree);
+					LESSTHAN194_tree = (CommonTree)adaptor.create(LESSTHAN194);
+					adaptor.addChild(root_0, LESSTHAN194_tree);
 					}
 
 					}
 					break;
 				case 7 :
-					// IdentifiersParser.g:371:101: GREATERTHANOREQUALTO
+					// IdentifiersParser.g:377:101: GREATERTHANOREQUALTO
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					GREATERTHANOREQUALTO189=(Token)match(input,GREATERTHANOREQUALTO,FOLLOW_GREATERTHANOREQUALTO_in_precedenceEqualOperator2331); if (state.failed) return retval;
+					GREATERTHANOREQUALTO195=(Token)match(input,GREATERTHANOREQUALTO,FOLLOW_GREATERTHANOREQUALTO_in_precedenceEqualOperator2379); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					GREATERTHANOREQUALTO189_tree = (CommonTree)adaptor.create(GREATERTHANOREQUALTO189);
-					adaptor.addChild(root_0, GREATERTHANOREQUALTO189_tree);
+					GREATERTHANOREQUALTO195_tree = (CommonTree)adaptor.create(GREATERTHANOREQUALTO195);
+					adaptor.addChild(root_0, GREATERTHANOREQUALTO195_tree);
 					}
 
 					}
 					break;
 				case 8 :
-					// IdentifiersParser.g:371:124: GREATERTHAN
+					// IdentifiersParser.g:377:124: GREATERTHAN
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					GREATERTHAN190=(Token)match(input,GREATERTHAN,FOLLOW_GREATERTHAN_in_precedenceEqualOperator2335); if (state.failed) return retval;
+					GREATERTHAN196=(Token)match(input,GREATERTHAN,FOLLOW_GREATERTHAN_in_precedenceEqualOperator2383); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					GREATERTHAN190_tree = (CommonTree)adaptor.create(GREATERTHAN190);
-					adaptor.addChild(root_0, GREATERTHAN190_tree);
+					GREATERTHAN196_tree = (CommonTree)adaptor.create(GREATERTHAN196);
+					adaptor.addChild(root_0, GREATERTHAN196_tree);
 					}
 
 					}
@@ -6199,41 +6454,41 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceEqualExpression"
-	// IdentifiersParser.g:374:1: precedenceEqualExpression : (left= precedenceBitwiseOrExpression -> $left) ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )* ;
+	// IdentifiersParser.g:380:1: precedenceEqualExpression : (left= precedenceBitwiseOrExpression -> $left) ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )* ;
 	public final HiveParser_IdentifiersParser.precedenceEqualExpression_return precedenceEqualExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceEqualExpression_return retval = new HiveParser_IdentifiersParser.precedenceEqualExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_NOT191=null;
-		Token KW_NOT194=null;
-		Token KW_IN195=null;
-		Token KW_IN197=null;
-		Token KW_NOT199=null;
-		Token KW_BETWEEN200=null;
-		Token KW_AND201=null;
-		Token KW_BETWEEN202=null;
-		Token KW_AND203=null;
+		Token KW_NOT197=null;
+		Token KW_NOT200=null;
+		Token KW_IN201=null;
+		Token KW_IN203=null;
+		Token KW_NOT205=null;
+		Token KW_BETWEEN206=null;
+		Token KW_AND207=null;
+		Token KW_BETWEEN208=null;
+		Token KW_AND209=null;
 		ParserRuleReturnScope left =null;
 		ParserRuleReturnScope notExpr =null;
 		ParserRuleReturnScope equalExpr =null;
 		ParserRuleReturnScope min =null;
 		ParserRuleReturnScope max =null;
-		ParserRuleReturnScope precedenceEqualNegatableOperator192 =null;
-		ParserRuleReturnScope precedenceEqualOperator193 =null;
-		ParserRuleReturnScope expressions196 =null;
-		ParserRuleReturnScope expressions198 =null;
+		ParserRuleReturnScope precedenceEqualNegatableOperator198 =null;
+		ParserRuleReturnScope precedenceEqualOperator199 =null;
+		ParserRuleReturnScope expressions202 =null;
+		ParserRuleReturnScope expressions204 =null;
 
-		CommonTree KW_NOT191_tree=null;
-		CommonTree KW_NOT194_tree=null;
-		CommonTree KW_IN195_tree=null;
-		CommonTree KW_IN197_tree=null;
-		CommonTree KW_NOT199_tree=null;
-		CommonTree KW_BETWEEN200_tree=null;
-		CommonTree KW_AND201_tree=null;
-		CommonTree KW_BETWEEN202_tree=null;
-		CommonTree KW_AND203_tree=null;
+		CommonTree KW_NOT197_tree=null;
+		CommonTree KW_NOT200_tree=null;
+		CommonTree KW_IN201_tree=null;
+		CommonTree KW_IN203_tree=null;
+		CommonTree KW_NOT205_tree=null;
+		CommonTree KW_BETWEEN206_tree=null;
+		CommonTree KW_AND207_tree=null;
+		CommonTree KW_BETWEEN208_tree=null;
+		CommonTree KW_AND209_tree=null;
 		RewriteRuleTokenStream stream_KW_IN=new RewriteRuleTokenStream(adaptor,"token KW_IN");
 		RewriteRuleTokenStream stream_KW_BETWEEN=new RewriteRuleTokenStream(adaptor,"token KW_BETWEEN");
 		RewriteRuleTokenStream stream_KW_AND=new RewriteRuleTokenStream(adaptor,"token KW_AND");
@@ -6244,13 +6499,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 		RewriteRuleSubtreeStream stream_expressions=new RewriteRuleSubtreeStream(adaptor,"rule expressions");
 
 		try {
-			// IdentifiersParser.g:375:5: ( (left= precedenceBitwiseOrExpression -> $left) ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )* )
-			// IdentifiersParser.g:376:5: (left= precedenceBitwiseOrExpression -> $left) ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )*
+			// IdentifiersParser.g:381:5: ( (left= precedenceBitwiseOrExpression -> $left) ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )* )
+			// IdentifiersParser.g:382:5: (left= precedenceBitwiseOrExpression -> $left) ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )*
 			{
-			// IdentifiersParser.g:376:5: (left= precedenceBitwiseOrExpression -> $left)
-			// IdentifiersParser.g:376:6: left= precedenceBitwiseOrExpression
+			// IdentifiersParser.g:382:5: (left= precedenceBitwiseOrExpression -> $left)
+			// IdentifiersParser.g:382:6: left= precedenceBitwiseOrExpression
 			{
-			pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2359);
+			pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2407);
 			left=precedenceBitwiseOrExpression();
 			state._fsp--;
 			if (state.failed) return retval;
@@ -6268,7 +6523,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_left=new RewriteRuleSubtreeStream(adaptor,"rule left",left!=null?left.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 376:41: -> $left
+			// 382:41: -> $left
 			{
 				adaptor.addChild(root_0, stream_left.nextTree());
 			}
@@ -6279,27 +6534,27 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 			}
 
-			// IdentifiersParser.g:377:5: ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )*
+			// IdentifiersParser.g:383:5: ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )*
 			loop45:
 			while (true) {
 				int alt45=7;
 				alt45 = dfa45.predict(input);
 				switch (alt45) {
 				case 1 :
-					// IdentifiersParser.g:378:8: ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:384:8: ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression )
 					{
-					// IdentifiersParser.g:378:8: ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression )
-					// IdentifiersParser.g:378:9: KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression
+					// IdentifiersParser.g:384:8: ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:384:9: KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression
 					{
-					KW_NOT191=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceEqualExpression2381); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT191);
+					KW_NOT197=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceEqualExpression2429); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT197);
 
-					pushFollow(FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualExpression2383);
-					precedenceEqualNegatableOperator192=precedenceEqualNegatableOperator();
+					pushFollow(FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualExpression2431);
+					precedenceEqualNegatableOperator198=precedenceEqualNegatableOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_precedenceEqualNegatableOperator.add(precedenceEqualNegatableOperator192.getTree());
-					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2387);
+					if ( state.backtracking==0 ) stream_precedenceEqualNegatableOperator.add(precedenceEqualNegatableOperator198.getTree());
+					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2435);
 					notExpr=precedenceBitwiseOrExpression();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -6307,7 +6562,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: precedenceEqualExpression, notExpr, precedenceEqualNegatableOperator, KW_NOT
+					// elements: KW_NOT, notExpr, precedenceEqualExpression, precedenceEqualNegatableOperator
 					// token labels: 
 					// rule labels: retval, notExpr
 					// token list labels: 
@@ -6319,13 +6574,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_notExpr=new RewriteRuleSubtreeStream(adaptor,"rule notExpr",notExpr!=null?notExpr.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 379:8: -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) )
+					// 385:8: -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) )
 					{
-						// IdentifiersParser.g:379:11: ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) )
+						// IdentifiersParser.g:385:11: ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot(stream_KW_NOT.nextNode(), root_1);
-						// IdentifiersParser.g:379:20: ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr)
+						// IdentifiersParser.g:385:20: ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr)
 						{
 						CommonTree root_2 = (CommonTree)adaptor.nil();
 						root_2 = (CommonTree)adaptor.becomeRoot(stream_precedenceEqualNegatableOperator.nextNode(), root_2);
@@ -6346,17 +6601,17 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:380:7: ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:386:7: ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression )
 					{
-					// IdentifiersParser.g:380:7: ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression )
-					// IdentifiersParser.g:380:8: precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression
+					// IdentifiersParser.g:386:7: ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:386:8: precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression
 					{
-					pushFollow(FOLLOW_precedenceEqualOperator_in_precedenceEqualExpression2420);
-					precedenceEqualOperator193=precedenceEqualOperator();
+					pushFollow(FOLLOW_precedenceEqualOperator_in_precedenceEqualExpression2468);
+					precedenceEqualOperator199=precedenceEqualOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_precedenceEqualOperator.add(precedenceEqualOperator193.getTree());
-					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2424);
+					if ( state.backtracking==0 ) stream_precedenceEqualOperator.add(precedenceEqualOperator199.getTree());
+					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2472);
 					equalExpr=precedenceBitwiseOrExpression();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -6364,7 +6619,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: equalExpr, precedenceEqualExpression, precedenceEqualOperator
+					// elements: precedenceEqualExpression, equalExpr, precedenceEqualOperator
 					// token labels: 
 					// rule labels: equalExpr, retval
 					// token list labels: 
@@ -6376,9 +6631,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 381:8: -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr)
+					// 387:8: -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr)
 					{
-						// IdentifiersParser.g:381:11: ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr)
+						// IdentifiersParser.g:387:11: ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr)
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot(stream_precedenceEqualOperator.nextNode(), root_1);
@@ -6396,26 +6651,26 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 3 :
-					// IdentifiersParser.g:382:7: ( KW_NOT KW_IN expressions )
+					// IdentifiersParser.g:388:7: ( KW_NOT KW_IN expressions )
 					{
-					// IdentifiersParser.g:382:7: ( KW_NOT KW_IN expressions )
-					// IdentifiersParser.g:382:8: KW_NOT KW_IN expressions
+					// IdentifiersParser.g:388:7: ( KW_NOT KW_IN expressions )
+					// IdentifiersParser.g:388:8: KW_NOT KW_IN expressions
 					{
-					KW_NOT194=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceEqualExpression2453); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT194);
+					KW_NOT200=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceEqualExpression2501); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT200);
 
-					KW_IN195=(Token)match(input,KW_IN,FOLLOW_KW_IN_in_precedenceEqualExpression2455); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_IN.add(KW_IN195);
+					KW_IN201=(Token)match(input,KW_IN,FOLLOW_KW_IN_in_precedenceEqualExpression2503); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_IN.add(KW_IN201);
 
-					pushFollow(FOLLOW_expressions_in_precedenceEqualExpression2457);
-					expressions196=expressions();
+					pushFollow(FOLLOW_expressions_in_precedenceEqualExpression2505);
+					expressions202=expressions();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_expressions.add(expressions196.getTree());
+					if ( state.backtracking==0 ) stream_expressions.add(expressions202.getTree());
 					}
 
 					// AST REWRITE
-					// elements: KW_NOT, expressions, precedenceEqualExpression, KW_IN
+					// elements: expressions, KW_NOT, KW_IN, precedenceEqualExpression
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -6426,13 +6681,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 383:8: -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) )
+					// 389:8: -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) )
 					{
-						// IdentifiersParser.g:383:11: ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) )
+						// IdentifiersParser.g:389:11: ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot(stream_KW_NOT.nextNode(), root_1);
-						// IdentifiersParser.g:383:20: ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions )
+						// IdentifiersParser.g:389:20: ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions )
 						{
 						CommonTree root_2 = (CommonTree)adaptor.nil();
 						root_2 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_FUNCTION, "TOK_FUNCTION"), root_2);
@@ -6454,23 +6709,23 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 4 :
-					// IdentifiersParser.g:384:7: ( KW_IN expressions )
+					// IdentifiersParser.g:390:7: ( KW_IN expressions )
 					{
-					// IdentifiersParser.g:384:7: ( KW_IN expressions )
-					// IdentifiersParser.g:384:8: KW_IN expressions
+					// IdentifiersParser.g:390:7: ( KW_IN expressions )
+					// IdentifiersParser.g:390:8: KW_IN expressions
 					{
-					KW_IN197=(Token)match(input,KW_IN,FOLLOW_KW_IN_in_precedenceEqualExpression2491); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_IN.add(KW_IN197);
+					KW_IN203=(Token)match(input,KW_IN,FOLLOW_KW_IN_in_precedenceEqualExpression2539); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_IN.add(KW_IN203);
 
-					pushFollow(FOLLOW_expressions_in_precedenceEqualExpression2493);
-					expressions198=expressions();
+					pushFollow(FOLLOW_expressions_in_precedenceEqualExpression2541);
+					expressions204=expressions();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_expressions.add(expressions198.getTree());
+					if ( state.backtracking==0 ) stream_expressions.add(expressions204.getTree());
 					}
 
 					// AST REWRITE
-					// elements: precedenceEqualExpression, expressions, KW_IN
+					// elements: expressions, precedenceEqualExpression, KW_IN
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -6481,9 +6736,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 385:8: -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions )
+					// 391:8: -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions )
 					{
-						// IdentifiersParser.g:385:11: ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions )
+						// IdentifiersParser.g:391:11: ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions )
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_FUNCTION, "TOK_FUNCTION"), root_1);
@@ -6502,34 +6757,34 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 5 :
-					// IdentifiersParser.g:386:7: ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
+					// IdentifiersParser.g:392:7: ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
 					{
-					// IdentifiersParser.g:386:7: ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
-					// IdentifiersParser.g:386:9: KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:392:7: ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
+					// IdentifiersParser.g:392:9: KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression )
 					{
-					KW_NOT199=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceEqualExpression2524); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT199);
+					KW_NOT205=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceEqualExpression2572); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_NOT.add(KW_NOT205);
 
-					KW_BETWEEN200=(Token)match(input,KW_BETWEEN,FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2526); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_BETWEEN.add(KW_BETWEEN200);
+					KW_BETWEEN206=(Token)match(input,KW_BETWEEN,FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2574); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_BETWEEN.add(KW_BETWEEN206);
 
-					// IdentifiersParser.g:386:27: (min= precedenceBitwiseOrExpression )
-					// IdentifiersParser.g:386:28: min= precedenceBitwiseOrExpression
+					// IdentifiersParser.g:392:27: (min= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:392:28: min= precedenceBitwiseOrExpression
 					{
-					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2531);
+					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2579);
 					min=precedenceBitwiseOrExpression();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_precedenceBitwiseOrExpression.add(min.getTree());
 					}
 
-					KW_AND201=(Token)match(input,KW_AND,FOLLOW_KW_AND_in_precedenceEqualExpression2534); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_AND.add(KW_AND201);
+					KW_AND207=(Token)match(input,KW_AND,FOLLOW_KW_AND_in_precedenceEqualExpression2582); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_AND.add(KW_AND207);
 
-					// IdentifiersParser.g:386:70: (max= precedenceBitwiseOrExpression )
-					// IdentifiersParser.g:386:71: max= precedenceBitwiseOrExpression
+					// IdentifiersParser.g:392:70: (max= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:392:71: max= precedenceBitwiseOrExpression
 					{
-					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2539);
+					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2587);
 					max=precedenceBitwiseOrExpression();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -6539,7 +6794,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: left, min, max
+					// elements: left, max, min
 					// token labels: 
 					// rule labels: min, retval, max, left
 					// token list labels: 
@@ -6553,9 +6808,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_left=new RewriteRuleSubtreeStream(adaptor,"rule left",left!=null?left.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 387:8: -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max)
+					// 393:8: -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max)
 					{
-						// IdentifiersParser.g:387:11: ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max)
+						// IdentifiersParser.g:393:11: ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max)
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_FUNCTION, "TOK_FUNCTION"), root_1);
@@ -6576,31 +6831,31 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 					break;
 				case 6 :
-					// IdentifiersParser.g:388:7: ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
+					// IdentifiersParser.g:394:7: ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
 					{
-					// IdentifiersParser.g:388:7: ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
-					// IdentifiersParser.g:388:9: KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:394:7: ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) )
+					// IdentifiersParser.g:394:9: KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression )
 					{
-					KW_BETWEEN202=(Token)match(input,KW_BETWEEN,FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2579); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_BETWEEN.add(KW_BETWEEN202);
+					KW_BETWEEN208=(Token)match(input,KW_BETWEEN,FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2627); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_BETWEEN.add(KW_BETWEEN208);
 
-					// IdentifiersParser.g:388:20: (min= precedenceBitwiseOrExpression )
-					// IdentifiersParser.g:388:21: min= precedenceBitwiseOrExpression
+					// IdentifiersParser.g:394:20: (min= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:394:21: min= precedenceBitwiseOrExpression
 					{
-					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2584);
+					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2632);
 					min=precedenceBitwiseOrExpression();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_precedenceBitwiseOrExpression.add(min.getTree());
 					}
 
-					KW_AND203=(Token)match(input,KW_AND,FOLLOW_KW_AND_in_precedenceEqualExpression2587); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_KW_AND.add(KW_AND203);
+					KW_AND209=(Token)match(input,KW_AND,FOLLOW_KW_AND_in_precedenceEqualExpression2635); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_KW_AND.add(KW_AND209);
 
-					// IdentifiersParser.g:388:63: (max= precedenceBitwiseOrExpression )
-					// IdentifiersParser.g:388:64: max= precedenceBitwiseOrExpression
+					// IdentifiersParser.g:394:63: (max= precedenceBitwiseOrExpression )
+					// IdentifiersParser.g:394:64: max= precedenceBitwiseOrExpression
 					{
-					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2592);
+					pushFollow(FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2640);
 					max=precedenceBitwiseOrExpression();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -6610,7 +6865,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: max, min, left
+					// elements: min, max, left
 					// token labels: 
 					// rule labels: min, retval, max, left
 					// token list labels: 
@@ -6624,9 +6879,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_left=new RewriteRuleSubtreeStream(adaptor,"rule left",left!=null?left.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 389:8: -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max)
+					// 395:8: -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max)
 					{
-						// IdentifiersParser.g:389:11: ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max)
+						// IdentifiersParser.g:395:11: ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max)
 						{
 						CommonTree root_1 = (CommonTree)adaptor.nil();
 						root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_FUNCTION, "TOK_FUNCTION"), root_1);
@@ -6682,40 +6937,40 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "expressions"
-	// IdentifiersParser.g:393:1: expressions : LPAREN expression ( COMMA expression )* RPAREN -> ( expression )* ;
+	// IdentifiersParser.g:399:1: expressions : LPAREN expression ( COMMA expression )* RPAREN -> ( expression )* ;
 	public final HiveParser_IdentifiersParser.expressions_return expressions() throws RecognitionException {
 		HiveParser_IdentifiersParser.expressions_return retval = new HiveParser_IdentifiersParser.expressions_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token LPAREN204=null;
-		Token COMMA206=null;
-		Token RPAREN208=null;
-		ParserRuleReturnScope expression205 =null;
-		ParserRuleReturnScope expression207 =null;
+		Token LPAREN210=null;
+		Token COMMA212=null;
+		Token RPAREN214=null;
+		ParserRuleReturnScope expression211 =null;
+		ParserRuleReturnScope expression213 =null;
 
-		CommonTree LPAREN204_tree=null;
-		CommonTree COMMA206_tree=null;
-		CommonTree RPAREN208_tree=null;
+		CommonTree LPAREN210_tree=null;
+		CommonTree COMMA212_tree=null;
+		CommonTree RPAREN214_tree=null;
 		RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleTokenStream stream_LPAREN=new RewriteRuleTokenStream(adaptor,"token LPAREN");
 		RewriteRuleSubtreeStream stream_expression=new RewriteRuleSubtreeStream(adaptor,"rule expression");
 
 		try {
-			// IdentifiersParser.g:394:5: ( LPAREN expression ( COMMA expression )* RPAREN -> ( expression )* )
-			// IdentifiersParser.g:395:5: LPAREN expression ( COMMA expression )* RPAREN
+			// IdentifiersParser.g:400:5: ( LPAREN expression ( COMMA expression )* RPAREN -> ( expression )* )
+			// IdentifiersParser.g:401:5: LPAREN expression ( COMMA expression )* RPAREN
 			{
-			LPAREN204=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_expressions2650); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN204);
+			LPAREN210=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_expressions2698); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN210);
 
-			pushFollow(FOLLOW_expression_in_expressions2652);
-			expression205=expression();
+			pushFollow(FOLLOW_expression_in_expressions2700);
+			expression211=expression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_expression.add(expression205.getTree());
-			// IdentifiersParser.g:395:23: ( COMMA expression )*
+			if ( state.backtracking==0 ) stream_expression.add(expression211.getTree());
+			// IdentifiersParser.g:401:23: ( COMMA expression )*
 			loop46:
 			while (true) {
 				int alt46=2;
@@ -6726,16 +6981,16 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt46) {
 				case 1 :
-					// IdentifiersParser.g:395:24: COMMA expression
+					// IdentifiersParser.g:401:24: COMMA expression
 					{
-					COMMA206=(Token)match(input,COMMA,FOLLOW_COMMA_in_expressions2655); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_COMMA.add(COMMA206);
+					COMMA212=(Token)match(input,COMMA,FOLLOW_COMMA_in_expressions2703); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_COMMA.add(COMMA212);
 
-					pushFollow(FOLLOW_expression_in_expressions2657);
-					expression207=expression();
+					pushFollow(FOLLOW_expression_in_expressions2705);
+					expression213=expression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_expression.add(expression207.getTree());
+					if ( state.backtracking==0 ) stream_expression.add(expression213.getTree());
 					}
 					break;
 
@@ -6744,8 +6999,8 @@ public class HiveParser_IdentifiersParser extends Parser {
 				}
 			}
 
-			RPAREN208=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_expressions2661); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN208);
+			RPAREN214=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_expressions2709); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN214);
 
 			// AST REWRITE
 			// elements: expression
@@ -6759,9 +7014,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 395:50: -> ( expression )*
+			// 401:50: -> ( expression )*
 			{
-				// IdentifiersParser.g:395:53: ( expression )*
+				// IdentifiersParser.g:401:53: ( expression )*
 				while ( stream_expression.hasNext() ) {
 					adaptor.addChild(root_0, stream_expression.nextTree());
 				}
@@ -6803,28 +7058,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceNotOperator"
-	// IdentifiersParser.g:398:1: precedenceNotOperator : KW_NOT ;
+	// IdentifiersParser.g:404:1: precedenceNotOperator : KW_NOT ;
 	public final HiveParser_IdentifiersParser.precedenceNotOperator_return precedenceNotOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceNotOperator_return retval = new HiveParser_IdentifiersParser.precedenceNotOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_NOT209=null;
+		Token KW_NOT215=null;
 
-		CommonTree KW_NOT209_tree=null;
+		CommonTree KW_NOT215_tree=null;
 
 		try {
-			// IdentifiersParser.g:399:5: ( KW_NOT )
-			// IdentifiersParser.g:400:5: KW_NOT
+			// IdentifiersParser.g:405:5: ( KW_NOT )
+			// IdentifiersParser.g:406:5: KW_NOT
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			KW_NOT209=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceNotOperator2687); if (state.failed) return retval;
+			KW_NOT215=(Token)match(input,KW_NOT,FOLLOW_KW_NOT_in_precedenceNotOperator2735); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
-			KW_NOT209_tree = (CommonTree)adaptor.create(KW_NOT209);
-			adaptor.addChild(root_0, KW_NOT209_tree);
+			KW_NOT215_tree = (CommonTree)adaptor.create(KW_NOT215);
+			adaptor.addChild(root_0, KW_NOT215_tree);
 			}
 
 			}
@@ -6857,25 +7112,25 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceNotExpression"
-	// IdentifiersParser.g:403:1: precedenceNotExpression : ( precedenceNotOperator ^)* precedenceEqualExpression ;
+	// IdentifiersParser.g:409:1: precedenceNotExpression : ( precedenceNotOperator ^)* precedenceEqualExpression ;
 	public final HiveParser_IdentifiersParser.precedenceNotExpression_return precedenceNotExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceNotExpression_return retval = new HiveParser_IdentifiersParser.precedenceNotExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceNotOperator210 =null;
-		ParserRuleReturnScope precedenceEqualExpression211 =null;
+		ParserRuleReturnScope precedenceNotOperator216 =null;
+		ParserRuleReturnScope precedenceEqualExpression217 =null;
 
 
 		try {
-			// IdentifiersParser.g:404:5: ( ( precedenceNotOperator ^)* precedenceEqualExpression )
-			// IdentifiersParser.g:405:5: ( precedenceNotOperator ^)* precedenceEqualExpression
+			// IdentifiersParser.g:410:5: ( ( precedenceNotOperator ^)* precedenceEqualExpression )
+			// IdentifiersParser.g:411:5: ( precedenceNotOperator ^)* precedenceEqualExpression
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			// IdentifiersParser.g:405:5: ( precedenceNotOperator ^)*
+			// IdentifiersParser.g:411:5: ( precedenceNotOperator ^)*
 			loop47:
 			while (true) {
 				int alt47=2;
@@ -6886,13 +7141,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt47) {
 				case 1 :
-					// IdentifiersParser.g:405:6: precedenceNotOperator ^
+					// IdentifiersParser.g:411:6: precedenceNotOperator ^
 					{
-					pushFollow(FOLLOW_precedenceNotOperator_in_precedenceNotExpression2709);
-					precedenceNotOperator210=precedenceNotOperator();
+					pushFollow(FOLLOW_precedenceNotOperator_in_precedenceNotExpression2757);
+					precedenceNotOperator216=precedenceNotOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceNotOperator210.getTree(), root_0);
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceNotOperator216.getTree(), root_0);
 					}
 					break;
 
@@ -6901,11 +7156,11 @@ public class HiveParser_IdentifiersParser extends Parser {
 				}
 			}
 
-			pushFollow(FOLLOW_precedenceEqualExpression_in_precedenceNotExpression2714);
-			precedenceEqualExpression211=precedenceEqualExpression();
+			pushFollow(FOLLOW_precedenceEqualExpression_in_precedenceNotExpression2762);
+			precedenceEqualExpression217=precedenceEqualExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceEqualExpression211.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceEqualExpression217.getTree());
 
 			}
 
@@ -6937,28 +7192,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceAndOperator"
-	// IdentifiersParser.g:409:1: precedenceAndOperator : KW_AND ;
+	// IdentifiersParser.g:415:1: precedenceAndOperator : KW_AND ;
 	public final HiveParser_IdentifiersParser.precedenceAndOperator_return precedenceAndOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceAndOperator_return retval = new HiveParser_IdentifiersParser.precedenceAndOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_AND212=null;
+		Token KW_AND218=null;
 
-		CommonTree KW_AND212_tree=null;
+		CommonTree KW_AND218_tree=null;
 
 		try {
-			// IdentifiersParser.g:410:5: ( KW_AND )
-			// IdentifiersParser.g:411:5: KW_AND
+			// IdentifiersParser.g:416:5: ( KW_AND )
+			// IdentifiersParser.g:417:5: KW_AND
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			KW_AND212=(Token)match(input,KW_AND,FOLLOW_KW_AND_in_precedenceAndOperator2736); if (state.failed) return retval;
+			KW_AND218=(Token)match(input,KW_AND,FOLLOW_KW_AND_in_precedenceAndOperator2784); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
-			KW_AND212_tree = (CommonTree)adaptor.create(KW_AND212);
-			adaptor.addChild(root_0, KW_AND212_tree);
+			KW_AND218_tree = (CommonTree)adaptor.create(KW_AND218);
+			adaptor.addChild(root_0, KW_AND218_tree);
 			}
 
 			}
@@ -6991,32 +7246,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceAndExpression"
-	// IdentifiersParser.g:414:1: precedenceAndExpression : precedenceNotExpression ( precedenceAndOperator ^ precedenceNotExpression )* ;
+	// IdentifiersParser.g:420:1: precedenceAndExpression : precedenceNotExpression ( precedenceAndOperator ^ precedenceNotExpression )* ;
 	public final HiveParser_IdentifiersParser.precedenceAndExpression_return precedenceAndExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceAndExpression_return retval = new HiveParser_IdentifiersParser.precedenceAndExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceNotExpression213 =null;
-		ParserRuleReturnScope precedenceAndOperator214 =null;
-		ParserRuleReturnScope precedenceNotExpression215 =null;
+		ParserRuleReturnScope precedenceNotExpression219 =null;
+		ParserRuleReturnScope precedenceAndOperator220 =null;
+		ParserRuleReturnScope precedenceNotExpression221 =null;
 
 
 		try {
-			// IdentifiersParser.g:415:5: ( precedenceNotExpression ( precedenceAndOperator ^ precedenceNotExpression )* )
-			// IdentifiersParser.g:416:5: precedenceNotExpression ( precedenceAndOperator ^ precedenceNotExpression )*
+			// IdentifiersParser.g:421:5: ( precedenceNotExpression ( precedenceAndOperator ^ precedenceNotExpression )* )
+			// IdentifiersParser.g:422:5: precedenceNotExpression ( precedenceAndOperator ^ precedenceNotExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceNotExpression_in_precedenceAndExpression2757);
-			precedenceNotExpression213=precedenceNotExpression();
+			pushFollow(FOLLOW_precedenceNotExpression_in_precedenceAndExpression2805);
+			precedenceNotExpression219=precedenceNotExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceNotExpression213.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceNotExpression219.getTree());
 
-			// IdentifiersParser.g:416:29: ( precedenceAndOperator ^ precedenceNotExpression )*
+			// IdentifiersParser.g:422:29: ( precedenceAndOperator ^ precedenceNotExpression )*
 			loop48:
 			while (true) {
 				int alt48=2;
@@ -7027,18 +7282,18 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt48) {
 				case 1 :
-					// IdentifiersParser.g:416:30: precedenceAndOperator ^ precedenceNotExpression
+					// IdentifiersParser.g:422:30: precedenceAndOperator ^ precedenceNotExpression
 					{
-					pushFollow(FOLLOW_precedenceAndOperator_in_precedenceAndExpression2760);
-					precedenceAndOperator214=precedenceAndOperator();
+					pushFollow(FOLLOW_precedenceAndOperator_in_precedenceAndExpression2808);
+					precedenceAndOperator220=precedenceAndOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceAndOperator214.getTree(), root_0);
-					pushFollow(FOLLOW_precedenceNotExpression_in_precedenceAndExpression2763);
-					precedenceNotExpression215=precedenceNotExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceAndOperator220.getTree(), root_0);
+					pushFollow(FOLLOW_precedenceNotExpression_in_precedenceAndExpression2811);
+					precedenceNotExpression221=precedenceNotExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceNotExpression215.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceNotExpression221.getTree());
 
 					}
 					break;
@@ -7078,28 +7333,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceOrOperator"
-	// IdentifiersParser.g:420:1: precedenceOrOperator : KW_OR ;
+	// IdentifiersParser.g:426:1: precedenceOrOperator : KW_OR ;
 	public final HiveParser_IdentifiersParser.precedenceOrOperator_return precedenceOrOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceOrOperator_return retval = new HiveParser_IdentifiersParser.precedenceOrOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_OR216=null;
+		Token KW_OR222=null;
 
-		CommonTree KW_OR216_tree=null;
+		CommonTree KW_OR222_tree=null;
 
 		try {
-			// IdentifiersParser.g:421:5: ( KW_OR )
-			// IdentifiersParser.g:422:5: KW_OR
+			// IdentifiersParser.g:427:5: ( KW_OR )
+			// IdentifiersParser.g:428:5: KW_OR
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			KW_OR216=(Token)match(input,KW_OR,FOLLOW_KW_OR_in_precedenceOrOperator2787); if (state.failed) return retval;
+			KW_OR222=(Token)match(input,KW_OR,FOLLOW_KW_OR_in_precedenceOrOperator2835); if (state.failed) return retval;
 			if ( state.backtracking==0 ) {
-			KW_OR216_tree = (CommonTree)adaptor.create(KW_OR216);
-			adaptor.addChild(root_0, KW_OR216_tree);
+			KW_OR222_tree = (CommonTree)adaptor.create(KW_OR222);
+			adaptor.addChild(root_0, KW_OR222_tree);
 			}
 
 			}
@@ -7132,32 +7387,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "precedenceOrExpression"
-	// IdentifiersParser.g:425:1: precedenceOrExpression : precedenceAndExpression ( precedenceOrOperator ^ precedenceAndExpression )* ;
+	// IdentifiersParser.g:431:1: precedenceOrExpression : precedenceAndExpression ( precedenceOrOperator ^ precedenceAndExpression )* ;
 	public final HiveParser_IdentifiersParser.precedenceOrExpression_return precedenceOrExpression() throws RecognitionException {
 		HiveParser_IdentifiersParser.precedenceOrExpression_return retval = new HiveParser_IdentifiersParser.precedenceOrExpression_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope precedenceAndExpression217 =null;
-		ParserRuleReturnScope precedenceOrOperator218 =null;
-		ParserRuleReturnScope precedenceAndExpression219 =null;
+		ParserRuleReturnScope precedenceAndExpression223 =null;
+		ParserRuleReturnScope precedenceOrOperator224 =null;
+		ParserRuleReturnScope precedenceAndExpression225 =null;
 
 
 		try {
-			// IdentifiersParser.g:426:5: ( precedenceAndExpression ( precedenceOrOperator ^ precedenceAndExpression )* )
-			// IdentifiersParser.g:427:5: precedenceAndExpression ( precedenceOrOperator ^ precedenceAndExpression )*
+			// IdentifiersParser.g:432:5: ( precedenceAndExpression ( precedenceOrOperator ^ precedenceAndExpression )* )
+			// IdentifiersParser.g:433:5: precedenceAndExpression ( precedenceOrOperator ^ precedenceAndExpression )*
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_precedenceAndExpression_in_precedenceOrExpression2808);
-			precedenceAndExpression217=precedenceAndExpression();
+			pushFollow(FOLLOW_precedenceAndExpression_in_precedenceOrExpression2856);
+			precedenceAndExpression223=precedenceAndExpression();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAndExpression217.getTree());
+			if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAndExpression223.getTree());
 
-			// IdentifiersParser.g:427:29: ( precedenceOrOperator ^ precedenceAndExpression )*
+			// IdentifiersParser.g:433:29: ( precedenceOrOperator ^ precedenceAndExpression )*
 			loop49:
 			while (true) {
 				int alt49=2;
@@ -7168,18 +7423,18 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt49) {
 				case 1 :
-					// IdentifiersParser.g:427:30: precedenceOrOperator ^ precedenceAndExpression
+					// IdentifiersParser.g:433:30: precedenceOrOperator ^ precedenceAndExpression
 					{
-					pushFollow(FOLLOW_precedenceOrOperator_in_precedenceOrExpression2811);
-					precedenceOrOperator218=precedenceOrOperator();
+					pushFollow(FOLLOW_precedenceOrOperator_in_precedenceOrExpression2859);
+					precedenceOrOperator224=precedenceOrOperator();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceOrOperator218.getTree(), root_0);
-					pushFollow(FOLLOW_precedenceAndExpression_in_precedenceOrExpression2814);
-					precedenceAndExpression219=precedenceAndExpression();
+					if ( state.backtracking==0 ) root_0 = (CommonTree)adaptor.becomeRoot(precedenceOrOperator224.getTree(), root_0);
+					pushFollow(FOLLOW_precedenceAndExpression_in_precedenceOrExpression2862);
+					precedenceAndExpression225=precedenceAndExpression();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAndExpression219.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, precedenceAndExpression225.getTree());
 
 					}
 					break;
@@ -7219,21 +7474,21 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "booleanValue"
-	// IdentifiersParser.g:431:1: booleanValue : ( KW_TRUE ^| KW_FALSE ^);
+	// IdentifiersParser.g:437:1: booleanValue : ( KW_TRUE ^| KW_FALSE ^);
 	public final HiveParser_IdentifiersParser.booleanValue_return booleanValue() throws RecognitionException {
 		HiveParser_IdentifiersParser.booleanValue_return retval = new HiveParser_IdentifiersParser.booleanValue_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_TRUE220=null;
-		Token KW_FALSE221=null;
+		Token KW_TRUE226=null;
+		Token KW_FALSE227=null;
 
-		CommonTree KW_TRUE220_tree=null;
-		CommonTree KW_FALSE221_tree=null;
+		CommonTree KW_TRUE226_tree=null;
+		CommonTree KW_FALSE227_tree=null;
 
 		try {
-			// IdentifiersParser.g:432:5: ( KW_TRUE ^| KW_FALSE ^)
+			// IdentifiersParser.g:438:5: ( KW_TRUE ^| KW_FALSE ^)
 			int alt50=2;
 			int LA50_0 = input.LA(1);
 			if ( (LA50_0==KW_TRUE) ) {
@@ -7252,29 +7507,29 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 			switch (alt50) {
 				case 1 :
-					// IdentifiersParser.g:433:5: KW_TRUE ^
+					// IdentifiersParser.g:439:5: KW_TRUE ^
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					KW_TRUE220=(Token)match(input,KW_TRUE,FOLLOW_KW_TRUE_in_booleanValue2838); if (state.failed) return retval;
+					KW_TRUE226=(Token)match(input,KW_TRUE,FOLLOW_KW_TRUE_in_booleanValue2886); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					KW_TRUE220_tree = (CommonTree)adaptor.create(KW_TRUE220);
-					root_0 = (CommonTree)adaptor.becomeRoot(KW_TRUE220_tree, root_0);
+					KW_TRUE226_tree = (CommonTree)adaptor.create(KW_TRUE226);
+					root_0 = (CommonTree)adaptor.becomeRoot(KW_TRUE226_tree, root_0);
 					}
 
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:433:16: KW_FALSE ^
+					// IdentifiersParser.g:439:16: KW_FALSE ^
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					KW_FALSE221=(Token)match(input,KW_FALSE,FOLLOW_KW_FALSE_in_booleanValue2843); if (state.failed) return retval;
+					KW_FALSE227=(Token)match(input,KW_FALSE,FOLLOW_KW_FALSE_in_booleanValue2891); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					KW_FALSE221_tree = (CommonTree)adaptor.create(KW_FALSE221);
-					root_0 = (CommonTree)adaptor.becomeRoot(KW_FALSE221_tree, root_0);
+					KW_FALSE227_tree = (CommonTree)adaptor.create(KW_FALSE227);
+					root_0 = (CommonTree)adaptor.becomeRoot(KW_FALSE227_tree, root_0);
 					}
 
 					}
@@ -7309,29 +7564,29 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "tableOrPartition"
-	// IdentifiersParser.g:436:1: tableOrPartition : tableName ( partitionSpec )? -> ^( TOK_TAB tableName ( partitionSpec )? ) ;
+	// IdentifiersParser.g:442:1: tableOrPartition : tableName ( partitionSpec )? -> ^( TOK_TAB tableName ( partitionSpec )? ) ;
 	public final HiveParser_IdentifiersParser.tableOrPartition_return tableOrPartition() throws RecognitionException {
 		HiveParser_IdentifiersParser.tableOrPartition_return retval = new HiveParser_IdentifiersParser.tableOrPartition_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope tableName222 =null;
-		ParserRuleReturnScope partitionSpec223 =null;
+		ParserRuleReturnScope tableName228 =null;
+		ParserRuleReturnScope partitionSpec229 =null;
 
 		RewriteRuleSubtreeStream stream_tableName=new RewriteRuleSubtreeStream(adaptor,"rule tableName");
 		RewriteRuleSubtreeStream stream_partitionSpec=new RewriteRuleSubtreeStream(adaptor,"rule partitionSpec");
 
 		try {
-			// IdentifiersParser.g:437:4: ( tableName ( partitionSpec )? -> ^( TOK_TAB tableName ( partitionSpec )? ) )
-			// IdentifiersParser.g:438:4: tableName ( partitionSpec )?
+			// IdentifiersParser.g:443:4: ( tableName ( partitionSpec )? -> ^( TOK_TAB tableName ( partitionSpec )? ) )
+			// IdentifiersParser.g:444:4: tableName ( partitionSpec )?
 			{
-			pushFollow(FOLLOW_tableName_in_tableOrPartition2863);
-			tableName222=gHiveParser.tableName();
+			pushFollow(FOLLOW_tableName_in_tableOrPartition2911);
+			tableName228=gHiveParser.tableName();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_tableName.add(tableName222.getTree());
-			// IdentifiersParser.g:438:14: ( partitionSpec )?
+			if ( state.backtracking==0 ) stream_tableName.add(tableName228.getTree());
+			// IdentifiersParser.g:444:14: ( partitionSpec )?
 			int alt51=2;
 			int LA51_0 = input.LA(1);
 			if ( (LA51_0==KW_PARTITION) ) {
@@ -7339,13 +7594,13 @@ public class HiveParser_IdentifiersParser extends Parser {
 			}
 			switch (alt51) {
 				case 1 :
-					// IdentifiersParser.g:438:14: partitionSpec
+					// IdentifiersParser.g:444:14: partitionSpec
 					{
-					pushFollow(FOLLOW_partitionSpec_in_tableOrPartition2865);
-					partitionSpec223=partitionSpec();
+					pushFollow(FOLLOW_partitionSpec_in_tableOrPartition2913);
+					partitionSpec229=partitionSpec();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_partitionSpec.add(partitionSpec223.getTree());
+					if ( state.backtracking==0 ) stream_partitionSpec.add(partitionSpec229.getTree());
 					}
 					break;
 
@@ -7363,14 +7618,14 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 438:29: -> ^( TOK_TAB tableName ( partitionSpec )? )
+			// 444:29: -> ^( TOK_TAB tableName ( partitionSpec )? )
 			{
-				// IdentifiersParser.g:438:32: ^( TOK_TAB tableName ( partitionSpec )? )
+				// IdentifiersParser.g:444:32: ^( TOK_TAB tableName ( partitionSpec )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_TAB, "TOK_TAB"), root_1);
 				adaptor.addChild(root_1, stream_tableName.nextTree());
-				// IdentifiersParser.g:438:52: ( partitionSpec )?
+				// IdentifiersParser.g:444:52: ( partitionSpec )?
 				if ( stream_partitionSpec.hasNext() ) {
 					adaptor.addChild(root_1, stream_partitionSpec.nextTree());
 				}
@@ -7415,24 +7670,24 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "partitionSpec"
-	// IdentifiersParser.g:441:1: partitionSpec : KW_PARTITION LPAREN partitionVal ( COMMA partitionVal )* RPAREN -> ^( TOK_PARTSPEC ( partitionVal )+ ) ;
+	// IdentifiersParser.g:447:1: partitionSpec : KW_PARTITION LPAREN partitionVal ( COMMA partitionVal )* RPAREN -> ^( TOK_PARTSPEC ( partitionVal )+ ) ;
 	public final HiveParser_IdentifiersParser.partitionSpec_return partitionSpec() throws RecognitionException {
 		HiveParser_IdentifiersParser.partitionSpec_return retval = new HiveParser_IdentifiersParser.partitionSpec_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_PARTITION224=null;
-		Token LPAREN225=null;
-		Token COMMA227=null;
-		Token RPAREN229=null;
-		ParserRuleReturnScope partitionVal226 =null;
-		ParserRuleReturnScope partitionVal228 =null;
+		Token KW_PARTITION230=null;
+		Token LPAREN231=null;
+		Token COMMA233=null;
+		Token RPAREN235=null;
+		ParserRuleReturnScope partitionVal232 =null;
+		ParserRuleReturnScope partitionVal234 =null;
 
-		CommonTree KW_PARTITION224_tree=null;
-		CommonTree LPAREN225_tree=null;
-		CommonTree COMMA227_tree=null;
-		CommonTree RPAREN229_tree=null;
+		CommonTree KW_PARTITION230_tree=null;
+		CommonTree LPAREN231_tree=null;
+		CommonTree COMMA233_tree=null;
+		CommonTree RPAREN235_tree=null;
 		RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleTokenStream stream_KW_PARTITION=new RewriteRuleTokenStream(adaptor,"token KW_PARTITION");
@@ -7440,21 +7695,21 @@ public class HiveParser_IdentifiersParser extends Parser {
 		RewriteRuleSubtreeStream stream_partitionVal=new RewriteRuleSubtreeStream(adaptor,"rule partitionVal");
 
 		try {
-			// IdentifiersParser.g:442:5: ( KW_PARTITION LPAREN partitionVal ( COMMA partitionVal )* RPAREN -> ^( TOK_PARTSPEC ( partitionVal )+ ) )
-			// IdentifiersParser.g:443:5: KW_PARTITION LPAREN partitionVal ( COMMA partitionVal )* RPAREN
+			// IdentifiersParser.g:448:5: ( KW_PARTITION LPAREN partitionVal ( COMMA partitionVal )* RPAREN -> ^( TOK_PARTSPEC ( partitionVal )+ ) )
+			// IdentifiersParser.g:449:5: KW_PARTITION LPAREN partitionVal ( COMMA partitionVal )* RPAREN
 			{
-			KW_PARTITION224=(Token)match(input,KW_PARTITION,FOLLOW_KW_PARTITION_in_partitionSpec2897); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_KW_PARTITION.add(KW_PARTITION224);
+			KW_PARTITION230=(Token)match(input,KW_PARTITION,FOLLOW_KW_PARTITION_in_partitionSpec2945); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_KW_PARTITION.add(KW_PARTITION230);
 
-			LPAREN225=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionSpec2904); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN225);
+			LPAREN231=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionSpec2952); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN231);
 
-			pushFollow(FOLLOW_partitionVal_in_partitionSpec2906);
-			partitionVal226=partitionVal();
+			pushFollow(FOLLOW_partitionVal_in_partitionSpec2954);
+			partitionVal232=partitionVal();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_partitionVal.add(partitionVal226.getTree());
-			// IdentifiersParser.g:444:26: ( COMMA partitionVal )*
+			if ( state.backtracking==0 ) stream_partitionVal.add(partitionVal232.getTree());
+			// IdentifiersParser.g:450:26: ( COMMA partitionVal )*
 			loop52:
 			while (true) {
 				int alt52=2;
@@ -7465,16 +7720,16 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt52) {
 				case 1 :
-					// IdentifiersParser.g:444:27: COMMA partitionVal
+					// IdentifiersParser.g:450:27: COMMA partitionVal
 					{
-					COMMA227=(Token)match(input,COMMA,FOLLOW_COMMA_in_partitionSpec2909); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_COMMA.add(COMMA227);
+					COMMA233=(Token)match(input,COMMA,FOLLOW_COMMA_in_partitionSpec2957); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_COMMA.add(COMMA233);
 
-					pushFollow(FOLLOW_partitionVal_in_partitionSpec2912);
-					partitionVal228=partitionVal();
+					pushFollow(FOLLOW_partitionVal_in_partitionSpec2960);
+					partitionVal234=partitionVal();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_partitionVal.add(partitionVal228.getTree());
+					if ( state.backtracking==0 ) stream_partitionVal.add(partitionVal234.getTree());
 					}
 					break;
 
@@ -7483,8 +7738,8 @@ public class HiveParser_IdentifiersParser extends Parser {
 				}
 			}
 
-			RPAREN229=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionSpec2917); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN229);
+			RPAREN235=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionSpec2965); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN235);
 
 			// AST REWRITE
 			// elements: partitionVal
@@ -7498,9 +7753,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 444:57: -> ^( TOK_PARTSPEC ( partitionVal )+ )
+			// 450:57: -> ^( TOK_PARTSPEC ( partitionVal )+ )
 			{
-				// IdentifiersParser.g:444:60: ^( TOK_PARTSPEC ( partitionVal )+ )
+				// IdentifiersParser.g:450:60: ^( TOK_PARTSPEC ( partitionVal )+ )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_PARTSPEC, "TOK_PARTSPEC"), root_1);
@@ -7551,32 +7806,32 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "partitionVal"
-	// IdentifiersParser.g:447:1: partitionVal : identifier ( EQUAL constant )? -> ^( TOK_PARTVAL identifier ( constant )? ) ;
+	// IdentifiersParser.g:453:1: partitionVal : identifier ( EQUAL constant )? -> ^( TOK_PARTVAL identifier ( constant )? ) ;
 	public final HiveParser_IdentifiersParser.partitionVal_return partitionVal() throws RecognitionException {
 		HiveParser_IdentifiersParser.partitionVal_return retval = new HiveParser_IdentifiersParser.partitionVal_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token EQUAL231=null;
-		ParserRuleReturnScope identifier230 =null;
-		ParserRuleReturnScope constant232 =null;
+		Token EQUAL237=null;
+		ParserRuleReturnScope identifier236 =null;
+		ParserRuleReturnScope constant238 =null;
 
-		CommonTree EQUAL231_tree=null;
+		CommonTree EQUAL237_tree=null;
 		RewriteRuleTokenStream stream_EQUAL=new RewriteRuleTokenStream(adaptor,"token EQUAL");
 		RewriteRuleSubtreeStream stream_constant=new RewriteRuleSubtreeStream(adaptor,"rule constant");
 		RewriteRuleSubtreeStream stream_identifier=new RewriteRuleSubtreeStream(adaptor,"rule identifier");
 
 		try {
-			// IdentifiersParser.g:448:5: ( identifier ( EQUAL constant )? -> ^( TOK_PARTVAL identifier ( constant )? ) )
-			// IdentifiersParser.g:449:5: identifier ( EQUAL constant )?
+			// IdentifiersParser.g:454:5: ( identifier ( EQUAL constant )? -> ^( TOK_PARTVAL identifier ( constant )? ) )
+			// IdentifiersParser.g:455:5: identifier ( EQUAL constant )?
 			{
-			pushFollow(FOLLOW_identifier_in_partitionVal2948);
-			identifier230=identifier();
+			pushFollow(FOLLOW_identifier_in_partitionVal2996);
+			identifier236=identifier();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_identifier.add(identifier230.getTree());
-			// IdentifiersParser.g:449:16: ( EQUAL constant )?
+			if ( state.backtracking==0 ) stream_identifier.add(identifier236.getTree());
+			// IdentifiersParser.g:455:16: ( EQUAL constant )?
 			int alt53=2;
 			int LA53_0 = input.LA(1);
 			if ( (LA53_0==EQUAL) ) {
@@ -7584,23 +7839,23 @@ public class HiveParser_IdentifiersParser extends Parser {
 			}
 			switch (alt53) {
 				case 1 :
-					// IdentifiersParser.g:449:17: EQUAL constant
+					// IdentifiersParser.g:455:17: EQUAL constant
 					{
-					EQUAL231=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_partitionVal2951); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_EQUAL.add(EQUAL231);
+					EQUAL237=(Token)match(input,EQUAL,FOLLOW_EQUAL_in_partitionVal2999); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_EQUAL.add(EQUAL237);
 
-					pushFollow(FOLLOW_constant_in_partitionVal2953);
-					constant232=constant();
+					pushFollow(FOLLOW_constant_in_partitionVal3001);
+					constant238=constant();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_constant.add(constant232.getTree());
+					if ( state.backtracking==0 ) stream_constant.add(constant238.getTree());
 					}
 					break;
 
 			}
 
 			// AST REWRITE
-			// elements: identifier, constant
+			// elements: constant, identifier
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -7611,14 +7866,14 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 449:34: -> ^( TOK_PARTVAL identifier ( constant )? )
+			// 455:34: -> ^( TOK_PARTVAL identifier ( constant )? )
 			{
-				// IdentifiersParser.g:449:37: ^( TOK_PARTVAL identifier ( constant )? )
+				// IdentifiersParser.g:455:37: ^( TOK_PARTVAL identifier ( constant )? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_PARTVAL, "TOK_PARTVAL"), root_1);
 				adaptor.addChild(root_1, stream_identifier.nextTree());
-				// IdentifiersParser.g:449:62: ( constant )?
+				// IdentifiersParser.g:455:62: ( constant )?
 				if ( stream_constant.hasNext() ) {
 					adaptor.addChild(root_1, stream_constant.nextTree());
 				}
@@ -7663,24 +7918,24 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "dropPartitionSpec"
-	// IdentifiersParser.g:452:1: dropPartitionSpec : KW_PARTITION LPAREN dropPartitionVal ( COMMA dropPartitionVal )* RPAREN -> ^( TOK_PARTSPEC ( dropPartitionVal )+ ) ;
+	// IdentifiersParser.g:458:1: dropPartitionSpec : KW_PARTITION LPAREN dropPartitionVal ( COMMA dropPartitionVal )* RPAREN -> ^( TOK_PARTSPEC ( dropPartitionVal )+ ) ;
 	public final HiveParser_IdentifiersParser.dropPartitionSpec_return dropPartitionSpec() throws RecognitionException {
 		HiveParser_IdentifiersParser.dropPartitionSpec_return retval = new HiveParser_IdentifiersParser.dropPartitionSpec_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token KW_PARTITION233=null;
-		Token LPAREN234=null;
-		Token COMMA236=null;
-		Token RPAREN238=null;
-		ParserRuleReturnScope dropPartitionVal235 =null;
-		ParserRuleReturnScope dropPartitionVal237 =null;
+		Token KW_PARTITION239=null;
+		Token LPAREN240=null;
+		Token COMMA242=null;
+		Token RPAREN244=null;
+		ParserRuleReturnScope dropPartitionVal241 =null;
+		ParserRuleReturnScope dropPartitionVal243 =null;
 
-		CommonTree KW_PARTITION233_tree=null;
-		CommonTree LPAREN234_tree=null;
-		CommonTree COMMA236_tree=null;
-		CommonTree RPAREN238_tree=null;
+		CommonTree KW_PARTITION239_tree=null;
+		CommonTree LPAREN240_tree=null;
+		CommonTree COMMA242_tree=null;
+		CommonTree RPAREN244_tree=null;
 		RewriteRuleTokenStream stream_RPAREN=new RewriteRuleTokenStream(adaptor,"token RPAREN");
 		RewriteRuleTokenStream stream_COMMA=new RewriteRuleTokenStream(adaptor,"token COMMA");
 		RewriteRuleTokenStream stream_KW_PARTITION=new RewriteRuleTokenStream(adaptor,"token KW_PARTITION");
@@ -7688,21 +7943,21 @@ public class HiveParser_IdentifiersParser extends Parser {
 		RewriteRuleSubtreeStream stream_dropPartitionVal=new RewriteRuleSubtreeStream(adaptor,"rule dropPartitionVal");
 
 		try {
-			// IdentifiersParser.g:453:5: ( KW_PARTITION LPAREN dropPartitionVal ( COMMA dropPartitionVal )* RPAREN -> ^( TOK_PARTSPEC ( dropPartitionVal )+ ) )
-			// IdentifiersParser.g:454:5: KW_PARTITION LPAREN dropPartitionVal ( COMMA dropPartitionVal )* RPAREN
+			// IdentifiersParser.g:459:5: ( KW_PARTITION LPAREN dropPartitionVal ( COMMA dropPartitionVal )* RPAREN -> ^( TOK_PARTSPEC ( dropPartitionVal )+ ) )
+			// IdentifiersParser.g:460:5: KW_PARTITION LPAREN dropPartitionVal ( COMMA dropPartitionVal )* RPAREN
 			{
-			KW_PARTITION233=(Token)match(input,KW_PARTITION,FOLLOW_KW_PARTITION_in_dropPartitionSpec2987); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_KW_PARTITION.add(KW_PARTITION233);
+			KW_PARTITION239=(Token)match(input,KW_PARTITION,FOLLOW_KW_PARTITION_in_dropPartitionSpec3035); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_KW_PARTITION.add(KW_PARTITION239);
 
-			LPAREN234=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_dropPartitionSpec2994); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN234);
+			LPAREN240=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_dropPartitionSpec3042); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN240);
 
-			pushFollow(FOLLOW_dropPartitionVal_in_dropPartitionSpec2996);
-			dropPartitionVal235=dropPartitionVal();
+			pushFollow(FOLLOW_dropPartitionVal_in_dropPartitionSpec3044);
+			dropPartitionVal241=dropPartitionVal();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_dropPartitionVal.add(dropPartitionVal235.getTree());
-			// IdentifiersParser.g:455:30: ( COMMA dropPartitionVal )*
+			if ( state.backtracking==0 ) stream_dropPartitionVal.add(dropPartitionVal241.getTree());
+			// IdentifiersParser.g:461:30: ( COMMA dropPartitionVal )*
 			loop54:
 			while (true) {
 				int alt54=2;
@@ -7713,16 +7968,16 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 				switch (alt54) {
 				case 1 :
-					// IdentifiersParser.g:455:31: COMMA dropPartitionVal
+					// IdentifiersParser.g:461:31: COMMA dropPartitionVal
 					{
-					COMMA236=(Token)match(input,COMMA,FOLLOW_COMMA_in_dropPartitionSpec2999); if (state.failed) return retval; 
-					if ( state.backtracking==0 ) stream_COMMA.add(COMMA236);
+					COMMA242=(Token)match(input,COMMA,FOLLOW_COMMA_in_dropPartitionSpec3047); if (state.failed) return retval; 
+					if ( state.backtracking==0 ) stream_COMMA.add(COMMA242);
 
-					pushFollow(FOLLOW_dropPartitionVal_in_dropPartitionSpec3002);
-					dropPartitionVal237=dropPartitionVal();
+					pushFollow(FOLLOW_dropPartitionVal_in_dropPartitionSpec3050);
+					dropPartitionVal243=dropPartitionVal();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_dropPartitionVal.add(dropPartitionVal237.getTree());
+					if ( state.backtracking==0 ) stream_dropPartitionVal.add(dropPartitionVal243.getTree());
 					}
 					break;
 
@@ -7731,8 +7986,8 @@ public class HiveParser_IdentifiersParser extends Parser {
 				}
 			}
 
-			RPAREN238=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_dropPartitionSpec3007); if (state.failed) return retval; 
-			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN238);
+			RPAREN244=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_dropPartitionSpec3055); if (state.failed) return retval; 
+			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN244);
 
 			// AST REWRITE
 			// elements: dropPartitionVal
@@ -7746,9 +8001,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 455:65: -> ^( TOK_PARTSPEC ( dropPartitionVal )+ )
+			// 461:65: -> ^( TOK_PARTSPEC ( dropPartitionVal )+ )
 			{
-				// IdentifiersParser.g:455:68: ^( TOK_PARTSPEC ( dropPartitionVal )+ )
+				// IdentifiersParser.g:461:68: ^( TOK_PARTSPEC ( dropPartitionVal )+ )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_PARTSPEC, "TOK_PARTSPEC"), root_1);
@@ -7799,42 +8054,42 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "dropPartitionVal"
-	// IdentifiersParser.g:458:1: dropPartitionVal : identifier dropPartitionOperator constant -> ^( TOK_PARTVAL identifier dropPartitionOperator constant ) ;
+	// IdentifiersParser.g:464:1: dropPartitionVal : identifier dropPartitionOperator constant -> ^( TOK_PARTVAL identifier dropPartitionOperator constant ) ;
 	public final HiveParser_IdentifiersParser.dropPartitionVal_return dropPartitionVal() throws RecognitionException {
 		HiveParser_IdentifiersParser.dropPartitionVal_return retval = new HiveParser_IdentifiersParser.dropPartitionVal_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		ParserRuleReturnScope identifier239 =null;
-		ParserRuleReturnScope dropPartitionOperator240 =null;
-		ParserRuleReturnScope constant241 =null;
+		ParserRuleReturnScope identifier245 =null;
+		ParserRuleReturnScope dropPartitionOperator246 =null;
+		ParserRuleReturnScope constant247 =null;
 
 		RewriteRuleSubtreeStream stream_dropPartitionOperator=new RewriteRuleSubtreeStream(adaptor,"rule dropPartitionOperator");
 		RewriteRuleSubtreeStream stream_constant=new RewriteRuleSubtreeStream(adaptor,"rule constant");
 		RewriteRuleSubtreeStream stream_identifier=new RewriteRuleSubtreeStream(adaptor,"rule identifier");
 
 		try {
-			// IdentifiersParser.g:459:5: ( identifier dropPartitionOperator constant -> ^( TOK_PARTVAL identifier dropPartitionOperator constant ) )
-			// IdentifiersParser.g:460:5: identifier dropPartitionOperator constant
+			// IdentifiersParser.g:465:5: ( identifier dropPartitionOperator constant -> ^( TOK_PARTVAL identifier dropPartitionOperator constant ) )
+			// IdentifiersParser.g:466:5: identifier dropPartitionOperator constant
 			{
-			pushFollow(FOLLOW_identifier_in_dropPartitionVal3038);
-			identifier239=identifier();
+			pushFollow(FOLLOW_identifier_in_dropPartitionVal3086);
+			identifier245=identifier();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_identifier.add(identifier239.getTree());
-			pushFollow(FOLLOW_dropPartitionOperator_in_dropPartitionVal3040);
-			dropPartitionOperator240=dropPartitionOperator();
+			if ( state.backtracking==0 ) stream_identifier.add(identifier245.getTree());
+			pushFollow(FOLLOW_dropPartitionOperator_in_dropPartitionVal3088);
+			dropPartitionOperator246=dropPartitionOperator();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_dropPartitionOperator.add(dropPartitionOperator240.getTree());
-			pushFollow(FOLLOW_constant_in_dropPartitionVal3042);
-			constant241=constant();
+			if ( state.backtracking==0 ) stream_dropPartitionOperator.add(dropPartitionOperator246.getTree());
+			pushFollow(FOLLOW_constant_in_dropPartitionVal3090);
+			constant247=constant();
 			state._fsp--;
 			if (state.failed) return retval;
-			if ( state.backtracking==0 ) stream_constant.add(constant241.getTree());
+			if ( state.backtracking==0 ) stream_constant.add(constant247.getTree());
 			// AST REWRITE
-			// elements: identifier, constant, dropPartitionOperator
+			// elements: constant, dropPartitionOperator, identifier
 			// token labels: 
 			// rule labels: retval
 			// token list labels: 
@@ -7845,9 +8100,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 460:47: -> ^( TOK_PARTVAL identifier dropPartitionOperator constant )
+			// 466:47: -> ^( TOK_PARTVAL identifier dropPartitionOperator constant )
 			{
-				// IdentifiersParser.g:460:50: ^( TOK_PARTVAL identifier dropPartitionOperator constant )
+				// IdentifiersParser.g:466:50: ^( TOK_PARTVAL identifier dropPartitionOperator constant )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_PARTVAL, "TOK_PARTVAL"), root_1);
@@ -7893,28 +8148,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "dropPartitionOperator"
-	// IdentifiersParser.g:463:1: dropPartitionOperator : ( EQUAL | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN );
+	// IdentifiersParser.g:469:1: dropPartitionOperator : ( EQUAL | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN );
 	public final HiveParser_IdentifiersParser.dropPartitionOperator_return dropPartitionOperator() throws RecognitionException {
 		HiveParser_IdentifiersParser.dropPartitionOperator_return retval = new HiveParser_IdentifiersParser.dropPartitionOperator_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set242=null;
+		Token set248=null;
 
-		CommonTree set242_tree=null;
+		CommonTree set248_tree=null;
 
 		try {
-			// IdentifiersParser.g:464:5: ( EQUAL | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN )
+			// IdentifiersParser.g:470:5: ( EQUAL | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set242=input.LT(1);
+			set248=input.LT(1);
 			if ( input.LA(1)==EQUAL||(input.LA(1) >= GREATERTHAN && input.LA(1) <= GREATERTHANOREQUALTO)||(input.LA(1) >= LESSTHAN && input.LA(1) <= LESSTHANOREQUALTO)||input.LA(1)==NOTEQUAL ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set242));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set248));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -7953,28 +8208,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "sysFuncNames"
-	// IdentifiersParser.g:468:1: sysFuncNames : ( KW_AND | KW_OR | KW_NOT | KW_LIKE | KW_IF | KW_CASE | KW_WHEN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_BOOLEAN | KW_STRING | KW_BINARY | KW_ARRAY | KW_MAP | KW_STRUCT | KW_UNIONTYPE | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN | DIVIDE | PLUS | MINUS | STAR | MOD | DIV | AMPERSAND | TILDE | BITWISEOR | BITWISEXOR | KW_RLIKE | KW_REGEXP | KW_IN | KW_BETWEEN );
+	// IdentifiersParser.g:474:1: sysFuncNames : ( KW_AND | KW_OR | KW_NOT | KW_LIKE | KW_IF | KW_CASE | KW_WHEN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_BOOLEAN | KW_STRING | KW_BINARY | KW_ARRAY | KW_MAP | KW_STRUCT | KW_UNIONTYPE | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN | DIVIDE | PLUS | MINUS | STAR | MOD | DIV | AMPERSAND | TILDE | BITWISEOR | BITWISEXOR | KW_RLIKE | KW_REGEXP | KW_IN | KW_BETWEEN );
 	public final HiveParser_IdentifiersParser.sysFuncNames_return sysFuncNames() throws RecognitionException {
 		HiveParser_IdentifiersParser.sysFuncNames_return retval = new HiveParser_IdentifiersParser.sysFuncNames_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set243=null;
+		Token set249=null;
 
-		CommonTree set243_tree=null;
+		CommonTree set249_tree=null;
 
 		try {
-			// IdentifiersParser.g:469:5: ( KW_AND | KW_OR | KW_NOT | KW_LIKE | KW_IF | KW_CASE | KW_WHEN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_BOOLEAN | KW_STRING | KW_BINARY | KW_ARRAY | KW_MAP | KW_STRUCT | KW_UNIONTYPE | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN | DIVIDE | PLUS | MINUS | STAR | MOD | DIV | AMPERSAND | TILDE | BITWISEOR | BITWISEXOR | KW_RLIKE | KW_REGEXP | KW_IN | KW_BETWEEN )
+			// IdentifiersParser.g:475:5: ( KW_AND | KW_OR | KW_NOT | KW_LIKE | KW_IF | KW_CASE | KW_WHEN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_BOOLEAN | KW_STRING | KW_BINARY | KW_ARRAY | KW_MAP | KW_STRUCT | KW_UNIONTYPE | EQUAL | EQUAL_NS | NOTEQUAL | LESSTHANOREQUALTO | LESSTHAN | GREATERTHANOREQUALTO | GREATERTHAN | DIVIDE | PLUS | MINUS | STAR | MOD | DIV | AMPERSAND | TILDE | BITWISEOR | BITWISEXOR | KW_RLIKE | KW_REGEXP | KW_IN | KW_BETWEEN )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set243=input.LT(1);
-			if ( (input.LA(1) >= AMPERSAND && input.LA(1) <= BITWISEXOR)||(input.LA(1) >= DIV && input.LA(1) <= DIVIDE)||(input.LA(1) >= EQUAL && input.LA(1) <= EQUAL_NS)||(input.LA(1) >= GREATERTHAN && input.LA(1) <= GREATERTHANOREQUALTO)||input.LA(1)==KW_AND||input.LA(1)==KW_ARRAY||(input.LA(1) >= KW_BETWEEN && input.LA(1) <= KW_BOOLEAN)||input.LA(1)==KW_CASE||input.LA(1)==KW_DOUBLE||input.LA(1)==KW_FLOAT||input.LA(1)==KW_IF||input.LA(1)==KW_IN||input.LA(1)==KW_INT||input.LA(1)==KW_LIKE||input.LA(1)==KW_MAP||input.LA(1)==KW_NOT||input.LA(1)==KW_OR||input.LA(1)==KW_REGEXP||input.LA(1)==KW_RLIKE||input.LA(1)==KW_SMALLINT||(input.LA(1) >= KW_STRING && input.LA(1) <= KW_STRUCT)||input.LA(1)==KW_TINYINT||input.LA(1)==KW_UNIONTYPE||input.LA(1)==KW_WHEN||(input.LA(1) >= LESSTHAN && input.LA(1) <= LESSTHANOREQUALTO)||(input.LA(1) >= MINUS && input.LA(1) <= NOTEQUAL)||input.LA(1)==PLUS||input.LA(1)==STAR||input.LA(1)==TILDE ) {
+			set249=input.LT(1);
+			if ( input.LA(1)==AMPERSAND||(input.LA(1) >= BITWISEOR && input.LA(1) <= BITWISEXOR)||(input.LA(1) >= DIV && input.LA(1) <= DIVIDE)||(input.LA(1) >= EQUAL && input.LA(1) <= EQUAL_NS)||(input.LA(1) >= GREATERTHAN && input.LA(1) <= GREATERTHANOREQUALTO)||input.LA(1)==KW_AND||input.LA(1)==KW_ARRAY||(input.LA(1) >= KW_BETWEEN && input.LA(1) <= KW_BOOLEAN)||input.LA(1)==KW_CASE||input.LA(1)==KW_DOUBLE||input.LA(1)==KW_FLOAT||input.LA(1)==KW_IF||input.LA(1)==KW_IN||input.LA(1)==KW_INT||input.LA(1)==KW_LIKE||input.LA(1)==KW_MAP||input.LA(1)==KW_NOT||input.LA(1)==KW_OR||input.LA(1)==KW_REGEXP||input.LA(1)==KW_RLIKE||input.LA(1)==KW_SMALLINT||(input.LA(1) >= KW_STRING && input.LA(1) <= KW_STRUCT)||input.LA(1)==KW_TINYINT||input.LA(1)==KW_UNIONTYPE||input.LA(1)==KW_WHEN||(input.LA(1) >= LESSTHAN && input.LA(1) <= LESSTHANOREQUALTO)||input.LA(1)==MINUS||input.LA(1)==MOD||input.LA(1)==NOTEQUAL||input.LA(1)==PLUS||input.LA(1)==STAR||input.LA(1)==TILDE ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set243));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set249));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -8013,21 +8268,21 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "descFuncNames"
-	// IdentifiersParser.g:513:1: descFuncNames : ( sysFuncNames | StringLiteral | identifier );
+	// IdentifiersParser.g:519:1: descFuncNames : ( sysFuncNames | StringLiteral | identifier );
 	public final HiveParser_IdentifiersParser.descFuncNames_return descFuncNames() throws RecognitionException {
 		HiveParser_IdentifiersParser.descFuncNames_return retval = new HiveParser_IdentifiersParser.descFuncNames_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token StringLiteral245=null;
-		ParserRuleReturnScope sysFuncNames244 =null;
-		ParserRuleReturnScope identifier246 =null;
+		Token StringLiteral251=null;
+		ParserRuleReturnScope sysFuncNames250 =null;
+		ParserRuleReturnScope identifier252 =null;
 
-		CommonTree StringLiteral245_tree=null;
+		CommonTree StringLiteral251_tree=null;
 
 		try {
-			// IdentifiersParser.g:514:5: ( sysFuncNames | StringLiteral | identifier )
+			// IdentifiersParser.g:520:5: ( sysFuncNames | StringLiteral | identifier )
 			int alt55=3;
 			switch ( input.LA(1) ) {
 			case AMPERSAND:
@@ -8276,44 +8531,44 @@ public class HiveParser_IdentifiersParser extends Parser {
 			}
 			switch (alt55) {
 				case 1 :
-					// IdentifiersParser.g:515:7: sysFuncNames
+					// IdentifiersParser.g:521:7: sysFuncNames
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_sysFuncNames_in_descFuncNames3461);
-					sysFuncNames244=sysFuncNames();
+					pushFollow(FOLLOW_sysFuncNames_in_descFuncNames3509);
+					sysFuncNames250=sysFuncNames();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, sysFuncNames244.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, sysFuncNames250.getTree());
 
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:516:7: StringLiteral
+					// IdentifiersParser.g:522:7: StringLiteral
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					StringLiteral245=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_descFuncNames3469); if (state.failed) return retval;
+					StringLiteral251=(Token)match(input,StringLiteral,FOLLOW_StringLiteral_in_descFuncNames3517); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					StringLiteral245_tree = (CommonTree)adaptor.create(StringLiteral245);
-					adaptor.addChild(root_0, StringLiteral245_tree);
+					StringLiteral251_tree = (CommonTree)adaptor.create(StringLiteral251);
+					adaptor.addChild(root_0, StringLiteral251_tree);
 					}
 
 					}
 					break;
 				case 3 :
-					// IdentifiersParser.g:517:7: identifier
+					// IdentifiersParser.g:523:7: identifier
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_identifier_in_descFuncNames3477);
-					identifier246=identifier();
+					pushFollow(FOLLOW_identifier_in_descFuncNames3525);
+					identifier252=identifier();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier246.getTree());
+					if ( state.backtracking==0 ) adaptor.addChild(root_0, identifier252.getTree());
 
 					}
 					break;
@@ -8347,27 +8602,27 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "identifier"
-	// IdentifiersParser.g:520:1: identifier : ( Identifier | nonReserved -> Identifier[$nonReserved.text] );
+	// IdentifiersParser.g:526:1: identifier : ( Identifier | nonReserved -> Identifier[$nonReserved.text] );
 	public final HiveParser_IdentifiersParser.identifier_return identifier() throws RecognitionException {
 		HiveParser_IdentifiersParser.identifier_return retval = new HiveParser_IdentifiersParser.identifier_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token Identifier247=null;
-		ParserRuleReturnScope nonReserved248 =null;
+		Token Identifier253=null;
+		ParserRuleReturnScope nonReserved254 =null;
 
-		CommonTree Identifier247_tree=null;
+		CommonTree Identifier253_tree=null;
 		RewriteRuleSubtreeStream stream_nonReserved=new RewriteRuleSubtreeStream(adaptor,"rule nonReserved");
 
 		try {
-			// IdentifiersParser.g:521:5: ( Identifier | nonReserved -> Identifier[$nonReserved.text] )
+			// IdentifiersParser.g:527:5: ( Identifier | nonReserved -> Identifier[$nonReserved.text] )
 			int alt56=2;
 			int LA56_0 = input.LA(1);
 			if ( (LA56_0==Identifier) ) {
 				alt56=1;
 			}
-			else if ( ((LA56_0 >= KW_ADD && LA56_0 <= KW_AFTER)||(LA56_0 >= KW_ALTER && LA56_0 <= KW_ANALYZE)||(LA56_0 >= KW_ARCHIVE && LA56_0 <= KW_CASCADE)||(LA56_0 >= KW_CHANGE && LA56_0 <= KW_COLLECTION)||(LA56_0 >= KW_COLUMNS && LA56_0 <= KW_CREATE)||LA56_0==KW_CUBE||(LA56_0 >= KW_CURSOR && LA56_0 <= KW_DATA)||(LA56_0 >= KW_DATABASES && LA56_0 <= KW_DISABLE)||(LA56_0 >= KW_DISTRIBUTE && LA56_0 <= KW_ELEM_TYPE)||LA56_0==KW_ENABLE||LA56_0==KW_ESCAPED||(LA56_0 >= KW_EXCLUSIVE && LA56_0 <= KW_EXPORT)||(LA56_0 >= KW_EXTERNAL && LA56_0 <= KW_FLOAT)||(LA56_0 >= KW_FOR && LA56_0 <= KW_FORMATTED)||LA56_0==KW_FULL||(LA56_0 >= KW_FUNCTIONS && LA56_0 <= KW_GROUPING)||(LA56_0 >= KW_HOLD_DDLTIME && LA56_0 <= KW_IDXPROPERTIES)||(LA56_0 >= KW_IGNORE && LA56_0 <= KW_ITEMS)||(LA56_0 >= KW_KEYS && LA56_0 <= KW_LEFT)||(LA56_0 >= KW_LIKE && LA56_0 <= KW_LONG)||(LA56_0 >= KW_MAPJOIN && LA56_0 <= KW_MINUS)||(LA56_0 >= KW_MSCK && LA56_0 <= KW_NOSCAN)||(LA56_0 >= KW_NO_DROP && LA56_0 <= KW_OFFLINE)||LA56_0==KW_OPTION||(LA56_0 >= KW_ORCFILE && LA56_0 <= KW_OUTPUTFORMAT)||LA56_0==KW_OVERWRITE||(LA56_0 >= KW_PARTITION && LA56_0 <= KW_PLUS)||(LA56_0 >= KW_PRETTY && LA56_0 <= KW_RECORDWRITER)||(LA56_0 >= KW_REGEXP && LA56_0 <= KW_SCHEMAS)||(LA56_0 >= KW_SEMI && LA56_0 <= KW_TABLES)||(LA56_0 >= KW_TBLPROPERTIES && LA56_0 <= KW_TEXTFILE)||(LA56_0 >= KW_TIMESTAMP && LA56_0 <= KW_TOUCH)||(LA56_0 >= KW_TRIGGER && LA56_0 <= KW_UNARCHIVE)||(LA56_0 >= KW_UNDO && LA56_0 <= KW_UNIONTYPE)||(LA56_0 >= KW_UNLOCK && LA56_0 <= KW_VALUE_TYPE)||LA56_0==KW_VIEW||LA56_0==KW_WHILE||LA56_0==KW_WITH) ) {
+			else if ( ((LA56_0 >= KW_ADD && LA56_0 <= KW_AFTER)||(LA56_0 >= KW_ALTER && LA56_0 <= KW_ANALYZE)||(LA56_0 >= KW_ARCHIVE && LA56_0 <= KW_CASCADE)||(LA56_0 >= KW_CHANGE && LA56_0 <= KW_COLLECTION)||(LA56_0 >= KW_COLUMNS && LA56_0 <= KW_CREATE)||LA56_0==KW_CUBE||(LA56_0 >= KW_CURSOR && LA56_0 <= KW_DATA)||(LA56_0 >= KW_DATABASES && LA56_0 <= KW_DISABLE)||(LA56_0 >= KW_DISTRIBUTE && LA56_0 <= KW_DROP)||LA56_0==KW_ELEM_TYPE||LA56_0==KW_ENABLE||LA56_0==KW_ESCAPED||(LA56_0 >= KW_EXCLUSIVE && LA56_0 <= KW_EXPORT)||(LA56_0 >= KW_EXTERNAL && LA56_0 <= KW_FLOAT)||(LA56_0 >= KW_FOR && LA56_0 <= KW_FORMATTED)||LA56_0==KW_FULL||(LA56_0 >= KW_FUNCTIONS && LA56_0 <= KW_GROUPING)||(LA56_0 >= KW_HOLD_DDLTIME && LA56_0 <= KW_IDXPROPERTIES)||(LA56_0 >= KW_IGNORE && LA56_0 <= KW_INCRE)||(LA56_0 >= KW_INDEX && LA56_0 <= KW_ITEMS)||(LA56_0 >= KW_KEYS && LA56_0 <= KW_LEFT)||(LA56_0 >= KW_LIKE && LA56_0 <= KW_LONG)||(LA56_0 >= KW_MAPJOIN && LA56_0 <= KW_MINUS)||(LA56_0 >= KW_MSCK && LA56_0 <= KW_NOSCAN)||(LA56_0 >= KW_NO_DROP && LA56_0 <= KW_OFFLINE)||LA56_0==KW_OPTION||(LA56_0 >= KW_ORCFILE && LA56_0 <= KW_OUTPUTFORMAT)||LA56_0==KW_OVERWRITE||(LA56_0 >= KW_PARTITION && LA56_0 <= KW_PLUS)||(LA56_0 >= KW_PRETTY && LA56_0 <= KW_RECORDWRITER)||(LA56_0 >= KW_REGEXP && LA56_0 <= KW_SCHEMAS)||(LA56_0 >= KW_SEMI && LA56_0 <= KW_TABLES)||(LA56_0 >= KW_TBLPROPERTIES && LA56_0 <= KW_TEXTFILE)||(LA56_0 >= KW_TIMESTAMP && LA56_0 <= KW_TOUCH)||(LA56_0 >= KW_TRIGGER && LA56_0 <= KW_UNARCHIVE)||(LA56_0 >= KW_UNDO && LA56_0 <= KW_UNIONTYPE)||(LA56_0 >= KW_UNLOCK && LA56_0 <= KW_VALUE_TYPE)||LA56_0==KW_VIEW||LA56_0==KW_WHILE||LA56_0==KW_WITH) ) {
 				alt56=2;
 			}
 
@@ -8380,27 +8635,27 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 			switch (alt56) {
 				case 1 :
-					// IdentifiersParser.g:522:5: Identifier
+					// IdentifiersParser.g:528:5: Identifier
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					Identifier247=(Token)match(input,Identifier,FOLLOW_Identifier_in_identifier3498); if (state.failed) return retval;
+					Identifier253=(Token)match(input,Identifier,FOLLOW_Identifier_in_identifier3546); if (state.failed) return retval;
 					if ( state.backtracking==0 ) {
-					Identifier247_tree = (CommonTree)adaptor.create(Identifier247);
-					adaptor.addChild(root_0, Identifier247_tree);
+					Identifier253_tree = (CommonTree)adaptor.create(Identifier253);
+					adaptor.addChild(root_0, Identifier253_tree);
 					}
 
 					}
 					break;
 				case 2 :
-					// IdentifiersParser.g:523:7: nonReserved
+					// IdentifiersParser.g:529:7: nonReserved
 					{
-					pushFollow(FOLLOW_nonReserved_in_identifier3506);
-					nonReserved248=nonReserved();
+					pushFollow(FOLLOW_nonReserved_in_identifier3554);
+					nonReserved254=nonReserved();
 					state._fsp--;
 					if (state.failed) return retval;
-					if ( state.backtracking==0 ) stream_nonReserved.add(nonReserved248.getTree());
+					if ( state.backtracking==0 ) stream_nonReserved.add(nonReserved254.getTree());
 					// AST REWRITE
 					// elements: 
 					// token labels: 
@@ -8413,9 +8668,9 @@ public class HiveParser_IdentifiersParser extends Parser {
 					RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 
 					root_0 = (CommonTree)adaptor.nil();
-					// 523:19: -> Identifier[$nonReserved.text]
+					// 529:19: -> Identifier[$nonReserved.text]
 					{
-						adaptor.addChild(root_0, (CommonTree)adaptor.create(Identifier, (nonReserved248!=null?input.toString(nonReserved248.start,nonReserved248.stop):null)));
+						adaptor.addChild(root_0, (CommonTree)adaptor.create(Identifier, (nonReserved254!=null?input.toString(nonReserved254.start,nonReserved254.stop):null)));
 					}
 
 
@@ -8454,28 +8709,28 @@ public class HiveParser_IdentifiersParser extends Parser {
 
 
 	// $ANTLR start "nonReserved"
-	// IdentifiersParser.g:526:1: nonReserved : ( KW_INCRE | KW_TRUE | KW_FALSE | KW_LIKE | KW_EXISTS | KW_ASC | KW_DESC | KW_ORDER | KW_GROUP | KW_BY | KW_AS | KW_INSERT | KW_OVERWRITE | KW_OUTER | KW_LEFT | KW_RIGHT | KW_FULL | KW_PARTITION | KW_PARTITIONS | KW_TABLE | KW_TABLES | KW_COLUMNS | KW_INDEX | KW_INDEXES | KW_REBUILD | KW_FUNCTIONS | KW_SHOW | KW_MSCK | KW_REPAIR | KW_DIRECTORY | KW_LOCAL | KW_USING | KW_CLUSTER | KW_DISTRIBUTE | KW_SORT | KW_UNION | KW_LOAD | KW_EXPORT | KW_IMPORT | KW_DATA | KW_INPATH | KW_IS | KW_NULL | KW_CREATE | KW_EXTERNAL | KW_ALTER | KW_CHANGE | KW_FIRST | KW_AFTER | KW_DESCRIBE | KW_DROP | KW_RENAME | KW_IGNORE | KW_PROTECTION | KW_TO | KW_COMMENT | KW_BOOLEAN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_DATE | KW_DATETIME | KW_TIMESTAMP | KW_DECIMAL | KW_STRING | KW_ARRAY | KW_STRUCT | KW_UNIONTYPE | KW_PARTITIONED | KW_CLUSTERED | KW_SORTED | KW_INTO | KW_BUCKETS | KW_ROW | KW_ROWS | KW_FORMAT | KW_DELIMITED | KW_FIELDS | KW_TERMINATED | KW_ESCAPED | KW_COLLECTION | KW_ITEMS | KW_KEYS | KW_KEY_TYPE | KW_LINES | KW_STORED | KW_FILEFORMAT | KW_SEQUENCEFILE | KW_TEXTFILE | KW_RCFILE | KW_ORCFILE | KW_INPUTFORMAT | KW_OUTPUTFORMAT | KW_INPUTDRIVER | KW_OUTPUTDRIVER | KW_OFFLINE | KW_ENABLE | KW_DISABLE | KW_READONLY | KW_NO_DROP | KW_LOCATION | KW_BUCKET | KW_OUT | KW_OF | KW_PERCENT | KW_ADD | KW_REPLACE | KW_RLIKE | KW_REGEXP | KW_TEMPORARY | KW_EXPLAIN | KW_FORMATTED | KW_PRETTY | KW_DEPENDENCY | KW_LOGICAL | KW_SERDE | KW_WITH | KW_DEFERRED | KW_SERDEPROPERTIES | KW_DBPROPERTIES | KW_LIMIT | KW_SET | KW_UNSET | KW_TBLPROPERTIES | KW_IDXPROPERTIES | KW_VALUE_TYPE | KW_ELEM_TYPE | KW_MAPJOIN | KW_STREAMTABLE | KW_HOLD_DDLTIME | KW_CLUSTERSTATUS | KW_UTC | KW_UTCTIMESTAMP | KW_LONG | KW_DELETE | KW_PLUS | KW_MINUS | KW_FETCH | KW_INTERSECT | KW_VIEW | KW_IN | KW_DATABASES | KW_MATERIALIZED | KW_SCHEMA | KW_SCHEMAS | KW_GRANT | KW_REVOKE | KW_SSL | KW_UNDO | KW_LOCK | KW_LOCKS | KW_UNLOCK | KW_SHARED | KW_EXCLUSIVE | KW_PROCEDURE | KW_UNSIGNED | KW_WHILE | KW_READ | KW_READS | KW_PURGE | KW_RANGE | KW_ANALYZE | KW_BEFORE | KW_BETWEEN | KW_BOTH | KW_BINARY | KW_CONTINUE | KW_CURSOR | KW_TRIGGER | KW_RECORDREADER | KW_RECORDWRITER | KW_SEMI | KW_LATERAL | KW_TOUCH | KW_ARCHIVE | KW_UNARCHIVE | KW_COMPUTE | KW_STATISTICS | KW_USE | KW_OPTION | KW_CONCATENATE | KW_SHOW_DATABASE | KW_UPDATE | KW_RESTRICT | KW_CASCADE | KW_SKEWED | KW_ROLLUP | KW_CUBE | KW_DIRECTORIES | KW_FOR | KW_GROUPING | KW_SETS | KW_TRUNCATE | KW_NOSCAN | KW_USER | KW_ROLE | KW_INNER );
+	// IdentifiersParser.g:532:1: nonReserved : ( KW_INCRE | KW_TRUE | KW_FALSE | KW_LIKE | KW_EXISTS | KW_ASC | KW_DESC | KW_ORDER | KW_GROUP | KW_BY | KW_AS | KW_INSERT | KW_OVERWRITE | KW_OUTER | KW_LEFT | KW_RIGHT | KW_FULL | KW_PARTITION | KW_PARTITIONS | KW_TABLE | KW_TABLES | KW_COLUMNS | KW_INDEX | KW_INDEXES | KW_REBUILD | KW_FUNCTIONS | KW_SHOW | KW_MSCK | KW_REPAIR | KW_DIRECTORY | KW_LOCAL | KW_USING | KW_CLUSTER | KW_DISTRIBUTE | KW_SORT | KW_UNION | KW_LOAD | KW_EXPORT | KW_IMPORT | KW_DATA | KW_INPATH | KW_IS | KW_NULL | KW_CREATE | KW_EXTERNAL | KW_ALTER | KW_CHANGE | KW_FIRST | KW_AFTER | KW_DESCRIBE | KW_DROP | KW_RENAME | KW_IGNORE | KW_PROTECTION | KW_TO | KW_COMMENT | KW_BOOLEAN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_DATE | KW_DATETIME | KW_TIMESTAMP | KW_DECIMAL | KW_STRING | KW_ARRAY | KW_STRUCT | KW_UNIONTYPE | KW_PARTITIONED | KW_CLUSTERED | KW_SORTED | KW_INTO | KW_BUCKETS | KW_ROW | KW_ROWS | KW_FORMAT | KW_DELIMITED | KW_FIELDS | KW_TERMINATED | KW_ESCAPED | KW_COLLECTION | KW_ITEMS | KW_KEYS | KW_KEY_TYPE | KW_LINES | KW_STORED | KW_FILEFORMAT | KW_SEQUENCEFILE | KW_TEXTFILE | KW_RCFILE | KW_ORCFILE | KW_INPUTFORMAT | KW_OUTPUTFORMAT | KW_INPUTDRIVER | KW_OUTPUTDRIVER | KW_OFFLINE | KW_ENABLE | KW_DISABLE | KW_READONLY | KW_NO_DROP | KW_LOCATION | KW_BUCKET | KW_OUT | KW_OF | KW_PERCENT | KW_ADD | KW_REPLACE | KW_RLIKE | KW_REGEXP | KW_TEMPORARY | KW_EXPLAIN | KW_FORMATTED | KW_PRETTY | KW_DEPENDENCY | KW_LOGICAL | KW_SERDE | KW_WITH | KW_DEFERRED | KW_SERDEPROPERTIES | KW_DBPROPERTIES | KW_LIMIT | KW_SET | KW_UNSET | KW_TBLPROPERTIES | KW_IDXPROPERTIES | KW_VALUE_TYPE | KW_ELEM_TYPE | KW_MAPJOIN | KW_STREAMTABLE | KW_HOLD_DDLTIME | KW_CLUSTERSTATUS | KW_UTC | KW_UTCTIMESTAMP | KW_LONG | KW_DELETE | KW_PLUS | KW_MINUS | KW_FETCH | KW_INTERSECT | KW_VIEW | KW_IN | KW_DATABASES | KW_MATERIALIZED | KW_SCHEMA | KW_SCHEMAS | KW_GRANT | KW_REVOKE | KW_SSL | KW_UNDO | KW_LOCK | KW_LOCKS | KW_UNLOCK | KW_SHARED | KW_EXCLUSIVE | KW_PROCEDURE | KW_UNSIGNED | KW_WHILE | KW_READ | KW_READS | KW_PURGE | KW_RANGE | KW_ANALYZE | KW_BEFORE | KW_BETWEEN | KW_BOTH | KW_BINARY | KW_CONTINUE | KW_CURSOR | KW_TRIGGER | KW_RECORDREADER | KW_RECORDWRITER | KW_SEMI | KW_LATERAL | KW_TOUCH | KW_ARCHIVE | KW_UNARCHIVE | KW_COMPUTE | KW_STATISTICS | KW_USE | KW_OPTION | KW_CONCATENATE | KW_SHOW_DATABASE | KW_UPDATE | KW_RESTRICT | KW_CASCADE | KW_SKEWED | KW_ROLLUP | KW_CUBE | KW_DIRECTORIES | KW_FOR | KW_GROUPING | KW_SETS | KW_TRUNCATE | KW_NOSCAN | KW_USER | KW_ROLE | KW_INNER );
 	public final HiveParser_IdentifiersParser.nonReserved_return nonReserved() throws RecognitionException {
 		HiveParser_IdentifiersParser.nonReserved_return retval = new HiveParser_IdentifiersParser.nonReserved_return();
 		retval.start = input.LT(1);
 
 		CommonTree root_0 = null;
 
-		Token set249=null;
+		Token set255=null;
 
-		CommonTree set249_tree=null;
+		CommonTree set255_tree=null;
 
 		try {
-			// IdentifiersParser.g:527:5: ( KW_INCRE | KW_TRUE | KW_FALSE | KW_LIKE | KW_EXISTS | KW_ASC | KW_DESC | KW_ORDER | KW_GROUP | KW_BY | KW_AS | KW_INSERT | KW_OVERWRITE | KW_OUTER | KW_LEFT | KW_RIGHT | KW_FULL | KW_PARTITION | KW_PARTITIONS | KW_TABLE | KW_TABLES | KW_COLUMNS | KW_INDEX | KW_INDEXES | KW_REBUILD | KW_FUNCTIONS | KW_SHOW | KW_MSCK | KW_REPAIR | KW_DIRECTORY | KW_LOCAL | KW_USING | KW_CLUSTER | KW_DISTRIBUTE | KW_SORT | KW_UNION | KW_LOAD | KW_EXPORT | KW_IMPORT | KW_DATA | KW_INPATH | KW_IS | KW_NULL | KW_CREATE | KW_EXTERNAL | KW_ALTER | KW_CHANGE | KW_FIRST | KW_AFTER | KW_DESCRIBE | KW_DROP | KW_RENAME | KW_IGNORE | KW_PROTECTION | KW_TO | KW_COMMENT | KW_BOOLEAN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_DATE | KW_DATETIME | KW_TIMESTAMP | KW_DECIMAL | KW_STRING | KW_ARRAY | KW_STRUCT | KW_UNIONTYPE | KW_PARTITIONED | KW_CLUSTERED | KW_SORTED | KW_INTO | KW_BUCKETS | KW_ROW | KW_ROWS | KW_FORMAT | KW_DELIMITED | KW_FIELDS | KW_TERMINATED | KW_ESCAPED | KW_COLLECTION | KW_ITEMS | KW_KEYS | KW_KEY_TYPE | KW_LINES | KW_STORED | KW_FILEFORMAT | KW_SEQUENCEFILE | KW_TEXTFILE | KW_RCFILE | KW_ORCFILE | KW_INPUTFORMAT | KW_OUTPUTFORMAT | KW_INPUTDRIVER | KW_OUTPUTDRIVER | KW_OFFLINE | KW_ENABLE | KW_DISABLE | KW_READONLY | KW_NO_DROP | KW_LOCATION | KW_BUCKET | KW_OUT | KW_OF | KW_PERCENT | KW_ADD | KW_REPLACE | KW_RLIKE | KW_REGEXP | KW_TEMPORARY | KW_EXPLAIN | KW_FORMATTED | KW_PRETTY | KW_DEPENDENCY | KW_LOGICAL | KW_SERDE | KW_WITH | KW_DEFERRED | KW_SERDEPROPERTIES | KW_DBPROPERTIES | KW_LIMIT | KW_SET | KW_UNSET | KW_TBLPROPERTIES | KW_IDXPROPERTIES | KW_VALUE_TYPE | KW_ELEM_TYPE | KW_MAPJOIN | KW_STREAMTABLE | KW_HOLD_DDLTIME | KW_CLUSTERSTATUS | KW_UTC | KW_UTCTIMESTAMP | KW_LONG | KW_DELETE | KW_PLUS | KW_MINUS | KW_FETCH | KW_INTERSECT | KW_VIEW | KW_IN | KW_DATABASES | KW_MATERIALIZED | KW_SCHEMA | KW_SCHEMAS | KW_GRANT | KW_REVOKE | KW_SSL | KW_UNDO | KW_LOCK | KW_LOCKS | KW_UNLOCK | KW_SHARED | KW_EXCLUSIVE | KW_PROCEDURE | KW_UNSIGNED | KW_WHILE | KW_READ | KW_READS | KW_PURGE | KW_RANGE | KW_ANALYZE | KW_BEFORE | KW_BETWEEN | KW_BOTH | KW_BINARY | KW_CONTINUE | KW_CURSOR | KW_TRIGGER | KW_RECORDREADER | KW_RECORDWRITER | KW_SEMI | KW_LATERAL | KW_TOUCH | KW_ARCHIVE | KW_UNARCHIVE | KW_COMPUTE | KW_STATISTICS | KW_USE | KW_OPTION | KW_CONCATENATE | KW_SHOW_DATABASE | KW_UPDATE | KW_RESTRICT | KW_CASCADE | KW_SKEWED | KW_ROLLUP | KW_CUBE | KW_DIRECTORIES | KW_FOR | KW_GROUPING | KW_SETS | KW_TRUNCATE | KW_NOSCAN | KW_USER | KW_ROLE | KW_INNER )
+			// IdentifiersParser.g:533:5: ( KW_INCRE | KW_TRUE | KW_FALSE | KW_LIKE | KW_EXISTS | KW_ASC | KW_DESC | KW_ORDER | KW_GROUP | KW_BY | KW_AS | KW_INSERT | KW_OVERWRITE | KW_OUTER | KW_LEFT | KW_RIGHT | KW_FULL | KW_PARTITION | KW_PARTITIONS | KW_TABLE | KW_TABLES | KW_COLUMNS | KW_INDEX | KW_INDEXES | KW_REBUILD | KW_FUNCTIONS | KW_SHOW | KW_MSCK | KW_REPAIR | KW_DIRECTORY | KW_LOCAL | KW_USING | KW_CLUSTER | KW_DISTRIBUTE | KW_SORT | KW_UNION | KW_LOAD | KW_EXPORT | KW_IMPORT | KW_DATA | KW_INPATH | KW_IS | KW_NULL | KW_CREATE | KW_EXTERNAL | KW_ALTER | KW_CHANGE | KW_FIRST | KW_AFTER | KW_DESCRIBE | KW_DROP | KW_RENAME | KW_IGNORE | KW_PROTECTION | KW_TO | KW_COMMENT | KW_BOOLEAN | KW_TINYINT | KW_SMALLINT | KW_INT | KW_BIGINT | KW_FLOAT | KW_DOUBLE | KW_DATE | KW_DATETIME | KW_TIMESTAMP | KW_DECIMAL | KW_STRING | KW_ARRAY | KW_STRUCT | KW_UNIONTYPE | KW_PARTITIONED | KW_CLUSTERED | KW_SORTED | KW_INTO | KW_BUCKETS | KW_ROW | KW_ROWS | KW_FORMAT | KW_DELIMITED | KW_FIELDS | KW_TERMINATED | KW_ESCAPED | KW_COLLECTION | KW_ITEMS | KW_KEYS | KW_KEY_TYPE | KW_LINES | KW_STORED | KW_FILEFORMAT | KW_SEQUENCEFILE | KW_TEXTFILE | KW_RCFILE | KW_ORCFILE | KW_INPUTFORMAT | KW_OUTPUTFORMAT | KW_INPUTDRIVER | KW_OUTPUTDRIVER | KW_OFFLINE | KW_ENABLE | KW_DISABLE | KW_READONLY | KW_NO_DROP | KW_LOCATION | KW_BUCKET | KW_OUT | KW_OF | KW_PERCENT | KW_ADD | KW_REPLACE | KW_RLIKE | KW_REGEXP | KW_TEMPORARY | KW_EXPLAIN | KW_FORMATTED | KW_PRETTY | KW_DEPENDENCY | KW_LOGICAL | KW_SERDE | KW_WITH | KW_DEFERRED | KW_SERDEPROPERTIES | KW_DBPROPERTIES | KW_LIMIT | KW_SET | KW_UNSET | KW_TBLPROPERTIES | KW_IDXPROPERTIES | KW_VALUE_TYPE | KW_ELEM_TYPE | KW_MAPJOIN | KW_STREAMTABLE | KW_HOLD_DDLTIME | KW_CLUSTERSTATUS | KW_UTC | KW_UTCTIMESTAMP | KW_LONG | KW_DELETE | KW_PLUS | KW_MINUS | KW_FETCH | KW_INTERSECT | KW_VIEW | KW_IN | KW_DATABASES | KW_MATERIALIZED | KW_SCHEMA | KW_SCHEMAS | KW_GRANT | KW_REVOKE | KW_SSL | KW_UNDO | KW_LOCK | KW_LOCKS | KW_UNLOCK | KW_SHARED | KW_EXCLUSIVE | KW_PROCEDURE | KW_UNSIGNED | KW_WHILE | KW_READ | KW_READS | KW_PURGE | KW_RANGE | KW_ANALYZE | KW_BEFORE | KW_BETWEEN | KW_BOTH | KW_BINARY | KW_CONTINUE | KW_CURSOR | KW_TRIGGER | KW_RECORDREADER | KW_RECORDWRITER | KW_SEMI | KW_LATERAL | KW_TOUCH | KW_ARCHIVE | KW_UNARCHIVE | KW_COMPUTE | KW_STATISTICS | KW_USE | KW_OPTION | KW_CONCATENATE | KW_SHOW_DATABASE | KW_UPDATE | KW_RESTRICT | KW_CASCADE | KW_SKEWED | KW_ROLLUP | KW_CUBE | KW_DIRECTORIES | KW_FOR | KW_GROUPING | KW_SETS | KW_TRUNCATE | KW_NOSCAN | KW_USER | KW_ROLE | KW_INNER )
 			// IdentifiersParser.g:
 			{
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			set249=input.LT(1);
-			if ( (input.LA(1) >= KW_ADD && input.LA(1) <= KW_AFTER)||(input.LA(1) >= KW_ALTER && input.LA(1) <= KW_ANALYZE)||(input.LA(1) >= KW_ARCHIVE && input.LA(1) <= KW_CASCADE)||(input.LA(1) >= KW_CHANGE && input.LA(1) <= KW_COLLECTION)||(input.LA(1) >= KW_COLUMNS && input.LA(1) <= KW_CREATE)||input.LA(1)==KW_CUBE||(input.LA(1) >= KW_CURSOR && input.LA(1) <= KW_DATA)||(input.LA(1) >= KW_DATABASES && input.LA(1) <= KW_DISABLE)||(input.LA(1) >= KW_DISTRIBUTE && input.LA(1) <= KW_ELEM_TYPE)||input.LA(1)==KW_ENABLE||input.LA(1)==KW_ESCAPED||(input.LA(1) >= KW_EXCLUSIVE && input.LA(1) <= KW_EXPORT)||(input.LA(1) >= KW_EXTERNAL && input.LA(1) <= KW_FLOAT)||(input.LA(1) >= KW_FOR && input.LA(1) <= KW_FORMATTED)||input.LA(1)==KW_FULL||(input.LA(1) >= KW_FUNCTIONS && input.LA(1) <= KW_GROUPING)||(input.LA(1) >= KW_HOLD_DDLTIME && input.LA(1) <= KW_IDXPROPERTIES)||(input.LA(1) >= KW_IGNORE && input.LA(1) <= KW_ITEMS)||(input.LA(1) >= KW_KEYS && input.LA(1) <= KW_LEFT)||(input.LA(1) >= KW_LIKE && input.LA(1) <= KW_LONG)||(input.LA(1) >= KW_MAPJOIN && input.LA(1) <= KW_MINUS)||(input.LA(1) >= KW_MSCK && input.LA(1) <= KW_NOSCAN)||(input.LA(1) >= KW_NO_DROP && input.LA(1) <= KW_OFFLINE)||input.LA(1)==KW_OPTION||(input.LA(1) >= KW_ORCFILE && input.LA(1) <= KW_OUTPUTFORMAT)||input.LA(1)==KW_OVERWRITE||(input.LA(1) >= KW_PARTITION && input.LA(1) <= KW_PLUS)||(input.LA(1) >= KW_PRETTY && input.LA(1) <= KW_RECORDWRITER)||(input.LA(1) >= KW_REGEXP && input.LA(1) <= KW_SCHEMAS)||(input.LA(1) >= KW_SEMI && input.LA(1) <= KW_TABLES)||(input.LA(1) >= KW_TBLPROPERTIES && input.LA(1) <= KW_TEXTFILE)||(input.LA(1) >= KW_TIMESTAMP && input.LA(1) <= KW_TOUCH)||(input.LA(1) >= KW_TRIGGER && input.LA(1) <= KW_UNARCHIVE)||(input.LA(1) >= KW_UNDO && input.LA(1) <= KW_UNIONTYPE)||(input.LA(1) >= KW_UNLOCK && input.LA(1) <= KW_VALUE_TYPE)||input.LA(1)==KW_VIEW||input.LA(1)==KW_WHILE||input.LA(1)==KW_WITH ) {
+			set255=input.LT(1);
+			if ( (input.LA(1) >= KW_ADD && input.LA(1) <= KW_AFTER)||(input.LA(1) >= KW_ALTER && input.LA(1) <= KW_ANALYZE)||(input.LA(1) >= KW_ARCHIVE && input.LA(1) <= KW_CASCADE)||(input.LA(1) >= KW_CHANGE && input.LA(1) <= KW_COLLECTION)||(input.LA(1) >= KW_COLUMNS && input.LA(1) <= KW_CREATE)||input.LA(1)==KW_CUBE||(input.LA(1) >= KW_CURSOR && input.LA(1) <= KW_DATA)||(input.LA(1) >= KW_DATABASES && input.LA(1) <= KW_DISABLE)||(input.LA(1) >= KW_DISTRIBUTE && input.LA(1) <= KW_DROP)||input.LA(1)==KW_ELEM_TYPE||input.LA(1)==KW_ENABLE||input.LA(1)==KW_ESCAPED||(input.LA(1) >= KW_EXCLUSIVE && input.LA(1) <= KW_EXPORT)||(input.LA(1) >= KW_EXTERNAL && input.LA(1) <= KW_FLOAT)||(input.LA(1) >= KW_FOR && input.LA(1) <= KW_FORMATTED)||input.LA(1)==KW_FULL||(input.LA(1) >= KW_FUNCTIONS && input.LA(1) <= KW_GROUPING)||(input.LA(1) >= KW_HOLD_DDLTIME && input.LA(1) <= KW_IDXPROPERTIES)||(input.LA(1) >= KW_IGNORE && input.LA(1) <= KW_INCRE)||(input.LA(1) >= KW_INDEX && input.LA(1) <= KW_ITEMS)||(input.LA(1) >= KW_KEYS && input.LA(1) <= KW_LEFT)||(input.LA(1) >= KW_LIKE && input.LA(1) <= KW_LONG)||(input.LA(1) >= KW_MAPJOIN && input.LA(1) <= KW_MINUS)||(input.LA(1) >= KW_MSCK && input.LA(1) <= KW_NOSCAN)||(input.LA(1) >= KW_NO_DROP && input.LA(1) <= KW_OFFLINE)||input.LA(1)==KW_OPTION||(input.LA(1) >= KW_ORCFILE && input.LA(1) <= KW_OUTPUTFORMAT)||input.LA(1)==KW_OVERWRITE||(input.LA(1) >= KW_PARTITION && input.LA(1) <= KW_PLUS)||(input.LA(1) >= KW_PRETTY && input.LA(1) <= KW_RECORDWRITER)||(input.LA(1) >= KW_REGEXP && input.LA(1) <= KW_SCHEMAS)||(input.LA(1) >= KW_SEMI && input.LA(1) <= KW_TABLES)||(input.LA(1) >= KW_TBLPROPERTIES && input.LA(1) <= KW_TEXTFILE)||(input.LA(1) >= KW_TIMESTAMP && input.LA(1) <= KW_TOUCH)||(input.LA(1) >= KW_TRIGGER && input.LA(1) <= KW_UNARCHIVE)||(input.LA(1) >= KW_UNDO && input.LA(1) <= KW_UNIONTYPE)||(input.LA(1) >= KW_UNLOCK && input.LA(1) <= KW_VALUE_TYPE)||input.LA(1)==KW_VIEW||input.LA(1)==KW_WHILE||input.LA(1)==KW_WITH ) {
 				input.consume();
-				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set249));
+				if ( state.backtracking==0 ) adaptor.addChild(root_0, (CommonTree)adaptor.create(set255));
 				state.errorRecovery=false;
 				state.failed=false;
 			}
@@ -8624,32 +8879,35 @@ public class HiveParser_IdentifiersParser extends Parser {
 	protected DFA40 dfa40 = new DFA40(this);
 	protected DFA45 dfa45 = new DFA45(this);
 	static final String DFA6_eotS =
-		"\u01f4\uffff";
+		"\u02a2\uffff";
 	static final String DFA6_eofS =
-		"\u01f4\uffff";
+		"\u02a2\uffff";
 	static final String DFA6_minS =
-		"\1\7\26\uffff\1\7\1\uffff\2\7\10\4\1\14\2\4\1\u010f\1\4\1\u010f\4\4\1"+
-		"\u010f\2\7\u01c4\uffff";
+		"\1\11\34\uffff\1\11\1\uffff\2\11\16\4\1\16\2\4\1\u018a\1\4\1\u018a\4\4"+
+		"\1\u018a\2\11\u0266\uffff";
 	static final String DFA6_maxS =
-		"\1\u0121\26\uffff\1\u0121\1\uffff\2\u0121\1\u011d\1\u011f\1\u011d\1\u011f"+
-		"\4\u011d\1\14\2\u011d\1\u010f\1\u011d\1\u010f\4\u011d\1\u010f\2\u0121"+
-		"\u01c4\uffff";
+		"\1\u044e\34\uffff\1\u044e\1\uffff\2\u044e\1\u01a1\1\u01a4\7\u01a1\1\u01a4"+
+		"\4\u01a1\1\16\2\u01a1\1\u018a\1\u01a1\1\u018a\4\u01a1\1\u018a\2\u044e"+
+		"\u0266\uffff";
 	static final String DFA6_acceptS =
-		"\1\uffff\1\1\26\uffff\1\3\27\uffff\104\1\1\2\30\1\1\uffff\26\1\1\uffff"+
-		"\27\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff\30\1"+
-		"\1\uffff\27\1\1\uffff\30\1\1\uffff\30\1\1\uffff\27\1\1\uffff\27\1\1\uffff"+
-		"\27\1\1\uffff\60\1";
+		"\1\uffff\1\1\34\uffff\1\3\35\uffff\120\1\1\2\30\1\1\uffff\26\1\1\uffff"+
+		"\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1"+
+		"\1\uffff\27\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff\26\1\1\uffff"+
+		"\30\1\1\uffff\27\1\1\uffff\30\1\1\uffff\30\1\1\uffff\27\1\1\uffff\27\1"+
+		"\1\uffff\27\1\1\uffff\74\1";
 	static final String DFA6_specialS =
-		"\u01f4\uffff}>";
+		"\u02a2\uffff}>";
 	static final String[] DFA6_transitionS = {
-			"\1\1\5\uffff\1\1\4\uffff\1\1\7\uffff\3\1\1\uffff\2\1\1\uffff\25\1\1\uffff"+
-			"\6\1\1\uffff\1\1\1\uffff\2\1\1\uffff\16\1\1\uffff\4\1\1\uffff\1\1\1\uffff"+
-			"\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff\3\1\1\uffff\1\1\1\uffff\4\1\1\uffff"+
-			"\23\1\1\uffff\4\1\1\uffff\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\1\1\1"+
-			"\uffff\6\1\1\uffff\1\1\1\uffff\5\1\2\uffff\14\1\1\uffff\16\1\1\uffff"+
-			"\25\1\1\uffff\4\1\1\uffff\4\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1"+
-			"\uffff\1\1\2\uffff\1\1\1\uffff\1\1\3\uffff\1\27\2\uffff\1\1\2\uffff\2"+
-			"\1\7\uffff\4\1",
+			"\1\1\5\uffff\1\1\6\uffff\1\1\170\uffff\1\1\3\uffff\2\1\1\uffff\2\1\1"+
+			"\uffff\25\1\1\uffff\6\1\1\uffff\1\1\1\uffff\2\1\1\uffff\16\1\1\uffff"+
+			"\3\1\2\uffff\1\1\1\uffff\1\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff"+
+			"\3\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff\14\1\1\uffff\4\1\1\uffff"+
+			"\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\1\1\1\uffff\6\1\1\uffff\1\1\1\uffff"+
+			"\5\1\2\uffff\14\1\1\uffff\16\1\1\uffff\25\1\1\uffff\4\1\1\uffff\4\1\1"+
+			"\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\1\1\2\uffff\1\1\1\uffff\1"+
+			"\1\3\uffff\1\35\4\uffff\1\1\6\uffff\1\1\1\uffff\1\1\12\uffff\2\1\1\uffff"+
+			"\1\1\4\uffff\1\1\21\uffff\1\1\5\uffff\1\1\u0160\uffff\2\1\6\uffff\1\1"+
+			"\u0121\uffff\1\1",
 			"",
 			"",
 			"",
@@ -8672,158 +8930,375 @@ public class HiveParser_IdentifiersParser extends Parser {
 			"",
 			"",
 			"",
-			"\1\37\5\uffff\1\43\4\uffff\1\42\7\uffff\1\53\2\54\1\uffff\2\54\1\uffff"+
-			"\1\54\1\47\14\54\1\56\1\55\5\54\1\uffff\6\54\1\uffff\1\54\1\uffff\2\54"+
-			"\1\uffff\1\54\1\34\14\54\1\uffff\4\54\1\uffff\1\54\1\uffff\1\54\1\uffff"+
-			"\4\54\1\uffff\1\54\1\45\5\54\1\uffff\3\54\1\uffff\1\54\1\uffff\4\54\1"+
-			"\uffff\2\54\1\46\20\54\1\uffff\4\54\1\uffff\12\54\1\uffff\1\50\3\54\1"+
-			"\uffff\2\54\1\31\1\54\1\33\2\54\1\uffff\1\54\1\uffff\6\54\1\uffff\1\54"+
-			"\1\uffff\5\54\2\uffff\14\54\1\uffff\16\54\1\uffff\22\54\1\51\2\54\1\uffff"+
-			"\4\54\1\uffff\4\54\1\uffff\1\54\1\44\2\54\1\uffff\2\54\1\52\1\uffff\12"+
-			"\54\1\uffff\1\54\2\uffff\1\54\1\uffff\1\54\3\uffff\1\57\2\uffff\1\32"+
-			"\2\uffff\1\35\1\32\2\uffff\1\30\4\uffff\1\40\1\36\1\32\1\41",
 			"",
-			"\1\65\5\uffff\1\71\4\uffff\1\70\7\uffff\1\101\2\102\1\uffff\2\102\1"+
-			"\uffff\1\102\1\75\14\102\1\104\1\103\5\102\1\uffff\6\102\1\uffff\1\102"+
-			"\1\uffff\2\102\1\uffff\1\102\1\62\14\102\1\uffff\4\102\1\uffff\1\102"+
-			"\1\uffff\1\102\1\uffff\4\102\1\uffff\1\102\1\73\5\102\1\uffff\3\102\1"+
-			"\uffff\1\102\1\uffff\4\102\1\uffff\2\102\1\74\20\102\1\uffff\4\102\1"+
-			"\uffff\12\102\1\uffff\1\76\3\102\1\uffff\2\102\1\106\1\102\1\61\2\102"+
-			"\1\uffff\1\102\1\uffff\6\102\1\uffff\1\102\1\uffff\5\102\2\uffff\14\102"+
-			"\1\uffff\16\102\1\uffff\22\102\1\77\2\102\1\uffff\4\102\1\uffff\4\102"+
-			"\1\uffff\1\102\1\72\2\102\1\uffff\2\102\1\100\1\uffff\12\102\1\uffff"+
-			"\1\102\2\uffff\1\102\1\uffff\1\102\3\uffff\1\105\2\uffff\1\60\2\uffff"+
-			"\1\63\1\60\7\uffff\1\66\1\64\1\60\1\67",
-			"\1\113\5\uffff\1\117\4\uffff\1\116\7\uffff\1\127\2\130\1\uffff\2\130"+
-			"\1\uffff\1\130\1\123\14\130\1\132\1\131\5\130\1\uffff\6\130\1\uffff\1"+
-			"\130\1\uffff\2\130\1\uffff\1\130\1\110\14\130\1\uffff\4\130\1\uffff\1"+
-			"\130\1\uffff\1\130\1\uffff\4\130\1\uffff\1\130\1\121\5\130\1\uffff\3"+
-			"\130\1\uffff\1\130\1\uffff\4\130\1\uffff\2\130\1\122\20\130\1\uffff\4"+
-			"\130\1\uffff\12\130\1\uffff\1\124\3\130\1\uffff\2\130\1\uffff\1\130\1"+
-			"\107\2\130\1\uffff\1\130\1\uffff\6\130\1\uffff\1\130\1\uffff\5\130\2"+
-			"\uffff\14\130\1\uffff\16\130\1\uffff\22\130\1\125\2\130\1\uffff\4\130"+
-			"\1\uffff\4\130\1\uffff\1\130\1\120\2\130\1\uffff\2\130\1\126\1\uffff"+
-			"\12\130\1\uffff\1\130\2\uffff\1\130\1\uffff\1\130\3\uffff\1\133\2\uffff"+
-			"\1\134\2\uffff\1\111\1\134\7\uffff\1\114\1\112\1\134\1\115",
-			"\1\143\1\144\1\140\3\uffff\1\164\3\uffff\2\141\1\uffff\1\136\2\uffff"+
-			"\1\147\1\150\1\uffff\1\155\1\154\7\uffff\1\160\5\uffff\1\157\121\uffff"+
-			"\1\156\13\uffff\1\137\7\uffff\1\146\21\uffff\1\145\6\uffff\1\161\35\uffff"+
-			"\1\146\6\uffff\1\146\102\uffff\1\153\1\152\1\163\1\135\1\uffff\1\142"+
-			"\1\141\1\151\1\uffff\1\142\2\uffff\1\162\3\uffff\1\141",
-			"\1\175\1\176\1\172\3\uffff\1\164\3\uffff\2\173\1\uffff\1\170\2\uffff"+
-			"\1\u0081\1\u0082\1\uffff\1\u0087\1\u0086\7\uffff\1\u008a\5\uffff\1\u0089"+
-			"\121\uffff\1\u0088\13\uffff\1\171\7\uffff\1\u0080\21\uffff\1\177\6\uffff"+
-			"\1\u008b\35\uffff\1\u0080\6\uffff\1\u0080\102\uffff\1\u0085\1\u0084\1"+
-			"\166\1\167\1\uffff\1\174\1\173\1\u0083\1\uffff\1\174\2\uffff\1\u008c"+
-			"\3\uffff\1\173\1\uffff\1\165",
-			"\1\u0094\1\u0095\1\u0091\3\uffff\1\164\3\uffff\2\u0092\1\uffff\1\u008f"+
-			"\2\uffff\1\u0098\1\u0099\1\uffff\1\u009e\1\u009d\7\uffff\1\u00a1\5\uffff"+
-			"\1\u00a0\121\uffff\1\u009f\13\uffff\1\u0090\7\uffff\1\u0097\21\uffff"+
-			"\1\u0096\6\uffff\1\u00a2\35\uffff\1\u0097\6\uffff\1\u0097\102\uffff\1"+
-			"\u009c\1\u009b\1\uffff\1\u008e\1\uffff\1\u0093\1\u0092\1\u009a\1\uffff"+
-			"\1\u0093\2\uffff\1\u00a3\3\uffff\1\u0092",
-			"\1\u00ab\1\u00ac\1\u00a8\3\uffff\1\164\3\uffff\2\u00a9\1\uffff\1\u00a6"+
-			"\2\uffff\1\u00af\1\u00b0\1\uffff\1\u00b5\1\u00b4\7\uffff\1\u00b8\5\uffff"+
-			"\1\u00b7\121\uffff\1\u00b6\13\uffff\1\u00a7\7\uffff\1\u00ae\21\uffff"+
-			"\1\u00ad\6\uffff\1\u00b9\35\uffff\1\u00ae\6\uffff\1\u00ae\102\uffff\1"+
-			"\u00b3\1\u00b2\1\uffff\1\u00a5\1\uffff\1\u00aa\1\u00a9\1\u00b1\1\uffff"+
-			"\1\u00aa\2\uffff\1\u00ba\3\uffff\1\u00a9\1\uffff\1\u00bb",
-			"\1\u00c3\1\u00c4\1\u00c0\3\uffff\1\164\3\uffff\2\u00c1\1\uffff\1\u00be"+
-			"\2\uffff\1\u00c7\1\u00c8\1\uffff\1\u00cd\1\u00cc\7\uffff\1\u00d0\5\uffff"+
-			"\1\u00cf\121\uffff\1\u00ce\13\uffff\1\u00bf\7\uffff\1\u00c6\21\uffff"+
-			"\1\u00c5\6\uffff\1\u00d1\35\uffff\1\u00c6\6\uffff\1\u00c6\102\uffff\1"+
-			"\u00cb\1\u00ca\1\uffff\1\u00bd\1\uffff\1\u00c2\1\u00c1\1\u00c9\1\uffff"+
-			"\1\u00c2\2\uffff\1\u00d2\3\uffff\1\u00c1",
-			"\1\u00da\1\u00db\1\u00d7\3\uffff\1\164\3\uffff\2\u00d8\1\uffff\1\u00d5"+
-			"\2\uffff\1\u00de\1\u00df\1\uffff\1\u00e4\1\u00e3\7\uffff\1\u00e7\5\uffff"+
-			"\1\u00e6\121\uffff\1\u00e5\13\uffff\1\u00d6\7\uffff\1\u00dd\21\uffff"+
-			"\1\u00dc\6\uffff\1\u00e8\35\uffff\1\u00dd\6\uffff\1\u00dd\102\uffff\1"+
-			"\u00e2\1\u00e1\1\uffff\1\u00d4\1\uffff\1\u00d9\1\u00d8\1\u00e0\1\uffff"+
-			"\1\u00d9\2\uffff\1\u00e9\3\uffff\1\u00d8",
-			"\1\u00f1\1\u00f2\1\u00ee\3\uffff\1\164\3\uffff\2\u00ef\1\uffff\1\u00ec"+
-			"\2\uffff\1\u00f5\1\u00f6\1\uffff\1\u00fb\1\u00fa\7\uffff\1\u00fe\5\uffff"+
-			"\1\u00fd\121\uffff\1\u00fc\13\uffff\1\u00ed\7\uffff\1\u00f4\21\uffff"+
-			"\1\u00f3\6\uffff\1\u00ff\35\uffff\1\u00f4\6\uffff\1\u00f4\102\uffff\1"+
-			"\u00f9\1\u00f8\1\uffff\1\u00eb\1\uffff\1\u00f0\1\u00ef\1\u00f7\1\uffff"+
-			"\1\u00f0\2\uffff\1\u0100\3\uffff\1\u00ef",
-			"\1\u0108\1\u0109\1\u0105\3\uffff\1\164\3\uffff\2\u0106\1\uffff\1\u0103"+
-			"\2\uffff\1\u010c\1\u010d\1\uffff\1\u0112\1\u0111\7\uffff\1\u0115\5\uffff"+
-			"\1\u0114\121\uffff\1\u0113\13\uffff\1\u0104\7\uffff\1\u010b\21\uffff"+
-			"\1\u010a\6\uffff\1\u0116\35\uffff\1\u010b\6\uffff\1\u010b\102\uffff\1"+
-			"\u0110\1\u010f\1\uffff\1\u0102\1\uffff\1\u0107\1\u0106\1\u010e\1\uffff"+
-			"\1\u0107\2\uffff\1\u0117\3\uffff\1\u0106",
-			"\1\u0119",
-			"\1\u0120\1\u0121\1\u011d\3\uffff\1\164\3\uffff\2\u011e\1\uffff\1\u011b"+
-			"\2\uffff\1\u0124\1\u0125\1\uffff\1\u012a\1\u0129\7\uffff\1\u012d\5\uffff"+
-			"\1\u012c\121\uffff\1\u012b\13\uffff\1\u011c\7\uffff\1\u0123\21\uffff"+
-			"\1\u0122\6\uffff\1\u012e\35\uffff\1\u0123\6\uffff\1\u0123\102\uffff\1"+
-			"\u0128\1\u0127\1\u0130\1\u011a\1\uffff\1\u011f\1\u011e\1\u0126\1\uffff"+
-			"\1\u011f\2\uffff\1\u012f\3\uffff\1\u011e",
-			"\1\u0138\1\u0139\1\u0135\3\uffff\1\164\3\uffff\2\u0136\1\uffff\1\u0133"+
-			"\2\uffff\1\u013c\1\u013d\1\uffff\1\u0142\1\u0141\7\uffff\1\u0145\5\uffff"+
-			"\1\u0144\121\uffff\1\u0143\13\uffff\1\u0134\7\uffff\1\u013b\21\uffff"+
-			"\1\u013a\6\uffff\1\u0146\35\uffff\1\u013b\6\uffff\1\u013b\102\uffff\1"+
-			"\u0140\1\u013f\1\u0148\1\u0132\1\uffff\1\u0137\1\u0136\1\u013e\1\uffff"+
-			"\1\u0137\2\uffff\1\u0147\3\uffff\1\u0136",
-			"\1\u014a",
-			"\1\u0152\1\u0153\1\u014f\3\uffff\1\164\3\uffff\2\u0150\1\uffff\1\u014d"+
-			"\2\uffff\1\u0156\1\u0157\1\uffff\1\u015c\1\u015b\7\uffff\1\u015f\5\uffff"+
-			"\1\u015e\121\uffff\1\u015d\13\uffff\1\u014e\7\uffff\1\u0155\21\uffff"+
-			"\1\u0154\6\uffff\1\u0160\35\uffff\1\u0155\6\uffff\1\u0155\102\uffff\1"+
-			"\u015a\1\u0159\1\u014b\1\u014c\1\uffff\1\u0151\1\u0150\1\u0158\1\uffff"+
-			"\1\u0151\2\uffff\1\u0161\3\uffff\1\u0150",
-			"\1\u0163",
-			"\1\u016b\1\u016c\1\u0168\3\uffff\1\164\3\uffff\2\u0169\1\uffff\1\u0166"+
-			"\2\uffff\1\u016f\1\u0170\1\uffff\1\u0175\1\u0174\7\uffff\1\u0178\5\uffff"+
-			"\1\u0177\121\uffff\1\u0176\13\uffff\1\u0167\7\uffff\1\u016e\21\uffff"+
-			"\1\u016d\6\uffff\1\u0179\35\uffff\1\u016e\6\uffff\1\u016e\102\uffff\1"+
-			"\u0173\1\u0172\1\u0164\1\u0165\1\uffff\1\u016a\1\u0169\1\u0171\1\uffff"+
-			"\1\u016a\2\uffff\1\u017a\3\uffff\1\u0169",
-			"\1\u0183\1\u0184\1\u0180\3\uffff\1\164\3\uffff\2\u0181\1\uffff\1\u017e"+
-			"\2\uffff\1\u0187\1\u0188\1\uffff\1\u018d\1\u018c\7\uffff\1\u0190\5\uffff"+
-			"\1\u018f\121\uffff\1\u018e\13\uffff\1\u017f\7\uffff\1\u0186\21\uffff"+
-			"\1\u0185\6\uffff\1\u0191\35\uffff\1\u0186\6\uffff\1\u0186\102\uffff\1"+
-			"\u018b\1\u018a\1\u017c\1\u017d\1\uffff\1\u0182\1\u0181\1\u0189\1\uffff"+
-			"\1\u0182\2\uffff\1\u0192\3\uffff\1\u0181",
-			"\1\u019b\1\u019c\1\u0198\3\uffff\1\164\3\uffff\2\u0199\1\uffff\1\u0196"+
-			"\2\uffff\1\u019f\1\u01a0\1\uffff\1\u01a5\1\u01a4\7\uffff\1\u01a8\5\uffff"+
-			"\1\u01a7\121\uffff\1\u01a6\13\uffff\1\u0197\7\uffff\1\u019e\21\uffff"+
-			"\1\u019d\6\uffff\1\u01a9\35\uffff\1\u019e\6\uffff\1\u019e\102\uffff\1"+
-			"\u01a3\1\u01a2\1\u0194\1\u0195\1\uffff\1\u019a\1\u0199\1\u01a1\1\uffff"+
-			"\1\u019a\2\uffff\1\u01aa\3\uffff\1\u0199",
-			"\1\u01b3\1\u01b4\1\u01b0\3\uffff\1\164\3\uffff\2\u01b1\1\uffff\1\u01ae"+
-			"\2\uffff\1\u01b7\1\u01b8\1\uffff\1\u01bd\1\u01bc\7\uffff\1\u01c0\5\uffff"+
-			"\1\u01bf\121\uffff\1\u01be\13\uffff\1\u01af\7\uffff\1\u01b6\21\uffff"+
-			"\1\u01b5\6\uffff\1\u01c1\35\uffff\1\u01b6\6\uffff\1\u01b6\102\uffff\1"+
-			"\u01bb\1\u01ba\1\u01ac\1\u01ad\1\uffff\1\u01b2\1\u01b1\1\u01b9\1\uffff"+
-			"\1\u01b2\2\uffff\1\u01c2\3\uffff\1\u01b1",
-			"\1\u01c4",
-			"\1\u01cb\5\uffff\1\u01cf\4\uffff\1\u01ce\7\uffff\1\u01d7\2\u01d8\1\uffff"+
-			"\2\u01d8\1\uffff\1\u01d8\1\u01d3\14\u01d8\1\u01da\1\u01d9\5\u01d8\1\uffff"+
-			"\6\u01d8\1\uffff\1\u01d8\1\uffff\2\u01d8\1\uffff\1\u01d8\1\u01c8\14\u01d8"+
-			"\1\uffff\4\u01d8\1\uffff\1\u01d8\1\uffff\1\u01d8\1\uffff\4\u01d8\1\uffff"+
-			"\1\u01d8\1\u01d1\5\u01d8\1\uffff\3\u01d8\1\uffff\1\u01d8\1\uffff\4\u01d8"+
-			"\1\uffff\2\u01d8\1\u01d2\20\u01d8\1\uffff\4\u01d8\1\uffff\12\u01d8\1"+
-			"\uffff\1\u01d4\3\u01d8\1\uffff\2\u01d8\1\u01c5\1\u01d8\1\u01c7\2\u01d8"+
-			"\1\uffff\1\u01d8\1\uffff\6\u01d8\1\uffff\1\u01d8\1\uffff\5\u01d8\2\uffff"+
-			"\14\u01d8\1\uffff\16\u01d8\1\uffff\22\u01d8\1\u01d5\2\u01d8\1\uffff\4"+
-			"\u01d8\1\uffff\4\u01d8\1\uffff\1\u01d8\1\u01d0\2\u01d8\1\uffff\2\u01d8"+
-			"\1\u01d6\1\uffff\12\u01d8\1\uffff\1\u01d8\1\u01dc\1\uffff\1\u01d8\1\uffff"+
-			"\1\u01d8\3\uffff\1\u01db\2\uffff\1\u01c6\2\uffff\1\u01c9\1\u01c6\7\uffff"+
-			"\1\u01cc\1\u01ca\1\u01c6\1\u01cd",
-			"\1\u01e3\5\uffff\1\u01e7\4\uffff\1\u01e6\7\uffff\1\u01ef\2\u01f0\1\uffff"+
-			"\2\u01f0\1\uffff\1\u01f0\1\u01eb\14\u01f0\1\u01f2\1\u01f1\5\u01f0\1\uffff"+
-			"\6\u01f0\1\uffff\1\u01f0\1\uffff\2\u01f0\1\uffff\1\u01f0\1\u01e0\14\u01f0"+
-			"\1\uffff\4\u01f0\1\uffff\1\u01f0\1\uffff\1\u01f0\1\uffff\4\u01f0\1\uffff"+
-			"\1\u01f0\1\u01e9\5\u01f0\1\uffff\3\u01f0\1\uffff\1\u01f0\1\uffff\4\u01f0"+
-			"\1\uffff\2\u01f0\1\u01ea\20\u01f0\1\uffff\4\u01f0\1\uffff\12\u01f0\1"+
-			"\uffff\1\u01ec\3\u01f0\1\uffff\2\u01f0\1\u01dd\1\u01f0\1\u01df\2\u01f0"+
-			"\1\uffff\1\u01f0\1\uffff\6\u01f0\1\uffff\1\u01f0\1\uffff\5\u01f0\2\uffff"+
-			"\14\u01f0\1\uffff\16\u01f0\1\uffff\22\u01f0\1\u01ed\2\u01f0\1\uffff\4"+
-			"\u01f0\1\uffff\4\u01f0\1\uffff\1\u01f0\1\u01e8\2\u01f0\1\uffff\2\u01f0"+
-			"\1\u01ee\1\uffff\12\u01f0\1\uffff\1\u01f0\2\uffff\1\u01f0\1\uffff\1\u01f0"+
-			"\3\uffff\1\u01f3\2\uffff\1\u01de\2\uffff\1\u01e1\1\u01de\7\uffff\1\u01e4"+
-			"\1\u01e2\1\u01de\1\u01e5",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\53\5\uffff\1\57\6\uffff\1\56\170\uffff\1\67\3\uffff\2\70\1\uffff"+
+			"\2\70\1\uffff\1\70\1\63\14\70\1\72\1\71\5\70\1\uffff\6\70\1\uffff\1\70"+
+			"\1\uffff\2\70\1\uffff\1\70\1\42\14\70\1\uffff\3\70\2\uffff\1\70\1\uffff"+
+			"\1\70\1\uffff\1\70\1\uffff\4\70\1\uffff\1\70\1\61\5\70\1\uffff\3\70\1"+
+			"\uffff\1\70\1\uffff\4\70\1\uffff\2\70\1\62\4\70\1\uffff\14\70\1\uffff"+
+			"\4\70\1\uffff\12\70\1\uffff\1\64\3\70\1\uffff\2\70\1\37\1\70\1\41\2\70"+
+			"\1\uffff\1\70\1\uffff\6\70\1\uffff\1\70\1\uffff\5\70\2\uffff\14\70\1"+
+			"\uffff\16\70\1\uffff\22\70\1\65\2\70\1\uffff\4\70\1\uffff\4\70\1\uffff"+
+			"\1\70\1\60\2\70\1\uffff\2\70\1\66\1\uffff\12\70\1\uffff\1\70\2\uffff"+
+			"\1\70\1\uffff\1\70\3\uffff\1\73\4\uffff\1\40\6\uffff\1\43\1\uffff\1\40"+
+			"\2\uffff\1\36\7\uffff\1\54\1\52\1\uffff\1\40\4\uffff\1\55\21\uffff\1"+
+			"\46\5\uffff\1\47\u0160\uffff\1\50\1\45\6\uffff\1\51\u0121\uffff\1\44",
+			"",
+			"\1\107\5\uffff\1\113\6\uffff\1\112\170\uffff\1\123\3\uffff\2\124\1\uffff"+
+			"\2\124\1\uffff\1\124\1\117\14\124\1\126\1\125\5\124\1\uffff\6\124\1\uffff"+
+			"\1\124\1\uffff\2\124\1\uffff\1\124\1\76\14\124\1\uffff\3\124\2\uffff"+
+			"\1\124\1\uffff\1\124\1\uffff\1\124\1\uffff\4\124\1\uffff\1\124\1\115"+
+			"\5\124\1\uffff\3\124\1\uffff\1\124\1\uffff\4\124\1\uffff\2\124\1\116"+
+			"\4\124\1\uffff\14\124\1\uffff\4\124\1\uffff\12\124\1\uffff\1\120\3\124"+
+			"\1\uffff\2\124\1\130\1\124\1\75\2\124\1\uffff\1\124\1\uffff\6\124\1\uffff"+
+			"\1\124\1\uffff\5\124\2\uffff\14\124\1\uffff\16\124\1\uffff\22\124\1\121"+
+			"\2\124\1\uffff\4\124\1\uffff\4\124\1\uffff\1\124\1\114\2\124\1\uffff"+
+			"\2\124\1\122\1\uffff\12\124\1\uffff\1\124\2\uffff\1\124\1\uffff\1\124"+
+			"\3\uffff\1\127\4\uffff\1\74\6\uffff\1\77\1\uffff\1\74\12\uffff\1\110"+
+			"\1\106\1\uffff\1\74\4\uffff\1\111\21\uffff\1\102\5\uffff\1\103\u0160"+
+			"\uffff\1\104\1\101\6\uffff\1\105\u0121\uffff\1\100",
+			"\1\143\5\uffff\1\147\6\uffff\1\146\170\uffff\1\157\3\uffff\2\160\1\uffff"+
+			"\2\160\1\uffff\1\160\1\153\14\160\1\162\1\161\5\160\1\uffff\6\160\1\uffff"+
+			"\1\160\1\uffff\2\160\1\uffff\1\160\1\132\14\160\1\uffff\3\160\2\uffff"+
+			"\1\160\1\uffff\1\160\1\uffff\1\160\1\uffff\4\160\1\uffff\1\160\1\151"+
+			"\5\160\1\uffff\3\160\1\uffff\1\160\1\uffff\4\160\1\uffff\2\160\1\152"+
+			"\4\160\1\uffff\14\160\1\uffff\4\160\1\uffff\12\160\1\uffff\1\154\3\160"+
+			"\1\uffff\2\160\1\uffff\1\160\1\131\2\160\1\uffff\1\160\1\uffff\6\160"+
+			"\1\uffff\1\160\1\uffff\5\160\2\uffff\14\160\1\uffff\16\160\1\uffff\22"+
+			"\160\1\155\2\160\1\uffff\4\160\1\uffff\4\160\1\uffff\1\160\1\150\2\160"+
+			"\1\uffff\2\160\1\156\1\uffff\12\160\1\uffff\1\160\2\uffff\1\160\1\uffff"+
+			"\1\160\3\uffff\1\163\4\uffff\1\164\6\uffff\1\133\1\uffff\1\164\12\uffff"+
+			"\1\144\1\142\1\uffff\1\164\4\uffff\1\145\21\uffff\1\136\5\uffff\1\137"+
+			"\u0160\uffff\1\140\1\135\6\uffff\1\141\u0121\uffff\1\134",
+			"\1\173\2\uffff\1\174\1\170\3\uffff\1\u008c\5\uffff\2\171\1\uffff\1\166"+
+			"\2\uffff\1\177\1\u0080\3\uffff\1\u0085\1\u0084\171\uffff\1\u0088\5\uffff"+
+			"\1\u0087\123\uffff\1\u0086\14\uffff\1\167\7\uffff\1\176\21\uffff\1\175"+
+			"\6\uffff\1\u0089\35\uffff\1\176\6\uffff\1\176\102\uffff\1\u0083\1\u0082"+
+			"\1\u008b\1\165\3\uffff\1\172\1\uffff\1\171\2\uffff\1\u0081\3\uffff\1"+
+			"\172\2\uffff\1\u008a\5\uffff\1\171",
+			"\1\u0095\2\uffff\1\u0096\1\u0092\3\uffff\1\u008c\5\uffff\2\u0093\1\uffff"+
+			"\1\u0090\2\uffff\1\u0099\1\u009a\3\uffff\1\u009f\1\u009e\171\uffff\1"+
+			"\u00a2\5\uffff\1\u00a1\123\uffff\1\u00a0\14\uffff\1\u0091\7\uffff\1\u0098"+
+			"\21\uffff\1\u0097\6\uffff\1\u00a3\35\uffff\1\u0098\6\uffff\1\u0098\102"+
+			"\uffff\1\u009d\1\u009c\1\u008e\1\u008f\3\uffff\1\u0094\1\uffff\1\u0093"+
+			"\2\uffff\1\u009b\3\uffff\1\u0094\2\uffff\1\u00a4\5\uffff\1\u0093\2\uffff"+
+			"\1\u008d",
+			"\1\u00ac\2\uffff\1\u00ad\1\u00a9\3\uffff\1\u008c\5\uffff\2\u00aa\1\uffff"+
+			"\1\u00a7\2\uffff\1\u00b0\1\u00b1\3\uffff\1\u00b6\1\u00b5\171\uffff\1"+
+			"\u00b9\5\uffff\1\u00b8\123\uffff\1\u00b7\14\uffff\1\u00a8\7\uffff\1\u00af"+
+			"\21\uffff\1\u00ae\6\uffff\1\u00ba\35\uffff\1\u00af\6\uffff\1\u00af\102"+
+			"\uffff\1\u00b4\1\u00b3\1\uffff\1\u00a6\3\uffff\1\u00ab\1\uffff\1\u00aa"+
+			"\2\uffff\1\u00b2\3\uffff\1\u00ab\2\uffff\1\u00bb\5\uffff\1\u00aa",
+			"\1\u00c3\2\uffff\1\u00c4\1\u00c0\3\uffff\1\u008c\5\uffff\2\u00c1\1\uffff"+
+			"\1\u00be\2\uffff\1\u00c7\1\u00c8\3\uffff\1\u00cd\1\u00cc\171\uffff\1"+
+			"\u00d0\5\uffff\1\u00cf\123\uffff\1\u00ce\14\uffff\1\u00bf\7\uffff\1\u00c6"+
+			"\21\uffff\1\u00c5\6\uffff\1\u00d1\35\uffff\1\u00c6\6\uffff\1\u00c6\102"+
+			"\uffff\1\u00cb\1\u00ca\1\uffff\1\u00bd\3\uffff\1\u00c2\1\uffff\1\u00c1"+
+			"\2\uffff\1\u00c9\3\uffff\1\u00c2\2\uffff\1\u00d2\5\uffff\1\u00c1",
+			"\1\u00da\2\uffff\1\u00db\1\u00d7\3\uffff\1\u008c\5\uffff\2\u00d8\1\uffff"+
+			"\1\u00d5\2\uffff\1\u00de\1\u00df\3\uffff\1\u00e4\1\u00e3\171\uffff\1"+
+			"\u00e7\5\uffff\1\u00e6\123\uffff\1\u00e5\14\uffff\1\u00d6\7\uffff\1\u00dd"+
+			"\21\uffff\1\u00dc\6\uffff\1\u00e8\35\uffff\1\u00dd\6\uffff\1\u00dd\102"+
+			"\uffff\1\u00e2\1\u00e1\1\uffff\1\u00d4\3\uffff\1\u00d9\1\uffff\1\u00d8"+
+			"\2\uffff\1\u00e0\3\uffff\1\u00d9\2\uffff\1\u00e9\5\uffff\1\u00d8",
+			"\1\u00f1\2\uffff\1\u00f2\1\u00ee\3\uffff\1\u008c\5\uffff\2\u00ef\1\uffff"+
+			"\1\u00ec\2\uffff\1\u00f5\1\u00f6\3\uffff\1\u00fb\1\u00fa\171\uffff\1"+
+			"\u00fe\5\uffff\1\u00fd\123\uffff\1\u00fc\14\uffff\1\u00ed\7\uffff\1\u00f4"+
+			"\21\uffff\1\u00f3\6\uffff\1\u00ff\35\uffff\1\u00f4\6\uffff\1\u00f4\102"+
+			"\uffff\1\u00f9\1\u00f8\1\uffff\1\u00eb\3\uffff\1\u00f0\1\uffff\1\u00ef"+
+			"\2\uffff\1\u00f7\3\uffff\1\u00f0\2\uffff\1\u0100\5\uffff\1\u00ef",
+			"\1\u0108\2\uffff\1\u0109\1\u0105\3\uffff\1\u008c\5\uffff\2\u0106\1\uffff"+
+			"\1\u0103\2\uffff\1\u010c\1\u010d\3\uffff\1\u0112\1\u0111\171\uffff\1"+
+			"\u0115\5\uffff\1\u0114\123\uffff\1\u0113\14\uffff\1\u0104\7\uffff\1\u010b"+
+			"\21\uffff\1\u010a\6\uffff\1\u0116\35\uffff\1\u010b\6\uffff\1\u010b\102"+
+			"\uffff\1\u0110\1\u010f\1\uffff\1\u0102\3\uffff\1\u0107\1\uffff\1\u0106"+
+			"\2\uffff\1\u010e\3\uffff\1\u0107\2\uffff\1\u0117\5\uffff\1\u0106",
+			"\1\u011f\2\uffff\1\u0120\1\u011c\3\uffff\1\u008c\5\uffff\2\u011d\1\uffff"+
+			"\1\u011a\2\uffff\1\u0123\1\u0124\3\uffff\1\u0129\1\u0128\171\uffff\1"+
+			"\u012c\5\uffff\1\u012b\123\uffff\1\u012a\14\uffff\1\u011b\7\uffff\1\u0122"+
+			"\21\uffff\1\u0121\6\uffff\1\u012d\35\uffff\1\u0122\6\uffff\1\u0122\102"+
+			"\uffff\1\u0127\1\u0126\1\uffff\1\u0119\3\uffff\1\u011e\1\uffff\1\u011d"+
+			"\2\uffff\1\u0125\3\uffff\1\u011e\2\uffff\1\u012e\5\uffff\1\u011d",
+			"\1\u0136\2\uffff\1\u0137\1\u0133\3\uffff\1\u008c\5\uffff\2\u0134\1\uffff"+
+			"\1\u0131\2\uffff\1\u013a\1\u013b\3\uffff\1\u0140\1\u013f\171\uffff\1"+
+			"\u0143\5\uffff\1\u0142\123\uffff\1\u0141\14\uffff\1\u0132\7\uffff\1\u0139"+
+			"\21\uffff\1\u0138\6\uffff\1\u0144\35\uffff\1\u0139\6\uffff\1\u0139\102"+
+			"\uffff\1\u013e\1\u013d\1\uffff\1\u0130\3\uffff\1\u0135\1\uffff\1\u0134"+
+			"\2\uffff\1\u013c\3\uffff\1\u0135\2\uffff\1\u0145\5\uffff\1\u0134",
+			"\1\u014d\2\uffff\1\u014e\1\u014a\3\uffff\1\u008c\5\uffff\2\u014b\1\uffff"+
+			"\1\u0148\2\uffff\1\u0151\1\u0152\3\uffff\1\u0157\1\u0156\171\uffff\1"+
+			"\u015a\5\uffff\1\u0159\123\uffff\1\u0158\14\uffff\1\u0149\7\uffff\1\u0150"+
+			"\21\uffff\1\u014f\6\uffff\1\u015b\35\uffff\1\u0150\6\uffff\1\u0150\102"+
+			"\uffff\1\u0155\1\u0154\1\uffff\1\u0147\3\uffff\1\u014c\1\uffff\1\u014b"+
+			"\2\uffff\1\u0153\3\uffff\1\u014c\2\uffff\1\u015c\5\uffff\1\u014b\2\uffff"+
+			"\1\u015d",
+			"\1\u0165\2\uffff\1\u0166\1\u0162\3\uffff\1\u008c\5\uffff\2\u0163\1\uffff"+
+			"\1\u0160\2\uffff\1\u0169\1\u016a\3\uffff\1\u016f\1\u016e\171\uffff\1"+
+			"\u0172\5\uffff\1\u0171\123\uffff\1\u0170\14\uffff\1\u0161\7\uffff\1\u0168"+
+			"\21\uffff\1\u0167\6\uffff\1\u0173\35\uffff\1\u0168\6\uffff\1\u0168\102"+
+			"\uffff\1\u016d\1\u016c\1\uffff\1\u015f\3\uffff\1\u0164\1\uffff\1\u0163"+
+			"\2\uffff\1\u016b\3\uffff\1\u0164\2\uffff\1\u0174\5\uffff\1\u0163",
+			"\1\u017c\2\uffff\1\u017d\1\u0179\3\uffff\1\u008c\5\uffff\2\u017a\1\uffff"+
+			"\1\u0177\2\uffff\1\u0180\1\u0181\3\uffff\1\u0186\1\u0185\171\uffff\1"+
+			"\u0189\5\uffff\1\u0188\123\uffff\1\u0187\14\uffff\1\u0178\7\uffff\1\u017f"+
+			"\21\uffff\1\u017e\6\uffff\1\u018a\35\uffff\1\u017f\6\uffff\1\u017f\102"+
+			"\uffff\1\u0184\1\u0183\1\uffff\1\u0176\3\uffff\1\u017b\1\uffff\1\u017a"+
+			"\2\uffff\1\u0182\3\uffff\1\u017b\2\uffff\1\u018b\5\uffff\1\u017a",
+			"\1\u0193\2\uffff\1\u0194\1\u0190\3\uffff\1\u008c\5\uffff\2\u0191\1\uffff"+
+			"\1\u018e\2\uffff\1\u0197\1\u0198\3\uffff\1\u019d\1\u019c\171\uffff\1"+
+			"\u01a0\5\uffff\1\u019f\123\uffff\1\u019e\14\uffff\1\u018f\7\uffff\1\u0196"+
+			"\21\uffff\1\u0195\6\uffff\1\u01a1\35\uffff\1\u0196\6\uffff\1\u0196\102"+
+			"\uffff\1\u019b\1\u019a\1\uffff\1\u018d\3\uffff\1\u0192\1\uffff\1\u0191"+
+			"\2\uffff\1\u0199\3\uffff\1\u0192\2\uffff\1\u01a2\5\uffff\1\u0191",
+			"\1\u01aa\2\uffff\1\u01ab\1\u01a7\3\uffff\1\u008c\5\uffff\2\u01a8\1\uffff"+
+			"\1\u01a5\2\uffff\1\u01ae\1\u01af\3\uffff\1\u01b4\1\u01b3\171\uffff\1"+
+			"\u01b7\5\uffff\1\u01b6\123\uffff\1\u01b5\14\uffff\1\u01a6\7\uffff\1\u01ad"+
+			"\21\uffff\1\u01ac\6\uffff\1\u01b8\35\uffff\1\u01ad\6\uffff\1\u01ad\102"+
+			"\uffff\1\u01b2\1\u01b1\1\uffff\1\u01a4\3\uffff\1\u01a9\1\uffff\1\u01a8"+
+			"\2\uffff\1\u01b0\3\uffff\1\u01a9\2\uffff\1\u01b9\5\uffff\1\u01a8",
+			"\1\u01bb",
+			"\1\u01c2\2\uffff\1\u01c3\1\u01bf\3\uffff\1\u008c\5\uffff\2\u01c0\1\uffff"+
+			"\1\u01bd\2\uffff\1\u01c6\1\u01c7\3\uffff\1\u01cc\1\u01cb\171\uffff\1"+
+			"\u01cf\5\uffff\1\u01ce\123\uffff\1\u01cd\14\uffff\1\u01be\7\uffff\1\u01c5"+
+			"\21\uffff\1\u01c4\6\uffff\1\u01d0\35\uffff\1\u01c5\6\uffff\1\u01c5\102"+
+			"\uffff\1\u01ca\1\u01c9\1\u01d2\1\u01bc\3\uffff\1\u01c1\1\uffff\1\u01c0"+
+			"\2\uffff\1\u01c8\3\uffff\1\u01c1\2\uffff\1\u01d1\5\uffff\1\u01c0",
+			"\1\u01da\2\uffff\1\u01db\1\u01d7\3\uffff\1\u008c\5\uffff\2\u01d8\1\uffff"+
+			"\1\u01d5\2\uffff\1\u01de\1\u01df\3\uffff\1\u01e4\1\u01e3\171\uffff\1"+
+			"\u01e7\5\uffff\1\u01e6\123\uffff\1\u01e5\14\uffff\1\u01d6\7\uffff\1\u01dd"+
+			"\21\uffff\1\u01dc\6\uffff\1\u01e8\35\uffff\1\u01dd\6\uffff\1\u01dd\102"+
+			"\uffff\1\u01e2\1\u01e1\1\u01ea\1\u01d4\3\uffff\1\u01d9\1\uffff\1\u01d8"+
+			"\2\uffff\1\u01e0\3\uffff\1\u01d9\2\uffff\1\u01e9\5\uffff\1\u01d8",
+			"\1\u01ec",
+			"\1\u01f4\2\uffff\1\u01f5\1\u01f1\3\uffff\1\u008c\5\uffff\2\u01f2\1\uffff"+
+			"\1\u01ef\2\uffff\1\u01f8\1\u01f9\3\uffff\1\u01fe\1\u01fd\171\uffff\1"+
+			"\u0201\5\uffff\1\u0200\123\uffff\1\u01ff\14\uffff\1\u01f0\7\uffff\1\u01f7"+
+			"\21\uffff\1\u01f6\6\uffff\1\u0202\35\uffff\1\u01f7\6\uffff\1\u01f7\102"+
+			"\uffff\1\u01fc\1\u01fb\1\u01ed\1\u01ee\3\uffff\1\u01f3\1\uffff\1\u01f2"+
+			"\2\uffff\1\u01fa\3\uffff\1\u01f3\2\uffff\1\u0203\5\uffff\1\u01f2",
+			"\1\u0205",
+			"\1\u020d\2\uffff\1\u020e\1\u020a\3\uffff\1\u008c\5\uffff\2\u020b\1\uffff"+
+			"\1\u0208\2\uffff\1\u0211\1\u0212\3\uffff\1\u0217\1\u0216\171\uffff\1"+
+			"\u021a\5\uffff\1\u0219\123\uffff\1\u0218\14\uffff\1\u0209\7\uffff\1\u0210"+
+			"\21\uffff\1\u020f\6\uffff\1\u021b\35\uffff\1\u0210\6\uffff\1\u0210\102"+
+			"\uffff\1\u0215\1\u0214\1\u0206\1\u0207\3\uffff\1\u020c\1\uffff\1\u020b"+
+			"\2\uffff\1\u0213\3\uffff\1\u020c\2\uffff\1\u021c\5\uffff\1\u020b",
+			"\1\u0225\2\uffff\1\u0226\1\u0222\3\uffff\1\u008c\5\uffff\2\u0223\1\uffff"+
+			"\1\u0220\2\uffff\1\u0229\1\u022a\3\uffff\1\u022f\1\u022e\171\uffff\1"+
+			"\u0232\5\uffff\1\u0231\123\uffff\1\u0230\14\uffff\1\u0221\7\uffff\1\u0228"+
+			"\21\uffff\1\u0227\6\uffff\1\u0233\35\uffff\1\u0228\6\uffff\1\u0228\102"+
+			"\uffff\1\u022d\1\u022c\1\u021e\1\u021f\3\uffff\1\u0224\1\uffff\1\u0223"+
+			"\2\uffff\1\u022b\3\uffff\1\u0224\2\uffff\1\u0234\5\uffff\1\u0223",
+			"\1\u023d\2\uffff\1\u023e\1\u023a\3\uffff\1\u008c\5\uffff\2\u023b\1\uffff"+
+			"\1\u0238\2\uffff\1\u0241\1\u0242\3\uffff\1\u0247\1\u0246\171\uffff\1"+
+			"\u024a\5\uffff\1\u0249\123\uffff\1\u0248\14\uffff\1\u0239\7\uffff\1\u0240"+
+			"\21\uffff\1\u023f\6\uffff\1\u024b\35\uffff\1\u0240\6\uffff\1\u0240\102"+
+			"\uffff\1\u0245\1\u0244\1\u0236\1\u0237\3\uffff\1\u023c\1\uffff\1\u023b"+
+			"\2\uffff\1\u0243\3\uffff\1\u023c\2\uffff\1\u024c\5\uffff\1\u023b",
+			"\1\u0255\2\uffff\1\u0256\1\u0252\3\uffff\1\u008c\5\uffff\2\u0253\1\uffff"+
+			"\1\u0250\2\uffff\1\u0259\1\u025a\3\uffff\1\u025f\1\u025e\171\uffff\1"+
+			"\u0262\5\uffff\1\u0261\123\uffff\1\u0260\14\uffff\1\u0251\7\uffff\1\u0258"+
+			"\21\uffff\1\u0257\6\uffff\1\u0263\35\uffff\1\u0258\6\uffff\1\u0258\102"+
+			"\uffff\1\u025d\1\u025c\1\u024e\1\u024f\3\uffff\1\u0254\1\uffff\1\u0253"+
+			"\2\uffff\1\u025b\3\uffff\1\u0254\2\uffff\1\u0264\5\uffff\1\u0253",
+			"\1\u0266",
+			"\1\u0273\5\uffff\1\u0277\6\uffff\1\u0276\170\uffff\1\u027f\3\uffff\2"+
+			"\u0280\1\uffff\2\u0280\1\uffff\1\u0280\1\u027b\14\u0280\1\u0282\1\u0281"+
+			"\5\u0280\1\uffff\6\u0280\1\uffff\1\u0280\1\uffff\2\u0280\1\uffff\1\u0280"+
+			"\1\u026a\14\u0280\1\uffff\3\u0280\2\uffff\1\u0280\1\uffff\1\u0280\1\uffff"+
+			"\1\u0280\1\uffff\4\u0280\1\uffff\1\u0280\1\u0279\5\u0280\1\uffff\3\u0280"+
+			"\1\uffff\1\u0280\1\uffff\4\u0280\1\uffff\2\u0280\1\u027a\4\u0280\1\uffff"+
+			"\14\u0280\1\uffff\4\u0280\1\uffff\12\u0280\1\uffff\1\u027c\3\u0280\1"+
+			"\uffff\2\u0280\1\u0267\1\u0280\1\u0269\2\u0280\1\uffff\1\u0280\1\uffff"+
+			"\6\u0280\1\uffff\1\u0280\1\uffff\5\u0280\2\uffff\14\u0280\1\uffff\16"+
+			"\u0280\1\uffff\22\u0280\1\u027d\2\u0280\1\uffff\4\u0280\1\uffff\4\u0280"+
+			"\1\uffff\1\u0280\1\u0278\2\u0280\1\uffff\2\u0280\1\u027e\1\uffff\12\u0280"+
+			"\1\uffff\1\u0280\1\u0284\1\uffff\1\u0280\1\uffff\1\u0280\3\uffff\1\u0283"+
+			"\4\uffff\1\u0268\6\uffff\1\u026b\1\uffff\1\u0268\12\uffff\1\u0274\1\u0272"+
+			"\1\uffff\1\u0268\4\uffff\1\u0275\21\uffff\1\u026e\5\uffff\1\u026f\u0160"+
+			"\uffff\1\u0270\1\u026d\6\uffff\1\u0271\u0121\uffff\1\u026c",
+			"\1\u0291\5\uffff\1\u0295\6\uffff\1\u0294\170\uffff\1\u029d\3\uffff\2"+
+			"\u029e\1\uffff\2\u029e\1\uffff\1\u029e\1\u0299\14\u029e\1\u02a0\1\u029f"+
+			"\5\u029e\1\uffff\6\u029e\1\uffff\1\u029e\1\uffff\2\u029e\1\uffff\1\u029e"+
+			"\1\u0288\14\u029e\1\uffff\3\u029e\2\uffff\1\u029e\1\uffff\1\u029e\1\uffff"+
+			"\1\u029e\1\uffff\4\u029e\1\uffff\1\u029e\1\u0297\5\u029e\1\uffff\3\u029e"+
+			"\1\uffff\1\u029e\1\uffff\4\u029e\1\uffff\2\u029e\1\u0298\4\u029e\1\uffff"+
+			"\14\u029e\1\uffff\4\u029e\1\uffff\12\u029e\1\uffff\1\u029a\3\u029e\1"+
+			"\uffff\2\u029e\1\u0285\1\u029e\1\u0287\2\u029e\1\uffff\1\u029e\1\uffff"+
+			"\6\u029e\1\uffff\1\u029e\1\uffff\5\u029e\2\uffff\14\u029e\1\uffff\16"+
+			"\u029e\1\uffff\22\u029e\1\u029b\2\u029e\1\uffff\4\u029e\1\uffff\4\u029e"+
+			"\1\uffff\1\u029e\1\u0296\2\u029e\1\uffff\2\u029e\1\u029c\1\uffff\12\u029e"+
+			"\1\uffff\1\u029e\2\uffff\1\u029e\1\uffff\1\u029e\3\uffff\1\u02a1\4\uffff"+
+			"\1\u0286\6\uffff\1\u0289\1\uffff\1\u0286\12\uffff\1\u0292\1\u0290\1\uffff"+
+			"\1\u0286\4\uffff\1\u0293\21\uffff\1\u028c\5\uffff\1\u028d\u0160\uffff"+
+			"\1\u028e\1\u028b\6\uffff\1\u028f\u0121\uffff\1\u028a",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
 			"",
 			"",
 			"",
@@ -9320,19 +9795,20 @@ public class HiveParser_IdentifiersParser extends Parser {
 	static final String DFA26_minS =
 		"\1\4\100\uffff";
 	static final String DFA26_maxS =
-		"\1\u011d\100\uffff";
+		"\1\u01a1\100\uffff";
 	static final String DFA26_acceptS =
 		"\1\uffff\1\1\1\2\76\uffff";
 	static final String DFA26_specialS =
 		"\101\uffff}>";
 	static final String[] DFA26_transitionS = {
-			"\3\2\3\uffff\1\2\3\uffff\2\2\1\uffff\1\2\2\uffff\2\2\1\uffff\2\2\1\uffff"+
-			"\3\2\1\uffff\21\2\2\uffff\5\2\1\uffff\10\2\1\uffff\2\2\1\uffff\16\2\1"+
-			"\uffff\10\2\1\uffff\4\2\1\uffff\7\2\1\uffff\5\2\1\uffff\7\2\1\uffff\25"+
-			"\2\1\uffff\12\2\1\uffff\4\2\1\uffff\7\2\1\uffff\10\2\1\1\1\2\1\uffff"+
-			"\5\2\2\uffff\61\2\1\uffff\11\2\1\uffff\4\2\1\uffff\3\2\1\uffff\12\2\1"+
-			"\uffff\6\2\1\uffff\2\2\1\uffff\1\2\1\uffff\3\2\1\uffff\1\2\2\uffff\2"+
-			"\2\2\uffff\1\2",
+			"\1\2\2\uffff\2\2\3\uffff\1\2\5\uffff\2\2\1\uffff\1\2\2\uffff\2\2\3\uffff"+
+			"\2\2\160\uffff\1\2\3\uffff\2\2\1\uffff\21\2\2\uffff\5\2\1\uffff\10\2"+
+			"\1\uffff\2\2\1\uffff\16\2\1\uffff\3\2\2\uffff\5\2\1\uffff\4\2\1\uffff"+
+			"\7\2\1\uffff\5\2\1\uffff\7\2\1\uffff\4\2\1\uffff\21\2\1\uffff\12\2\1"+
+			"\uffff\4\2\1\uffff\7\2\1\uffff\10\2\1\1\1\2\1\uffff\5\2\2\uffff\61\2"+
+			"\1\uffff\11\2\1\uffff\4\2\1\uffff\3\2\1\uffff\12\2\1\uffff\6\2\1\uffff"+
+			"\2\2\1\uffff\1\2\3\uffff\1\2\1\uffff\1\2\2\uffff\1\2\3\uffff\1\2\2\uffff"+
+			"\2\2\4\uffff\1\2",
 			"",
 			"",
 			"",
@@ -9435,30 +9911,39 @@ public class HiveParser_IdentifiersParser extends Parser {
 	}
 
 	static final String DFA32_eotS =
-		"\113\uffff";
+		"\121\uffff";
 	static final String DFA32_eofS =
-		"\3\uffff\1\13\107\uffff";
+		"\11\uffff\1\21\107\uffff";
 	static final String DFA32_minS =
-		"\1\7\2\uffff\1\4\107\uffff";
+		"\1\11\10\uffff\1\4\107\uffff";
 	static final String DFA32_maxS =
-		"\1\u0121\2\uffff\1\u011f\107\uffff";
+		"\1\u044e\10\uffff\1\u01a4\107\uffff";
 	static final String DFA32_acceptS =
-		"\1\uffff\1\1\1\2\1\uffff\1\5\1\6\1\7\1\10\1\11\1\12\1\uffff\1\3\76\uffff"+
-		"\1\4";
+		"\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\uffff\1\13\1\14\1\15\1\16"+
+		"\1\17\1\20\1\uffff\1\11\76\uffff\1\12";
 	static final String DFA32_specialS =
-		"\113\uffff}>";
+		"\121\uffff}>";
 	static final String[] DFA32_transitionS = {
-			"\1\4\5\uffff\1\10\4\uffff\1\7\61\uffff\1\2\34\uffff\1\11\u0091\uffff"+
-			"\1\11\41\uffff\1\1\10\uffff\1\5\1\3\1\uffff\1\6",
+			"\1\12\5\uffff\1\16\6\uffff\1\15\u00a5\uffff\1\10\36\uffff\1\17\u0092"+
+			"\uffff\1\17\47\uffff\1\1\14\uffff\1\13\1\11\6\uffff\1\14\21\uffff\1\4"+
+			"\5\uffff\1\5\u0160\uffff\1\6\1\3\6\uffff\1\7\u0121\uffff\1\2",
 			"",
 			"",
-			"\3\13\3\uffff\1\13\3\uffff\2\13\1\uffff\1\13\2\uffff\2\13\1\uffff\2"+
-			"\13\1\uffff\3\13\1\uffff\21\13\2\uffff\5\13\1\uffff\10\13\1\uffff\2\13"+
-			"\1\uffff\16\13\1\uffff\10\13\1\uffff\4\13\1\uffff\7\13\1\uffff\5\13\1"+
-			"\uffff\7\13\1\uffff\25\13\1\uffff\12\13\1\uffff\4\13\1\uffff\7\13\1\uffff"+
-			"\10\13\1\uffff\1\13\1\uffff\5\13\2\uffff\61\13\1\uffff\11\13\1\uffff"+
-			"\4\13\1\uffff\3\13\1\uffff\12\13\1\uffff\6\13\1\uffff\2\13\1\uffff\1"+
-			"\13\1\uffff\3\13\1\uffff\1\13\2\uffff\2\13\2\uffff\1\13\1\uffff\1\112",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\21\2\uffff\2\21\3\uffff\1\21\5\uffff\2\21\1\uffff\1\21\2\uffff\2"+
+			"\21\3\uffff\2\21\160\uffff\1\21\3\uffff\2\21\1\uffff\21\21\2\uffff\5"+
+			"\21\1\uffff\10\21\1\uffff\2\21\1\uffff\16\21\1\uffff\3\21\2\uffff\5\21"+
+			"\1\uffff\4\21\1\uffff\7\21\1\uffff\5\21\1\uffff\7\21\1\uffff\4\21\1\uffff"+
+			"\21\21\1\uffff\12\21\1\uffff\4\21\1\uffff\7\21\1\uffff\10\21\1\uffff"+
+			"\1\21\1\uffff\5\21\2\uffff\61\21\1\uffff\11\21\1\uffff\4\21\1\uffff\3"+
+			"\21\1\uffff\12\21\1\uffff\6\21\1\uffff\2\21\1\uffff\1\21\3\uffff\1\21"+
+			"\1\uffff\1\21\2\uffff\1\21\3\uffff\1\21\2\uffff\2\21\4\uffff\1\21\2\uffff"+
+			"\1\120",
 			"",
 			"",
 			"",
@@ -9563,7 +10048,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "221:1: constant : ( Number | dateLiteral | StringLiteral | stringLiteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue );";
+			return "221:1: constant : ( Number | Year | Month | Day | Hour | Minute | Second | dateLiteral | StringLiteral | stringLiteralSequence | BigintLiteral | SmallintLiteral | TinyintLiteral | DecimalLiteral | charSetStringLiteral | booleanValue );";
 		}
 	}
 
@@ -9574,19 +10059,20 @@ public class HiveParser_IdentifiersParser extends Parser {
 	static final String DFA33_minS =
 		"\1\4\100\uffff";
 	static final String DFA33_maxS =
-		"\1\u011f\100\uffff";
+		"\1\u01a4\100\uffff";
 	static final String DFA33_acceptS =
 		"\1\uffff\1\2\76\uffff\1\1";
 	static final String DFA33_specialS =
 		"\101\uffff}>";
 	static final String[] DFA33_transitionS = {
-			"\3\1\3\uffff\1\1\3\uffff\2\1\1\uffff\1\1\2\uffff\2\1\1\uffff\2\1\1\uffff"+
-			"\3\1\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1\1\uffff\2\1\1\uffff\16\1\1"+
-			"\uffff\10\1\1\uffff\4\1\1\uffff\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\25"+
-			"\1\1\uffff\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff"+
-			"\5\1\2\uffff\61\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1"+
-			"\uffff\6\1\1\uffff\2\1\1\uffff\1\1\1\uffff\3\1\1\uffff\1\1\2\uffff\2"+
-			"\1\2\uffff\1\1\1\uffff\1\100",
+			"\1\1\2\uffff\2\1\3\uffff\1\1\5\uffff\2\1\1\uffff\1\1\2\uffff\2\1\3\uffff"+
+			"\2\1\160\uffff\1\1\3\uffff\2\1\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1"+
+			"\1\uffff\2\1\1\uffff\16\1\1\uffff\3\1\2\uffff\5\1\1\uffff\4\1\1\uffff"+
+			"\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\4\1\1\uffff\21\1\1\uffff\12\1\1"+
+			"\uffff\4\1\1\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff\5\1\2\uffff\61"+
+			"\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\6\1\1\uffff"+
+			"\2\1\1\uffff\1\1\3\uffff\1\1\1\uffff\1\1\2\uffff\1\1\3\uffff\1\1\2\uffff"+
+			"\2\1\4\uffff\1\1\2\uffff\1\100",
 			"",
 			"",
 			"",
@@ -9684,50 +10170,53 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "()+ loopback of 239:19: ( StringLiteral )+";
+			return "()+ loopback of 245:19: ( StringLiteral )+";
 		}
 	}
 
 	static final String DFA34_eotS =
-		"\u026f\uffff";
+		"\u027b\uffff";
 	static final String DFA34_eofS =
-		"\1\uffff\1\26\1\130\7\uffff\2\3\1\uffff\1\130\1\uffff\4\130\u025c\uffff";
+		"\1\uffff\1\34\1\136\15\uffff\2\3\1\uffff\1\136\1\uffff\4\136\u0262\uffff";
 	static final String DFA34_minS =
-		"\1\7\2\4\7\uffff\2\4\1\uffff\1\4\1\uffff\4\4\1\uffff\1\7\u025a\uffff";
+		"\1\11\2\4\15\uffff\2\4\1\uffff\1\4\1\uffff\4\4\1\uffff\1\11\u0260\uffff";
 	static final String DFA34_maxS =
-		"\1\u0121\1\u011d\1\u011f\7\uffff\2\u011d\1\uffff\1\u011d\1\uffff\4\u011d"+
-		"\1\uffff\1\u0121\u025a\uffff";
+		"\1\u044e\1\u01a1\1\u01a4\15\uffff\2\u01a1\1\uffff\1\u01a1\1\uffff\4\u01a1"+
+		"\1\uffff\1\u044e\u0260\uffff";
 	static final String DFA34_acceptS =
-		"\3\uffff\1\3\10\uffff\1\4\6\uffff\1\5\1\uffff\1\11\1\1\77\uffff\1\2\1"+
-		"\uffff\1\10\u01fe\uffff\1\6\26\uffff\1\7";
+		"\3\uffff\1\3\16\uffff\1\4\6\uffff\1\5\1\uffff\1\11\1\1\77\uffff\1\2\1"+
+		"\uffff\1\10\u01fe\uffff\1\6\34\uffff\1\7";
 	static final String DFA34_specialS =
-		"\u026f\uffff}>";
+		"\u027b\uffff}>";
 	static final String[] DFA34_transitionS = {
-			"\1\3\5\uffff\1\3\4\uffff\1\3\7\uffff\1\21\2\22\1\uffff\2\22\1\uffff\1"+
-			"\22\1\15\14\22\1\24\1\23\5\22\1\uffff\6\22\1\uffff\1\22\1\uffff\2\22"+
-			"\1\uffff\1\22\1\2\14\22\1\uffff\4\22\1\uffff\1\22\1\uffff\1\22\1\uffff"+
-			"\4\22\1\uffff\1\22\1\13\5\22\1\uffff\3\22\1\uffff\1\22\1\uffff\4\22\1"+
-			"\uffff\2\22\1\14\20\22\1\uffff\4\22\1\uffff\12\22\1\uffff\1\14\3\22\1"+
-			"\uffff\2\22\1\uffff\1\22\1\1\2\22\1\uffff\1\22\1\uffff\6\22\1\uffff\1"+
-			"\22\1\uffff\5\22\2\uffff\14\22\1\uffff\16\22\1\uffff\22\22\1\17\2\22"+
-			"\1\uffff\4\22\1\uffff\4\22\1\uffff\1\22\1\12\2\22\1\uffff\2\22\1\20\1"+
-			"\uffff\12\22\1\uffff\1\22\2\uffff\1\22\1\uffff\1\22\3\uffff\1\25\5\uffff"+
-			"\1\3\10\uffff\2\3\1\uffff\1\3",
-			"\3\26\3\uffff\1\26\3\uffff\2\26\1\uffff\1\26\2\uffff\2\26\1\uffff\2"+
-			"\26\1\uffff\3\26\1\uffff\21\26\2\uffff\5\26\1\uffff\10\26\1\uffff\2\26"+
-			"\1\uffff\16\26\1\uffff\10\26\1\uffff\4\26\1\uffff\7\26\1\uffff\5\26\1"+
-			"\uffff\7\26\1\uffff\25\26\1\uffff\12\26\1\uffff\4\26\1\uffff\7\26\1\uffff"+
-			"\10\26\1\uffff\1\26\1\uffff\5\26\2\uffff\61\26\1\uffff\11\26\1\uffff"+
-			"\4\26\1\uffff\3\26\1\uffff\12\26\1\uffff\6\26\1\uffff\2\26\1\14\1\26"+
-			"\1\uffff\3\26\1\uffff\1\26\2\uffff\2\26\2\uffff\1\26",
-			"\3\130\3\uffff\1\130\3\uffff\2\130\1\uffff\1\130\2\uffff\2\130\1\uffff"+
-			"\2\130\1\uffff\3\130\1\uffff\21\130\2\uffff\5\130\1\uffff\10\130\1\uffff"+
-			"\2\130\1\uffff\16\130\1\uffff\10\130\1\uffff\4\130\1\uffff\7\130\1\uffff"+
-			"\5\130\1\uffff\7\130\1\uffff\25\130\1\uffff\12\130\1\uffff\4\130\1\uffff"+
-			"\7\130\1\uffff\10\130\1\uffff\1\130\1\uffff\5\130\2\uffff\61\130\1\uffff"+
-			"\11\130\1\uffff\4\130\1\uffff\3\130\1\uffff\12\130\1\uffff\6\130\1\uffff"+
-			"\2\130\1\14\1\130\1\uffff\3\130\1\uffff\1\130\2\uffff\2\130\2\uffff\1"+
-			"\130\1\uffff\1\126",
+			"\1\3\5\uffff\1\3\6\uffff\1\3\170\uffff\1\27\3\uffff\2\30\1\uffff\2\30"+
+			"\1\uffff\1\30\1\23\14\30\1\32\1\31\5\30\1\uffff\6\30\1\uffff\1\30\1\uffff"+
+			"\2\30\1\uffff\1\30\1\2\14\30\1\uffff\3\30\2\uffff\1\30\1\uffff\1\30\1"+
+			"\uffff\1\30\1\uffff\4\30\1\uffff\1\30\1\21\5\30\1\uffff\3\30\1\uffff"+
+			"\1\30\1\uffff\4\30\1\uffff\2\30\1\22\4\30\1\uffff\14\30\1\uffff\4\30"+
+			"\1\uffff\12\30\1\uffff\1\22\3\30\1\uffff\2\30\1\uffff\1\30\1\1\2\30\1"+
+			"\uffff\1\30\1\uffff\6\30\1\uffff\1\30\1\uffff\5\30\2\uffff\14\30\1\uffff"+
+			"\16\30\1\uffff\22\30\1\25\2\30\1\uffff\4\30\1\uffff\4\30\1\uffff\1\30"+
+			"\1\20\2\30\1\uffff\2\30\1\26\1\uffff\12\30\1\uffff\1\30\2\uffff\1\30"+
+			"\1\uffff\1\30\3\uffff\1\33\13\uffff\1\3\14\uffff\2\3\6\uffff\1\3\21\uffff"+
+			"\1\3\5\uffff\1\3\u0160\uffff\2\3\6\uffff\1\3\u0121\uffff\1\3",
+			"\1\34\2\uffff\2\34\3\uffff\1\34\5\uffff\2\34\1\uffff\1\34\2\uffff\2"+
+			"\34\3\uffff\2\34\160\uffff\1\34\3\uffff\2\34\1\uffff\21\34\2\uffff\5"+
+			"\34\1\uffff\10\34\1\uffff\2\34\1\uffff\16\34\1\uffff\3\34\2\uffff\5\34"+
+			"\1\uffff\4\34\1\uffff\7\34\1\uffff\5\34\1\uffff\7\34\1\uffff\4\34\1\uffff"+
+			"\21\34\1\uffff\12\34\1\uffff\4\34\1\uffff\7\34\1\uffff\10\34\1\uffff"+
+			"\1\34\1\uffff\5\34\2\uffff\61\34\1\uffff\11\34\1\uffff\4\34\1\uffff\3"+
+			"\34\1\uffff\12\34\1\uffff\6\34\1\uffff\2\34\1\22\1\34\3\uffff\1\34\1"+
+			"\uffff\1\34\2\uffff\1\34\3\uffff\1\34\2\uffff\2\34\4\uffff\1\34",
+			"\1\136\2\uffff\2\136\3\uffff\1\136\5\uffff\2\136\1\uffff\1\136\2\uffff"+
+			"\2\136\3\uffff\2\136\160\uffff\1\136\3\uffff\2\136\1\uffff\21\136\2\uffff"+
+			"\5\136\1\uffff\10\136\1\uffff\2\136\1\uffff\16\136\1\uffff\3\136\2\uffff"+
+			"\5\136\1\uffff\4\136\1\uffff\7\136\1\uffff\5\136\1\uffff\7\136\1\uffff"+
+			"\4\136\1\uffff\21\136\1\uffff\12\136\1\uffff\4\136\1\uffff\7\136\1\uffff"+
+			"\10\136\1\uffff\1\136\1\uffff\5\136\2\uffff\61\136\1\uffff\11\136\1\uffff"+
+			"\4\136\1\uffff\3\136\1\uffff\12\136\1\uffff\6\136\1\uffff\2\136\1\22"+
+			"\1\136\3\uffff\1\136\1\uffff\1\136\2\uffff\1\136\3\uffff\1\136\2\uffff"+
+			"\2\136\4\uffff\1\136\2\uffff\1\134",
 			"",
 			"",
 			"",
@@ -9735,73 +10224,95 @@ public class HiveParser_IdentifiersParser extends Parser {
 			"",
 			"",
 			"",
-			"\3\3\3\uffff\1\3\3\uffff\2\3\1\uffff\1\3\2\uffff\2\3\1\uffff\2\3\1\uffff"+
-			"\3\3\1\uffff\21\3\2\uffff\5\3\1\uffff\10\3\1\uffff\2\3\1\uffff\16\3\1"+
-			"\uffff\10\3\1\uffff\4\3\1\uffff\7\3\1\uffff\5\3\1\uffff\7\3\1\uffff\25"+
-			"\3\1\uffff\12\3\1\uffff\4\3\1\uffff\7\3\1\uffff\10\3\1\uffff\1\3\1\uffff"+
-			"\5\3\2\uffff\61\3\1\uffff\11\3\1\uffff\4\3\1\uffff\3\3\1\uffff\12\3\1"+
-			"\uffff\6\3\1\uffff\2\3\1\14\1\3\1\uffff\3\3\1\uffff\1\3\2\uffff\2\3\2"+
-			"\uffff\1\3",
-			"\3\3\3\uffff\1\3\3\uffff\2\3\1\uffff\1\3\2\uffff\2\3\1\uffff\2\3\1\uffff"+
-			"\3\3\1\uffff\21\3\2\uffff\5\3\1\uffff\10\3\1\uffff\2\3\1\uffff\16\3\1"+
-			"\uffff\10\3\1\uffff\4\3\1\uffff\7\3\1\uffff\5\3\1\uffff\7\3\1\uffff\25"+
-			"\3\1\uffff\12\3\1\uffff\4\3\1\uffff\7\3\1\uffff\10\3\1\uffff\1\3\1\uffff"+
-			"\5\3\2\uffff\61\3\1\uffff\11\3\1\uffff\4\3\1\uffff\3\3\1\uffff\12\3\1"+
-			"\uffff\6\3\1\uffff\2\3\1\14\1\3\1\uffff\3\3\1\uffff\1\3\2\uffff\2\3\2"+
-			"\uffff\1\3",
 			"",
-			"\3\130\3\uffff\1\130\3\uffff\2\130\1\uffff\1\130\2\uffff\2\130\1\uffff"+
-			"\2\130\1\uffff\3\130\1\uffff\21\130\2\uffff\5\130\1\uffff\10\130\1\uffff"+
-			"\2\130\1\uffff\16\130\1\uffff\10\130\1\uffff\4\130\1\uffff\7\130\1\uffff"+
-			"\5\130\1\uffff\7\130\1\uffff\25\130\1\uffff\12\130\1\uffff\4\130\1\uffff"+
-			"\7\130\1\uffff\10\130\1\uffff\1\130\1\uffff\5\130\2\uffff\61\130\1\uffff"+
-			"\11\130\1\uffff\4\130\1\uffff\3\130\1\uffff\12\130\1\uffff\6\130\1\uffff"+
-			"\2\130\1\14\1\130\1\uffff\3\130\1\uffff\1\130\2\uffff\2\130\2\uffff\1"+
-			"\130",
 			"",
-			"\3\130\3\uffff\1\130\3\uffff\2\130\1\uffff\1\130\2\uffff\2\130\1\uffff"+
-			"\2\130\1\uffff\3\130\1\uffff\21\130\2\uffff\5\130\1\uffff\10\130\1\uffff"+
-			"\2\130\1\uffff\16\130\1\uffff\10\130\1\uffff\4\130\1\uffff\7\130\1\uffff"+
-			"\5\130\1\uffff\7\130\1\uffff\25\130\1\uffff\12\130\1\uffff\4\130\1\uffff"+
-			"\7\130\1\uffff\10\130\1\uffff\1\130\1\uffff\5\130\2\uffff\61\130\1\uffff"+
-			"\11\130\1\uffff\4\130\1\uffff\3\130\1\uffff\12\130\1\uffff\6\130\1\uffff"+
-			"\2\130\1\14\1\130\1\uffff\3\130\1\uffff\1\130\2\uffff\2\130\2\uffff\1"+
-			"\130",
-			"\3\130\3\uffff\1\130\3\uffff\2\130\1\uffff\1\130\2\uffff\2\130\1\uffff"+
-			"\2\130\1\uffff\3\130\1\uffff\21\130\2\uffff\5\130\1\uffff\10\130\1\uffff"+
-			"\2\130\1\uffff\16\130\1\uffff\10\130\1\uffff\4\130\1\uffff\7\130\1\uffff"+
-			"\5\130\1\uffff\7\130\1\uffff\25\130\1\uffff\12\130\1\uffff\4\130\1\uffff"+
-			"\7\130\1\uffff\10\130\1\uffff\1\130\1\uffff\5\130\2\uffff\61\130\1\uffff"+
-			"\11\130\1\uffff\4\130\1\uffff\3\130\1\uffff\12\130\1\uffff\6\130\1\uffff"+
-			"\2\130\1\14\1\130\1\uffff\3\130\1\uffff\1\130\2\uffff\2\130\2\uffff\1"+
-			"\130",
-			"\3\130\3\uffff\1\130\3\uffff\2\130\1\uffff\1\130\2\uffff\2\130\1\uffff"+
-			"\2\130\1\uffff\3\130\1\uffff\21\130\2\uffff\5\130\1\uffff\10\130\1\uffff"+
-			"\2\130\1\uffff\16\130\1\uffff\10\130\1\uffff\4\130\1\uffff\7\130\1\uffff"+
-			"\5\130\1\uffff\7\130\1\uffff\25\130\1\uffff\12\130\1\uffff\4\130\1\uffff"+
-			"\7\130\1\uffff\10\130\1\uffff\1\130\1\uffff\5\130\2\uffff\61\130\1\uffff"+
-			"\11\130\1\uffff\4\130\1\uffff\3\130\1\uffff\12\130\1\uffff\6\130\1\uffff"+
-			"\2\130\1\14\1\130\1\uffff\3\130\1\uffff\1\130\2\uffff\2\130\2\uffff\1"+
-			"\130",
-			"\3\130\3\uffff\1\130\3\uffff\2\130\1\uffff\1\130\2\uffff\2\130\1\uffff"+
-			"\2\130\1\uffff\3\130\1\uffff\21\130\2\uffff\5\130\1\uffff\10\130\1\uffff"+
-			"\2\130\1\uffff\16\130\1\uffff\10\130\1\uffff\4\130\1\uffff\7\130\1\uffff"+
-			"\5\130\1\uffff\7\130\1\uffff\25\130\1\uffff\12\130\1\uffff\4\130\1\uffff"+
-			"\7\130\1\uffff\10\130\1\uffff\1\130\1\uffff\5\130\2\uffff\61\130\1\uffff"+
-			"\11\130\1\uffff\4\130\1\uffff\3\130\1\uffff\12\130\1\uffff\6\130\1\uffff"+
-			"\2\130\1\14\1\130\1\uffff\3\130\1\uffff\1\130\2\uffff\2\130\2\uffff\1"+
-			"\130",
 			"",
-			"\1\u0257\5\uffff\1\u0257\4\uffff\1\u0257\7\uffff\3\u0257\1\uffff\2\u0257"+
-			"\1\uffff\25\u0257\1\uffff\6\u0257\1\uffff\1\u0257\1\uffff\2\u0257\1\uffff"+
-			"\16\u0257\1\uffff\4\u0257\1\uffff\1\u0257\1\uffff\1\u0257\1\uffff\4\u0257"+
-			"\1\uffff\7\u0257\1\uffff\3\u0257\1\uffff\1\u0257\1\uffff\4\u0257\1\uffff"+
-			"\23\u0257\1\uffff\4\u0257\1\uffff\12\u0257\1\uffff\4\u0257\1\uffff\7"+
-			"\u0257\1\uffff\1\u0257\1\uffff\6\u0257\1\uffff\1\u0257\1\uffff\5\u0257"+
-			"\2\uffff\14\u0257\1\uffff\16\u0257\1\uffff\25\u0257\1\uffff\4\u0257\1"+
-			"\uffff\4\u0257\1\uffff\4\u0257\1\uffff\3\u0257\1\uffff\12\u0257\1\uffff"+
-			"\1\u0257\1\u026e\1\uffff\1\u0257\1\uffff\1\u0257\3\uffff\1\u0257\2\uffff"+
-			"\1\u0257\2\uffff\2\u0257\7\uffff\4\u0257",
+			"",
+			"",
+			"",
+			"\1\3\2\uffff\2\3\3\uffff\1\3\5\uffff\2\3\1\uffff\1\3\2\uffff\2\3\3\uffff"+
+			"\2\3\160\uffff\1\3\3\uffff\2\3\1\uffff\21\3\2\uffff\5\3\1\uffff\10\3"+
+			"\1\uffff\2\3\1\uffff\16\3\1\uffff\3\3\2\uffff\5\3\1\uffff\4\3\1\uffff"+
+			"\7\3\1\uffff\5\3\1\uffff\7\3\1\uffff\4\3\1\uffff\21\3\1\uffff\12\3\1"+
+			"\uffff\4\3\1\uffff\7\3\1\uffff\10\3\1\uffff\1\3\1\uffff\5\3\2\uffff\61"+
+			"\3\1\uffff\11\3\1\uffff\4\3\1\uffff\3\3\1\uffff\12\3\1\uffff\6\3\1\uffff"+
+			"\2\3\1\22\1\3\3\uffff\1\3\1\uffff\1\3\2\uffff\1\3\3\uffff\1\3\2\uffff"+
+			"\2\3\4\uffff\1\3",
+			"\1\3\2\uffff\2\3\3\uffff\1\3\5\uffff\2\3\1\uffff\1\3\2\uffff\2\3\3\uffff"+
+			"\2\3\160\uffff\1\3\3\uffff\2\3\1\uffff\21\3\2\uffff\5\3\1\uffff\10\3"+
+			"\1\uffff\2\3\1\uffff\16\3\1\uffff\3\3\2\uffff\5\3\1\uffff\4\3\1\uffff"+
+			"\7\3\1\uffff\5\3\1\uffff\7\3\1\uffff\4\3\1\uffff\21\3\1\uffff\12\3\1"+
+			"\uffff\4\3\1\uffff\7\3\1\uffff\10\3\1\uffff\1\3\1\uffff\5\3\2\uffff\61"+
+			"\3\1\uffff\11\3\1\uffff\4\3\1\uffff\3\3\1\uffff\12\3\1\uffff\6\3\1\uffff"+
+			"\2\3\1\22\1\3\3\uffff\1\3\1\uffff\1\3\2\uffff\1\3\3\uffff\1\3\2\uffff"+
+			"\2\3\4\uffff\1\3",
+			"",
+			"\1\136\2\uffff\2\136\3\uffff\1\136\5\uffff\2\136\1\uffff\1\136\2\uffff"+
+			"\2\136\3\uffff\2\136\160\uffff\1\136\3\uffff\2\136\1\uffff\21\136\2\uffff"+
+			"\5\136\1\uffff\10\136\1\uffff\2\136\1\uffff\16\136\1\uffff\3\136\2\uffff"+
+			"\5\136\1\uffff\4\136\1\uffff\7\136\1\uffff\5\136\1\uffff\7\136\1\uffff"+
+			"\4\136\1\uffff\21\136\1\uffff\12\136\1\uffff\4\136\1\uffff\7\136\1\uffff"+
+			"\10\136\1\uffff\1\136\1\uffff\5\136\2\uffff\61\136\1\uffff\11\136\1\uffff"+
+			"\4\136\1\uffff\3\136\1\uffff\12\136\1\uffff\6\136\1\uffff\2\136\1\22"+
+			"\1\136\3\uffff\1\136\1\uffff\1\136\2\uffff\1\136\3\uffff\1\136\2\uffff"+
+			"\2\136\4\uffff\1\136",
+			"",
+			"\1\136\2\uffff\2\136\3\uffff\1\136\5\uffff\2\136\1\uffff\1\136\2\uffff"+
+			"\2\136\3\uffff\2\136\160\uffff\1\136\3\uffff\2\136\1\uffff\21\136\2\uffff"+
+			"\5\136\1\uffff\10\136\1\uffff\2\136\1\uffff\16\136\1\uffff\3\136\2\uffff"+
+			"\5\136\1\uffff\4\136\1\uffff\7\136\1\uffff\5\136\1\uffff\7\136\1\uffff"+
+			"\4\136\1\uffff\21\136\1\uffff\12\136\1\uffff\4\136\1\uffff\7\136\1\uffff"+
+			"\10\136\1\uffff\1\136\1\uffff\5\136\2\uffff\61\136\1\uffff\11\136\1\uffff"+
+			"\4\136\1\uffff\3\136\1\uffff\12\136\1\uffff\6\136\1\uffff\2\136\1\22"+
+			"\1\136\3\uffff\1\136\1\uffff\1\136\2\uffff\1\136\3\uffff\1\136\2\uffff"+
+			"\2\136\4\uffff\1\136",
+			"\1\136\2\uffff\2\136\3\uffff\1\136\5\uffff\2\136\1\uffff\1\136\2\uffff"+
+			"\2\136\3\uffff\2\136\160\uffff\1\136\3\uffff\2\136\1\uffff\21\136\2\uffff"+
+			"\5\136\1\uffff\10\136\1\uffff\2\136\1\uffff\16\136\1\uffff\3\136\2\uffff"+
+			"\5\136\1\uffff\4\136\1\uffff\7\136\1\uffff\5\136\1\uffff\7\136\1\uffff"+
+			"\4\136\1\uffff\21\136\1\uffff\12\136\1\uffff\4\136\1\uffff\7\136\1\uffff"+
+			"\10\136\1\uffff\1\136\1\uffff\5\136\2\uffff\61\136\1\uffff\11\136\1\uffff"+
+			"\4\136\1\uffff\3\136\1\uffff\12\136\1\uffff\6\136\1\uffff\2\136\1\22"+
+			"\1\136\3\uffff\1\136\1\uffff\1\136\2\uffff\1\136\3\uffff\1\136\2\uffff"+
+			"\2\136\4\uffff\1\136",
+			"\1\136\2\uffff\2\136\3\uffff\1\136\5\uffff\2\136\1\uffff\1\136\2\uffff"+
+			"\2\136\3\uffff\2\136\160\uffff\1\136\3\uffff\2\136\1\uffff\21\136\2\uffff"+
+			"\5\136\1\uffff\10\136\1\uffff\2\136\1\uffff\16\136\1\uffff\3\136\2\uffff"+
+			"\5\136\1\uffff\4\136\1\uffff\7\136\1\uffff\5\136\1\uffff\7\136\1\uffff"+
+			"\4\136\1\uffff\21\136\1\uffff\12\136\1\uffff\4\136\1\uffff\7\136\1\uffff"+
+			"\10\136\1\uffff\1\136\1\uffff\5\136\2\uffff\61\136\1\uffff\11\136\1\uffff"+
+			"\4\136\1\uffff\3\136\1\uffff\12\136\1\uffff\6\136\1\uffff\2\136\1\22"+
+			"\1\136\3\uffff\1\136\1\uffff\1\136\2\uffff\1\136\3\uffff\1\136\2\uffff"+
+			"\2\136\4\uffff\1\136",
+			"\1\136\2\uffff\2\136\3\uffff\1\136\5\uffff\2\136\1\uffff\1\136\2\uffff"+
+			"\2\136\3\uffff\2\136\160\uffff\1\136\3\uffff\2\136\1\uffff\21\136\2\uffff"+
+			"\5\136\1\uffff\10\136\1\uffff\2\136\1\uffff\16\136\1\uffff\3\136\2\uffff"+
+			"\5\136\1\uffff\4\136\1\uffff\7\136\1\uffff\5\136\1\uffff\7\136\1\uffff"+
+			"\4\136\1\uffff\21\136\1\uffff\12\136\1\uffff\4\136\1\uffff\7\136\1\uffff"+
+			"\10\136\1\uffff\1\136\1\uffff\5\136\2\uffff\61\136\1\uffff\11\136\1\uffff"+
+			"\4\136\1\uffff\3\136\1\uffff\12\136\1\uffff\6\136\1\uffff\2\136\1\22"+
+			"\1\136\3\uffff\1\136\1\uffff\1\136\2\uffff\1\136\3\uffff\1\136\2\uffff"+
+			"\2\136\4\uffff\1\136",
+			"",
+			"\1\u025d\5\uffff\1\u025d\6\uffff\1\u025d\170\uffff\1\u025d\3\uffff\2"+
+			"\u025d\1\uffff\2\u025d\1\uffff\25\u025d\1\uffff\6\u025d\1\uffff\1\u025d"+
+			"\1\uffff\2\u025d\1\uffff\16\u025d\1\uffff\3\u025d\2\uffff\1\u025d\1\uffff"+
+			"\1\u025d\1\uffff\1\u025d\1\uffff\4\u025d\1\uffff\7\u025d\1\uffff\3\u025d"+
+			"\1\uffff\1\u025d\1\uffff\4\u025d\1\uffff\7\u025d\1\uffff\14\u025d\1\uffff"+
+			"\4\u025d\1\uffff\12\u025d\1\uffff\4\u025d\1\uffff\7\u025d\1\uffff\1\u025d"+
+			"\1\uffff\6\u025d\1\uffff\1\u025d\1\uffff\5\u025d\2\uffff\14\u025d\1\uffff"+
+			"\16\u025d\1\uffff\25\u025d\1\uffff\4\u025d\1\uffff\4\u025d\1\uffff\4"+
+			"\u025d\1\uffff\3\u025d\1\uffff\12\u025d\1\uffff\1\u025d\1\u027a\1\uffff"+
+			"\1\u025d\1\uffff\1\u025d\3\uffff\1\u025d\4\uffff\1\u025d\6\uffff\1\u025d"+
+			"\1\uffff\1\u025d\12\uffff\2\u025d\1\uffff\1\u025d\4\uffff\1\u025d\21"+
+			"\uffff\1\u025d\5\uffff\1\u025d\u0160\uffff\2\u025d\6\uffff\1\u025d\u0121"+
+			"\uffff\1\u025d",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
 			"",
 			"",
 			"",
@@ -10437,7 +10948,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "266:1: atomExpression : ( KW_NULL -> TOK_NULL | dateLiteral | constant | function | castExpression | caseExpression | whenExpression | tableOrColumn | LPAREN ! expression RPAREN !);";
+			return "272:1: atomExpression : ( KW_NULL -> TOK_NULL | dateLiteral | constant | function | castExpression | caseExpression | whenExpression | tableOrColumn | LPAREN ! expression RPAREN !);";
 		}
 	}
 
@@ -10448,19 +10959,20 @@ public class HiveParser_IdentifiersParser extends Parser {
 	static final String DFA35_minS =
 		"\1\4\77\uffff";
 	static final String DFA35_maxS =
-		"\1\u011d\77\uffff";
+		"\1\u01a1\77\uffff";
 	static final String DFA35_acceptS =
 		"\1\uffff\1\3\74\uffff\1\1\1\2";
 	static final String DFA35_specialS =
 		"\100\uffff}>";
 	static final String[] DFA35_transitionS = {
-			"\3\1\3\uffff\1\1\3\uffff\2\1\1\uffff\1\77\2\uffff\2\1\1\uffff\2\1\1\uffff"+
-			"\3\1\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1\1\uffff\2\1\1\uffff\16\1\1"+
-			"\uffff\10\1\1\uffff\4\1\1\uffff\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\25"+
-			"\1\1\uffff\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff"+
-			"\5\1\2\uffff\61\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1"+
-			"\uffff\6\1\1\uffff\2\1\1\uffff\1\76\1\uffff\3\1\1\uffff\1\1\2\uffff\2"+
-			"\1\2\uffff\1\1",
+			"\1\1\2\uffff\2\1\3\uffff\1\1\5\uffff\2\1\1\uffff\1\77\2\uffff\2\1\3\uffff"+
+			"\2\1\160\uffff\1\1\3\uffff\2\1\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1"+
+			"\1\uffff\2\1\1\uffff\16\1\1\uffff\3\1\2\uffff\5\1\1\uffff\4\1\1\uffff"+
+			"\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\4\1\1\uffff\21\1\1\uffff\12\1\1"+
+			"\uffff\4\1\1\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff\5\1\2\uffff\61"+
+			"\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\6\1\1\uffff"+
+			"\2\1\1\uffff\1\76\3\uffff\1\1\1\uffff\1\1\2\uffff\1\1\3\uffff\1\1\2\uffff"+
+			"\2\1\4\uffff\1\1",
 			"",
 			"",
 			"",
@@ -10557,7 +11069,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "()* loopback of 282:20: ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*";
+			return "()* loopback of 288:20: ( ( LSQUARE ^ expression RSQUARE !) | ( DOT ^ identifier ) )*";
 		}
 	}
 
@@ -10566,25 +11078,26 @@ public class HiveParser_IdentifiersParser extends Parser {
 	static final String DFA38_eofS =
 		"\2\2\121\uffff";
 	static final String DFA38_minS =
-		"\1\4\1\12\121\uffff";
+		"\1\4\1\14\121\uffff";
 	static final String DFA38_maxS =
-		"\1\u011d\1\u0119\121\uffff";
+		"\1\u01a1\1\u019b\121\uffff";
 	static final String DFA38_acceptS =
 		"\2\uffff\1\2\73\uffff\1\1\24\uffff";
 	static final String DFA38_specialS =
 		"\123\uffff}>";
 	static final String[] DFA38_transitionS = {
-			"\3\2\3\uffff\1\2\3\uffff\2\2\4\uffff\2\2\1\uffff\2\2\1\uffff\3\2\1\uffff"+
-			"\21\2\2\uffff\5\2\1\uffff\10\2\1\uffff\2\2\1\uffff\16\2\1\uffff\10\2"+
-			"\1\uffff\4\2\1\uffff\7\2\1\uffff\5\2\1\uffff\7\2\1\uffff\16\2\1\1\6\2"+
-			"\1\uffff\12\2\1\uffff\4\2\1\uffff\7\2\1\uffff\10\2\1\uffff\1\2\1\uffff"+
-			"\5\2\2\uffff\61\2\1\uffff\11\2\1\uffff\4\2\1\uffff\3\2\1\uffff\12\2\1"+
-			"\uffff\6\2\1\uffff\2\2\3\uffff\3\2\1\uffff\1\2\2\uffff\2\2\2\uffff\1"+
-			"\2",
-			"\1\2\47\uffff\1\2\37\uffff\1\2\30\uffff\1\2\4\uffff\1\2\1\uffff\1\2"+
-			"\15\uffff\1\2\10\uffff\1\2\3\uffff\1\2\11\uffff\1\2\6\uffff\1\76\1\uffff"+
-			"\1\76\6\uffff\1\2\32\uffff\1\2\16\uffff\1\2\13\uffff\1\2\32\uffff\1\2"+
-			"\17\uffff\1\2\1\uffff\1\2\16\uffff\1\2",
+			"\1\2\2\uffff\2\2\3\uffff\1\2\5\uffff\2\2\4\uffff\2\2\3\uffff\2\2\160"+
+			"\uffff\1\2\3\uffff\2\2\1\uffff\21\2\2\uffff\5\2\1\uffff\10\2\1\uffff"+
+			"\2\2\1\uffff\16\2\1\uffff\3\2\2\uffff\5\2\1\uffff\4\2\1\uffff\7\2\1\uffff"+
+			"\5\2\1\uffff\7\2\1\uffff\4\2\1\uffff\12\2\1\1\6\2\1\uffff\12\2\1\uffff"+
+			"\4\2\1\uffff\7\2\1\uffff\10\2\1\uffff\1\2\1\uffff\5\2\2\uffff\61\2\1"+
+			"\uffff\11\2\1\uffff\4\2\1\uffff\3\2\1\uffff\12\2\1\uffff\6\2\1\uffff"+
+			"\2\2\5\uffff\1\2\1\uffff\1\2\2\uffff\1\2\3\uffff\1\2\2\uffff\2\2\4\uffff"+
+			"\1\2",
+			"\1\2\u009d\uffff\1\2\37\uffff\1\2\32\uffff\1\2\4\uffff\1\2\1\uffff\1"+
+			"\2\16\uffff\1\2\10\uffff\1\2\3\uffff\1\2\11\uffff\1\2\6\uffff\1\76\1"+
+			"\uffff\1\76\6\uffff\1\2\32\uffff\1\2\16\uffff\1\2\13\uffff\1\2\32\uffff"+
+			"\1\2\17\uffff\1\2\1\uffff\1\2\25\uffff\1\2",
 			"",
 			"",
 			"",
@@ -10699,7 +11212,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "302:39: (a= KW_IS nullCondition )?";
+			return "308:39: (a= KW_IS nullCondition )?";
 		}
 	}
 
@@ -10710,18 +11223,19 @@ public class HiveParser_IdentifiersParser extends Parser {
 	static final String DFA39_minS =
 		"\1\4\74\uffff";
 	static final String DFA39_maxS =
-		"\1\u011d\74\uffff";
+		"\1\u01a1\74\uffff";
 	static final String DFA39_acceptS =
 		"\1\uffff\1\2\72\uffff\1\1";
 	static final String DFA39_specialS =
 		"\75\uffff}>";
 	static final String[] DFA39_transitionS = {
-			"\2\1\1\74\3\uffff\1\1\3\uffff\2\1\4\uffff\2\1\1\uffff\2\1\1\uffff\3\1"+
-			"\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1\1\uffff\2\1\1\uffff\16\1\1\uffff"+
-			"\10\1\1\uffff\4\1\1\uffff\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\25\1\1"+
-			"\uffff\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff"+
-			"\5\1\2\uffff\61\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1"+
-			"\uffff\6\1\1\uffff\2\1\3\uffff\3\1\1\uffff\1\1\2\uffff\2\1\2\uffff\1"+
+			"\1\1\2\uffff\1\1\1\74\3\uffff\1\1\5\uffff\2\1\4\uffff\2\1\3\uffff\2\1"+
+			"\160\uffff\1\1\3\uffff\2\1\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1\1\uffff"+
+			"\2\1\1\uffff\16\1\1\uffff\3\1\2\uffff\5\1\1\uffff\4\1\1\uffff\7\1\1\uffff"+
+			"\5\1\1\uffff\7\1\1\uffff\4\1\1\uffff\21\1\1\uffff\12\1\1\uffff\4\1\1"+
+			"\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff\5\1\2\uffff\61\1\1\uffff"+
+			"\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\6\1\1\uffff\2\1\5"+
+			"\uffff\1\1\1\uffff\1\1\2\uffff\1\1\3\uffff\1\1\2\uffff\2\1\4\uffff\1"+
 			"\1",
 			"",
 			"",
@@ -10816,7 +11330,7 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "()* loopback of 315:37: ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )*";
+			return "()* loopback of 321:37: ( precedenceBitwiseXorOperator ^ precedenceUnarySuffixExpression )*";
 		}
 	}
 
@@ -10827,19 +11341,20 @@ public class HiveParser_IdentifiersParser extends Parser {
 	static final String DFA40_minS =
 		"\1\4\73\uffff";
 	static final String DFA40_maxS =
-		"\1\u011d\73\uffff";
+		"\1\u01a1\73\uffff";
 	static final String DFA40_acceptS =
 		"\1\uffff\1\2\71\uffff\1\1";
 	static final String DFA40_specialS =
 		"\74\uffff}>";
 	static final String[] DFA40_transitionS = {
-			"\2\1\4\uffff\1\1\3\uffff\2\73\4\uffff\2\1\1\uffff\2\1\1\uffff\3\1\1\uffff"+
-			"\21\1\2\uffff\5\1\1\uffff\10\1\1\uffff\2\1\1\uffff\16\1\1\uffff\10\1"+
-			"\1\uffff\4\1\1\uffff\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\25\1\1\uffff"+
-			"\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff\5\1\2"+
-			"\uffff\61\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff"+
-			"\6\1\1\uffff\2\1\3\uffff\1\1\1\73\1\1\1\uffff\1\1\2\uffff\2\1\2\uffff"+
-			"\1\73",
+			"\1\1\2\uffff\1\1\4\uffff\1\1\5\uffff\2\73\4\uffff\2\1\3\uffff\2\1\160"+
+			"\uffff\1\1\3\uffff\2\1\1\uffff\21\1\2\uffff\5\1\1\uffff\10\1\1\uffff"+
+			"\2\1\1\uffff\16\1\1\uffff\3\1\2\uffff\5\1\1\uffff\4\1\1\uffff\7\1\1\uffff"+
+			"\5\1\1\uffff\7\1\1\uffff\4\1\1\uffff\21\1\1\uffff\12\1\1\uffff\4\1\1"+
+			"\uffff\7\1\1\uffff\10\1\1\uffff\1\1\1\uffff\5\1\2\uffff\61\1\1\uffff"+
+			"\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\6\1\1\uffff\2\1\5"+
+			"\uffff\1\1\1\uffff\1\73\2\uffff\1\1\3\uffff\1\1\2\uffff\2\1\4\uffff\1"+
+			"\73",
 			"",
 			"",
 			"",
@@ -10932,38 +11447,38 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "()* loopback of 326:36: ( precedenceStarOperator ^ precedenceBitwiseXorExpression )*";
+			return "()* loopback of 332:36: ( precedenceStarOperator ^ precedenceBitwiseXorExpression )*";
 		}
 	}
 
 	static final String DFA45_eotS =
-		"\u037d\uffff";
+		"\u0395\uffff";
 	static final String DFA45_eofS =
 		"\1\1\53\uffff\1\1\1\uffff\1\1\7\uffff\1\1\4\uffff\1\57\1\uffff\1\57\1"+
-		"\uffff\4\57\1\uffff\2\57\1\uffff\1\57\u0335\uffff";
+		"\uffff\4\57\1\uffff\2\57\1\uffff\1\57\u034d\uffff";
 	static final String DFA45_minS =
-		"\1\12\53\uffff\1\7\1\46\1\12\7\uffff\1\7\4\uffff\1\4\1\uffff\1\4\1\uffff"+
-		"\4\4\1\uffff\2\4\1\uffff\1\4\1\uffff\1\7\60\uffff\1\4\1\uffff\1\4\1\uffff"+
-		"\4\4\1\uffff\2\4\1\uffff\1\4\1\uffff\1\7\u02f4\uffff";
+		"\1\14\53\uffff\1\11\1\u009e\1\14\7\uffff\1\11\4\uffff\1\4\1\uffff\1\4"+
+		"\1\uffff\4\4\1\uffff\2\4\1\uffff\1\4\1\uffff\1\11\66\uffff\1\4\1\uffff"+
+		"\1\4\1\uffff\4\4\1\uffff\2\4\1\uffff\1\4\1\uffff\1\11\u0306\uffff";
 	static final String DFA45_maxS =
-		"\1\u011a\53\uffff\1\u0121\1\u00ca\1\u0119\7\uffff\1\u0121\4\uffff\1\u011d"+
-		"\1\uffff\1\u011d\1\uffff\4\u011d\1\uffff\2\u011d\1\uffff\1\u011d\1\uffff"+
-		"\1\u0121\60\uffff\1\u011d\1\uffff\1\u011d\1\uffff\4\u011d\1\uffff\2\u011d"+
-		"\1\uffff\1\u011d\1\uffff\1\u0121\u02f4\uffff";
+		"\1\u019c\53\uffff\1\u044e\1\u0145\1\u019b\7\uffff\1\u044e\4\uffff\1\u01a1"+
+		"\1\uffff\1\u01a1\1\uffff\4\u01a1\1\uffff\2\u01a1\1\uffff\1\u01a1\1\uffff"+
+		"\1\u044e\66\uffff\1\u01a1\1\uffff\1\u01a1\1\uffff\4\u01a1\1\uffff\2\u01a1"+
+		"\1\uffff\1\u01a1\1\uffff\1\u044e\u0306\uffff";
 	static final String DFA45_acceptS =
-		"\1\uffff\1\7\55\uffff\1\2\60\uffff\1\3\1\5\1\1\23\uffff\1\4\23\uffff\1"+
-		"\6\24\uffff\1\2\100\uffff\1\2\100\uffff\1\2\100\uffff\1\2\100\uffff\1"+
-		"\2\100\uffff\1\2\u00c2\uffff\2\2\126\uffff\1\2\173\uffff\1\6\1\uffff";
+		"\1\uffff\1\7\55\uffff\1\2\66\uffff\1\3\1\5\1\1\23\uffff\1\4\23\uffff\1"+
+		"\6\32\uffff\1\2\100\uffff\1\2\100\uffff\1\2\100\uffff\1\2\100\uffff\1"+
+		"\2\100\uffff\1\2\u00c2\uffff\2\2\134\uffff\1\2\u0081\uffff\1\6\1\uffff";
 	static final String DFA45_specialS =
-		"\u037d\uffff}>";
+		"\u0395\uffff}>";
 	static final String[] DFA45_transitionS = {
-			"\1\1\11\uffff\2\57\1\uffff\2\57\1\uffff\3\1\1\uffff\10\1\1\66\10\1\2"+
-			"\uffff\5\1\1\uffff\10\1\1\uffff\2\1\1\uffff\16\1\1\uffff\10\1\1\uffff"+
-			"\4\1\1\uffff\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff\2\1\1\56\22\1\1\uffff"+
-			"\1\54\11\1\1\uffff\4\1\1\uffff\2\1\1\55\4\1\1\uffff\10\1\1\uffff\1\1"+
-			"\1\uffff\5\1\2\uffff\15\1\1\54\6\1\1\54\34\1\1\uffff\11\1\1\uffff\4\1"+
-			"\1\uffff\3\1\1\uffff\12\1\1\uffff\6\1\1\uffff\2\57\5\uffff\1\57\4\uffff"+
-			"\2\1",
+			"\1\1\13\uffff\2\57\3\uffff\2\57\160\uffff\1\1\3\uffff\2\1\1\uffff\10"+
+			"\1\1\66\10\1\2\uffff\5\1\1\uffff\10\1\1\uffff\2\1\1\uffff\16\1\1\uffff"+
+			"\3\1\2\uffff\5\1\1\uffff\4\1\1\uffff\7\1\1\uffff\5\1\1\uffff\7\1\1\uffff"+
+			"\2\1\1\56\1\1\1\uffff\21\1\1\uffff\1\54\11\1\1\uffff\4\1\1\uffff\2\1"+
+			"\1\55\4\1\1\uffff\10\1\1\uffff\1\1\1\uffff\5\1\2\uffff\15\1\1\54\6\1"+
+			"\1\54\34\1\1\uffff\11\1\1\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff"+
+			"\6\1\1\uffff\2\57\12\uffff\1\57\6\uffff\2\1",
 			"",
 			"",
 			"",
@@ -11007,21 +11522,23 @@ public class HiveParser_IdentifiersParser extends Parser {
 			"",
 			"",
 			"",
-			"\1\57\2\uffff\1\1\2\uffff\1\57\4\uffff\1\57\7\uffff\3\57\1\uffff\2\57"+
-			"\1\uffff\21\57\1\100\3\57\1\uffff\6\57\1\uffff\1\57\1\uffff\2\57\1\uffff"+
-			"\16\57\1\uffff\1\101\3\57\1\uffff\1\57\1\uffff\1\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\3\57\1\1\1\57\1\uffff\2\57\1\75\1\57\1\1\15\57\1\107\5"+
-			"\57\1\uffff\2\57\1\73\1\57\1\uffff\1\57\1\104\10\57\1\uffff\1\111\3\57"+
-			"\1\uffff\2\57\1\uffff\4\57\1\uffff\1\57\1\uffff\1\57\1\77\4\57\1\uffff"+
-			"\1\57\1\uffff\5\57\2\uffff\14\57\1\1\16\57\1\1\13\57\1\102\11\57\1\uffff"+
-			"\4\57\1\uffff\4\57\1\uffff\4\57\1\uffff\1\57\1\105\1\57\1\uffff\12\57"+
-			"\1\uffff\1\57\1\uffff\1\1\1\57\1\1\1\57\3\uffff\1\57\2\uffff\1\57\2\uffff"+
-			"\2\57\2\uffff\1\1\4\uffff\4\57",
-			"\1\141\121\uffff\1\140\23\uffff\1\142\66\uffff\1\142\6\uffff\1\142",
-			"\1\1\47\uffff\1\1\37\uffff\1\1\30\uffff\1\1\4\uffff\1\1\1\uffff\1\1"+
-			"\15\uffff\1\1\10\uffff\1\1\3\uffff\1\1\11\uffff\1\1\17\uffff\1\1\32\uffff"+
-			"\1\1\16\uffff\1\1\13\uffff\1\1\32\uffff\1\1\17\uffff\1\1\1\uffff\1\1"+
-			"\4\uffff\1\166\11\uffff\1\1",
+			"\1\57\2\uffff\1\1\2\uffff\1\57\6\uffff\1\57\170\uffff\1\57\3\uffff\2"+
+			"\57\1\uffff\2\57\1\uffff\21\57\1\100\3\57\1\uffff\6\57\1\uffff\1\57\1"+
+			"\uffff\2\57\1\uffff\16\57\1\uffff\1\101\2\57\2\uffff\1\57\1\uffff\1\57"+
+			"\1\uffff\1\57\1\uffff\4\57\1\uffff\7\57\1\uffff\3\57\1\1\1\57\1\uffff"+
+			"\2\57\1\75\1\57\1\1\7\57\1\uffff\6\57\1\107\5\57\1\uffff\2\57\1\73\1"+
+			"\57\1\uffff\1\57\1\104\10\57\1\uffff\1\111\3\57\1\uffff\2\57\1\uffff"+
+			"\4\57\1\uffff\1\57\1\uffff\1\57\1\77\4\57\1\uffff\1\57\1\uffff\5\57\2"+
+			"\uffff\14\57\1\1\16\57\1\1\13\57\1\102\11\57\1\uffff\4\57\1\uffff\4\57"+
+			"\1\uffff\4\57\1\uffff\1\57\1\105\1\57\1\uffff\12\57\1\uffff\1\57\1\uffff"+
+			"\1\1\1\57\1\1\1\57\3\uffff\1\57\4\uffff\1\57\6\uffff\1\57\1\uffff\1\57"+
+			"\2\uffff\1\1\7\uffff\2\57\1\uffff\1\57\4\uffff\1\57\21\uffff\1\57\5\uffff"+
+			"\1\57\u0160\uffff\2\57\6\uffff\1\57\u0121\uffff\1\57",
+			"\1\147\123\uffff\1\146\24\uffff\1\150\66\uffff\1\150\6\uffff\1\150",
+			"\1\1\u009d\uffff\1\1\37\uffff\1\1\32\uffff\1\1\4\uffff\1\1\1\uffff\1"+
+			"\1\16\uffff\1\1\10\uffff\1\1\3\uffff\1\1\11\uffff\1\1\17\uffff\1\1\32"+
+			"\uffff\1\1\16\uffff\1\1\13\uffff\1\1\32\uffff\1\1\17\uffff\1\1\1\uffff"+
+			"\1\1\4\uffff\1\174\20\uffff\1\1",
 			"",
 			"",
 			"",
@@ -11029,98 +11546,112 @@ public class HiveParser_IdentifiersParser extends Parser {
 			"",
 			"",
 			"",
-			"\1\u008a\2\uffff\1\1\2\uffff\1\u008a\4\uffff\1\u008a\7\uffff\3\u008a"+
-			"\1\uffff\2\u008a\1\uffff\21\u008a\1\177\3\u008a\1\uffff\6\u008a\1\uffff"+
-			"\1\u008a\1\uffff\2\u008a\1\uffff\16\u008a\1\uffff\1\u0080\3\u008a\1\uffff"+
-			"\1\u008a\1\uffff\1\u008a\1\uffff\4\u008a\1\uffff\7\u008a\1\uffff\3\u008a"+
-			"\1\1\1\u008a\1\uffff\2\u008a\1\174\1\u008a\1\1\15\u008a\1\u0086\5\u008a"+
-			"\1\uffff\2\u008a\1\172\1\u008a\1\uffff\1\u008a\1\u0083\10\u008a\1\uffff"+
-			"\1\u0088\3\u008a\1\uffff\2\u008a\1\uffff\4\u008a\1\uffff\1\u008a\1\uffff"+
-			"\1\u008a\1\176\4\u008a\1\uffff\1\u008a\1\uffff\5\u008a\2\uffff\14\u008a"+
-			"\1\1\16\u008a\1\1\13\u008a\1\u0081\11\u008a\1\uffff\4\u008a\1\uffff\4"+
-			"\u008a\1\uffff\4\u008a\1\uffff\1\u008a\1\u0084\1\u008a\1\uffff\12\u008a"+
-			"\1\uffff\1\u008a\1\uffff\1\1\1\u008a\1\1\1\u008a\3\uffff\1\u008a\2\uffff"+
-			"\1\u008a\2\uffff\2\u008a\2\uffff\1\1\4\uffff\4\u008a",
+			"\1\u0090\2\uffff\1\1\2\uffff\1\u0090\6\uffff\1\u0090\170\uffff\1\u0090"+
+			"\3\uffff\2\u0090\1\uffff\2\u0090\1\uffff\21\u0090\1\u0085\3\u0090\1\uffff"+
+			"\6\u0090\1\uffff\1\u0090\1\uffff\2\u0090\1\uffff\16\u0090\1\uffff\1\u0086"+
+			"\2\u0090\2\uffff\1\u0090\1\uffff\1\u0090\1\uffff\1\u0090\1\uffff\4\u0090"+
+			"\1\uffff\7\u0090\1\uffff\3\u0090\1\1\1\u0090\1\uffff\2\u0090\1\u0082"+
+			"\1\u0090\1\1\7\u0090\1\uffff\6\u0090\1\u008c\5\u0090\1\uffff\2\u0090"+
+			"\1\u0080\1\u0090\1\uffff\1\u0090\1\u0089\10\u0090\1\uffff\1\u008e\3\u0090"+
+			"\1\uffff\2\u0090\1\uffff\4\u0090\1\uffff\1\u0090\1\uffff\1\u0090\1\u0084"+
+			"\4\u0090\1\uffff\1\u0090\1\uffff\5\u0090\2\uffff\14\u0090\1\1\16\u0090"+
+			"\1\1\13\u0090\1\u0087\11\u0090\1\uffff\4\u0090\1\uffff\4\u0090\1\uffff"+
+			"\4\u0090\1\uffff\1\u0090\1\u008a\1\u0090\1\uffff\12\u0090\1\uffff\1\u0090"+
+			"\1\uffff\1\1\1\u0090\1\1\1\u0090\3\uffff\1\u0090\4\uffff\1\u0090\6\uffff"+
+			"\1\u0090\1\uffff\1\u0090\2\uffff\1\1\7\uffff\2\u0090\1\uffff\1\u0090"+
+			"\4\uffff\1\u0090\21\uffff\1\u0090\5\uffff\1\u0090\u0160\uffff\2\u0090"+
+			"\6\uffff\1\u0090\u0121\uffff\1\u0090",
 			"",
 			"",
 			"",
 			"",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\21\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57"+
-			"\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1"+
-			"\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff"+
-			"\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff"+
-			"\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\1\u009f\5\57\1\uffff\4\57\1"+
-			"\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\21\57\2\uffff\5"+
+			"\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57\2\uffff\5\57"+
+			"\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff\4\57\1\uffff"+
+			"\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10\57\1\uffff"+
+			"\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57\1\uffff\3"+
+			"\57\1\uffff\12\57\1\uffff\1\u00ab\5\57\1\uffff\4\57\3\uffff\1\57\1\uffff"+
+			"\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
 			"",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\17\57\1\u00e0\1\57\2\uffff\5\57\1\uffff\10\57"+
-			"\1\uffff\2\57\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1"+
-			"\uffff\5\57\1\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11"+
-			"\57\1\uffff\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57"+
-			"\1\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
-			"",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\17\57\1\u0121\1\57\2\uffff\5\57\1\uffff\10\57"+
-			"\1\uffff\2\57\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1"+
-			"\uffff\5\57\1\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11"+
-			"\57\1\uffff\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57"+
-			"\1\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\17\57\1\u0162\1\57\2\uffff\5\57\1\uffff\10\57"+
-			"\1\uffff\2\57\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1"+
-			"\uffff\5\57\1\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11"+
-			"\57\1\uffff\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57"+
-			"\1\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\17\57\1\u01a3\1\57\2\uffff\5\57\1\uffff\10\57"+
-			"\1\uffff\2\57\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1"+
-			"\uffff\5\57\1\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11"+
-			"\57\1\uffff\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57"+
-			"\1\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\17\57\1\u01e4\1\57\2\uffff\5\57\1\uffff\10\57"+
-			"\1\uffff\2\57\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1"+
-			"\uffff\5\57\1\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11"+
-			"\57\1\uffff\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57"+
-			"\1\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
-			"",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\21\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57"+
-			"\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1"+
-			"\uffff\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff"+
-			"\10\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff"+
-			"\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\1\uffff\3"+
-			"\57\1\1\1\57\2\uffff\2\57\2\uffff\1\57",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\1\21\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57\1"+
-			"\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff"+
-			"\7\57\1\uffff\25\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\17\57\1\u00ec\1"+
+			"\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57"+
+			"\2\uffff\5\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff"+
+			"\4\57\1\uffff\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
 			"\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57"+
-			"\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\1\uffff\3\57\1"+
-			"\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
+			"\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1"+
+			"\uffff\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
 			"",
-			"\3\57\3\uffff\1\57\3\uffff\2\57\1\uffff\1\57\2\uffff\2\57\1\uffff\2"+
-			"\57\1\uffff\3\57\1\uffff\21\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57"+
-			"\1\uffff\16\57\1\uffff\10\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1"+
-			"\uffff\7\57\1\uffff\15\57\1\u02a8\7\57\1\uffff\12\57\1\uffff\4\57\1\uffff"+
-			"\7\57\1\uffff\10\57\1\uffff\1\u02a7\1\uffff\5\57\2\uffff\61\57\1\uffff"+
-			"\11\57\1\uffff\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4"+
-			"\57\1\uffff\3\57\1\uffff\1\57\2\uffff\2\57\2\uffff\1\57",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\17\57\1\u012d\1"+
+			"\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57"+
+			"\2\uffff\5\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff"+
+			"\4\57\1\uffff\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
+			"\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57"+
+			"\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1"+
+			"\uffff\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\17\57\1\u016e\1"+
+			"\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57"+
+			"\2\uffff\5\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff"+
+			"\4\57\1\uffff\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
+			"\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57"+
+			"\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1"+
+			"\uffff\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\17\57\1\u01af\1"+
+			"\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57"+
+			"\2\uffff\5\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff"+
+			"\4\57\1\uffff\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
+			"\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57"+
+			"\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1"+
+			"\uffff\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\17\57\1\u01f0\1"+
+			"\57\2\uffff\5\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57"+
+			"\2\uffff\5\57\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff"+
+			"\4\57\1\uffff\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
+			"\57\1\uffff\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57"+
+			"\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1"+
+			"\uffff\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
 			"",
-			"\1\1\5\uffff\1\1\4\uffff\1\1\7\uffff\3\1\1\uffff\2\1\1\uffff\25\1\1"+
-			"\uffff\6\1\1\uffff\1\1\1\uffff\2\1\1\uffff\16\1\1\uffff\4\1\1\uffff\1"+
-			"\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff\3\1\1\uffff\1\1\1\uffff"+
-			"\4\1\1\uffff\23\1\1\uffff\4\1\1\uffff\12\1\1\uffff\4\1\1\uffff\7\1\1"+
-			"\uffff\1\1\1\uffff\6\1\1\uffff\1\1\1\uffff\5\1\2\uffff\14\1\1\uffff\16"+
-			"\1\1\uffff\25\1\1\uffff\4\1\1\uffff\4\1\1\uffff\4\1\1\uffff\3\1\1\uffff"+
-			"\12\1\1\uffff\1\1\2\uffff\1\1\1\uffff\1\1\3\uffff\1\u02ff\2\uffff\1\1"+
-			"\2\uffff\2\1\6\uffff\5\1",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\21\57\2\uffff\5"+
+			"\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57\2\uffff\5\57"+
+			"\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff\4\57\1\uffff"+
+			"\21\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10\57\1\uffff"+
+			"\1\57\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57\1\uffff\3"+
+			"\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1\uffff\1\57"+
+			"\2\uffff\1\57\1\uffff\1\1\1\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\1\21\57\2\uffff\5\57\1"+
+			"\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57\2\uffff\5\57\1\uffff"+
+			"\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff\4\57\1\uffff\21"+
+			"\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10\57\1\uffff\1\57"+
+			"\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff\4\57\1\uffff\3\57\1"+
+			"\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1\57\1\uffff\1\57\2\uffff"+
+			"\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
+			"",
+			"\1\57\2\uffff\2\57\3\uffff\1\57\5\uffff\2\57\1\uffff\1\57\2\uffff\2"+
+			"\57\3\uffff\2\57\160\uffff\1\57\3\uffff\2\57\1\uffff\21\57\2\uffff\5"+
+			"\57\1\uffff\10\57\1\uffff\2\57\1\uffff\16\57\1\uffff\3\57\2\uffff\5\57"+
+			"\1\uffff\4\57\1\uffff\7\57\1\uffff\5\57\1\uffff\7\57\1\uffff\4\57\1\uffff"+
+			"\11\57\1\u02b4\7\57\1\uffff\12\57\1\uffff\4\57\1\uffff\7\57\1\uffff\10"+
+			"\57\1\uffff\1\u02b3\1\uffff\5\57\2\uffff\61\57\1\uffff\11\57\1\uffff"+
+			"\4\57\1\uffff\3\57\1\uffff\12\57\1\uffff\6\57\1\uffff\4\57\3\uffff\1"+
+			"\57\1\uffff\1\57\2\uffff\1\57\3\uffff\1\57\2\uffff\2\57\4\uffff\1\57",
+			"",
+			"\1\1\5\uffff\1\1\6\uffff\1\1\170\uffff\1\1\3\uffff\2\1\1\uffff\2\1\1"+
+			"\uffff\25\1\1\uffff\6\1\1\uffff\1\1\1\uffff\2\1\1\uffff\16\1\1\uffff"+
+			"\3\1\2\uffff\1\1\1\uffff\1\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff"+
+			"\3\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff\14\1\1\uffff\4\1\1\uffff"+
+			"\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\1\1\1\uffff\6\1\1\uffff\1\1\1\uffff"+
+			"\5\1\2\uffff\14\1\1\uffff\16\1\1\uffff\25\1\1\uffff\4\1\1\uffff\4\1\1"+
+			"\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\1\1\2\uffff\1\1\1\uffff\1"+
+			"\1\3\uffff\1\u0311\4\uffff\1\1\6\uffff\1\1\1\uffff\1\1\10\uffff\1\1\1"+
+			"\uffff\2\1\1\uffff\1\1\4\uffff\1\1\21\uffff\1\1\5\uffff\1\1\u0160\uffff"+
+			"\2\1\6\uffff\1\1\u0121\uffff\1\1",
 			"",
 			"",
 			"",
@@ -11169,46 +11700,72 @@ public class HiveParser_IdentifiersParser extends Parser {
 			"",
 			"",
 			"",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\143\uffff"+
-			"\1\u008a\u0081\uffff\1\1\10\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
 			"",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\14\uffff\1"+
-			"\1\126\uffff\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
 			"",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\14\uffff\1"+
-			"\1\126\uffff\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\14\uffff\1"+
-			"\1\126\uffff\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\14\uffff\1"+
-			"\1\126\uffff\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\14\uffff\1"+
-			"\1\126\uffff\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
 			"",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\143\uffff"+
-			"\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\1\uffff\1\1\1\u008a\6\uffff"+
-			"\1\u008a",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\13\uffff\1\1\2\uffff\1\u008a"+
-			"\143\uffff\1\u008a\u008a\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1\u008a"+
-			"\6\uffff\1\u008a",
 			"",
-			"\3\u008a\7\uffff\2\u008a\1\uffff\1\u008a\16\uffff\1\u008a\142\uffff"+
-			"\1\1\1\u008a\50\uffff\1\1\141\uffff\2\u008a\1\uffff\2\u008a\2\uffff\1"+
-			"\u008a\6\uffff\1\u008a",
 			"",
-			"\1\1\5\uffff\1\1\4\uffff\1\1\7\uffff\3\1\1\uffff\2\1\1\uffff\25\1\1"+
-			"\uffff\6\1\1\uffff\1\1\1\uffff\2\1\1\uffff\16\1\1\uffff\4\1\1\uffff\1"+
-			"\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff\3\1\1\uffff\1\1\1\uffff"+
-			"\4\1\1\uffff\23\1\1\uffff\4\1\1\uffff\12\1\1\uffff\4\1\1\uffff\7\1\1"+
-			"\uffff\1\1\1\uffff\6\1\1\uffff\1\1\1\uffff\5\1\2\uffff\14\1\1\uffff\16"+
-			"\1\1\uffff\25\1\1\uffff\4\1\1\uffff\4\1\1\uffff\4\1\1\uffff\3\1\1\uffff"+
-			"\12\1\1\uffff\1\1\2\uffff\1\1\1\uffff\1\1\3\uffff\1\u037b\2\uffff\1\1"+
-			"\2\uffff\2\1\6\uffff\5\1",
+			"",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\146\uffff\1\u0090\u0081\uffff\1\1\10\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\14\uffff\1\1\131\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\14\uffff\1\1\131\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\14\uffff\1\1\131\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\14\uffff\1\1\131\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\14\uffff\1\1\131\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\146\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1\u0090\1\uffff"+
+			"\1\u0090\4\uffff\1\1\1\uffff\1\u0090\10\uffff\1\u0090",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\177\uffff"+
+			"\1\1\2\uffff\1\u0090\146\uffff\1\u0090\u008a\uffff\2\u0090\3\uffff\1"+
+			"\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"",
+			"\1\u0090\2\uffff\2\u0090\11\uffff\2\u0090\1\uffff\1\u0090\u0082\uffff"+
+			"\1\u0090\145\uffff\1\1\1\u0090\50\uffff\1\1\141\uffff\2\u0090\3\uffff"+
+			"\1\u0090\1\uffff\1\u0090\6\uffff\1\u0090\10\uffff\1\u0090",
+			"",
+			"\1\1\5\uffff\1\1\6\uffff\1\1\170\uffff\1\1\3\uffff\2\1\1\uffff\2\1\1"+
+			"\uffff\25\1\1\uffff\6\1\1\uffff\1\1\1\uffff\2\1\1\uffff\16\1\1\uffff"+
+			"\3\1\2\uffff\1\1\1\uffff\1\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff"+
+			"\3\1\1\uffff\1\1\1\uffff\4\1\1\uffff\7\1\1\uffff\14\1\1\uffff\4\1\1\uffff"+
+			"\12\1\1\uffff\4\1\1\uffff\7\1\1\uffff\1\1\1\uffff\6\1\1\uffff\1\1\1\uffff"+
+			"\5\1\2\uffff\14\1\1\uffff\16\1\1\uffff\25\1\1\uffff\4\1\1\uffff\4\1\1"+
+			"\uffff\4\1\1\uffff\3\1\1\uffff\12\1\1\uffff\1\1\2\uffff\1\1\1\uffff\1"+
+			"\1\3\uffff\1\u0393\4\uffff\1\1\6\uffff\1\1\1\uffff\1\1\10\uffff\1\1\1"+
+			"\uffff\2\1\1\uffff\1\1\4\uffff\1\1\21\uffff\1\1\5\uffff\1\1\u0160\uffff"+
+			"\2\1\6\uffff\1\1\u0121\uffff\1\1",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
 			"",
 			"",
 			"",
@@ -11998,107 +12555,107 @@ public class HiveParser_IdentifiersParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "()* loopback of 377:5: ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )*";
+			return "()* loopback of 383:5: ( ( KW_NOT precedenceEqualNegatableOperator notExpr= precedenceBitwiseOrExpression ) -> ^( KW_NOT ^( precedenceEqualNegatableOperator $precedenceEqualExpression $notExpr) ) | ( precedenceEqualOperator equalExpr= precedenceBitwiseOrExpression ) -> ^( precedenceEqualOperator $precedenceEqualExpression $equalExpr) | ( KW_NOT KW_IN expressions ) -> ^( KW_NOT ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) ) | ( KW_IN expressions ) -> ^( TOK_FUNCTION KW_IN $precedenceEqualExpression expressions ) | ( KW_NOT KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_TRUE $left $min $max) | ( KW_BETWEEN (min= precedenceBitwiseOrExpression ) KW_AND (max= precedenceBitwiseOrExpression ) ) -> ^( TOK_FUNCTION Identifier[\"between\"] KW_FALSE $left $min $max) )*";
 		}
 	}
 
-	public static final BitSet FOLLOW_KW_GROUP_in_groupByClause72 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_groupByClause74 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_groupByExpression_in_groupByClause80 = new BitSet(new long[]{0x0000000000000402L,0x0002000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_COMMA_in_groupByClause88 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_groupByExpression_in_groupByClause90 = new BitSet(new long[]{0x0000000000000402L,0x0002000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000800L});
-	public static final BitSet FOLLOW_KW_WITH_in_groupByClause103 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000001000L});
-	public static final BitSet FOLLOW_KW_ROLLUP_in_groupByClause105 = new BitSet(new long[]{0x0000000000000002L,0x0002000000000000L});
-	public static final BitSet FOLLOW_KW_WITH_in_groupByClause113 = new BitSet(new long[]{0x4000000000000000L});
-	public static final BitSet FOLLOW_KW_CUBE_in_groupByClause115 = new BitSet(new long[]{0x0000000000000002L,0x0002000000000000L});
-	public static final BitSet FOLLOW_KW_GROUPING_in_groupByClause128 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000800000L});
-	public static final BitSet FOLLOW_KW_SETS_in_groupByClause130 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_groupByClause137 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_groupingSetExpression_in_groupByClause139 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_groupByClause143 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_groupingSetExpression_in_groupByClause145 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_GROUP_in_groupByClause72 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_groupByClause74 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_groupByExpression_in_groupByClause80 = new BitSet(new long[]{0x0000000000001002L,0x0000000000000000L,0x0000000000000000L,0x0000080000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_COMMA_in_groupByClause88 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_groupByExpression_in_groupByClause90 = new BitSet(new long[]{0x0000000000001002L,0x0000000000000000L,0x0000000000000000L,0x0000080000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_WITH_in_groupByClause103 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
+	public static final BitSet FOLLOW_KW_ROLLUP_in_groupByClause105 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_KW_WITH_in_groupByClause113 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0040000000000000L});
+	public static final BitSet FOLLOW_KW_CUBE_in_groupByClause115 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000080000000000L});
+	public static final BitSet FOLLOW_KW_GROUPING_in_groupByClause128 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
+	public static final BitSet FOLLOW_KW_SETS_in_groupByClause130 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_groupByClause137 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_groupingSetExpression_in_groupByClause139 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_groupByClause143 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_groupingSetExpression_in_groupByClause145 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_groupByClause150 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_groupByExpression_in_groupingSetExpression244 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAREN_in_groupingSetExpression265 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_groupByExpression_in_groupingSetExpression271 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_groupingSetExpression274 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_groupByExpression_in_groupingSetExpression276 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_LPAREN_in_groupingSetExpression265 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_groupByExpression_in_groupingSetExpression271 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_groupingSetExpression274 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_groupByExpression_in_groupingSetExpression276 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_groupingSetExpression283 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAREN_in_groupingSetExpression305 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_LPAREN_in_groupingSetExpression305 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_groupingSetExpression310 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_expression_in_groupByExpression350 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_HAVING_in_havingClause381 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
+	public static final BitSet FOLLOW_KW_HAVING_in_havingClause381 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
 	public static final BitSet FOLLOW_havingCondition_in_havingClause383 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_expression_in_havingCondition422 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_ORDER_in_orderByClause454 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_orderByClause456 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_orderByClause462 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause464 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_orderByClause472 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause474 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_ORDER_in_orderByClause454 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_orderByClause456 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_orderByClause462 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause464 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_orderByClause472 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause474 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_orderByClause478 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_ORDER_in_orderByClause499 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_orderByClause501 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause507 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_orderByClause515 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause517 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_CLUSTER_in_clusterByClause559 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_clusterByClause561 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_clusterByClause567 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_clusterByClause569 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_clusterByClause572 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_clusterByClause574 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_ORDER_in_orderByClause499 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_orderByClause501 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause507 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_orderByClause515 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_orderByClause517 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_CLUSTER_in_clusterByClause559 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_clusterByClause561 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_clusterByClause567 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_clusterByClause569 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_clusterByClause572 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_clusterByClause574 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_clusterByClause578 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_CLUSTER_in_clusterByClause599 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_clusterByClause601 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_clusterByClause607 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_clusterByClause619 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_clusterByClause621 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_PARTITION_in_partitionByClause665 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_partitionByClause667 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_partitionByClause673 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_partitionByClause675 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_partitionByClause678 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_partitionByClause680 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_CLUSTER_in_clusterByClause599 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_clusterByClause601 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_clusterByClause607 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_clusterByClause619 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_clusterByClause621 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_PARTITION_in_partitionByClause665 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_partitionByClause667 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_partitionByClause673 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_partitionByClause675 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_partitionByClause678 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_partitionByClause680 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_partitionByClause684 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_PARTITION_in_partitionByClause705 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_partitionByClause707 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_partitionByClause713 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_partitionByClause721 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_partitionByClause723 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_DISTRIBUTE_in_distributeByClause765 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_distributeByClause767 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_distributeByClause773 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_distributeByClause775 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_distributeByClause778 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_distributeByClause780 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_PARTITION_in_partitionByClause705 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_partitionByClause707 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_partitionByClause713 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_partitionByClause721 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_partitionByClause723 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_DISTRIBUTE_in_distributeByClause765 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_distributeByClause767 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_distributeByClause773 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_distributeByClause775 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_distributeByClause778 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_distributeByClause780 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_distributeByClause784 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_DISTRIBUTE_in_distributeByClause805 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_distributeByClause807 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_distributeByClause813 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_distributeByClause821 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_distributeByClause823 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_SORT_in_sortByClause865 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_sortByClause867 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_sortByClause873 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause875 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_sortByClause883 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause885 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_DISTRIBUTE_in_distributeByClause805 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_distributeByClause807 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_distributeByClause813 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_distributeByClause821 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_distributeByClause823 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_SORT_in_sortByClause865 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_sortByClause867 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_sortByClause873 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause875 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_sortByClause883 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause885 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_sortByClause889 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_SORT_in_sortByClause910 = new BitSet(new long[]{0x0000200000000000L});
-	public static final BitSet FOLLOW_KW_BY_in_sortByClause912 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause918 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_sortByClause931 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause933 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_functionName_in_function976 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_function982 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABFFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003E2648A5FL});
-	public static final BitSet FOLLOW_STAR_in_function1003 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_KW_DISTINCT_in_function1019 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003E2648A5FL});
-	public static final BitSet FOLLOW_selectExpression_in_function1024 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_function1027 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003E0648A5FL});
-	public static final BitSet FOLLOW_selectExpression_in_function1029 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_function1047 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000100000000000L});
-	public static final BitSet FOLLOW_KW_OVER_in_function1050 = new BitSet(new long[]{0x0000000004000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_KW_SORT_in_sortByClause910 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000002000000000L});
+	public static final BitSet FOLLOW_KW_BY_in_sortByClause912 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause918 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_sortByClause931 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_columnRefOrder_in_sortByClause933 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_functionName_in_function976 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_function982 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9FFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085A09408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_STAR_in_function1003 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_DISTINCT_in_function1019 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085A09408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_selectExpression_in_function1024 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_function1027 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085A01408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_selectExpression_in_function1029 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_function1047 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000008000000000L});
+	public static final BitSet FOLLOW_KW_OVER_in_function1050 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
 	public static final BitSet FOLLOW_window_specification_in_function1054 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_IF_in_functionName1186 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_ARRAY_in_functionName1190 = new BitSet(new long[]{0x0000000000000002L});
@@ -12106,160 +12663,166 @@ public class HiveParser_IdentifiersParser extends Parser {
 	public static final BitSet FOLLOW_KW_STRUCT_in_functionName1198 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_UNIONTYPE_in_functionName1202 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_identifier_in_functionName1206 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_CAST_in_castExpression1237 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_castExpression1243 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_castExpression1255 = new BitSet(new long[]{0x0000000800000000L});
-	public static final BitSet FOLLOW_KW_AS_in_castExpression1267 = new BitSet(new long[]{0x0000038000000000L,0x00000040000800B0L,0x0000000000000002L,0x0000600810000000L,0x0000000000000020L});
-	public static final BitSet FOLLOW_primitiveType_in_castExpression1279 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_CAST_in_castExpression1237 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_castExpression1243 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_castExpression1255 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_AS_in_castExpression1267 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xB000000380000000L,0x1000000100000800L,0x0000000000000000L,0x0000030040800000L,0x0000000000000001L});
+	public static final BitSet FOLLOW_primitiveType_in_castExpression1279 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_castExpression1285 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_CASE_in_caseExpression1326 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_caseExpression1328 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
-	public static final BitSet FOLLOW_KW_WHEN_in_caseExpression1335 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_caseExpression1337 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000100000000000L});
-	public static final BitSet FOLLOW_KW_THEN_in_caseExpression1339 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_caseExpression1341 = new BitSet(new long[]{0x0000000000000000L,0x0000000001400000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
-	public static final BitSet FOLLOW_KW_ELSE_in_caseExpression1350 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_caseExpression1352 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_KW_CASE_in_caseExpression1326 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_caseExpression1328 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_KW_WHEN_in_caseExpression1335 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_caseExpression1337 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000008000000000L});
+	public static final BitSet FOLLOW_KW_THEN_in_caseExpression1339 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_caseExpression1341 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000050000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_KW_ELSE_in_caseExpression1350 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_caseExpression1352 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
 	public static final BitSet FOLLOW_KW_END_in_caseExpression1360 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_CASE_in_whenExpression1402 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
-	public static final BitSet FOLLOW_KW_WHEN_in_whenExpression1411 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_whenExpression1413 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000100000000000L});
-	public static final BitSet FOLLOW_KW_THEN_in_whenExpression1415 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_whenExpression1417 = new BitSet(new long[]{0x0000000000000000L,0x0000000001400000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000080L});
-	public static final BitSet FOLLOW_KW_ELSE_in_whenExpression1426 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_whenExpression1428 = new BitSet(new long[]{0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_KW_CASE_in_whenExpression1402 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_KW_WHEN_in_whenExpression1411 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_whenExpression1413 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000008000000000L});
+	public static final BitSet FOLLOW_KW_THEN_in_whenExpression1415 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_whenExpression1417 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000050000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000004L});
+	public static final BitSet FOLLOW_KW_ELSE_in_whenExpression1426 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_whenExpression1428 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
 	public static final BitSet FOLLOW_KW_END_in_whenExpression1436 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_Number_in_constant1478 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_dateLiteral_in_constant1486 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_StringLiteral_in_constant1494 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_stringLiteralSequence_in_constant1502 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BigintLiteral_in_constant1510 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_SmallintLiteral_in_constant1518 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TinyintLiteral_in_constant1526 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DecimalLiteral_in_constant1534 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_charSetStringLiteral_in_constant1542 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_booleanValue_in_constant1550 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_StringLiteral_in_stringLiteralSequence1571 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000080000000L});
-	public static final BitSet FOLLOW_StringLiteral_in_stringLiteralSequence1573 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000080000000L});
-	public static final BitSet FOLLOW_CharSetName_in_charSetStringLiteral1618 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_CharSetLiteral_in_charSetStringLiteral1622 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_DATE_in_dateLiteral1655 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000080000000L});
-	public static final BitSet FOLLOW_StringLiteral_in_dateLiteral1657 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceOrExpression_in_expression1696 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_NULL_in_atomExpression1717 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_dateLiteral_in_atomExpression1729 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_constant_in_atomExpression1737 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_function_in_atomExpression1745 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_castExpression_in_atomExpression1753 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_caseExpression_in_atomExpression1761 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_whenExpression_in_atomExpression1769 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_tableOrColumn_in_atomExpression1777 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAREN_in_atomExpression1785 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_atomExpression1788 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_atomExpression1790 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_atomExpression_in_precedenceFieldExpression1813 = new BitSet(new long[]{0x0000000000020002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_LSQUARE_in_precedenceFieldExpression1817 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_precedenceFieldExpression1820 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000004000000L});
-	public static final BitSet FOLLOW_RSQUARE_in_precedenceFieldExpression1822 = new BitSet(new long[]{0x0000000000020002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_DOT_in_precedenceFieldExpression1829 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_precedenceFieldExpression1832 = new BitSet(new long[]{0x0000000000020002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000010000L});
-	public static final BitSet FOLLOW_KW_NULL_in_nullCondition1885 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_NOT_in_nullCondition1899 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000100000000L});
-	public static final BitSet FOLLOW_KW_NULL_in_nullCondition1901 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceUnaryOperator_in_precedenceUnaryPrefixExpression1929 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceFieldExpression_in_precedenceUnaryPrefixExpression1934 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceUnaryPrefixExpression_in_precedenceUnarySuffixExpression1951 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000010L});
-	public static final BitSet FOLLOW_KW_IS_in_precedenceUnarySuffixExpression1956 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000140000000L});
-	public static final BitSet FOLLOW_nullCondition_in_precedenceUnarySuffixExpression1958 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_BITWISEXOR_in_precedenceBitwiseXorOperator2006 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2027 = new BitSet(new long[]{0x0000000000000042L});
-	public static final BitSet FOLLOW_precedenceBitwiseXorOperator_in_precedenceBitwiseXorExpression2030 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2033 = new BitSet(new long[]{0x0000000000000042L});
-	public static final BitSet FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2090 = new BitSet(new long[]{0x000000000000C002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000020080000L});
-	public static final BitSet FOLLOW_precedenceStarOperator_in_precedenceStarExpression2093 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2096 = new BitSet(new long[]{0x000000000000C002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000020080000L});
-	public static final BitSet FOLLOW_precedenceStarExpression_in_precedencePlusExpression2145 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000440000L});
-	public static final BitSet FOLLOW_precedencePlusOperator_in_precedencePlusExpression2148 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceStarExpression_in_precedencePlusExpression2151 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000440000L});
-	public static final BitSet FOLLOW_AMPERSAND_in_precedenceAmpersandOperator2175 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2196 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_precedenceAmpersandOperator_in_precedenceAmpersandExpression2199 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2202 = new BitSet(new long[]{0x0000000000000012L});
-	public static final BitSet FOLLOW_BITWISEOR_in_precedenceBitwiseOrOperator2226 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2247 = new BitSet(new long[]{0x0000000000000022L});
-	public static final BitSet FOLLOW_precedenceBitwiseOrOperator_in_precedenceBitwiseOrExpression2250 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2253 = new BitSet(new long[]{0x0000000000000022L});
-	public static final BitSet FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualOperator2307 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EQUAL_in_precedenceEqualOperator2311 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_EQUAL_NS_in_precedenceEqualOperator2315 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_NOTEQUAL_in_precedenceEqualOperator2319 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LESSTHANOREQUALTO_in_precedenceEqualOperator2323 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LESSTHAN_in_precedenceEqualOperator2327 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GREATERTHANOREQUALTO_in_precedenceEqualOperator2331 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GREATERTHAN_in_precedenceEqualOperator2335 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2359 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_KW_NOT_in_precedenceEqualExpression2381 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000001000L,0x0000000000000408L});
-	public static final BitSet FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualExpression2383 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2387 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_precedenceEqualOperator_in_precedenceEqualExpression2420 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2424 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_KW_NOT_in_precedenceEqualExpression2453 = new BitSet(new long[]{0x0000000000000000L,0x0100000000000000L});
-	public static final BitSet FOLLOW_KW_IN_in_precedenceEqualExpression2455 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_expressions_in_precedenceEqualExpression2457 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_KW_IN_in_precedenceEqualExpression2491 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_expressions_in_precedenceEqualExpression2493 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_KW_NOT_in_precedenceEqualExpression2524 = new BitSet(new long[]{0x0000004000000000L});
-	public static final BitSet FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2526 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2531 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_KW_AND_in_precedenceEqualExpression2534 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2539 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2579 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2584 = new BitSet(new long[]{0x0000000100000000L});
-	public static final BitSet FOLLOW_KW_AND_in_precedenceEqualExpression2587 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2592 = new BitSet(new long[]{0x0000004001B00002L,0x0100000000000000L,0x0000000040001000L,0x0000000000000408L,0x0000000000106000L});
-	public static final BitSet FOLLOW_LPAREN_in_expressions2650 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_expressions2652 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_expressions2655 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_expressions2657 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_expressions2661 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_NOT_in_precedenceNotOperator2687 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceNotOperator_in_precedenceNotExpression2709 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceEqualExpression_in_precedenceNotExpression2714 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_AND_in_precedenceAndOperator2736 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceNotExpression_in_precedenceAndExpression2757 = new BitSet(new long[]{0x0000000100000002L});
-	public static final BitSet FOLLOW_precedenceAndOperator_in_precedenceAndExpression2760 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceNotExpression_in_precedenceAndExpression2763 = new BitSet(new long[]{0x0000000100000002L});
-	public static final BitSet FOLLOW_KW_OR_in_precedenceOrOperator2787 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_precedenceAndExpression_in_precedenceOrExpression2808 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000002000000000L});
-	public static final BitSet FOLLOW_precedenceOrOperator_in_precedenceOrExpression2811 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_precedenceAndExpression_in_precedenceOrExpression2814 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000002000000000L});
-	public static final BitSet FOLLOW_KW_TRUE_in_booleanValue2838 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_FALSE_in_booleanValue2843 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_tableName_in_tableOrPartition2863 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000800000000000L});
-	public static final BitSet FOLLOW_partitionSpec_in_tableOrPartition2865 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_PARTITION_in_partitionSpec2897 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_partitionSpec2904 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_partitionVal_in_partitionSpec2906 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_partitionSpec2909 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_partitionVal_in_partitionSpec2912 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_partitionSpec2917 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identifier_in_partitionVal2948 = new BitSet(new long[]{0x0000000000100002L});
-	public static final BitSet FOLLOW_EQUAL_in_partitionVal2951 = new BitSet(new long[]{0x0000000000042080L,0x0000000200000010L,0x0000000000000000L,0x0008000000000000L,0x00000002C0200000L});
-	public static final BitSet FOLLOW_constant_in_partitionVal2953 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_PARTITION_in_dropPartitionSpec2987 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_dropPartitionSpec2994 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_dropPartitionVal_in_dropPartitionSpec2996 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_dropPartitionSpec2999 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_dropPartitionVal_in_dropPartitionSpec3002 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_dropPartitionSpec3007 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identifier_in_dropPartitionVal3038 = new BitSet(new long[]{0x0000000001900000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000106000L});
-	public static final BitSet FOLLOW_dropPartitionOperator_in_dropPartitionVal3040 = new BitSet(new long[]{0x0000000000042080L,0x0000000200000010L,0x0000000000000000L,0x0008000000000000L,0x00000002C0200000L});
-	public static final BitSet FOLLOW_constant_in_dropPartitionVal3042 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_sysFuncNames_in_descFuncNames3461 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_StringLiteral_in_descFuncNames3469 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identifier_in_descFuncNames3477 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_identifier3498 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_nonReserved_in_identifier3506 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Year_in_constant1486 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Month_in_constant1494 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Day_in_constant1502 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Hour_in_constant1510 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Minute_in_constant1518 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Second_in_constant1526 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_dateLiteral_in_constant1534 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_StringLiteral_in_constant1542 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_stringLiteralSequence_in_constant1550 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BigintLiteral_in_constant1558 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_SmallintLiteral_in_constant1566 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TinyintLiteral_in_constant1574 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_DecimalLiteral_in_constant1582 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_charSetStringLiteral_in_constant1590 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_booleanValue_in_constant1598 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_StringLiteral_in_stringLiteralSequence1619 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
+	public static final BitSet FOLLOW_StringLiteral_in_stringLiteralSequence1621 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
+	public static final BitSet FOLLOW_CharSetName_in_charSetStringLiteral1666 = new BitSet(new long[]{0x0000000000004000L});
+	public static final BitSet FOLLOW_CharSetLiteral_in_charSetStringLiteral1670 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_DATE_in_dateLiteral1703 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
+	public static final BitSet FOLLOW_StringLiteral_in_dateLiteral1705 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceOrExpression_in_expression1744 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_NULL_in_atomExpression1765 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_dateLiteral_in_atomExpression1777 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_constant_in_atomExpression1785 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_function_in_atomExpression1793 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_castExpression_in_atomExpression1801 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_caseExpression_in_atomExpression1809 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_whenExpression_in_atomExpression1817 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_tableOrColumn_in_atomExpression1825 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LPAREN_in_atomExpression1833 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_atomExpression1836 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_atomExpression1838 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_atomExpression_in_precedenceFieldExpression1861 = new BitSet(new long[]{0x0000000000200002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_LSQUARE_in_precedenceFieldExpression1865 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_precedenceFieldExpression1868 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000010000000L});
+	public static final BitSet FOLLOW_RSQUARE_in_precedenceFieldExpression1870 = new BitSet(new long[]{0x0000000000200002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_DOT_in_precedenceFieldExpression1877 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_precedenceFieldExpression1880 = new BitSet(new long[]{0x0000000000200002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000800L});
+	public static final BitSet FOLLOW_KW_NULL_in_nullCondition1933 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_NOT_in_nullCondition1947 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_NULL_in_nullCondition1949 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceUnaryOperator_in_precedenceUnaryPrefixExpression1977 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceFieldExpression_in_precedenceUnaryPrefixExpression1982 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceUnaryPrefixExpression_in_precedenceUnarySuffixExpression1999 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x8000000000000000L});
+	public static final BitSet FOLLOW_KW_IS_in_precedenceUnarySuffixExpression2004 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x000000000A000000L});
+	public static final BitSet FOLLOW_nullCondition_in_precedenceUnarySuffixExpression2006 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_BITWISEXOR_in_precedenceBitwiseXorOperator2054 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2075 = new BitSet(new long[]{0x0000000000000102L});
+	public static final BitSet FOLLOW_precedenceBitwiseXorOperator_in_precedenceBitwiseXorExpression2078 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceUnarySuffixExpression_in_precedenceBitwiseXorExpression2081 = new BitSet(new long[]{0x0000000000000102L});
+	public static final BitSet FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2138 = new BitSet(new long[]{0x00000000000C0002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000200020000L});
+	public static final BitSet FOLLOW_precedenceStarOperator_in_precedenceStarExpression2141 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseXorExpression_in_precedenceStarExpression2144 = new BitSet(new long[]{0x00000000000C0002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000200020000L});
+	public static final BitSet FOLLOW_precedenceStarExpression_in_precedencePlusExpression2193 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000001008000L});
+	public static final BitSet FOLLOW_precedencePlusOperator_in_precedencePlusExpression2196 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceStarExpression_in_precedencePlusExpression2199 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000001008000L});
+	public static final BitSet FOLLOW_AMPERSAND_in_precedenceAmpersandOperator2223 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2244 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_precedenceAmpersandOperator_in_precedenceAmpersandExpression2247 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedencePlusExpression_in_precedenceAmpersandExpression2250 = new BitSet(new long[]{0x0000000000000012L});
+	public static final BitSet FOLLOW_BITWISEOR_in_precedenceBitwiseOrOperator2274 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2295 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrOperator_in_precedenceBitwiseOrExpression2298 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceAmpersandExpression_in_precedenceBitwiseOrExpression2301 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualOperator2355 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EQUAL_in_precedenceEqualOperator2359 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_EQUAL_NS_in_precedenceEqualOperator2363 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_NOTEQUAL_in_precedenceEqualOperator2367 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LESSTHANOREQUALTO_in_precedenceEqualOperator2371 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LESSTHAN_in_precedenceEqualOperator2375 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GREATERTHANOREQUALTO_in_precedenceEqualOperator2379 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_GREATERTHAN_in_precedenceEqualOperator2383 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2407 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_KW_NOT_in_precedenceEqualExpression2429 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x4000000000000080L,0x0000000000000020L});
+	public static final BitSet FOLLOW_precedenceEqualNegatableOperator_in_precedenceEqualExpression2431 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2435 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_precedenceEqualOperator_in_precedenceEqualExpression2468 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2472 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_KW_NOT_in_precedenceEqualExpression2501 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0004000000000000L});
+	public static final BitSet FOLLOW_KW_IN_in_precedenceEqualExpression2503 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_expressions_in_precedenceEqualExpression2505 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_KW_IN_in_precedenceEqualExpression2539 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_expressions_in_precedenceEqualExpression2541 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_KW_NOT_in_precedenceEqualExpression2572 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000040000000L});
+	public static final BitSet FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2574 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2579 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_KW_AND_in_precedenceEqualExpression2582 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2587 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_KW_BETWEEN_in_precedenceEqualExpression2627 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2632 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_KW_AND_in_precedenceEqualExpression2635 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceBitwiseOrExpression_in_precedenceEqualExpression2640 = new BitSet(new long[]{0x0000000063000002L,0x0000000000000000L,0x0000000040000000L,0x0004000000000000L,0x4000000002000080L,0x0000000000000020L,0x0000000000100300L});
+	public static final BitSet FOLLOW_LPAREN_in_expressions2698 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_expressions2700 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_expressions2703 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_expressions2705 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_expressions2709 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_NOT_in_precedenceNotOperator2735 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceNotOperator_in_precedenceNotExpression2757 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceEqualExpression_in_precedenceNotExpression2762 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_AND_in_precedenceAndOperator2784 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceNotExpression_in_precedenceAndExpression2805 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_precedenceAndOperator_in_precedenceAndExpression2808 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceNotExpression_in_precedenceAndExpression2811 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_KW_OR_in_precedenceOrOperator2835 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_precedenceAndExpression_in_precedenceOrExpression2856 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_precedenceOrOperator_in_precedenceOrExpression2859 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_precedenceAndExpression_in_precedenceOrExpression2862 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000100000000L});
+	public static final BitSet FOLLOW_KW_TRUE_in_booleanValue2886 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_FALSE_in_booleanValue2891 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_tableName_in_tableOrPartition2911 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000040000000000L});
+	public static final BitSet FOLLOW_partitionSpec_in_tableOrPartition2913 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_PARTITION_in_partitionSpec2945 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_partitionSpec2952 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_partitionVal_in_partitionSpec2954 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_partitionSpec2957 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_partitionVal_in_partitionSpec2960 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_partitionSpec2965 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identifier_in_partitionVal2996 = new BitSet(new long[]{0x0000000001000002L});
+	public static final BitSet FOLLOW_EQUAL_in_partitionVal2999 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0x1000000000000000L,0x0000000008000000L,0x0000000000000000L,0x0000400000000000L,0x2000081800400000L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_constant_in_partitionVal3001 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_PARTITION_in_dropPartitionSpec3035 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_dropPartitionSpec3042 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_dropPartitionVal_in_dropPartitionSpec3044 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_dropPartitionSpec3047 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_dropPartitionVal_in_dropPartitionSpec3050 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_dropPartitionSpec3055 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identifier_in_dropPartitionVal3086 = new BitSet(new long[]{0x0000000061000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000100300L});
+	public static final BitSet FOLLOW_dropPartitionOperator_in_dropPartitionVal3088 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0x1000000000000000L,0x0000000008000000L,0x0000000000000000L,0x0000400000000000L,0x2000081800400000L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_constant_in_dropPartitionVal3090 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_sysFuncNames_in_descFuncNames3509 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_StringLiteral_in_descFuncNames3517 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identifier_in_descFuncNames3525 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_identifier3546 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_nonReserved_in_identifier3554 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_COMMA_in_synpred1_IdentifiersParser616 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_COMMA_in_synpred2_IdentifiersParser717 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_COMMA_in_synpred3_IdentifiersParser817 = new BitSet(new long[]{0x0000000000000002L});

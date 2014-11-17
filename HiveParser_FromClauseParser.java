@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 FromClauseParser.g 2014-10-31 18:14:08
+// $ANTLR 3.5.2 FromClauseParser.g 2014-11-15 16:34:32
 
 package parse;
 
@@ -36,567 +36,726 @@ import org.antlr.runtime.tree.*;
 public class HiveParser_FromClauseParser extends Parser {
 	public static final int EOF=-1;
 	public static final int AMPERSAND=4;
-	public static final int BITWISEOR=5;
-	public static final int BITWISEXOR=6;
-	public static final int BigintLiteral=7;
-	public static final int ByteLengthLiteral=8;
-	public static final int COLON=9;
-	public static final int COMMA=10;
-	public static final int COMMENT=11;
-	public static final int CharSetLiteral=12;
-	public static final int CharSetName=13;
-	public static final int DIV=14;
-	public static final int DIVIDE=15;
-	public static final int DOLLAR=16;
-	public static final int DOT=17;
-	public static final int DecimalLiteral=18;
-	public static final int Digit=19;
-	public static final int EQUAL=20;
-	public static final int EQUAL_NS=21;
-	public static final int Exponent=22;
-	public static final int GREATERTHAN=23;
-	public static final int GREATERTHANOREQUALTO=24;
-	public static final int HexDigit=25;
-	public static final int Identifier=26;
-	public static final int KW_ADD=27;
-	public static final int KW_AFTER=28;
-	public static final int KW_ALL=29;
-	public static final int KW_ALTER=30;
-	public static final int KW_ANALYZE=31;
-	public static final int KW_AND=32;
-	public static final int KW_ARCHIVE=33;
-	public static final int KW_ARRAY=34;
-	public static final int KW_AS=35;
-	public static final int KW_ASC=36;
-	public static final int KW_BEFORE=37;
-	public static final int KW_BETWEEN=38;
-	public static final int KW_BIGINT=39;
-	public static final int KW_BINARY=40;
-	public static final int KW_BOOLEAN=41;
-	public static final int KW_BOTH=42;
-	public static final int KW_BUCKET=43;
-	public static final int KW_BUCKETS=44;
-	public static final int KW_BY=45;
-	public static final int KW_CASCADE=46;
-	public static final int KW_CASE=47;
-	public static final int KW_CAST=48;
-	public static final int KW_CHANGE=49;
-	public static final int KW_CLUSTER=50;
-	public static final int KW_CLUSTERED=51;
-	public static final int KW_CLUSTERSTATUS=52;
-	public static final int KW_COLLECTION=53;
-	public static final int KW_COLUMN=54;
-	public static final int KW_COLUMNS=55;
-	public static final int KW_COMMENT=56;
-	public static final int KW_COMPUTE=57;
-	public static final int KW_CONCATENATE=58;
-	public static final int KW_CONTINUE=59;
-	public static final int KW_CREATE=60;
-	public static final int KW_CROSS=61;
-	public static final int KW_CUBE=62;
-	public static final int KW_CURRENT=63;
-	public static final int KW_CURSOR=64;
-	public static final int KW_DATA=65;
-	public static final int KW_DATABASE=66;
-	public static final int KW_DATABASES=67;
-	public static final int KW_DATE=68;
-	public static final int KW_DATETIME=69;
-	public static final int KW_DBPROPERTIES=70;
-	public static final int KW_DECIMAL=71;
-	public static final int KW_DEFERRED=72;
-	public static final int KW_DELETE=73;
-	public static final int KW_DELIMITED=74;
-	public static final int KW_DEPENDENCY=75;
-	public static final int KW_DESC=76;
-	public static final int KW_DESCRIBE=77;
-	public static final int KW_DIRECTORIES=78;
-	public static final int KW_DIRECTORY=79;
-	public static final int KW_DISABLE=80;
-	public static final int KW_DISTINCT=81;
-	public static final int KW_DISTRIBUTE=82;
-	public static final int KW_DOUBLE=83;
-	public static final int KW_DROP=84;
-	public static final int KW_ELEM_TYPE=85;
-	public static final int KW_ELSE=86;
-	public static final int KW_ENABLE=87;
-	public static final int KW_END=88;
-	public static final int KW_ESCAPED=89;
-	public static final int KW_EXCHANGE=90;
-	public static final int KW_EXCLUSIVE=91;
-	public static final int KW_EXISTS=92;
-	public static final int KW_EXPLAIN=93;
-	public static final int KW_EXPORT=94;
-	public static final int KW_EXTENDED=95;
-	public static final int KW_EXTERNAL=96;
-	public static final int KW_FALSE=97;
-	public static final int KW_FETCH=98;
-	public static final int KW_FIELDS=99;
-	public static final int KW_FILEFORMAT=100;
-	public static final int KW_FIRST=101;
-	public static final int KW_FLOAT=102;
-	public static final int KW_FOLLOWING=103;
-	public static final int KW_FOR=104;
-	public static final int KW_FORMAT=105;
-	public static final int KW_FORMATTED=106;
-	public static final int KW_FROM=107;
-	public static final int KW_FULL=108;
-	public static final int KW_FUNCTION=109;
-	public static final int KW_FUNCTIONS=110;
-	public static final int KW_GRANT=111;
-	public static final int KW_GROUP=112;
-	public static final int KW_GROUPING=113;
-	public static final int KW_HAVING=114;
-	public static final int KW_HOLD_DDLTIME=115;
-	public static final int KW_IDXPROPERTIES=116;
-	public static final int KW_IF=117;
-	public static final int KW_IGNORE=118;
-	public static final int KW_IMPORT=119;
-	public static final int KW_IN=120;
-	public static final int KW_INCRE=121;
-	public static final int KW_INDEX=122;
-	public static final int KW_INDEXES=123;
-	public static final int KW_INNER=124;
-	public static final int KW_INPATH=125;
-	public static final int KW_INPUTDRIVER=126;
-	public static final int KW_INPUTFORMAT=127;
-	public static final int KW_INSERT=128;
-	public static final int KW_INT=129;
-	public static final int KW_INTERSECT=130;
-	public static final int KW_INTO=131;
-	public static final int KW_IS=132;
-	public static final int KW_ITEMS=133;
-	public static final int KW_JOIN=134;
-	public static final int KW_KEYS=135;
-	public static final int KW_KEY_TYPE=136;
-	public static final int KW_LATERAL=137;
-	public static final int KW_LEFT=138;
-	public static final int KW_LESS=139;
-	public static final int KW_LIKE=140;
-	public static final int KW_LIMIT=141;
-	public static final int KW_LINES=142;
-	public static final int KW_LOAD=143;
-	public static final int KW_LOCAL=144;
-	public static final int KW_LOCATION=145;
-	public static final int KW_LOCK=146;
-	public static final int KW_LOCKS=147;
-	public static final int KW_LOGICAL=148;
-	public static final int KW_LONG=149;
-	public static final int KW_MACRO=150;
-	public static final int KW_MAP=151;
-	public static final int KW_MAPJOIN=152;
-	public static final int KW_MATERIALIZED=153;
-	public static final int KW_MINUS=154;
-	public static final int KW_MORE=155;
-	public static final int KW_MSCK=156;
-	public static final int KW_NOSCAN=157;
-	public static final int KW_NOT=158;
-	public static final int KW_NO_DROP=159;
-	public static final int KW_NULL=160;
-	public static final int KW_OF=161;
-	public static final int KW_OFFLINE=162;
-	public static final int KW_ON=163;
-	public static final int KW_OPTION=164;
-	public static final int KW_OR=165;
-	public static final int KW_ORCFILE=166;
-	public static final int KW_ORDER=167;
-	public static final int KW_OUT=168;
-	public static final int KW_OUTER=169;
-	public static final int KW_OUTPUTDRIVER=170;
-	public static final int KW_OUTPUTFORMAT=171;
-	public static final int KW_OVER=172;
-	public static final int KW_OVERWRITE=173;
-	public static final int KW_PARTIALSCAN=174;
-	public static final int KW_PARTITION=175;
-	public static final int KW_PARTITIONED=176;
-	public static final int KW_PARTITIONS=177;
-	public static final int KW_PERCENT=178;
-	public static final int KW_PLUS=179;
-	public static final int KW_PRECEDING=180;
-	public static final int KW_PRESERVE=181;
-	public static final int KW_PRETTY=182;
-	public static final int KW_PROCEDURE=183;
-	public static final int KW_PROTECTION=184;
-	public static final int KW_PURGE=185;
-	public static final int KW_RANGE=186;
-	public static final int KW_RCFILE=187;
-	public static final int KW_READ=188;
-	public static final int KW_READONLY=189;
-	public static final int KW_READS=190;
-	public static final int KW_REBUILD=191;
-	public static final int KW_RECORDREADER=192;
-	public static final int KW_RECORDWRITER=193;
-	public static final int KW_REDUCE=194;
-	public static final int KW_REGEXP=195;
-	public static final int KW_RENAME=196;
-	public static final int KW_REPAIR=197;
-	public static final int KW_REPLACE=198;
-	public static final int KW_RESTRICT=199;
-	public static final int KW_REVOKE=200;
-	public static final int KW_RIGHT=201;
-	public static final int KW_RLIKE=202;
-	public static final int KW_ROLE=203;
-	public static final int KW_ROLLUP=204;
-	public static final int KW_ROW=205;
-	public static final int KW_ROWS=206;
-	public static final int KW_SCHEMA=207;
-	public static final int KW_SCHEMAS=208;
-	public static final int KW_SELECT=209;
-	public static final int KW_SEMI=210;
-	public static final int KW_SEQUENCEFILE=211;
-	public static final int KW_SERDE=212;
-	public static final int KW_SERDEPROPERTIES=213;
-	public static final int KW_SET=214;
-	public static final int KW_SETS=215;
-	public static final int KW_SHARED=216;
-	public static final int KW_SHOW=217;
-	public static final int KW_SHOW_DATABASE=218;
-	public static final int KW_SKEWED=219;
-	public static final int KW_SMALLINT=220;
-	public static final int KW_SORT=221;
-	public static final int KW_SORTED=222;
-	public static final int KW_SSL=223;
-	public static final int KW_STATISTICS=224;
-	public static final int KW_STORED=225;
-	public static final int KW_STREAMTABLE=226;
-	public static final int KW_STRING=227;
-	public static final int KW_STRUCT=228;
-	public static final int KW_TABLE=229;
-	public static final int KW_TABLES=230;
-	public static final int KW_TABLESAMPLE=231;
-	public static final int KW_TBLPROPERTIES=232;
-	public static final int KW_TEMPORARY=233;
-	public static final int KW_TERMINATED=234;
-	public static final int KW_TEXTFILE=235;
-	public static final int KW_THEN=236;
-	public static final int KW_TIMESTAMP=237;
-	public static final int KW_TINYINT=238;
-	public static final int KW_TO=239;
-	public static final int KW_TOUCH=240;
-	public static final int KW_TRANSFORM=241;
-	public static final int KW_TRIGGER=242;
-	public static final int KW_TRUE=243;
-	public static final int KW_TRUNCATE=244;
-	public static final int KW_UNARCHIVE=245;
-	public static final int KW_UNBOUNDED=246;
-	public static final int KW_UNDO=247;
-	public static final int KW_UNION=248;
-	public static final int KW_UNIONTYPE=249;
-	public static final int KW_UNIQUEJOIN=250;
-	public static final int KW_UNLOCK=251;
-	public static final int KW_UNSET=252;
-	public static final int KW_UNSIGNED=253;
-	public static final int KW_UPDATE=254;
-	public static final int KW_USE=255;
-	public static final int KW_USER=256;
-	public static final int KW_USING=257;
-	public static final int KW_UTC=258;
-	public static final int KW_UTCTIMESTAMP=259;
-	public static final int KW_VALUE_TYPE=260;
-	public static final int KW_VARCHAR=261;
-	public static final int KW_VIEW=262;
-	public static final int KW_WHEN=263;
-	public static final int KW_WHERE=264;
-	public static final int KW_WHILE=265;
-	public static final int KW_WINDOW=266;
-	public static final int KW_WITH=267;
-	public static final int LCURLY=268;
-	public static final int LESSTHAN=269;
-	public static final int LESSTHANOREQUALTO=270;
-	public static final int LPAREN=271;
-	public static final int LSQUARE=272;
-	public static final int Letter=273;
-	public static final int MINUS=274;
-	public static final int MOD=275;
-	public static final int NOTEQUAL=276;
-	public static final int Number=277;
-	public static final int PLUS=278;
-	public static final int QUESTION=279;
-	public static final int RCURLY=280;
-	public static final int RPAREN=281;
-	public static final int RSQUARE=282;
-	public static final int RegexComponent=283;
-	public static final int SEMICOLON=284;
-	public static final int STAR=285;
-	public static final int SmallintLiteral=286;
-	public static final int StringLiteral=287;
-	public static final int TILDE=288;
-	public static final int TinyintLiteral=289;
-	public static final int WS=290;
-	public static final int TOK_ALIASLIST=554;
-	public static final int TOK_ALLCOLREF=555;
-	public static final int TOK_ALTERDATABASE_PROPERTIES=556;
-	public static final int TOK_ALTERINDEX_PROPERTIES=557;
-	public static final int TOK_ALTERINDEX_REBUILD=558;
-	public static final int TOK_ALTERTABLE_ADDCOLS=559;
-	public static final int TOK_ALTERTABLE_ADDPARTS=560;
-	public static final int TOK_ALTERTABLE_ALTERPARTS=561;
-	public static final int TOK_ALTERTABLE_ALTERPARTS_MERGEFILES=562;
-	public static final int TOK_ALTERTABLE_ALTERPARTS_PROTECTMODE=563;
-	public static final int TOK_ALTERTABLE_ARCHIVE=564;
-	public static final int TOK_ALTERTABLE_CHANGECOL_AFTER_POSITION=565;
-	public static final int TOK_ALTERTABLE_CLUSTER_SORT=566;
-	public static final int TOK_ALTERTABLE_DROPPARTS=567;
-	public static final int TOK_ALTERTABLE_FILEFORMAT=568;
-	public static final int TOK_ALTERTABLE_LOCATION=569;
-	public static final int TOK_ALTERTABLE_PARTITION=570;
-	public static final int TOK_ALTERTABLE_PROPERTIES=571;
-	public static final int TOK_ALTERTABLE_RENAME=572;
-	public static final int TOK_ALTERTABLE_RENAMECOL=573;
-	public static final int TOK_ALTERTABLE_RENAMEPART=574;
-	public static final int TOK_ALTERTABLE_REPLACECOLS=575;
-	public static final int TOK_ALTERTABLE_SERDEPROPERTIES=576;
-	public static final int TOK_ALTERTABLE_SERIALIZER=577;
-	public static final int TOK_ALTERTABLE_SKEWED=578;
-	public static final int TOK_ALTERTABLE_TOUCH=579;
-	public static final int TOK_ALTERTABLE_UNARCHIVE=580;
-	public static final int TOK_ALTERTBLPART_SKEWED_LOCATION=581;
-	public static final int TOK_ALTERVIEW_ADDPARTS=582;
-	public static final int TOK_ALTERVIEW_AS=583;
-	public static final int TOK_ALTERVIEW_DROPPARTS=584;
-	public static final int TOK_ALTERVIEW_PROPERTIES=585;
-	public static final int TOK_ALTERVIEW_RENAME=586;
-	public static final int TOK_ANALYZE=587;
-	public static final int TOK_BIGINT=588;
-	public static final int TOK_BINARY=589;
-	public static final int TOK_BOOLEAN=590;
-	public static final int TOK_CASCADE=591;
-	public static final int TOK_CHARSETLITERAL=592;
-	public static final int TOK_CLUSTERBY=593;
-	public static final int TOK_COLTYPELIST=594;
-	public static final int TOK_CREATEDATABASE=595;
-	public static final int TOK_CREATEFUNCTION=596;
-	public static final int TOK_CREATEINDEX=597;
-	public static final int TOK_CREATEINDEX_INDEXTBLNAME=598;
-	public static final int TOK_CREATEMACRO=599;
-	public static final int TOK_CREATEROLE=600;
-	public static final int TOK_CREATETABLE=601;
-	public static final int TOK_CREATEVIEW=602;
-	public static final int TOK_CROSSJOIN=603;
-	public static final int TOK_CUBE_GROUPBY=604;
-	public static final int TOK_DATABASECOMMENT=605;
-	public static final int TOK_DATABASELOCATION=606;
-	public static final int TOK_DATABASEPROPERTIES=607;
-	public static final int TOK_DATE=608;
-	public static final int TOK_DATELITERAL=609;
-	public static final int TOK_DATETIME=610;
-	public static final int TOK_DBPROPLIST=611;
-	public static final int TOK_DECIMAL=612;
-	public static final int TOK_DEFERRED_REBUILDINDEX=613;
-	public static final int TOK_DESCDATABASE=614;
-	public static final int TOK_DESCFUNCTION=615;
-	public static final int TOK_DESCTABLE=616;
-	public static final int TOK_DESTINATION=617;
-	public static final int TOK_DIR=618;
-	public static final int TOK_DISABLE=619;
-	public static final int TOK_DISTRIBUTEBY=620;
-	public static final int TOK_DOUBLE=621;
-	public static final int TOK_DROPDATABASE=622;
-	public static final int TOK_DROPFUNCTION=623;
-	public static final int TOK_DROPINDEX=624;
-	public static final int TOK_DROPMACRO=625;
-	public static final int TOK_DROPROLE=626;
-	public static final int TOK_DROPTABLE=627;
-	public static final int TOK_DROPTABLE_PROPERTIES=628;
-	public static final int TOK_DROPVIEW=629;
-	public static final int TOK_DROPVIEW_PROPERTIES=630;
-	public static final int TOK_ENABLE=631;
-	public static final int TOK_EXCHANGEPARTITION=632;
-	public static final int TOK_EXPLAIN=633;
-	public static final int TOK_EXPLIST=634;
-	public static final int TOK_EXPORT=635;
-	public static final int TOK_FALSE=636;
-	public static final int TOK_FILEFORMAT_GENERIC=637;
-	public static final int TOK_FLOAT=638;
-	public static final int TOK_FROM=639;
-	public static final int TOK_FULLOUTERJOIN=640;
-	public static final int TOK_FUNCTION=641;
-	public static final int TOK_FUNCTIONDI=642;
-	public static final int TOK_FUNCTIONSTAR=643;
-	public static final int TOK_GRANT=644;
-	public static final int TOK_GRANT_ROLE=645;
-	public static final int TOK_GRANT_WITH_OPTION=646;
-	public static final int TOK_GROUP=647;
-	public static final int TOK_GROUPBY=648;
-	public static final int TOK_GROUPING_SETS=649;
-	public static final int TOK_GROUPING_SETS_EXPRESSION=650;
-	public static final int TOK_HAVING=651;
-	public static final int TOK_HINT=652;
-	public static final int TOK_HINTARGLIST=653;
-	public static final int TOK_HINTLIST=654;
-	public static final int TOK_HOLD_DDLTIME=655;
-	public static final int TOK_IFEXISTS=656;
-	public static final int TOK_IFNOTEXISTS=657;
-	public static final int TOK_IGNOREPROTECTION=658;
-	public static final int TOK_IMPORT=659;
-	public static final int TOK_INCRE=660;
-	public static final int TOK_INDEXCOMMENT=661;
-	public static final int TOK_INDEXPROPERTIES=662;
-	public static final int TOK_INDEXPROPLIST=663;
-	public static final int TOK_INSERT=664;
-	public static final int TOK_INSERT_INTO=665;
-	public static final int TOK_INT=666;
-	public static final int TOK_ISNOTNULL=667;
-	public static final int TOK_ISNULL=668;
-	public static final int TOK_JOIN=669;
-	public static final int TOK_LATERAL_VIEW=670;
-	public static final int TOK_LATERAL_VIEW_OUTER=671;
-	public static final int TOK_LEFTOUTERJOIN=672;
-	public static final int TOK_LEFTSEMIJOIN=673;
-	public static final int TOK_LENGTH=674;
-	public static final int TOK_LIKETABLE=675;
-	public static final int TOK_LIMIT=676;
-	public static final int TOK_LIST=677;
-	public static final int TOK_LOAD=678;
-	public static final int TOK_LOCAL_DIR=679;
-	public static final int TOK_LOCKTABLE=680;
-	public static final int TOK_MAP=681;
-	public static final int TOK_MAPJOIN=682;
-	public static final int TOK_MSCK=683;
-	public static final int TOK_NOT_CLUSTERED=684;
-	public static final int TOK_NOT_SORTED=685;
-	public static final int TOK_NO_DROP=686;
-	public static final int TOK_NULL=687;
-	public static final int TOK_OFFLINE=688;
-	public static final int TOK_OP_ADD=689;
-	public static final int TOK_OP_AND=690;
-	public static final int TOK_OP_BITAND=691;
-	public static final int TOK_OP_BITNOT=692;
-	public static final int TOK_OP_BITOR=693;
-	public static final int TOK_OP_BITXOR=694;
-	public static final int TOK_OP_DIV=695;
-	public static final int TOK_OP_EQ=696;
-	public static final int TOK_OP_GE=697;
-	public static final int TOK_OP_GT=698;
-	public static final int TOK_OP_LE=699;
-	public static final int TOK_OP_LIKE=700;
-	public static final int TOK_OP_LT=701;
-	public static final int TOK_OP_MOD=702;
-	public static final int TOK_OP_MUL=703;
-	public static final int TOK_OP_NE=704;
-	public static final int TOK_OP_NOT=705;
-	public static final int TOK_OP_OR=706;
-	public static final int TOK_OP_SUB=707;
-	public static final int TOK_ORDERBY=708;
-	public static final int TOK_ORREPLACE=709;
-	public static final int TOK_PARTITIONINGSPEC=710;
-	public static final int TOK_PARTITIONLOCATION=711;
-	public static final int TOK_PARTSPEC=712;
-	public static final int TOK_PARTVAL=713;
-	public static final int TOK_PERCENT=714;
-	public static final int TOK_PRINCIPAL_NAME=715;
-	public static final int TOK_PRIVILEGE=716;
-	public static final int TOK_PRIVILEGE_LIST=717;
-	public static final int TOK_PRIV_ALL=718;
-	public static final int TOK_PRIV_ALTER_DATA=719;
-	public static final int TOK_PRIV_ALTER_METADATA=720;
-	public static final int TOK_PRIV_CREATE=721;
-	public static final int TOK_PRIV_DROP=722;
-	public static final int TOK_PRIV_INDEX=723;
-	public static final int TOK_PRIV_LOCK=724;
-	public static final int TOK_PRIV_OBJECT=725;
-	public static final int TOK_PRIV_OBJECT_COL=726;
-	public static final int TOK_PRIV_SELECT=727;
-	public static final int TOK_PRIV_SHOW_DATABASE=728;
-	public static final int TOK_PTBLFUNCTION=729;
-	public static final int TOK_QUERY=730;
-	public static final int TOK_READONLY=731;
-	public static final int TOK_RECORDREADER=732;
-	public static final int TOK_RECORDWRITER=733;
-	public static final int TOK_RESTRICT=734;
-	public static final int TOK_REVOKE=735;
-	public static final int TOK_REVOKE_ROLE=736;
-	public static final int TOK_RIGHTOUTERJOIN=737;
-	public static final int TOK_ROLE=738;
-	public static final int TOK_ROLLUP_GROUPBY=739;
-	public static final int TOK_ROWCOUNT=740;
-	public static final int TOK_SELECT=741;
-	public static final int TOK_SELECTDI=742;
-	public static final int TOK_SELEXPR=743;
-	public static final int TOK_SERDE=744;
-	public static final int TOK_SERDENAME=745;
-	public static final int TOK_SERDEPROPS=746;
-	public static final int TOK_SHOWCOLUMNS=747;
-	public static final int TOK_SHOWDATABASES=748;
-	public static final int TOK_SHOWFUNCTIONS=749;
-	public static final int TOK_SHOWINDEXES=750;
-	public static final int TOK_SHOWLOCKS=751;
-	public static final int TOK_SHOWPARTITIONS=752;
-	public static final int TOK_SHOWTABLES=753;
-	public static final int TOK_SHOW_CREATETABLE=754;
-	public static final int TOK_SHOW_GRANT=755;
-	public static final int TOK_SHOW_ROLE_GRANT=756;
-	public static final int TOK_SHOW_TABLESTATUS=757;
-	public static final int TOK_SHOW_TBLPROPERTIES=758;
-	public static final int TOK_SKEWED_LOCATIONS=759;
-	public static final int TOK_SKEWED_LOCATION_LIST=760;
-	public static final int TOK_SKEWED_LOCATION_MAP=761;
-	public static final int TOK_SMALLINT=762;
-	public static final int TOK_SORTBY=763;
-	public static final int TOK_STORAGEHANDLER=764;
-	public static final int TOK_STOREDASDIRS=765;
-	public static final int TOK_STREAMTABLE=766;
-	public static final int TOK_STRING=767;
-	public static final int TOK_STRINGLITERALSEQUENCE=768;
-	public static final int TOK_STRUCT=769;
-	public static final int TOK_SUBQUERY=770;
-	public static final int TOK_SWITCHDATABASE=771;
-	public static final int TOK_TAB=772;
-	public static final int TOK_TABALIAS=773;
-	public static final int TOK_TABCOL=774;
-	public static final int TOK_TABCOLLIST=775;
-	public static final int TOK_TABCOLNAME=776;
-	public static final int TOK_TABCOLVALUE=777;
-	public static final int TOK_TABCOLVALUES=778;
-	public static final int TOK_TABCOLVALUE_PAIR=779;
-	public static final int TOK_TABLEBUCKETS=780;
-	public static final int TOK_TABLEBUCKETSAMPLE=781;
-	public static final int TOK_TABLECOMMENT=782;
-	public static final int TOK_TABLEFILEFORMAT=783;
-	public static final int TOK_TABLELOCATION=784;
-	public static final int TOK_TABLEPARTCOLS=785;
-	public static final int TOK_TABLEPROPERTIES=786;
-	public static final int TOK_TABLEPROPERTY=787;
-	public static final int TOK_TABLEPROPLIST=788;
-	public static final int TOK_TABLEROWFORMAT=789;
-	public static final int TOK_TABLEROWFORMATCOLLITEMS=790;
-	public static final int TOK_TABLEROWFORMATFIELD=791;
-	public static final int TOK_TABLEROWFORMATLINES=792;
-	public static final int TOK_TABLEROWFORMATMAPKEYS=793;
-	public static final int TOK_TABLESERIALIZER=794;
-	public static final int TOK_TABLESKEWED=795;
-	public static final int TOK_TABLESPLITSAMPLE=796;
-	public static final int TOK_TABLE_OR_COL=797;
-	public static final int TOK_TABLE_PARTITION=798;
-	public static final int TOK_TABNAME=799;
-	public static final int TOK_TABREF=800;
-	public static final int TOK_TABSORTCOLNAMEASC=801;
-	public static final int TOK_TABSORTCOLNAMEDESC=802;
-	public static final int TOK_TABSRC=803;
-	public static final int TOK_TABTYPE=804;
-	public static final int TOK_TBLORCFILE=805;
-	public static final int TOK_TBLRCFILE=806;
-	public static final int TOK_TBLSEQUENCEFILE=807;
-	public static final int TOK_TBLTEXTFILE=808;
-	public static final int TOK_TIMESTAMP=809;
-	public static final int TOK_TINYINT=810;
-	public static final int TOK_TMP_FILE=811;
-	public static final int TOK_TRANSFORM=812;
-	public static final int TOK_TRUE=813;
-	public static final int TOK_TRUNCATETABLE=814;
-	public static final int TOK_UNION=815;
-	public static final int TOK_UNIONTYPE=816;
-	public static final int TOK_UNIQUEJOIN=817;
-	public static final int TOK_UNLOCKTABLE=818;
-	public static final int TOK_USER=819;
-	public static final int TOK_USERSCRIPTCOLNAMES=820;
-	public static final int TOK_USERSCRIPTCOLSCHEMA=821;
-	public static final int TOK_VARCHAR=822;
-	public static final int TOK_VIEWPARTCOLS=823;
-	public static final int TOK_WHERE=824;
-	public static final int TOK_WINDOWDEF=825;
-	public static final int TOK_WINDOWRANGE=826;
-	public static final int TOK_WINDOWSPEC=827;
-	public static final int TOK_WINDOWVALUES=828;
+	public static final int APRIL=5;
+	public static final int AUGUST=6;
+	public static final int BITWISEOR=7;
+	public static final int BITWISEXOR=8;
+	public static final int BigintLiteral=9;
+	public static final int ByteLengthLiteral=10;
+	public static final int COLON=11;
+	public static final int COMMA=12;
+	public static final int COMMENT=13;
+	public static final int CharSetLiteral=14;
+	public static final int CharSetName=15;
+	public static final int DAY=16;
+	public static final int DECEMBER=17;
+	public static final int DIV=18;
+	public static final int DIVIDE=19;
+	public static final int DOLLAR=20;
+	public static final int DOT=21;
+	public static final int DecimalLiteral=22;
+	public static final int Digit=23;
+	public static final int EQUAL=24;
+	public static final int EQUAL_NS=25;
+	public static final int Exponent=26;
+	public static final int FEBRUARY=27;
+	public static final int FRIDAY=28;
+	public static final int GREATERTHAN=29;
+	public static final int GREATERTHANOREQUALTO=30;
+	public static final int HOUR=31;
+	public static final int HexDigit=32;
+	public static final int INT_0=33;
+	public static final int INT_00=34;
+	public static final int INT_01=35;
+	public static final int INT_02=36;
+	public static final int INT_03=37;
+	public static final int INT_04=38;
+	public static final int INT_05=39;
+	public static final int INT_06=40;
+	public static final int INT_07=41;
+	public static final int INT_08=42;
+	public static final int INT_09=43;
+	public static final int INT_1=44;
+	public static final int INT_10=45;
+	public static final int INT_11=46;
+	public static final int INT_12=47;
+	public static final int INT_13=48;
+	public static final int INT_14=49;
+	public static final int INT_15=50;
+	public static final int INT_16=51;
+	public static final int INT_17=52;
+	public static final int INT_18=53;
+	public static final int INT_19=54;
+	public static final int INT_2=55;
+	public static final int INT_20=56;
+	public static final int INT_21=57;
+	public static final int INT_22=58;
+	public static final int INT_23=59;
+	public static final int INT_24=60;
+	public static final int INT_25=61;
+	public static final int INT_26=62;
+	public static final int INT_27=63;
+	public static final int INT_28=64;
+	public static final int INT_29=65;
+	public static final int INT_3=66;
+	public static final int INT_30=67;
+	public static final int INT_31=68;
+	public static final int INT_32=69;
+	public static final int INT_33=70;
+	public static final int INT_34=71;
+	public static final int INT_35=72;
+	public static final int INT_36=73;
+	public static final int INT_37=74;
+	public static final int INT_38=75;
+	public static final int INT_39=76;
+	public static final int INT_4=77;
+	public static final int INT_40=78;
+	public static final int INT_41=79;
+	public static final int INT_42=80;
+	public static final int INT_43=81;
+	public static final int INT_44=82;
+	public static final int INT_45=83;
+	public static final int INT_46=84;
+	public static final int INT_47=85;
+	public static final int INT_48=86;
+	public static final int INT_49=87;
+	public static final int INT_5=88;
+	public static final int INT_50=89;
+	public static final int INT_51=90;
+	public static final int INT_52=91;
+	public static final int INT_53=92;
+	public static final int INT_54=93;
+	public static final int INT_55=94;
+	public static final int INT_56=95;
+	public static final int INT_57=96;
+	public static final int INT_58=97;
+	public static final int INT_59=98;
+	public static final int INT_6=99;
+	public static final int INT_60=100;
+	public static final int INT_61=101;
+	public static final int INT_62=102;
+	public static final int INT_63=103;
+	public static final int INT_64=104;
+	public static final int INT_65=105;
+	public static final int INT_66=106;
+	public static final int INT_67=107;
+	public static final int INT_68=108;
+	public static final int INT_69=109;
+	public static final int INT_7=110;
+	public static final int INT_70=111;
+	public static final int INT_71=112;
+	public static final int INT_72=113;
+	public static final int INT_73=114;
+	public static final int INT_74=115;
+	public static final int INT_75=116;
+	public static final int INT_76=117;
+	public static final int INT_77=118;
+	public static final int INT_78=119;
+	public static final int INT_79=120;
+	public static final int INT_8=121;
+	public static final int INT_80=122;
+	public static final int INT_81=123;
+	public static final int INT_82=124;
+	public static final int INT_83=125;
+	public static final int INT_84=126;
+	public static final int INT_85=127;
+	public static final int INT_86=128;
+	public static final int INT_87=129;
+	public static final int INT_88=130;
+	public static final int INT_89=131;
+	public static final int INT_9=132;
+	public static final int INT_90=133;
+	public static final int INT_91=134;
+	public static final int INT_92=135;
+	public static final int INT_93=136;
+	public static final int INT_94=137;
+	public static final int INT_95=138;
+	public static final int INT_96=139;
+	public static final int INT_97=140;
+	public static final int INT_98=141;
+	public static final int INT_99=142;
+	public static final int Identifier=143;
+	public static final int JANUARY=144;
+	public static final int JULY=145;
+	public static final int JUNE=146;
+	public static final int KW_ADD=147;
+	public static final int KW_AFTER=148;
+	public static final int KW_ALL=149;
+	public static final int KW_ALTER=150;
+	public static final int KW_ANALYZE=151;
+	public static final int KW_AND=152;
+	public static final int KW_ARCHIVE=153;
+	public static final int KW_ARRAY=154;
+	public static final int KW_AS=155;
+	public static final int KW_ASC=156;
+	public static final int KW_BEFORE=157;
+	public static final int KW_BETWEEN=158;
+	public static final int KW_BIGINT=159;
+	public static final int KW_BINARY=160;
+	public static final int KW_BOOLEAN=161;
+	public static final int KW_BOTH=162;
+	public static final int KW_BUCKET=163;
+	public static final int KW_BUCKETS=164;
+	public static final int KW_BY=165;
+	public static final int KW_CASCADE=166;
+	public static final int KW_CASE=167;
+	public static final int KW_CAST=168;
+	public static final int KW_CHANGE=169;
+	public static final int KW_CLUSTER=170;
+	public static final int KW_CLUSTERED=171;
+	public static final int KW_CLUSTERSTATUS=172;
+	public static final int KW_COLLECTION=173;
+	public static final int KW_COLUMN=174;
+	public static final int KW_COLUMNS=175;
+	public static final int KW_COMMENT=176;
+	public static final int KW_COMPUTE=177;
+	public static final int KW_CONCATENATE=178;
+	public static final int KW_CONTINUE=179;
+	public static final int KW_CREATE=180;
+	public static final int KW_CROSS=181;
+	public static final int KW_CUBE=182;
+	public static final int KW_CURRENT=183;
+	public static final int KW_CURSOR=184;
+	public static final int KW_DATA=185;
+	public static final int KW_DATABASE=186;
+	public static final int KW_DATABASES=187;
+	public static final int KW_DATE=188;
+	public static final int KW_DATETIME=189;
+	public static final int KW_DBPROPERTIES=190;
+	public static final int KW_DECIMAL=191;
+	public static final int KW_DEFERRED=192;
+	public static final int KW_DELETE=193;
+	public static final int KW_DELIMITED=194;
+	public static final int KW_DEPENDENCY=195;
+	public static final int KW_DESC=196;
+	public static final int KW_DESCRIBE=197;
+	public static final int KW_DIRECTORIES=198;
+	public static final int KW_DIRECTORY=199;
+	public static final int KW_DISABLE=200;
+	public static final int KW_DISTINCT=201;
+	public static final int KW_DISTRIBUTE=202;
+	public static final int KW_DOUBLE=203;
+	public static final int KW_DROP=204;
+	public static final int KW_DURING=205;
+	public static final int KW_EACH=206;
+	public static final int KW_ELEM_TYPE=207;
+	public static final int KW_ELSE=208;
+	public static final int KW_ENABLE=209;
+	public static final int KW_END=210;
+	public static final int KW_ESCAPED=211;
+	public static final int KW_EXCHANGE=212;
+	public static final int KW_EXCLUSIVE=213;
+	public static final int KW_EXISTS=214;
+	public static final int KW_EXPLAIN=215;
+	public static final int KW_EXPORT=216;
+	public static final int KW_EXTENDED=217;
+	public static final int KW_EXTERNAL=218;
+	public static final int KW_FALSE=219;
+	public static final int KW_FETCH=220;
+	public static final int KW_FIELDS=221;
+	public static final int KW_FILEFORMAT=222;
+	public static final int KW_FIRST=223;
+	public static final int KW_FLOAT=224;
+	public static final int KW_FOLLOWING=225;
+	public static final int KW_FOR=226;
+	public static final int KW_FORMAT=227;
+	public static final int KW_FORMATTED=228;
+	public static final int KW_FROM=229;
+	public static final int KW_FULL=230;
+	public static final int KW_FUNCTION=231;
+	public static final int KW_FUNCTIONS=232;
+	public static final int KW_GRANT=233;
+	public static final int KW_GROUP=234;
+	public static final int KW_GROUPING=235;
+	public static final int KW_HAVING=236;
+	public static final int KW_HOLD_DDLTIME=237;
+	public static final int KW_IDXPROPERTIES=238;
+	public static final int KW_IF=239;
+	public static final int KW_IGNORE=240;
+	public static final int KW_IMPORT=241;
+	public static final int KW_IN=242;
+	public static final int KW_INCRE=243;
+	public static final int KW_INCREFREQUENCY=244;
+	public static final int KW_INDEX=245;
+	public static final int KW_INDEXES=246;
+	public static final int KW_INNER=247;
+	public static final int KW_INPATH=248;
+	public static final int KW_INPUTDRIVER=249;
+	public static final int KW_INPUTFORMAT=250;
+	public static final int KW_INSERT=251;
+	public static final int KW_INT=252;
+	public static final int KW_INTERSECT=253;
+	public static final int KW_INTO=254;
+	public static final int KW_IS=255;
+	public static final int KW_ITEMS=256;
+	public static final int KW_JOIN=257;
+	public static final int KW_KEYS=258;
+	public static final int KW_KEY_TYPE=259;
+	public static final int KW_LATERAL=260;
+	public static final int KW_LEFT=261;
+	public static final int KW_LESS=262;
+	public static final int KW_LIKE=263;
+	public static final int KW_LIMIT=264;
+	public static final int KW_LINES=265;
+	public static final int KW_LOAD=266;
+	public static final int KW_LOCAL=267;
+	public static final int KW_LOCATION=268;
+	public static final int KW_LOCK=269;
+	public static final int KW_LOCKS=270;
+	public static final int KW_LOGICAL=271;
+	public static final int KW_LONG=272;
+	public static final int KW_MACRO=273;
+	public static final int KW_MAP=274;
+	public static final int KW_MAPJOIN=275;
+	public static final int KW_MATERIALIZED=276;
+	public static final int KW_MINUS=277;
+	public static final int KW_MORE=278;
+	public static final int KW_MSCK=279;
+	public static final int KW_NOSCAN=280;
+	public static final int KW_NOT=281;
+	public static final int KW_NO_DROP=282;
+	public static final int KW_NULL=283;
+	public static final int KW_OF=284;
+	public static final int KW_OFFLINE=285;
+	public static final int KW_ON=286;
+	public static final int KW_OPTION=287;
+	public static final int KW_OR=288;
+	public static final int KW_ORCFILE=289;
+	public static final int KW_ORDER=290;
+	public static final int KW_OUT=291;
+	public static final int KW_OUTER=292;
+	public static final int KW_OUTPUTDRIVER=293;
+	public static final int KW_OUTPUTFORMAT=294;
+	public static final int KW_OVER=295;
+	public static final int KW_OVERWRITE=296;
+	public static final int KW_PARTIALSCAN=297;
+	public static final int KW_PARTITION=298;
+	public static final int KW_PARTITIONED=299;
+	public static final int KW_PARTITIONS=300;
+	public static final int KW_PERCENT=301;
+	public static final int KW_PLUS=302;
+	public static final int KW_PRECEDING=303;
+	public static final int KW_PRESERVE=304;
+	public static final int KW_PRETTY=305;
+	public static final int KW_PROCEDURE=306;
+	public static final int KW_PROTECTION=307;
+	public static final int KW_PURGE=308;
+	public static final int KW_RANGE=309;
+	public static final int KW_RCFILE=310;
+	public static final int KW_READ=311;
+	public static final int KW_READONLY=312;
+	public static final int KW_READS=313;
+	public static final int KW_REBUILD=314;
+	public static final int KW_RECORDREADER=315;
+	public static final int KW_RECORDWRITER=316;
+	public static final int KW_REDUCE=317;
+	public static final int KW_REGEXP=318;
+	public static final int KW_RENAME=319;
+	public static final int KW_REPAIR=320;
+	public static final int KW_REPLACE=321;
+	public static final int KW_RESTRICT=322;
+	public static final int KW_REVOKE=323;
+	public static final int KW_RIGHT=324;
+	public static final int KW_RLIKE=325;
+	public static final int KW_ROLE=326;
+	public static final int KW_ROLLUP=327;
+	public static final int KW_ROW=328;
+	public static final int KW_ROWS=329;
+	public static final int KW_SCHEMA=330;
+	public static final int KW_SCHEMAS=331;
+	public static final int KW_SELECT=332;
+	public static final int KW_SEMI=333;
+	public static final int KW_SEQUENCEFILE=334;
+	public static final int KW_SERDE=335;
+	public static final int KW_SERDEPROPERTIES=336;
+	public static final int KW_SET=337;
+	public static final int KW_SETS=338;
+	public static final int KW_SHARED=339;
+	public static final int KW_SHOW=340;
+	public static final int KW_SHOW_DATABASE=341;
+	public static final int KW_SKEWED=342;
+	public static final int KW_SMALLINT=343;
+	public static final int KW_SORT=344;
+	public static final int KW_SORTED=345;
+	public static final int KW_SSL=346;
+	public static final int KW_STATISTICS=347;
+	public static final int KW_STORED=348;
+	public static final int KW_STREAMTABLE=349;
+	public static final int KW_STRING=350;
+	public static final int KW_STRUCT=351;
+	public static final int KW_TABLE=352;
+	public static final int KW_TABLES=353;
+	public static final int KW_TABLESAMPLE=354;
+	public static final int KW_TBLPROPERTIES=355;
+	public static final int KW_TEMPORARY=356;
+	public static final int KW_TERMINATED=357;
+	public static final int KW_TEXTFILE=358;
+	public static final int KW_THEN=359;
+	public static final int KW_TIMESTAMP=360;
+	public static final int KW_TINYINT=361;
+	public static final int KW_TO=362;
+	public static final int KW_TOUCH=363;
+	public static final int KW_TRANSFORM=364;
+	public static final int KW_TRIGGER=365;
+	public static final int KW_TRUE=366;
+	public static final int KW_TRUNCATE=367;
+	public static final int KW_UNARCHIVE=368;
+	public static final int KW_UNBOUNDED=369;
+	public static final int KW_UNDO=370;
+	public static final int KW_UNION=371;
+	public static final int KW_UNIONTYPE=372;
+	public static final int KW_UNIQUEJOIN=373;
+	public static final int KW_UNLOCK=374;
+	public static final int KW_UNSET=375;
+	public static final int KW_UNSIGNED=376;
+	public static final int KW_UPDATE=377;
+	public static final int KW_USE=378;
+	public static final int KW_USER=379;
+	public static final int KW_USING=380;
+	public static final int KW_UTC=381;
+	public static final int KW_UTCTIMESTAMP=382;
+	public static final int KW_VALUE_TYPE=383;
+	public static final int KW_VARCHAR=384;
+	public static final int KW_VIEW=385;
+	public static final int KW_WHEN=386;
+	public static final int KW_WHERE=387;
+	public static final int KW_WHILE=388;
+	public static final int KW_WINDOW=389;
+	public static final int KW_WITH=390;
+	public static final int LCURLY=391;
+	public static final int LESSTHAN=392;
+	public static final int LESSTHANOREQUALTO=393;
+	public static final int LPAREN=394;
+	public static final int LSQUARE=395;
+	public static final int Letter=396;
+	public static final int MARCH=397;
+	public static final int MAY=398;
+	public static final int MINUS=399;
+	public static final int MINUTE=400;
+	public static final int MOD=401;
+	public static final int MONDAY=402;
+	public static final int MONTH=403;
+	public static final int NOTEQUAL=404;
+	public static final int NOVEMBER=405;
+	public static final int Number=406;
+	public static final int OCTOBER=407;
+	public static final int PLUS=408;
+	public static final int QUESTION=409;
+	public static final int RCURLY=410;
+	public static final int RPAREN=411;
+	public static final int RSQUARE=412;
+	public static final int RegexComponent=413;
+	public static final int SATURDAY=414;
+	public static final int SEMICOLON=415;
+	public static final int SEPTEMBER=416;
+	public static final int STAR=417;
+	public static final int SUNDAY=418;
+	public static final int SmallintLiteral=419;
+	public static final int StringLiteral=420;
+	public static final int THURSDAY=421;
+	public static final int TILDE=422;
+	public static final int TODAY=423;
+	public static final int TOMORROW=424;
+	public static final int TONIGHT=425;
+	public static final int TUESDAY=426;
+	public static final int TinyintLiteral=427;
+	public static final int WEDNESDAY=428;
+	public static final int WEEK=429;
+	public static final int WS=430;
+	public static final int YEAR=431;
+	public static final int YESTERDAY=432;
+	public static final int Day=445;
+	public static final int Hour=451;
+	public static final int INT=452;
+	public static final int Minute=804;
+	public static final int Month=805;
+	public static final int Second=812;
+	public static final int TOK_ALIASLIST=816;
+	public static final int TOK_ALLCOLREF=817;
+	public static final int TOK_ALTERDATABASE_PROPERTIES=818;
+	public static final int TOK_ALTERINDEX_PROPERTIES=819;
+	public static final int TOK_ALTERINDEX_REBUILD=820;
+	public static final int TOK_ALTERTABLE_ADDCOLS=821;
+	public static final int TOK_ALTERTABLE_ADDPARTS=822;
+	public static final int TOK_ALTERTABLE_ALTERPARTS=823;
+	public static final int TOK_ALTERTABLE_ALTERPARTS_MERGEFILES=824;
+	public static final int TOK_ALTERTABLE_ALTERPARTS_PROTECTMODE=825;
+	public static final int TOK_ALTERTABLE_ARCHIVE=826;
+	public static final int TOK_ALTERTABLE_CHANGECOL_AFTER_POSITION=827;
+	public static final int TOK_ALTERTABLE_CLUSTER_SORT=828;
+	public static final int TOK_ALTERTABLE_DROPPARTS=829;
+	public static final int TOK_ALTERTABLE_FILEFORMAT=830;
+	public static final int TOK_ALTERTABLE_LOCATION=831;
+	public static final int TOK_ALTERTABLE_PARTITION=832;
+	public static final int TOK_ALTERTABLE_PROPERTIES=833;
+	public static final int TOK_ALTERTABLE_RENAME=834;
+	public static final int TOK_ALTERTABLE_RENAMECOL=835;
+	public static final int TOK_ALTERTABLE_RENAMEPART=836;
+	public static final int TOK_ALTERTABLE_REPLACECOLS=837;
+	public static final int TOK_ALTERTABLE_SERDEPROPERTIES=838;
+	public static final int TOK_ALTERTABLE_SERIALIZER=839;
+	public static final int TOK_ALTERTABLE_SKEWED=840;
+	public static final int TOK_ALTERTABLE_TOUCH=841;
+	public static final int TOK_ALTERTABLE_UNARCHIVE=842;
+	public static final int TOK_ALTERTBLPART_SKEWED_LOCATION=843;
+	public static final int TOK_ALTERVIEW_ADDPARTS=844;
+	public static final int TOK_ALTERVIEW_AS=845;
+	public static final int TOK_ALTERVIEW_DROPPARTS=846;
+	public static final int TOK_ALTERVIEW_PROPERTIES=847;
+	public static final int TOK_ALTERVIEW_RENAME=848;
+	public static final int TOK_ANALYZE=849;
+	public static final int TOK_BIGINT=850;
+	public static final int TOK_BINARY=851;
+	public static final int TOK_BOOLEAN=852;
+	public static final int TOK_CASCADE=853;
+	public static final int TOK_CHARSETLITERAL=854;
+	public static final int TOK_CLUSTERBY=855;
+	public static final int TOK_COLTYPELIST=856;
+	public static final int TOK_CREATEDATABASE=857;
+	public static final int TOK_CREATEFUNCTION=858;
+	public static final int TOK_CREATEINDEX=859;
+	public static final int TOK_CREATEINDEX_INDEXTBLNAME=860;
+	public static final int TOK_CREATEMACRO=861;
+	public static final int TOK_CREATEROLE=862;
+	public static final int TOK_CREATETABLE=863;
+	public static final int TOK_CREATEVIEW=864;
+	public static final int TOK_CROSSJOIN=865;
+	public static final int TOK_CUBE_GROUPBY=866;
+	public static final int TOK_DATABASECOMMENT=867;
+	public static final int TOK_DATABASELOCATION=868;
+	public static final int TOK_DATABASEPROPERTIES=869;
+	public static final int TOK_DATE=870;
+	public static final int TOK_DATELITERAL=871;
+	public static final int TOK_DATETIME=872;
+	public static final int TOK_DAY=873;
+	public static final int TOK_DBPROPLIST=874;
+	public static final int TOK_DECIMAL=875;
+	public static final int TOK_DEFERRED_REBUILDINDEX=876;
+	public static final int TOK_DESCDATABASE=877;
+	public static final int TOK_DESCFUNCTION=878;
+	public static final int TOK_DESCTABLE=879;
+	public static final int TOK_DESTINATION=880;
+	public static final int TOK_DIR=881;
+	public static final int TOK_DISABLE=882;
+	public static final int TOK_DISTRIBUTEBY=883;
+	public static final int TOK_DOUBLE=884;
+	public static final int TOK_DROPDATABASE=885;
+	public static final int TOK_DROPFUNCTION=886;
+	public static final int TOK_DROPINDEX=887;
+	public static final int TOK_DROPMACRO=888;
+	public static final int TOK_DROPROLE=889;
+	public static final int TOK_DROPTABLE=890;
+	public static final int TOK_DROPTABLE_PROPERTIES=891;
+	public static final int TOK_DROPVIEW=892;
+	public static final int TOK_DROPVIEW_PROPERTIES=893;
+	public static final int TOK_ENABLE=894;
+	public static final int TOK_EXCHANGEPARTITION=895;
+	public static final int TOK_EXPLAIN=896;
+	public static final int TOK_EXPLIST=897;
+	public static final int TOK_EXPORT=898;
+	public static final int TOK_FALSE=899;
+	public static final int TOK_FILEFORMAT_GENERIC=900;
+	public static final int TOK_FLOAT=901;
+	public static final int TOK_FROM=902;
+	public static final int TOK_FULLOUTERJOIN=903;
+	public static final int TOK_FUNCTION=904;
+	public static final int TOK_FUNCTIONDI=905;
+	public static final int TOK_FUNCTIONSTAR=906;
+	public static final int TOK_GRANT=907;
+	public static final int TOK_GRANT_ROLE=908;
+	public static final int TOK_GRANT_WITH_OPTION=909;
+	public static final int TOK_GROUP=910;
+	public static final int TOK_GROUPBY=911;
+	public static final int TOK_GROUPING_SETS=912;
+	public static final int TOK_GROUPING_SETS_EXPRESSION=913;
+	public static final int TOK_HAVING=914;
+	public static final int TOK_HINT=915;
+	public static final int TOK_HINTARGLIST=916;
+	public static final int TOK_HINTLIST=917;
+	public static final int TOK_HOLD_DDLTIME=918;
+	public static final int TOK_HOUR=919;
+	public static final int TOK_IFEXISTS=920;
+	public static final int TOK_IFNOTEXISTS=921;
+	public static final int TOK_IGNOREPROTECTION=922;
+	public static final int TOK_IMPORT=923;
+	public static final int TOK_INCRE=924;
+	public static final int TOK_INCREFREQUENCY=925;
+	public static final int TOK_INDEXCOMMENT=926;
+	public static final int TOK_INDEXPROPERTIES=927;
+	public static final int TOK_INDEXPROPLIST=928;
+	public static final int TOK_INSERT=929;
+	public static final int TOK_INSERT_INTO=930;
+	public static final int TOK_INT=931;
+	public static final int TOK_ISNOTNULL=932;
+	public static final int TOK_ISNULL=933;
+	public static final int TOK_JOIN=934;
+	public static final int TOK_LATERAL_VIEW=935;
+	public static final int TOK_LATERAL_VIEW_OUTER=936;
+	public static final int TOK_LEFTOUTERJOIN=937;
+	public static final int TOK_LEFTSEMIJOIN=938;
+	public static final int TOK_LENGTH=939;
+	public static final int TOK_LIKETABLE=940;
+	public static final int TOK_LIMIT=941;
+	public static final int TOK_LIST=942;
+	public static final int TOK_LOAD=943;
+	public static final int TOK_LOCAL_DIR=944;
+	public static final int TOK_LOCKTABLE=945;
+	public static final int TOK_MAP=946;
+	public static final int TOK_MAPJOIN=947;
+	public static final int TOK_MINUTE=948;
+	public static final int TOK_MONTH=949;
+	public static final int TOK_MSCK=950;
+	public static final int TOK_NOT_CLUSTERED=951;
+	public static final int TOK_NOT_SORTED=952;
+	public static final int TOK_NO_DROP=953;
+	public static final int TOK_NULL=954;
+	public static final int TOK_OFFLINE=955;
+	public static final int TOK_OP_ADD=956;
+	public static final int TOK_OP_AND=957;
+	public static final int TOK_OP_BITAND=958;
+	public static final int TOK_OP_BITNOT=959;
+	public static final int TOK_OP_BITOR=960;
+	public static final int TOK_OP_BITXOR=961;
+	public static final int TOK_OP_DIV=962;
+	public static final int TOK_OP_EQ=963;
+	public static final int TOK_OP_GE=964;
+	public static final int TOK_OP_GT=965;
+	public static final int TOK_OP_LE=966;
+	public static final int TOK_OP_LIKE=967;
+	public static final int TOK_OP_LT=968;
+	public static final int TOK_OP_MOD=969;
+	public static final int TOK_OP_MUL=970;
+	public static final int TOK_OP_NE=971;
+	public static final int TOK_OP_NOT=972;
+	public static final int TOK_OP_OR=973;
+	public static final int TOK_OP_SUB=974;
+	public static final int TOK_ORDERBY=975;
+	public static final int TOK_ORREPLACE=976;
+	public static final int TOK_PARTITIONINGSPEC=977;
+	public static final int TOK_PARTITIONLOCATION=978;
+	public static final int TOK_PARTSPEC=979;
+	public static final int TOK_PARTVAL=980;
+	public static final int TOK_PERCENT=981;
+	public static final int TOK_PRINCIPAL_NAME=982;
+	public static final int TOK_PRIVILEGE=983;
+	public static final int TOK_PRIVILEGE_LIST=984;
+	public static final int TOK_PRIV_ALL=985;
+	public static final int TOK_PRIV_ALTER_DATA=986;
+	public static final int TOK_PRIV_ALTER_METADATA=987;
+	public static final int TOK_PRIV_CREATE=988;
+	public static final int TOK_PRIV_DROP=989;
+	public static final int TOK_PRIV_INDEX=990;
+	public static final int TOK_PRIV_LOCK=991;
+	public static final int TOK_PRIV_OBJECT=992;
+	public static final int TOK_PRIV_OBJECT_COL=993;
+	public static final int TOK_PRIV_SELECT=994;
+	public static final int TOK_PRIV_SHOW_DATABASE=995;
+	public static final int TOK_PTBLFUNCTION=996;
+	public static final int TOK_QUERY=997;
+	public static final int TOK_READONLY=998;
+	public static final int TOK_RECORDREADER=999;
+	public static final int TOK_RECORDWRITER=1000;
+	public static final int TOK_RESTRICT=1001;
+	public static final int TOK_REVOKE=1002;
+	public static final int TOK_REVOKE_ROLE=1003;
+	public static final int TOK_RIGHTOUTERJOIN=1004;
+	public static final int TOK_ROLE=1005;
+	public static final int TOK_ROLLUP_GROUPBY=1006;
+	public static final int TOK_ROWCOUNT=1007;
+	public static final int TOK_SECOND=1008;
+	public static final int TOK_SELECT=1009;
+	public static final int TOK_SELECTDI=1010;
+	public static final int TOK_SELEXPR=1011;
+	public static final int TOK_SERDE=1012;
+	public static final int TOK_SERDENAME=1013;
+	public static final int TOK_SERDEPROPS=1014;
+	public static final int TOK_SHOWCOLUMNS=1015;
+	public static final int TOK_SHOWDATABASES=1016;
+	public static final int TOK_SHOWFUNCTIONS=1017;
+	public static final int TOK_SHOWINDEXES=1018;
+	public static final int TOK_SHOWLOCKS=1019;
+	public static final int TOK_SHOWPARTITIONS=1020;
+	public static final int TOK_SHOWTABLES=1021;
+	public static final int TOK_SHOW_CREATETABLE=1022;
+	public static final int TOK_SHOW_GRANT=1023;
+	public static final int TOK_SHOW_ROLE_GRANT=1024;
+	public static final int TOK_SHOW_TABLESTATUS=1025;
+	public static final int TOK_SHOW_TBLPROPERTIES=1026;
+	public static final int TOK_SKEWED_LOCATIONS=1027;
+	public static final int TOK_SKEWED_LOCATION_LIST=1028;
+	public static final int TOK_SKEWED_LOCATION_MAP=1029;
+	public static final int TOK_SMALLINT=1030;
+	public static final int TOK_SORTBY=1031;
+	public static final int TOK_STARTTIME=1032;
+	public static final int TOK_STOPTIME=1033;
+	public static final int TOK_STORAGEHANDLER=1034;
+	public static final int TOK_STOREDASDIRS=1035;
+	public static final int TOK_STREAMTABLE=1036;
+	public static final int TOK_STRING=1037;
+	public static final int TOK_STRINGLITERALSEQUENCE=1038;
+	public static final int TOK_STRUCT=1039;
+	public static final int TOK_SUBQUERY=1040;
+	public static final int TOK_SWITCHDATABASE=1041;
+	public static final int TOK_TAB=1042;
+	public static final int TOK_TABALIAS=1043;
+	public static final int TOK_TABCOL=1044;
+	public static final int TOK_TABCOLLIST=1045;
+	public static final int TOK_TABCOLNAME=1046;
+	public static final int TOK_TABCOLVALUE=1047;
+	public static final int TOK_TABCOLVALUES=1048;
+	public static final int TOK_TABCOLVALUE_PAIR=1049;
+	public static final int TOK_TABLEBUCKETS=1050;
+	public static final int TOK_TABLEBUCKETSAMPLE=1051;
+	public static final int TOK_TABLECOMMENT=1052;
+	public static final int TOK_TABLEFILEFORMAT=1053;
+	public static final int TOK_TABLELOCATION=1054;
+	public static final int TOK_TABLEPARTCOLS=1055;
+	public static final int TOK_TABLEPROPERTIES=1056;
+	public static final int TOK_TABLEPROPERTY=1057;
+	public static final int TOK_TABLEPROPLIST=1058;
+	public static final int TOK_TABLEROWFORMAT=1059;
+	public static final int TOK_TABLEROWFORMATCOLLITEMS=1060;
+	public static final int TOK_TABLEROWFORMATFIELD=1061;
+	public static final int TOK_TABLEROWFORMATLINES=1062;
+	public static final int TOK_TABLEROWFORMATMAPKEYS=1063;
+	public static final int TOK_TABLESERIALIZER=1064;
+	public static final int TOK_TABLESKEWED=1065;
+	public static final int TOK_TABLESPLITSAMPLE=1066;
+	public static final int TOK_TABLE_OR_COL=1067;
+	public static final int TOK_TABLE_PARTITION=1068;
+	public static final int TOK_TABNAME=1069;
+	public static final int TOK_TABREF=1070;
+	public static final int TOK_TABSORTCOLNAMEASC=1071;
+	public static final int TOK_TABSORTCOLNAMEDESC=1072;
+	public static final int TOK_TABSRC=1073;
+	public static final int TOK_TABTYPE=1074;
+	public static final int TOK_TBLORCFILE=1075;
+	public static final int TOK_TBLRCFILE=1076;
+	public static final int TOK_TBLSEQUENCEFILE=1077;
+	public static final int TOK_TBLTEXTFILE=1078;
+	public static final int TOK_TIME=1079;
+	public static final int TOK_TIMESTAMP=1080;
+	public static final int TOK_TINYINT=1081;
+	public static final int TOK_TMP_FILE=1082;
+	public static final int TOK_TRANSFORM=1083;
+	public static final int TOK_TRUE=1084;
+	public static final int TOK_TRUNCATETABLE=1085;
+	public static final int TOK_UNION=1086;
+	public static final int TOK_UNIONTYPE=1087;
+	public static final int TOK_UNIQUEJOIN=1088;
+	public static final int TOK_UNLOCKTABLE=1089;
+	public static final int TOK_USER=1090;
+	public static final int TOK_USERSCRIPTCOLNAMES=1091;
+	public static final int TOK_USERSCRIPTCOLSCHEMA=1092;
+	public static final int TOK_VARCHAR=1093;
+	public static final int TOK_VIEWPARTCOLS=1094;
+	public static final int TOK_WHERE=1095;
+	public static final int TOK_WINDOWDEF=1096;
+	public static final int TOK_WINDOWRANGE=1097;
+	public static final int TOK_WINDOWSPEC=1098;
+	public static final int TOK_WINDOWVALUES=1099;
+	public static final int TOK_YEAR=1100;
+	public static final int Year=1102;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -675,7 +834,7 @@ public class HiveParser_FromClauseParser extends Parser {
 			if ( (LA1_0==STAR) ) {
 				alt1=1;
 			}
-			else if ( ((LA1_0 >= Identifier && LA1_0 <= KW_AFTER)||(LA1_0 >= KW_ALTER && LA1_0 <= KW_ANALYZE)||(LA1_0 >= KW_ARCHIVE && LA1_0 <= KW_CASCADE)||(LA1_0 >= KW_CHANGE && LA1_0 <= KW_COLLECTION)||(LA1_0 >= KW_COLUMNS && LA1_0 <= KW_CREATE)||LA1_0==KW_CUBE||(LA1_0 >= KW_CURSOR && LA1_0 <= KW_DATA)||(LA1_0 >= KW_DATABASES && LA1_0 <= KW_DISABLE)||(LA1_0 >= KW_DISTRIBUTE && LA1_0 <= KW_ELEM_TYPE)||LA1_0==KW_ENABLE||LA1_0==KW_ESCAPED||(LA1_0 >= KW_EXCLUSIVE && LA1_0 <= KW_EXPORT)||(LA1_0 >= KW_EXTERNAL && LA1_0 <= KW_FLOAT)||(LA1_0 >= KW_FOR && LA1_0 <= KW_FORMATTED)||LA1_0==KW_FULL||(LA1_0 >= KW_FUNCTIONS && LA1_0 <= KW_GROUPING)||(LA1_0 >= KW_HOLD_DDLTIME && LA1_0 <= KW_IDXPROPERTIES)||(LA1_0 >= KW_IGNORE && LA1_0 <= KW_ITEMS)||(LA1_0 >= KW_KEYS && LA1_0 <= KW_LEFT)||(LA1_0 >= KW_LIKE && LA1_0 <= KW_LONG)||(LA1_0 >= KW_MAPJOIN && LA1_0 <= KW_MINUS)||(LA1_0 >= KW_MSCK && LA1_0 <= KW_NOSCAN)||(LA1_0 >= KW_NO_DROP && LA1_0 <= KW_OFFLINE)||LA1_0==KW_OPTION||(LA1_0 >= KW_ORCFILE && LA1_0 <= KW_OUTPUTFORMAT)||LA1_0==KW_OVERWRITE||(LA1_0 >= KW_PARTITION && LA1_0 <= KW_PLUS)||(LA1_0 >= KW_PRETTY && LA1_0 <= KW_RECORDWRITER)||(LA1_0 >= KW_REGEXP && LA1_0 <= KW_SCHEMAS)||(LA1_0 >= KW_SEMI && LA1_0 <= KW_TABLES)||(LA1_0 >= KW_TBLPROPERTIES && LA1_0 <= KW_TEXTFILE)||(LA1_0 >= KW_TIMESTAMP && LA1_0 <= KW_TOUCH)||(LA1_0 >= KW_TRIGGER && LA1_0 <= KW_UNARCHIVE)||(LA1_0 >= KW_UNDO && LA1_0 <= KW_UNIONTYPE)||(LA1_0 >= KW_UNLOCK && LA1_0 <= KW_VALUE_TYPE)||LA1_0==KW_VIEW||LA1_0==KW_WHILE||LA1_0==KW_WITH) ) {
+			else if ( (LA1_0==Identifier||(LA1_0 >= KW_ADD && LA1_0 <= KW_AFTER)||(LA1_0 >= KW_ALTER && LA1_0 <= KW_ANALYZE)||(LA1_0 >= KW_ARCHIVE && LA1_0 <= KW_CASCADE)||(LA1_0 >= KW_CHANGE && LA1_0 <= KW_COLLECTION)||(LA1_0 >= KW_COLUMNS && LA1_0 <= KW_CREATE)||LA1_0==KW_CUBE||(LA1_0 >= KW_CURSOR && LA1_0 <= KW_DATA)||(LA1_0 >= KW_DATABASES && LA1_0 <= KW_DISABLE)||(LA1_0 >= KW_DISTRIBUTE && LA1_0 <= KW_DROP)||LA1_0==KW_ELEM_TYPE||LA1_0==KW_ENABLE||LA1_0==KW_ESCAPED||(LA1_0 >= KW_EXCLUSIVE && LA1_0 <= KW_EXPORT)||(LA1_0 >= KW_EXTERNAL && LA1_0 <= KW_FLOAT)||(LA1_0 >= KW_FOR && LA1_0 <= KW_FORMATTED)||LA1_0==KW_FULL||(LA1_0 >= KW_FUNCTIONS && LA1_0 <= KW_GROUPING)||(LA1_0 >= KW_HOLD_DDLTIME && LA1_0 <= KW_IDXPROPERTIES)||(LA1_0 >= KW_IGNORE && LA1_0 <= KW_INCRE)||(LA1_0 >= KW_INDEX && LA1_0 <= KW_ITEMS)||(LA1_0 >= KW_KEYS && LA1_0 <= KW_LEFT)||(LA1_0 >= KW_LIKE && LA1_0 <= KW_LONG)||(LA1_0 >= KW_MAPJOIN && LA1_0 <= KW_MINUS)||(LA1_0 >= KW_MSCK && LA1_0 <= KW_NOSCAN)||(LA1_0 >= KW_NO_DROP && LA1_0 <= KW_OFFLINE)||LA1_0==KW_OPTION||(LA1_0 >= KW_ORCFILE && LA1_0 <= KW_OUTPUTFORMAT)||LA1_0==KW_OVERWRITE||(LA1_0 >= KW_PARTITION && LA1_0 <= KW_PLUS)||(LA1_0 >= KW_PRETTY && LA1_0 <= KW_RECORDWRITER)||(LA1_0 >= KW_REGEXP && LA1_0 <= KW_SCHEMAS)||(LA1_0 >= KW_SEMI && LA1_0 <= KW_TABLES)||(LA1_0 >= KW_TBLPROPERTIES && LA1_0 <= KW_TEXTFILE)||(LA1_0 >= KW_TIMESTAMP && LA1_0 <= KW_TOUCH)||(LA1_0 >= KW_TRIGGER && LA1_0 <= KW_UNARCHIVE)||(LA1_0 >= KW_UNDO && LA1_0 <= KW_UNIONTYPE)||(LA1_0 >= KW_UNLOCK && LA1_0 <= KW_VALUE_TYPE)||LA1_0==KW_VIEW||LA1_0==KW_WHILE||LA1_0==KW_WITH) ) {
 				alt1=2;
 			}
 
@@ -1227,7 +1386,7 @@ public class HiveParser_FromClauseParser extends Parser {
 			// FromClauseParser.g:89:5: ( fromSource ( joinToken ^ fromSource ( KW_ON ! expression )? )* | uniqueJoinToken ^ uniqueJoinSource ( COMMA ! uniqueJoinSource )+ )
 			int alt7=2;
 			int LA7_0 = input.LA(1);
-			if ( ((LA7_0 >= Identifier && LA7_0 <= KW_AFTER)||(LA7_0 >= KW_ALTER && LA7_0 <= KW_ANALYZE)||(LA7_0 >= KW_ARCHIVE && LA7_0 <= KW_CASCADE)||(LA7_0 >= KW_CHANGE && LA7_0 <= KW_COLLECTION)||(LA7_0 >= KW_COLUMNS && LA7_0 <= KW_CREATE)||LA7_0==KW_CUBE||(LA7_0 >= KW_CURSOR && LA7_0 <= KW_DATA)||(LA7_0 >= KW_DATABASES && LA7_0 <= KW_DISABLE)||(LA7_0 >= KW_DISTRIBUTE && LA7_0 <= KW_ELEM_TYPE)||LA7_0==KW_ENABLE||LA7_0==KW_ESCAPED||(LA7_0 >= KW_EXCLUSIVE && LA7_0 <= KW_EXPORT)||(LA7_0 >= KW_EXTERNAL && LA7_0 <= KW_FLOAT)||(LA7_0 >= KW_FOR && LA7_0 <= KW_FORMATTED)||LA7_0==KW_FULL||(LA7_0 >= KW_FUNCTIONS && LA7_0 <= KW_GROUPING)||(LA7_0 >= KW_HOLD_DDLTIME && LA7_0 <= KW_IDXPROPERTIES)||(LA7_0 >= KW_IGNORE && LA7_0 <= KW_ITEMS)||(LA7_0 >= KW_KEYS && LA7_0 <= KW_LEFT)||(LA7_0 >= KW_LIKE && LA7_0 <= KW_LONG)||(LA7_0 >= KW_MAPJOIN && LA7_0 <= KW_MINUS)||(LA7_0 >= KW_MSCK && LA7_0 <= KW_NOSCAN)||(LA7_0 >= KW_NO_DROP && LA7_0 <= KW_OFFLINE)||LA7_0==KW_OPTION||(LA7_0 >= KW_ORCFILE && LA7_0 <= KW_OUTPUTFORMAT)||LA7_0==KW_OVERWRITE||(LA7_0 >= KW_PARTITION && LA7_0 <= KW_PLUS)||(LA7_0 >= KW_PRETTY && LA7_0 <= KW_RECORDWRITER)||(LA7_0 >= KW_REGEXP && LA7_0 <= KW_SCHEMAS)||(LA7_0 >= KW_SEMI && LA7_0 <= KW_TABLES)||(LA7_0 >= KW_TBLPROPERTIES && LA7_0 <= KW_TEXTFILE)||(LA7_0 >= KW_TIMESTAMP && LA7_0 <= KW_TOUCH)||(LA7_0 >= KW_TRIGGER && LA7_0 <= KW_UNARCHIVE)||(LA7_0 >= KW_UNDO && LA7_0 <= KW_UNIONTYPE)||(LA7_0 >= KW_UNLOCK && LA7_0 <= KW_VALUE_TYPE)||LA7_0==KW_VIEW||LA7_0==KW_WHILE||LA7_0==KW_WITH||LA7_0==LPAREN) ) {
+			if ( (LA7_0==Identifier||(LA7_0 >= KW_ADD && LA7_0 <= KW_AFTER)||(LA7_0 >= KW_ALTER && LA7_0 <= KW_ANALYZE)||(LA7_0 >= KW_ARCHIVE && LA7_0 <= KW_CASCADE)||(LA7_0 >= KW_CHANGE && LA7_0 <= KW_COLLECTION)||(LA7_0 >= KW_COLUMNS && LA7_0 <= KW_CREATE)||LA7_0==KW_CUBE||(LA7_0 >= KW_CURSOR && LA7_0 <= KW_DATA)||(LA7_0 >= KW_DATABASES && LA7_0 <= KW_DISABLE)||(LA7_0 >= KW_DISTRIBUTE && LA7_0 <= KW_DROP)||LA7_0==KW_ELEM_TYPE||LA7_0==KW_ENABLE||LA7_0==KW_ESCAPED||(LA7_0 >= KW_EXCLUSIVE && LA7_0 <= KW_EXPORT)||(LA7_0 >= KW_EXTERNAL && LA7_0 <= KW_FLOAT)||(LA7_0 >= KW_FOR && LA7_0 <= KW_FORMATTED)||LA7_0==KW_FULL||(LA7_0 >= KW_FUNCTIONS && LA7_0 <= KW_GROUPING)||(LA7_0 >= KW_HOLD_DDLTIME && LA7_0 <= KW_IDXPROPERTIES)||(LA7_0 >= KW_IGNORE && LA7_0 <= KW_INCRE)||(LA7_0 >= KW_INDEX && LA7_0 <= KW_ITEMS)||(LA7_0 >= KW_KEYS && LA7_0 <= KW_LEFT)||(LA7_0 >= KW_LIKE && LA7_0 <= KW_LONG)||(LA7_0 >= KW_MAPJOIN && LA7_0 <= KW_MINUS)||(LA7_0 >= KW_MSCK && LA7_0 <= KW_NOSCAN)||(LA7_0 >= KW_NO_DROP && LA7_0 <= KW_OFFLINE)||LA7_0==KW_OPTION||(LA7_0 >= KW_ORCFILE && LA7_0 <= KW_OUTPUTFORMAT)||LA7_0==KW_OVERWRITE||(LA7_0 >= KW_PARTITION && LA7_0 <= KW_PLUS)||(LA7_0 >= KW_PRETTY && LA7_0 <= KW_RECORDWRITER)||(LA7_0 >= KW_REGEXP && LA7_0 <= KW_SCHEMAS)||(LA7_0 >= KW_SEMI && LA7_0 <= KW_TABLES)||(LA7_0 >= KW_TBLPROPERTIES && LA7_0 <= KW_TEXTFILE)||(LA7_0 >= KW_TIMESTAMP && LA7_0 <= KW_TOUCH)||(LA7_0 >= KW_TRIGGER && LA7_0 <= KW_UNARCHIVE)||(LA7_0 >= KW_UNDO && LA7_0 <= KW_UNIONTYPE)||(LA7_0 >= KW_UNLOCK && LA7_0 <= KW_VALUE_TYPE)||LA7_0==KW_VIEW||LA7_0==KW_WHILE||LA7_0==KW_WITH||LA7_0==LPAREN) ) {
 				alt7=1;
 			}
 			else if ( (LA7_0==KW_UNIQUEJOIN) ) {
@@ -2160,7 +2319,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					if ( (LA18_2==KW_OUTER) ) {
 						alt18=1;
 					}
-					else if ( ((LA18_2 >= Identifier && LA18_2 <= KW_AFTER)||(LA18_2 >= KW_ALTER && LA18_2 <= KW_ANALYZE)||(LA18_2 >= KW_ARCHIVE && LA18_2 <= KW_CASCADE)||(LA18_2 >= KW_CHANGE && LA18_2 <= KW_COLLECTION)||(LA18_2 >= KW_COLUMNS && LA18_2 <= KW_CREATE)||LA18_2==KW_CUBE||(LA18_2 >= KW_CURSOR && LA18_2 <= KW_DATA)||(LA18_2 >= KW_DATABASES && LA18_2 <= KW_DISABLE)||(LA18_2 >= KW_DISTRIBUTE && LA18_2 <= KW_ELEM_TYPE)||LA18_2==KW_ENABLE||LA18_2==KW_ESCAPED||(LA18_2 >= KW_EXCLUSIVE && LA18_2 <= KW_EXPORT)||(LA18_2 >= KW_EXTERNAL && LA18_2 <= KW_FLOAT)||(LA18_2 >= KW_FOR && LA18_2 <= KW_FORMATTED)||LA18_2==KW_FULL||(LA18_2 >= KW_FUNCTIONS && LA18_2 <= KW_GROUPING)||(LA18_2 >= KW_HOLD_DDLTIME && LA18_2 <= KW_ITEMS)||(LA18_2 >= KW_KEYS && LA18_2 <= KW_LEFT)||(LA18_2 >= KW_LIKE && LA18_2 <= KW_LONG)||(LA18_2 >= KW_MAP && LA18_2 <= KW_MINUS)||(LA18_2 >= KW_MSCK && LA18_2 <= KW_NOSCAN)||(LA18_2 >= KW_NO_DROP && LA18_2 <= KW_OFFLINE)||LA18_2==KW_OPTION||(LA18_2 >= KW_ORCFILE && LA18_2 <= KW_OUT)||(LA18_2 >= KW_OUTPUTDRIVER && LA18_2 <= KW_OUTPUTFORMAT)||LA18_2==KW_OVERWRITE||(LA18_2 >= KW_PARTITION && LA18_2 <= KW_PLUS)||(LA18_2 >= KW_PRETTY && LA18_2 <= KW_RECORDWRITER)||(LA18_2 >= KW_REGEXP && LA18_2 <= KW_SCHEMAS)||(LA18_2 >= KW_SEMI && LA18_2 <= KW_TABLES)||(LA18_2 >= KW_TBLPROPERTIES && LA18_2 <= KW_TEXTFILE)||(LA18_2 >= KW_TIMESTAMP && LA18_2 <= KW_TOUCH)||(LA18_2 >= KW_TRIGGER && LA18_2 <= KW_UNARCHIVE)||(LA18_2 >= KW_UNDO && LA18_2 <= KW_UNIONTYPE)||(LA18_2 >= KW_UNLOCK && LA18_2 <= KW_VALUE_TYPE)||LA18_2==KW_VIEW||LA18_2==KW_WHILE||LA18_2==KW_WITH) ) {
+					else if ( (LA18_2==Identifier||(LA18_2 >= KW_ADD && LA18_2 <= KW_AFTER)||(LA18_2 >= KW_ALTER && LA18_2 <= KW_ANALYZE)||(LA18_2 >= KW_ARCHIVE && LA18_2 <= KW_CASCADE)||(LA18_2 >= KW_CHANGE && LA18_2 <= KW_COLLECTION)||(LA18_2 >= KW_COLUMNS && LA18_2 <= KW_CREATE)||LA18_2==KW_CUBE||(LA18_2 >= KW_CURSOR && LA18_2 <= KW_DATA)||(LA18_2 >= KW_DATABASES && LA18_2 <= KW_DISABLE)||(LA18_2 >= KW_DISTRIBUTE && LA18_2 <= KW_DROP)||LA18_2==KW_ELEM_TYPE||LA18_2==KW_ENABLE||LA18_2==KW_ESCAPED||(LA18_2 >= KW_EXCLUSIVE && LA18_2 <= KW_EXPORT)||(LA18_2 >= KW_EXTERNAL && LA18_2 <= KW_FLOAT)||(LA18_2 >= KW_FOR && LA18_2 <= KW_FORMATTED)||LA18_2==KW_FULL||(LA18_2 >= KW_FUNCTIONS && LA18_2 <= KW_GROUPING)||(LA18_2 >= KW_HOLD_DDLTIME && LA18_2 <= KW_INCRE)||(LA18_2 >= KW_INDEX && LA18_2 <= KW_ITEMS)||(LA18_2 >= KW_KEYS && LA18_2 <= KW_LEFT)||(LA18_2 >= KW_LIKE && LA18_2 <= KW_LONG)||(LA18_2 >= KW_MAP && LA18_2 <= KW_MINUS)||(LA18_2 >= KW_MSCK && LA18_2 <= KW_NOSCAN)||(LA18_2 >= KW_NO_DROP && LA18_2 <= KW_OFFLINE)||LA18_2==KW_OPTION||(LA18_2 >= KW_ORCFILE && LA18_2 <= KW_OUT)||(LA18_2 >= KW_OUTPUTDRIVER && LA18_2 <= KW_OUTPUTFORMAT)||LA18_2==KW_OVERWRITE||(LA18_2 >= KW_PARTITION && LA18_2 <= KW_PLUS)||(LA18_2 >= KW_PRETTY && LA18_2 <= KW_RECORDWRITER)||(LA18_2 >= KW_REGEXP && LA18_2 <= KW_SCHEMAS)||(LA18_2 >= KW_SEMI && LA18_2 <= KW_TABLES)||(LA18_2 >= KW_TBLPROPERTIES && LA18_2 <= KW_TEXTFILE)||(LA18_2 >= KW_TIMESTAMP && LA18_2 <= KW_TOUCH)||(LA18_2 >= KW_TRIGGER && LA18_2 <= KW_UNARCHIVE)||(LA18_2 >= KW_UNDO && LA18_2 <= KW_UNIONTYPE)||(LA18_2 >= KW_UNLOCK && LA18_2 <= KW_VALUE_TYPE)||LA18_2==KW_VIEW||LA18_2==KW_WHILE||LA18_2==KW_WITH) ) {
 						alt18=2;
 					}
 
@@ -2279,7 +2438,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: identifier, tableAlias, function
+					// elements: function, tableAlias, identifier
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2401,7 +2560,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: function, tableAlias, identifier
+					// elements: tableAlias, identifier, function
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -2585,269 +2744,7 @@ public class HiveParser_FromClauseParser extends Parser {
 
 			// FromClauseParser.g:146:5: ( ( Identifier LPAREN )=> partitionedTableFunction | tableSource | subQuerySource )
 			int alt19=3;
-			switch ( input.LA(1) ) {
-			case Identifier:
-				{
-				int LA19_1 = input.LA(2);
-				if ( (LA19_1==LPAREN) ) {
-					int LA19_4 = input.LA(3);
-					if ( (LA19_4==KW_ON) && (synpred1_FromClauseParser())) {
-						alt19=1;
-					}
-					else if ( (LA19_4==BigintLiteral||LA19_4==CharSetName||LA19_4==DecimalLiteral||(LA19_4 >= Identifier && LA19_4 <= KW_AFTER)||(LA19_4 >= KW_ALTER && LA19_4 <= KW_ANALYZE)||(LA19_4 >= KW_ARCHIVE && LA19_4 <= KW_COLLECTION)||(LA19_4 >= KW_COLUMNS && LA19_4 <= KW_CREATE)||LA19_4==KW_CUBE||(LA19_4 >= KW_CURSOR && LA19_4 <= KW_DATA)||(LA19_4 >= KW_DATABASES && LA19_4 <= KW_DISABLE)||(LA19_4 >= KW_DISTRIBUTE && LA19_4 <= KW_ELEM_TYPE)||LA19_4==KW_ENABLE||LA19_4==KW_ESCAPED||(LA19_4 >= KW_EXCLUSIVE && LA19_4 <= KW_EXPORT)||(LA19_4 >= KW_EXTERNAL && LA19_4 <= KW_FLOAT)||(LA19_4 >= KW_FOR && LA19_4 <= KW_FORMATTED)||LA19_4==KW_FULL||(LA19_4 >= KW_FUNCTIONS && LA19_4 <= KW_GROUPING)||(LA19_4 >= KW_HOLD_DDLTIME && LA19_4 <= KW_ITEMS)||(LA19_4 >= KW_KEYS && LA19_4 <= KW_LEFT)||(LA19_4 >= KW_LIKE && LA19_4 <= KW_LONG)||(LA19_4 >= KW_MAP && LA19_4 <= KW_MINUS)||(LA19_4 >= KW_MSCK && LA19_4 <= KW_OFFLINE)||LA19_4==KW_OPTION||(LA19_4 >= KW_ORCFILE && LA19_4 <= KW_OUTPUTFORMAT)||LA19_4==KW_OVERWRITE||(LA19_4 >= KW_PARTITION && LA19_4 <= KW_PLUS)||(LA19_4 >= KW_PRETTY && LA19_4 <= KW_RECORDWRITER)||(LA19_4 >= KW_REGEXP && LA19_4 <= KW_SCHEMAS)||(LA19_4 >= KW_SEMI && LA19_4 <= KW_TABLES)||(LA19_4 >= KW_TBLPROPERTIES && LA19_4 <= KW_TEXTFILE)||(LA19_4 >= KW_TIMESTAMP && LA19_4 <= KW_TOUCH)||(LA19_4 >= KW_TRIGGER && LA19_4 <= KW_UNARCHIVE)||(LA19_4 >= KW_UNDO && LA19_4 <= KW_UNIONTYPE)||(LA19_4 >= KW_UNLOCK && LA19_4 <= KW_VALUE_TYPE)||LA19_4==KW_VIEW||LA19_4==KW_WHILE||LA19_4==KW_WITH||LA19_4==LPAREN||LA19_4==MINUS||(LA19_4 >= Number && LA19_4 <= PLUS)||(LA19_4 >= SmallintLiteral && LA19_4 <= TinyintLiteral)) ) {
-						alt19=2;
-					}
-
-					else {
-						if (state.backtracking>0) {state.failed=true; return retval;}
-						int nvaeMark = input.mark();
-						try {
-							for (int nvaeConsume = 0; nvaeConsume < 3 - 1; nvaeConsume++) {
-								input.consume();
-							}
-							NoViableAltException nvae =
-								new NoViableAltException("", 19, 4, input);
-							throw nvae;
-						} finally {
-							input.rewind(nvaeMark);
-						}
-					}
-
-				}
-				else if ( (LA19_1==EOF||LA19_1==DOT||LA19_1==Identifier||LA19_1==KW_AS||LA19_1==KW_CLUSTER||LA19_1==KW_CROSS||LA19_1==KW_DISTRIBUTE||LA19_1==KW_FULL||LA19_1==KW_GROUP||LA19_1==KW_HAVING||LA19_1==KW_INNER||LA19_1==KW_INSERT||LA19_1==KW_JOIN||(LA19_1 >= KW_LATERAL && LA19_1 <= KW_LEFT)||LA19_1==KW_LIMIT||LA19_1==KW_MAP||LA19_1==KW_ON||LA19_1==KW_ORDER||LA19_1==KW_REDUCE||LA19_1==KW_RIGHT||LA19_1==KW_SELECT||LA19_1==KW_SORT||LA19_1==KW_TABLESAMPLE||LA19_1==KW_UNION||LA19_1==KW_WHERE||LA19_1==KW_WINDOW||LA19_1==RPAREN) ) {
-					alt19=2;
-				}
-
-				else {
-					if (state.backtracking>0) {state.failed=true; return retval;}
-					int nvaeMark = input.mark();
-					try {
-						input.consume();
-						NoViableAltException nvae =
-							new NoViableAltException("", 19, 1, input);
-						throw nvae;
-					} finally {
-						input.rewind(nvaeMark);
-					}
-				}
-
-				}
-				break;
-			case KW_ADD:
-			case KW_AFTER:
-			case KW_ALTER:
-			case KW_ANALYZE:
-			case KW_ARCHIVE:
-			case KW_ARRAY:
-			case KW_AS:
-			case KW_ASC:
-			case KW_BEFORE:
-			case KW_BETWEEN:
-			case KW_BIGINT:
-			case KW_BINARY:
-			case KW_BOOLEAN:
-			case KW_BOTH:
-			case KW_BUCKET:
-			case KW_BUCKETS:
-			case KW_BY:
-			case KW_CASCADE:
-			case KW_CHANGE:
-			case KW_CLUSTER:
-			case KW_CLUSTERED:
-			case KW_CLUSTERSTATUS:
-			case KW_COLLECTION:
-			case KW_COLUMNS:
-			case KW_COMMENT:
-			case KW_COMPUTE:
-			case KW_CONCATENATE:
-			case KW_CONTINUE:
-			case KW_CREATE:
-			case KW_CUBE:
-			case KW_CURSOR:
-			case KW_DATA:
-			case KW_DATABASES:
-			case KW_DATE:
-			case KW_DATETIME:
-			case KW_DBPROPERTIES:
-			case KW_DECIMAL:
-			case KW_DEFERRED:
-			case KW_DELETE:
-			case KW_DELIMITED:
-			case KW_DEPENDENCY:
-			case KW_DESC:
-			case KW_DESCRIBE:
-			case KW_DIRECTORIES:
-			case KW_DIRECTORY:
-			case KW_DISABLE:
-			case KW_DISTRIBUTE:
-			case KW_DOUBLE:
-			case KW_DROP:
-			case KW_ELEM_TYPE:
-			case KW_ENABLE:
-			case KW_ESCAPED:
-			case KW_EXCLUSIVE:
-			case KW_EXISTS:
-			case KW_EXPLAIN:
-			case KW_EXPORT:
-			case KW_EXTERNAL:
-			case KW_FALSE:
-			case KW_FETCH:
-			case KW_FIELDS:
-			case KW_FILEFORMAT:
-			case KW_FIRST:
-			case KW_FLOAT:
-			case KW_FOR:
-			case KW_FORMAT:
-			case KW_FORMATTED:
-			case KW_FULL:
-			case KW_FUNCTIONS:
-			case KW_GRANT:
-			case KW_GROUP:
-			case KW_GROUPING:
-			case KW_HOLD_DDLTIME:
-			case KW_IDXPROPERTIES:
-			case KW_IGNORE:
-			case KW_IMPORT:
-			case KW_IN:
-			case KW_INCRE:
-			case KW_INDEX:
-			case KW_INDEXES:
-			case KW_INNER:
-			case KW_INPATH:
-			case KW_INPUTDRIVER:
-			case KW_INPUTFORMAT:
-			case KW_INSERT:
-			case KW_INT:
-			case KW_INTERSECT:
-			case KW_INTO:
-			case KW_IS:
-			case KW_ITEMS:
-			case KW_KEYS:
-			case KW_KEY_TYPE:
-			case KW_LATERAL:
-			case KW_LEFT:
-			case KW_LIKE:
-			case KW_LIMIT:
-			case KW_LINES:
-			case KW_LOAD:
-			case KW_LOCAL:
-			case KW_LOCATION:
-			case KW_LOCK:
-			case KW_LOCKS:
-			case KW_LOGICAL:
-			case KW_LONG:
-			case KW_MAPJOIN:
-			case KW_MATERIALIZED:
-			case KW_MINUS:
-			case KW_MSCK:
-			case KW_NOSCAN:
-			case KW_NO_DROP:
-			case KW_NULL:
-			case KW_OF:
-			case KW_OFFLINE:
-			case KW_OPTION:
-			case KW_ORCFILE:
-			case KW_ORDER:
-			case KW_OUT:
-			case KW_OUTER:
-			case KW_OUTPUTDRIVER:
-			case KW_OUTPUTFORMAT:
-			case KW_OVERWRITE:
-			case KW_PARTITION:
-			case KW_PARTITIONED:
-			case KW_PARTITIONS:
-			case KW_PERCENT:
-			case KW_PLUS:
-			case KW_PRETTY:
-			case KW_PROCEDURE:
-			case KW_PROTECTION:
-			case KW_PURGE:
-			case KW_RANGE:
-			case KW_RCFILE:
-			case KW_READ:
-			case KW_READONLY:
-			case KW_READS:
-			case KW_REBUILD:
-			case KW_RECORDREADER:
-			case KW_RECORDWRITER:
-			case KW_REGEXP:
-			case KW_RENAME:
-			case KW_REPAIR:
-			case KW_REPLACE:
-			case KW_RESTRICT:
-			case KW_REVOKE:
-			case KW_RIGHT:
-			case KW_RLIKE:
-			case KW_ROLE:
-			case KW_ROLLUP:
-			case KW_ROW:
-			case KW_ROWS:
-			case KW_SCHEMA:
-			case KW_SCHEMAS:
-			case KW_SEMI:
-			case KW_SEQUENCEFILE:
-			case KW_SERDE:
-			case KW_SERDEPROPERTIES:
-			case KW_SET:
-			case KW_SETS:
-			case KW_SHARED:
-			case KW_SHOW:
-			case KW_SHOW_DATABASE:
-			case KW_SKEWED:
-			case KW_SMALLINT:
-			case KW_SORT:
-			case KW_SORTED:
-			case KW_SSL:
-			case KW_STATISTICS:
-			case KW_STORED:
-			case KW_STREAMTABLE:
-			case KW_STRING:
-			case KW_STRUCT:
-			case KW_TABLE:
-			case KW_TABLES:
-			case KW_TBLPROPERTIES:
-			case KW_TEMPORARY:
-			case KW_TERMINATED:
-			case KW_TEXTFILE:
-			case KW_TIMESTAMP:
-			case KW_TINYINT:
-			case KW_TO:
-			case KW_TOUCH:
-			case KW_TRIGGER:
-			case KW_TRUE:
-			case KW_TRUNCATE:
-			case KW_UNARCHIVE:
-			case KW_UNDO:
-			case KW_UNION:
-			case KW_UNIONTYPE:
-			case KW_UNLOCK:
-			case KW_UNSET:
-			case KW_UNSIGNED:
-			case KW_UPDATE:
-			case KW_USE:
-			case KW_USER:
-			case KW_USING:
-			case KW_UTC:
-			case KW_UTCTIMESTAMP:
-			case KW_VALUE_TYPE:
-			case KW_VIEW:
-			case KW_WHILE:
-			case KW_WITH:
-				{
-				alt19=2;
-				}
-				break;
-			case LPAREN:
-				{
-				alt19=3;
-				}
-				break;
-			default:
-				if (state.backtracking>0) {state.failed=true; return retval;}
-				NoViableAltException nvae =
-					new NoViableAltException("", 19, 0, input);
-				throw nvae;
-			}
+			alt19 = dfa19.predict(input);
 			switch (alt19) {
 				case 1 :
 					// FromClauseParser.g:146:6: ( Identifier LPAREN )=> partitionedTableFunction
@@ -3078,7 +2975,7 @@ public class HiveParser_FromClauseParser extends Parser {
 			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN76);
 
 			// AST REWRITE
-			// elements: denominator, numerator, expr
+			// elements: expr, denominator, numerator
 			// token labels: numerator, denominator
 			// rule labels: retval
 			// token list labels: 
@@ -3546,7 +3443,7 @@ public class HiveParser_FromClauseParser extends Parser {
 
 
 	// $ANTLR start "tableSource"
-	// FromClauseParser.g:176:1: tableSource : tabname= tableName (props= tableProperties )? (ts= tableSample )? ( ( KW_AS )? alias= Identifier )? -> ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $alias)? ) ;
+	// FromClauseParser.g:176:1: tableSource : tabname= tableName (props= tableProperties )? (ts= tableSample )? (ic= incrementalClause )? ( ( KW_AS )? alias= Identifier )? -> ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $ic)? ( $alias)? ) ;
 	public final HiveParser_FromClauseParser.tableSource_return tableSource() throws RecognitionException {
 		HiveParser_FromClauseParser.tableSource_return retval = new HiveParser_FromClauseParser.tableSource_return();
 		retval.start = input.LT(1);
@@ -3558,6 +3455,7 @@ public class HiveParser_FromClauseParser extends Parser {
 		ParserRuleReturnScope tabname =null;
 		ParserRuleReturnScope props =null;
 		ParserRuleReturnScope ts =null;
+		ParserRuleReturnScope ic =null;
 
 		CommonTree alias_tree=null;
 		CommonTree KW_AS86_tree=null;
@@ -3566,11 +3464,12 @@ public class HiveParser_FromClauseParser extends Parser {
 		RewriteRuleSubtreeStream stream_tableName=new RewriteRuleSubtreeStream(adaptor,"rule tableName");
 		RewriteRuleSubtreeStream stream_tableSample=new RewriteRuleSubtreeStream(adaptor,"rule tableSample");
 		RewriteRuleSubtreeStream stream_tableProperties=new RewriteRuleSubtreeStream(adaptor,"rule tableProperties");
+		RewriteRuleSubtreeStream stream_incrementalClause=new RewriteRuleSubtreeStream(adaptor,"rule incrementalClause");
 
 		 gParent.msgs.push("table source"); 
 		try {
-			// FromClauseParser.g:179:5: (tabname= tableName (props= tableProperties )? (ts= tableSample )? ( ( KW_AS )? alias= Identifier )? -> ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $alias)? ) )
-			// FromClauseParser.g:179:7: tabname= tableName (props= tableProperties )? (ts= tableSample )? ( ( KW_AS )? alias= Identifier )?
+			// FromClauseParser.g:179:5: (tabname= tableName (props= tableProperties )? (ts= tableSample )? (ic= incrementalClause )? ( ( KW_AS )? alias= Identifier )? -> ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $ic)? ( $alias)? ) )
+			// FromClauseParser.g:179:7: tabname= tableName (props= tableProperties )? (ts= tableSample )? (ic= incrementalClause )? ( ( KW_AS )? alias= Identifier )?
 			{
 			pushFollow(FOLLOW_tableName_in_tableSource1128);
 			tabname=tableName();
@@ -3614,24 +3513,44 @@ public class HiveParser_FromClauseParser extends Parser {
 
 			}
 
-			// FromClauseParser.g:179:68: ( ( KW_AS )? alias= Identifier )?
-			int alt29=2;
-			alt29 = dfa29.predict(input);
-			switch (alt29) {
+			// FromClauseParser.g:179:68: (ic= incrementalClause )?
+			int alt28=2;
+			int LA28_0 = input.LA(1);
+			if ( (LA28_0==DIVIDE) ) {
+				alt28=1;
+			}
+			switch (alt28) {
 				case 1 :
-					// FromClauseParser.g:179:69: ( KW_AS )? alias= Identifier
+					// FromClauseParser.g:179:69: ic= incrementalClause
 					{
-					// FromClauseParser.g:179:69: ( KW_AS )?
-					int alt28=2;
-					int LA28_0 = input.LA(1);
-					if ( (LA28_0==KW_AS) ) {
-						alt28=1;
+					pushFollow(FOLLOW_incrementalClause_in_tableSource1147);
+					ic=gHiveParser.incrementalClause();
+					state._fsp--;
+					if (state.failed) return retval;
+					if ( state.backtracking==0 ) stream_incrementalClause.add(ic.getTree());
 					}
-					switch (alt28) {
+					break;
+
+			}
+
+			// FromClauseParser.g:179:91: ( ( KW_AS )? alias= Identifier )?
+			int alt30=2;
+			alt30 = dfa30.predict(input);
+			switch (alt30) {
+				case 1 :
+					// FromClauseParser.g:179:92: ( KW_AS )? alias= Identifier
+					{
+					// FromClauseParser.g:179:92: ( KW_AS )?
+					int alt29=2;
+					int LA29_0 = input.LA(1);
+					if ( (LA29_0==KW_AS) ) {
+						alt29=1;
+					}
+					switch (alt29) {
 						case 1 :
-							// FromClauseParser.g:179:69: KW_AS
+							// FromClauseParser.g:179:92: KW_AS
 							{
-							KW_AS86=(Token)match(input,KW_AS,FOLLOW_KW_AS_in_tableSource1145); if (state.failed) return retval; 
+							KW_AS86=(Token)match(input,KW_AS,FOLLOW_KW_AS_in_tableSource1151); if (state.failed) return retval; 
 							if ( state.backtracking==0 ) stream_KW_AS.add(KW_AS86);
 
 							}
@@ -3639,7 +3558,7 @@ public class HiveParser_FromClauseParser extends Parser {
 
 					}
 
-					alias=(Token)match(input,Identifier,FOLLOW_Identifier_in_tableSource1150); if (state.failed) return retval; 
+					alias=(Token)match(input,Identifier,FOLLOW_Identifier_in_tableSource1156); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_Identifier.add(alias);
 
 					}
@@ -3648,24 +3567,25 @@ public class HiveParser_FromClauseParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: alias, props, tabname, ts
+			// elements: props, ts, tabname, alias, ic
 			// token labels: alias
-			// rule labels: retval, ts, tabname, props
+			// rule labels: ic, retval, ts, tabname, props
 			// token list labels: 
 			// rule list labels: 
 			// wildcard labels: 
 			if ( state.backtracking==0 ) {
 			retval.tree = root_0;
 			RewriteRuleTokenStream stream_alias=new RewriteRuleTokenStream(adaptor,"token alias",alias);
+			RewriteRuleSubtreeStream stream_ic=new RewriteRuleSubtreeStream(adaptor,"rule ic",ic!=null?ic.getTree():null);
 			RewriteRuleSubtreeStream stream_retval=new RewriteRuleSubtreeStream(adaptor,"rule retval",retval!=null?retval.getTree():null);
 			RewriteRuleSubtreeStream stream_ts=new RewriteRuleSubtreeStream(adaptor,"rule ts",ts!=null?ts.getTree():null);
 			RewriteRuleSubtreeStream stream_tabname=new RewriteRuleSubtreeStream(adaptor,"rule tabname",tabname!=null?tabname.getTree():null);
 			RewriteRuleSubtreeStream stream_props=new RewriteRuleSubtreeStream(adaptor,"rule props",props!=null?props.getTree():null);
 
 			root_0 = (CommonTree)adaptor.nil();
-			// 180:5: -> ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $alias)? )
+			// 180:5: -> ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $ic)? ( $alias)? )
 			{
-				// FromClauseParser.g:180:8: ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $alias)? )
+				// FromClauseParser.g:180:8: ^( TOK_TABREF $tabname ( $props)? ( $ts)? ( $ic)? ( $alias)? )
 				{
 				CommonTree root_1 = (CommonTree)adaptor.nil();
 				root_1 = (CommonTree)adaptor.becomeRoot((CommonTree)adaptor.create(TOK_TABREF, "TOK_TABREF"), root_1);
@@ -3682,7 +3602,13 @@ public class HiveParser_FromClauseParser extends Parser {
 				}
 				stream_ts.reset();
 
-				// FromClauseParser.g:180:44: ( $alias)?
+				// FromClauseParser.g:180:45: ( $ic)?
+				if ( stream_ic.hasNext() ) {
+					adaptor.addChild(root_1, stream_ic.nextTree());
+				}
+				stream_ic.reset();
+
+				// FromClauseParser.g:180:50: ( $alias)?
 				if ( stream_alias.hasNext() ) {
 					adaptor.addChild(root_1, stream_alias.nextNode());
 				}
@@ -3746,27 +3672,27 @@ public class HiveParser_FromClauseParser extends Parser {
 		 gParent.msgs.push("table name"); 
 		try {
 			// FromClauseParser.g:186:5: (db= identifier DOT tab= identifier -> ^( TOK_TABNAME $db $tab) |tab= identifier -> ^( TOK_TABNAME $tab) )
-			int alt30=2;
-			alt30 = dfa30.predict(input);
-			switch (alt30) {
+			int alt31=2;
+			alt31 = dfa31.predict(input);
+			switch (alt31) {
 				case 1 :
 					// FromClauseParser.g:187:5: db= identifier DOT tab= identifier
 					{
-					pushFollow(FOLLOW_identifier_in_tableName1210);
+					pushFollow(FOLLOW_identifier_in_tableName1221);
 					db=gHiveParser.identifier();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_identifier.add(db.getTree());
-					DOT87=(Token)match(input,DOT,FOLLOW_DOT_in_tableName1212); if (state.failed) return retval; 
+					DOT87=(Token)match(input,DOT,FOLLOW_DOT_in_tableName1223); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_DOT.add(DOT87);
 
-					pushFollow(FOLLOW_identifier_in_tableName1216);
+					pushFollow(FOLLOW_identifier_in_tableName1227);
 					tab=gHiveParser.identifier();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_identifier.add(tab.getTree());
 					// AST REWRITE
-					// elements: tab, db
+					// elements: db, tab
 					// token labels: 
 					// rule labels: db, retval, tab
 					// token list labels: 
@@ -3801,7 +3727,7 @@ public class HiveParser_FromClauseParser extends Parser {
 				case 2 :
 					// FromClauseParser.g:190:5: tab= identifier
 					{
-					pushFollow(FOLLOW_identifier_in_tableName1246);
+					pushFollow(FOLLOW_identifier_in_tableName1257);
 					tab=gHiveParser.identifier();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -3889,30 +3815,30 @@ public class HiveParser_FromClauseParser extends Parser {
 			// FromClauseParser.g:198:5: (db= identifier DOT )? view= identifier
 			{
 			// FromClauseParser.g:198:5: (db= identifier DOT )?
-			int alt31=2;
-			int LA31_0 = input.LA(1);
-			if ( (LA31_0==Identifier) ) {
-				int LA31_1 = input.LA(2);
-				if ( (LA31_1==DOT) ) {
-					alt31=1;
+			int alt32=2;
+			int LA32_0 = input.LA(1);
+			if ( (LA32_0==Identifier) ) {
+				int LA32_1 = input.LA(2);
+				if ( (LA32_1==DOT) ) {
+					alt32=1;
 				}
 			}
-			else if ( ((LA31_0 >= KW_ADD && LA31_0 <= KW_AFTER)||(LA31_0 >= KW_ALTER && LA31_0 <= KW_ANALYZE)||(LA31_0 >= KW_ARCHIVE && LA31_0 <= KW_CASCADE)||(LA31_0 >= KW_CHANGE && LA31_0 <= KW_COLLECTION)||(LA31_0 >= KW_COLUMNS && LA31_0 <= KW_CREATE)||LA31_0==KW_CUBE||(LA31_0 >= KW_CURSOR && LA31_0 <= KW_DATA)||(LA31_0 >= KW_DATABASES && LA31_0 <= KW_DISABLE)||(LA31_0 >= KW_DISTRIBUTE && LA31_0 <= KW_ELEM_TYPE)||LA31_0==KW_ENABLE||LA31_0==KW_ESCAPED||(LA31_0 >= KW_EXCLUSIVE && LA31_0 <= KW_EXPORT)||(LA31_0 >= KW_EXTERNAL && LA31_0 <= KW_FLOAT)||(LA31_0 >= KW_FOR && LA31_0 <= KW_FORMATTED)||LA31_0==KW_FULL||(LA31_0 >= KW_FUNCTIONS && LA31_0 <= KW_GROUPING)||(LA31_0 >= KW_HOLD_DDLTIME && LA31_0 <= KW_IDXPROPERTIES)||(LA31_0 >= KW_IGNORE && LA31_0 <= KW_ITEMS)||(LA31_0 >= KW_KEYS && LA31_0 <= KW_LEFT)||(LA31_0 >= KW_LIKE && LA31_0 <= KW_LONG)||(LA31_0 >= KW_MAPJOIN && LA31_0 <= KW_MINUS)||(LA31_0 >= KW_MSCK && LA31_0 <= KW_NOSCAN)||(LA31_0 >= KW_NO_DROP && LA31_0 <= KW_OFFLINE)||LA31_0==KW_OPTION||(LA31_0 >= KW_ORCFILE && LA31_0 <= KW_OUTPUTFORMAT)||LA31_0==KW_OVERWRITE||(LA31_0 >= KW_PARTITION && LA31_0 <= KW_PLUS)||(LA31_0 >= KW_PRETTY && LA31_0 <= KW_RECORDWRITER)||(LA31_0 >= KW_REGEXP && LA31_0 <= KW_SCHEMAS)||(LA31_0 >= KW_SEMI && LA31_0 <= KW_TABLES)||(LA31_0 >= KW_TBLPROPERTIES && LA31_0 <= KW_TEXTFILE)||(LA31_0 >= KW_TIMESTAMP && LA31_0 <= KW_TOUCH)||(LA31_0 >= KW_TRIGGER && LA31_0 <= KW_UNARCHIVE)||(LA31_0 >= KW_UNDO && LA31_0 <= KW_UNIONTYPE)||(LA31_0 >= KW_UNLOCK && LA31_0 <= KW_VALUE_TYPE)||LA31_0==KW_VIEW||LA31_0==KW_WHILE||LA31_0==KW_WITH) ) {
-				int LA31_2 = input.LA(2);
-				if ( (LA31_2==DOT) ) {
-					alt31=1;
+			else if ( ((LA32_0 >= KW_ADD && LA32_0 <= KW_AFTER)||(LA32_0 >= KW_ALTER && LA32_0 <= KW_ANALYZE)||(LA32_0 >= KW_ARCHIVE && LA32_0 <= KW_CASCADE)||(LA32_0 >= KW_CHANGE && LA32_0 <= KW_COLLECTION)||(LA32_0 >= KW_COLUMNS && LA32_0 <= KW_CREATE)||LA32_0==KW_CUBE||(LA32_0 >= KW_CURSOR && LA32_0 <= KW_DATA)||(LA32_0 >= KW_DATABASES && LA32_0 <= KW_DISABLE)||(LA32_0 >= KW_DISTRIBUTE && LA32_0 <= KW_DROP)||LA32_0==KW_ELEM_TYPE||LA32_0==KW_ENABLE||LA32_0==KW_ESCAPED||(LA32_0 >= KW_EXCLUSIVE && LA32_0 <= KW_EXPORT)||(LA32_0 >= KW_EXTERNAL && LA32_0 <= KW_FLOAT)||(LA32_0 >= KW_FOR && LA32_0 <= KW_FORMATTED)||LA32_0==KW_FULL||(LA32_0 >= KW_FUNCTIONS && LA32_0 <= KW_GROUPING)||(LA32_0 >= KW_HOLD_DDLTIME && LA32_0 <= KW_IDXPROPERTIES)||(LA32_0 >= KW_IGNORE && LA32_0 <= KW_INCRE)||(LA32_0 >= KW_INDEX && LA32_0 <= KW_ITEMS)||(LA32_0 >= KW_KEYS && LA32_0 <= KW_LEFT)||(LA32_0 >= KW_LIKE && LA32_0 <= KW_LONG)||(LA32_0 >= KW_MAPJOIN && LA32_0 <= KW_MINUS)||(LA32_0 >= KW_MSCK && LA32_0 <= KW_NOSCAN)||(LA32_0 >= KW_NO_DROP && LA32_0 <= KW_OFFLINE)||LA32_0==KW_OPTION||(LA32_0 >= KW_ORCFILE && LA32_0 <= KW_OUTPUTFORMAT)||LA32_0==KW_OVERWRITE||(LA32_0 >= KW_PARTITION && LA32_0 <= KW_PLUS)||(LA32_0 >= KW_PRETTY && LA32_0 <= KW_RECORDWRITER)||(LA32_0 >= KW_REGEXP && LA32_0 <= KW_SCHEMAS)||(LA32_0 >= KW_SEMI && LA32_0 <= KW_TABLES)||(LA32_0 >= KW_TBLPROPERTIES && LA32_0 <= KW_TEXTFILE)||(LA32_0 >= KW_TIMESTAMP && LA32_0 <= KW_TOUCH)||(LA32_0 >= KW_TRIGGER && LA32_0 <= KW_UNARCHIVE)||(LA32_0 >= KW_UNDO && LA32_0 <= KW_UNIONTYPE)||(LA32_0 >= KW_UNLOCK && LA32_0 <= KW_VALUE_TYPE)||LA32_0==KW_VIEW||LA32_0==KW_WHILE||LA32_0==KW_WITH) ) {
+				int LA32_2 = input.LA(2);
+				if ( (LA32_2==DOT) ) {
+					alt32=1;
 				}
 			}
-			switch (alt31) {
+			switch (alt32) {
 				case 1 :
 					// FromClauseParser.g:198:6: db= identifier DOT
 					{
-					pushFollow(FOLLOW_identifier_in_viewName1293);
+					pushFollow(FOLLOW_identifier_in_viewName1304);
 					db=gHiveParser.identifier();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_identifier.add(db.getTree());
-					DOT88=(Token)match(input,DOT,FOLLOW_DOT_in_viewName1295); if (state.failed) return retval; 
+					DOT88=(Token)match(input,DOT,FOLLOW_DOT_in_viewName1306); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_DOT.add(DOT88);
 
 					}
@@ -3920,13 +3846,13 @@ public class HiveParser_FromClauseParser extends Parser {
 
 			}
 
-			pushFollow(FOLLOW_identifier_in_viewName1301);
+			pushFollow(FOLLOW_identifier_in_viewName1312);
 			view=gHiveParser.identifier();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) stream_identifier.add(view.getTree());
 			// AST REWRITE
-			// elements: view, db
+			// elements: db, view
 			// token labels: 
 			// rule labels: db, retval, view
 			// token list labels: 
@@ -4016,18 +3942,18 @@ public class HiveParser_FromClauseParser extends Parser {
 			// FromClauseParser.g:205:5: ( LPAREN queryStatementExpression RPAREN identifier -> ^( TOK_SUBQUERY queryStatementExpression identifier ) )
 			// FromClauseParser.g:206:5: LPAREN queryStatementExpression RPAREN identifier
 			{
-			LPAREN89=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_subQuerySource1349); if (state.failed) return retval; 
+			LPAREN89=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_subQuerySource1360); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN89);
 
-			pushFollow(FOLLOW_queryStatementExpression_in_subQuerySource1351);
+			pushFollow(FOLLOW_queryStatementExpression_in_subQuerySource1362);
 			queryStatementExpression90=gHiveParser.queryStatementExpression();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) stream_queryStatementExpression.add(queryStatementExpression90.getTree());
-			RPAREN91=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_subQuerySource1353); if (state.failed) return retval; 
+			RPAREN91=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_subQuerySource1364); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN91);
 
-			pushFollow(FOLLOW_identifier_in_subQuerySource1355);
+			pushFollow(FOLLOW_identifier_in_subQuerySource1366);
 			identifier92=gHiveParser.identifier();
 			state._fsp--;
 			if (state.failed) return retval;
@@ -4116,59 +4042,59 @@ public class HiveParser_FromClauseParser extends Parser {
 		 gParent.msgs.push("partitioningSpec clause"); 
 		try {
 			// FromClauseParser.g:213:4: ( partitionByClause ( orderByClause )? -> ^( TOK_PARTITIONINGSPEC partitionByClause ( orderByClause )? ) | orderByClause -> ^( TOK_PARTITIONINGSPEC orderByClause ) | distributeByClause ( sortByClause )? -> ^( TOK_PARTITIONINGSPEC distributeByClause ( sortByClause )? ) | sortByClause -> ^( TOK_PARTITIONINGSPEC sortByClause ) | clusterByClause -> ^( TOK_PARTITIONINGSPEC clusterByClause ) )
-			int alt34=5;
+			int alt35=5;
 			switch ( input.LA(1) ) {
 			case KW_PARTITION:
 				{
-				alt34=1;
+				alt35=1;
 				}
 				break;
 			case KW_ORDER:
 				{
-				alt34=2;
+				alt35=2;
 				}
 				break;
 			case KW_DISTRIBUTE:
 				{
-				alt34=3;
+				alt35=3;
 				}
 				break;
 			case KW_SORT:
 				{
-				alt34=4;
+				alt35=4;
 				}
 				break;
 			case KW_CLUSTER:
 				{
-				alt34=5;
+				alt35=5;
 				}
 				break;
 			default:
 				if (state.backtracking>0) {state.failed=true; return retval;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 34, 0, input);
+					new NoViableAltException("", 35, 0, input);
 				throw nvae;
 			}
-			switch (alt34) {
+			switch (alt35) {
 				case 1 :
 					// FromClauseParser.g:214:4: partitionByClause ( orderByClause )?
 					{
-					pushFollow(FOLLOW_partitionByClause_in_partitioningSpec1396);
+					pushFollow(FOLLOW_partitionByClause_in_partitioningSpec1407);
 					partitionByClause93=gHiveParser.partitionByClause();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_partitionByClause.add(partitionByClause93.getTree());
 					// FromClauseParser.g:214:22: ( orderByClause )?
-					int alt32=2;
-					int LA32_0 = input.LA(1);
-					if ( (LA32_0==KW_ORDER) ) {
-						alt32=1;
+					int alt33=2;
+					int LA33_0 = input.LA(1);
+					if ( (LA33_0==KW_ORDER) ) {
+						alt33=1;
 					}
-					switch (alt32) {
+					switch (alt33) {
 						case 1 :
 							// FromClauseParser.g:214:22: orderByClause
 							{
-							pushFollow(FOLLOW_orderByClause_in_partitioningSpec1398);
+							pushFollow(FOLLOW_orderByClause_in_partitioningSpec1409);
 							orderByClause94=gHiveParser.orderByClause();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -4179,7 +4105,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: partitionByClause, orderByClause
+					// elements: orderByClause, partitionByClause
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -4217,7 +4143,7 @@ public class HiveParser_FromClauseParser extends Parser {
 				case 2 :
 					// FromClauseParser.g:215:4: orderByClause
 					{
-					pushFollow(FOLLOW_orderByClause_in_partitioningSpec1417);
+					pushFollow(FOLLOW_orderByClause_in_partitioningSpec1428);
 					orderByClause95=gHiveParser.orderByClause();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4255,22 +4181,22 @@ public class HiveParser_FromClauseParser extends Parser {
 				case 3 :
 					// FromClauseParser.g:216:4: distributeByClause ( sortByClause )?
 					{
-					pushFollow(FOLLOW_distributeByClause_in_partitioningSpec1432);
+					pushFollow(FOLLOW_distributeByClause_in_partitioningSpec1443);
 					distributeByClause96=gHiveParser.distributeByClause();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_distributeByClause.add(distributeByClause96.getTree());
 					// FromClauseParser.g:216:23: ( sortByClause )?
-					int alt33=2;
-					int LA33_0 = input.LA(1);
-					if ( (LA33_0==KW_SORT) ) {
-						alt33=1;
+					int alt34=2;
+					int LA34_0 = input.LA(1);
+					if ( (LA34_0==KW_SORT) ) {
+						alt34=1;
 					}
-					switch (alt33) {
+					switch (alt34) {
 						case 1 :
 							// FromClauseParser.g:216:23: sortByClause
 							{
-							pushFollow(FOLLOW_sortByClause_in_partitioningSpec1434);
+							pushFollow(FOLLOW_sortByClause_in_partitioningSpec1445);
 							sortByClause97=gHiveParser.sortByClause();
 							state._fsp--;
 							if (state.failed) return retval;
@@ -4281,7 +4207,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					}
 
 					// AST REWRITE
-					// elements: distributeByClause, sortByClause
+					// elements: sortByClause, distributeByClause
 					// token labels: 
 					// rule labels: retval
 					// token list labels: 
@@ -4319,7 +4245,7 @@ public class HiveParser_FromClauseParser extends Parser {
 				case 4 :
 					// FromClauseParser.g:217:4: sortByClause
 					{
-					pushFollow(FOLLOW_sortByClause_in_partitioningSpec1453);
+					pushFollow(FOLLOW_sortByClause_in_partitioningSpec1464);
 					sortByClause98=gHiveParser.sortByClause();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4357,7 +4283,7 @@ public class HiveParser_FromClauseParser extends Parser {
 				case 5 :
 					// FromClauseParser.g:218:4: clusterByClause
 					{
-					pushFollow(FOLLOW_clusterByClause_in_partitioningSpec1468);
+					pushFollow(FOLLOW_clusterByClause_in_partitioningSpec1479);
 					clusterByClause99=gHiveParser.clusterByClause();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4438,23 +4364,23 @@ public class HiveParser_FromClauseParser extends Parser {
 		 gParent.msgs.push("partitionTableFunctionSource clause"); 
 		try {
 			// FromClauseParser.g:224:4: ( subQuerySource | tableSource | partitionedTableFunction )
-			int alt35=3;
+			int alt36=3;
 			switch ( input.LA(1) ) {
 			case LPAREN:
 				{
-				alt35=1;
+				alt36=1;
 				}
 				break;
 			case Identifier:
 				{
-				int LA35_2 = input.LA(2);
-				if ( (LA35_2==LPAREN) ) {
-					int LA35_4 = input.LA(3);
-					if ( (LA35_4==KW_ON) ) {
-						alt35=3;
+				int LA36_2 = input.LA(2);
+				if ( (LA36_2==LPAREN) ) {
+					int LA36_4 = input.LA(3);
+					if ( (LA36_4==KW_ON) ) {
+						alt36=3;
 					}
-					else if ( (LA35_4==StringLiteral) ) {
-						alt35=2;
+					else if ( (LA36_4==StringLiteral) ) {
+						alt36=2;
 					}
 
 					else {
@@ -4465,7 +4391,7 @@ public class HiveParser_FromClauseParser extends Parser {
 								input.consume();
 							}
 							NoViableAltException nvae =
-								new NoViableAltException("", 35, 4, input);
+								new NoViableAltException("", 36, 4, input);
 							throw nvae;
 						} finally {
 							input.rewind(nvaeMark);
@@ -4473,8 +4399,8 @@ public class HiveParser_FromClauseParser extends Parser {
 					}
 
 				}
-				else if ( (LA35_2==DOT||LA35_2==Identifier||LA35_2==KW_AS||LA35_2==KW_CLUSTER||LA35_2==KW_DISTRIBUTE||LA35_2==KW_ORDER||LA35_2==KW_PARTITION||LA35_2==KW_SORT||LA35_2==KW_TABLESAMPLE||LA35_2==RPAREN) ) {
-					alt35=2;
+				else if ( (LA36_2==DIVIDE||LA36_2==DOT||LA36_2==Identifier||LA36_2==KW_AS||LA36_2==KW_CLUSTER||LA36_2==KW_DISTRIBUTE||LA36_2==KW_ORDER||LA36_2==KW_PARTITION||LA36_2==KW_SORT||LA36_2==KW_TABLESAMPLE||LA36_2==RPAREN) ) {
+					alt36=2;
 				}
 
 				else {
@@ -4483,7 +4409,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					try {
 						input.consume();
 						NoViableAltException nvae =
-							new NoViableAltException("", 35, 2, input);
+							new NoViableAltException("", 36, 2, input);
 						throw nvae;
 					} finally {
 						input.rewind(nvaeMark);
@@ -4693,23 +4619,23 @@ public class HiveParser_FromClauseParser extends Parser {
 			case KW_WHILE:
 			case KW_WITH:
 				{
-				alt35=2;
+				alt36=2;
 				}
 				break;
 			default:
 				if (state.backtracking>0) {state.failed=true; return retval;}
 				NoViableAltException nvae =
-					new NoViableAltException("", 35, 0, input);
+					new NoViableAltException("", 36, 0, input);
 				throw nvae;
 			}
-			switch (alt35) {
+			switch (alt36) {
 				case 1 :
 					// FromClauseParser.g:225:4: subQuerySource
 					{
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_subQuerySource_in_partitionTableFunctionSource1505);
+					pushFollow(FOLLOW_subQuerySource_in_partitionTableFunctionSource1516);
 					subQuerySource100=subQuerySource();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4723,7 +4649,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_tableSource_in_partitionTableFunctionSource1512);
+					pushFollow(FOLLOW_tableSource_in_partitionTableFunctionSource1523);
 					tableSource101=tableSource();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4737,7 +4663,7 @@ public class HiveParser_FromClauseParser extends Parser {
 					root_0 = (CommonTree)adaptor.nil();
 
 
-					pushFollow(FOLLOW_partitionedTableFunction_in_partitionTableFunctionSource1519);
+					pushFollow(FOLLOW_partitionedTableFunction_in_partitionTableFunctionSource1530);
 					partitionedTableFunction102=partitionedTableFunction();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4826,31 +4752,31 @@ public class HiveParser_FromClauseParser extends Parser {
 			// FromClauseParser.g:233:4: (name= Identifier LPAREN KW_ON ptfsrc= partitionTableFunctionSource ( partitioningSpec )? ( ( Identifier LPAREN expression RPAREN )=> Identifier LPAREN expression RPAREN ( COMMA Identifier LPAREN expression RPAREN )* )? RPAREN (alias= Identifier )? -> ^( TOK_PTBLFUNCTION $name ( $alias)? partitionTableFunctionSource ( partitioningSpec )? ( expression )* ) )
 			// FromClauseParser.g:234:4: name= Identifier LPAREN KW_ON ptfsrc= partitionTableFunctionSource ( partitioningSpec )? ( ( Identifier LPAREN expression RPAREN )=> Identifier LPAREN expression RPAREN ( COMMA Identifier LPAREN expression RPAREN )* )? RPAREN (alias= Identifier )?
 			{
-			name=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1550); if (state.failed) return retval; 
+			name=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1561); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_Identifier.add(name);
 
-			LPAREN103=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionedTableFunction1555); if (state.failed) return retval; 
+			LPAREN103=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionedTableFunction1566); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN103);
 
-			KW_ON104=(Token)match(input,KW_ON,FOLLOW_KW_ON_in_partitionedTableFunction1557); if (state.failed) return retval; 
+			KW_ON104=(Token)match(input,KW_ON,FOLLOW_KW_ON_in_partitionedTableFunction1568); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_KW_ON.add(KW_ON104);
 
-			pushFollow(FOLLOW_partitionTableFunctionSource_in_partitionedTableFunction1561);
+			pushFollow(FOLLOW_partitionTableFunctionSource_in_partitionedTableFunction1572);
 			ptfsrc=partitionTableFunctionSource();
 			state._fsp--;
 			if (state.failed) return retval;
 			if ( state.backtracking==0 ) stream_partitionTableFunctionSource.add(ptfsrc.getTree());
 			// FromClauseParser.g:235:53: ( partitioningSpec )?
-			int alt36=2;
-			int LA36_0 = input.LA(1);
-			if ( (LA36_0==KW_CLUSTER||LA36_0==KW_DISTRIBUTE||LA36_0==KW_ORDER||LA36_0==KW_PARTITION||LA36_0==KW_SORT) ) {
-				alt36=1;
+			int alt37=2;
+			int LA37_0 = input.LA(1);
+			if ( (LA37_0==KW_CLUSTER||LA37_0==KW_DISTRIBUTE||LA37_0==KW_ORDER||LA37_0==KW_PARTITION||LA37_0==KW_SORT) ) {
+				alt37=1;
 			}
-			switch (alt36) {
+			switch (alt37) {
 				case 1 :
 					// FromClauseParser.g:235:53: partitioningSpec
 					{
-					pushFollow(FOLLOW_partitioningSpec_in_partitionedTableFunction1563);
+					pushFollow(FOLLOW_partitioningSpec_in_partitionedTableFunction1574);
 					partitioningSpec105=partitioningSpec();
 					state._fsp--;
 					if (state.failed) return retval;
@@ -4861,64 +4787,64 @@ public class HiveParser_FromClauseParser extends Parser {
 			}
 
 			// FromClauseParser.g:236:6: ( ( Identifier LPAREN expression RPAREN )=> Identifier LPAREN expression RPAREN ( COMMA Identifier LPAREN expression RPAREN )* )?
-			int alt38=2;
-			int LA38_0 = input.LA(1);
-			if ( (LA38_0==Identifier) && (synpred2_FromClauseParser())) {
-				alt38=1;
+			int alt39=2;
+			int LA39_0 = input.LA(1);
+			if ( (LA39_0==Identifier) && (synpred2_FromClauseParser())) {
+				alt39=1;
 			}
-			switch (alt38) {
+			switch (alt39) {
 				case 1 :
 					// FromClauseParser.g:236:7: ( Identifier LPAREN expression RPAREN )=> Identifier LPAREN expression RPAREN ( COMMA Identifier LPAREN expression RPAREN )*
 					{
-					Identifier106=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1585); if (state.failed) return retval; 
+					Identifier106=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1596); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_Identifier.add(Identifier106);
 
-					LPAREN107=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionedTableFunction1587); if (state.failed) return retval; 
+					LPAREN107=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionedTableFunction1598); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN107);
 
-					pushFollow(FOLLOW_expression_in_partitionedTableFunction1589);
+					pushFollow(FOLLOW_expression_in_partitionedTableFunction1600);
 					expression108=gHiveParser.expression();
 					state._fsp--;
 					if (state.failed) return retval;
 					if ( state.backtracking==0 ) stream_expression.add(expression108.getTree());
-					RPAREN109=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionedTableFunction1591); if (state.failed) return retval; 
+					RPAREN109=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionedTableFunction1602); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN109);
 
 					// FromClauseParser.g:236:85: ( COMMA Identifier LPAREN expression RPAREN )*
-					loop37:
+					loop38:
 					while (true) {
-						int alt37=2;
-						int LA37_0 = input.LA(1);
-						if ( (LA37_0==COMMA) ) {
-							alt37=1;
+						int alt38=2;
+						int LA38_0 = input.LA(1);
+						if ( (LA38_0==COMMA) ) {
+							alt38=1;
 						}
 
-						switch (alt37) {
+						switch (alt38) {
 						case 1 :
 							// FromClauseParser.g:236:87: COMMA Identifier LPAREN expression RPAREN
 							{
-							COMMA110=(Token)match(input,COMMA,FOLLOW_COMMA_in_partitionedTableFunction1595); if (state.failed) return retval; 
+							COMMA110=(Token)match(input,COMMA,FOLLOW_COMMA_in_partitionedTableFunction1606); if (state.failed) return retval; 
 							if ( state.backtracking==0 ) stream_COMMA.add(COMMA110);
 
-							Identifier111=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1597); if (state.failed) return retval; 
+							Identifier111=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1608); if (state.failed) return retval; 
 							if ( state.backtracking==0 ) stream_Identifier.add(Identifier111);
 
-							LPAREN112=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionedTableFunction1599); if (state.failed) return retval; 
+							LPAREN112=(Token)match(input,LPAREN,FOLLOW_LPAREN_in_partitionedTableFunction1610); if (state.failed) return retval; 
 							if ( state.backtracking==0 ) stream_LPAREN.add(LPAREN112);
 
-							pushFollow(FOLLOW_expression_in_partitionedTableFunction1601);
+							pushFollow(FOLLOW_expression_in_partitionedTableFunction1612);
 							expression113=gHiveParser.expression();
 							state._fsp--;
 							if (state.failed) return retval;
 							if ( state.backtracking==0 ) stream_expression.add(expression113.getTree());
-							RPAREN114=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionedTableFunction1603); if (state.failed) return retval; 
+							RPAREN114=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionedTableFunction1614); if (state.failed) return retval; 
 							if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN114);
 
 							}
 							break;
 
 						default :
-							break loop37;
+							break loop38;
 						}
 					}
 
@@ -4927,17 +4853,17 @@ public class HiveParser_FromClauseParser extends Parser {
 
 			}
 
-			RPAREN115=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionedTableFunction1613); if (state.failed) return retval; 
+			RPAREN115=(Token)match(input,RPAREN,FOLLOW_RPAREN_in_partitionedTableFunction1624); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_RPAREN.add(RPAREN115);
 
 			// FromClauseParser.g:237:16: (alias= Identifier )?
-			int alt39=2;
-			alt39 = dfa39.predict(input);
-			switch (alt39) {
+			int alt40=2;
+			alt40 = dfa40.predict(input);
+			switch (alt40) {
 				case 1 :
 					// FromClauseParser.g:237:16: alias= Identifier
 					{
-					alias=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1617); if (state.failed) return retval; 
+					alias=(Token)match(input,Identifier,FOLLOW_Identifier_in_partitionedTableFunction1628); if (state.failed) return retval; 
 					if ( state.backtracking==0 ) stream_Identifier.add(alias);
 
 					}
@@ -4946,7 +4872,7 @@ public class HiveParser_FromClauseParser extends Parser {
 			}
 
 			// AST REWRITE
-			// elements: partitionTableFunctionSource, partitioningSpec, expression, name, alias
+			// elements: partitioningSpec, name, partitionTableFunctionSource, expression, alias
 			// token labels: alias, name
 			// rule labels: retval
 			// token list labels: 
@@ -5044,10 +4970,10 @@ public class HiveParser_FromClauseParser extends Parser {
 			// FromClauseParser.g:246:5: ( KW_WHERE searchCondition -> ^( TOK_WHERE searchCondition ) )
 			// FromClauseParser.g:247:5: KW_WHERE searchCondition
 			{
-			KW_WHERE116=(Token)match(input,KW_WHERE,FOLLOW_KW_WHERE_in_whereClause1677); if (state.failed) return retval; 
+			KW_WHERE116=(Token)match(input,KW_WHERE,FOLLOW_KW_WHERE_in_whereClause1688); if (state.failed) return retval; 
 			if ( state.backtracking==0 ) stream_KW_WHERE.add(KW_WHERE116);
 
-			pushFollow(FOLLOW_searchCondition_in_whereClause1679);
+			pushFollow(FOLLOW_searchCondition_in_whereClause1690);
 			searchCondition117=searchCondition();
 			state._fsp--;
 			if (state.failed) return retval;
@@ -5129,7 +5055,7 @@ public class HiveParser_FromClauseParser extends Parser {
 			root_0 = (CommonTree)adaptor.nil();
 
 
-			pushFollow(FOLLOW_expression_in_searchCondition1718);
+			pushFollow(FOLLOW_expression_in_searchCondition1729);
 			expression118=gHiveParser.expression();
 			state._fsp--;
 			if (state.failed) return retval;
@@ -5176,16 +5102,16 @@ public class HiveParser_FromClauseParser extends Parser {
 		// FromClauseParser.g:236:7: ( Identifier LPAREN expression RPAREN )
 		// FromClauseParser.g:236:8: Identifier LPAREN expression RPAREN
 		{
-		match(input,Identifier,FOLLOW_Identifier_in_synpred2_FromClauseParser1573); if (state.failed) return;
+		match(input,Identifier,FOLLOW_Identifier_in_synpred2_FromClauseParser1584); if (state.failed) return;
 
-		match(input,LPAREN,FOLLOW_LPAREN_in_synpred2_FromClauseParser1575); if (state.failed) return;
+		match(input,LPAREN,FOLLOW_LPAREN_in_synpred2_FromClauseParser1586); if (state.failed) return;
 
-		pushFollow(FOLLOW_expression_in_synpred2_FromClauseParser1577);
+		pushFollow(FOLLOW_expression_in_synpred2_FromClauseParser1588);
 		gHiveParser.expression();
 		state._fsp--;
 		if (state.failed) return;
 
-		match(input,RPAREN,FOLLOW_RPAREN_in_synpred2_FromClauseParser1579); if (state.failed) return;
+		match(input,RPAREN,FOLLOW_RPAREN_in_synpred2_FromClauseParser1590); if (state.failed) return;
 
 		}
 
@@ -5224,36 +5150,197 @@ public class HiveParser_FromClauseParser extends Parser {
 	}
 
 
+	protected DFA19 dfa19 = new DFA19(this);
 	protected DFA26 dfa26 = new DFA26(this);
-	protected DFA29 dfa29 = new DFA29(this);
 	protected DFA30 dfa30 = new DFA30(this);
-	protected DFA39 dfa39 = new DFA39(this);
+	protected DFA31 dfa31 = new DFA31(this);
+	protected DFA40 dfa40 = new DFA40(this);
+	static final String DFA19_eotS =
+		"\100\uffff";
+	static final String DFA19_eofS =
+		"\1\uffff\1\2\76\uffff";
+	static final String DFA19_minS =
+		"\1\u008f\1\23\2\uffff\1\11\73\uffff";
+	static final String DFA19_maxS =
+		"\1\u018a\1\u019b\2\uffff\1\u044e\73\uffff";
+	static final String DFA19_acceptS =
+		"\2\uffff\1\2\1\3\36\uffff\1\1\35\uffff";
+	static final String DFA19_specialS =
+		"\4\uffff\1\0\73\uffff}>";
+	static final String[] DFA19_transitionS = {
+			"\1\1\3\uffff\2\2\1\uffff\2\2\1\uffff\16\2\2\uffff\5\2\1\uffff\6\2\1\uffff"+
+			"\1\2\1\uffff\2\2\1\uffff\16\2\1\uffff\3\2\2\uffff\1\2\1\uffff\1\2\1\uffff"+
+			"\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff\3\2\1\uffff\1\2\1\uffff\4\2\1\uffff"+
+			"\2\2\1\uffff\4\2\1\uffff\14\2\1\uffff\4\2\1\uffff\12\2\2\uffff\3\2\1"+
+			"\uffff\2\2\1\uffff\4\2\1\uffff\1\2\1\uffff\6\2\1\uffff\1\2\1\uffff\5"+
+			"\2\2\uffff\14\2\1\uffff\16\2\1\uffff\25\2\1\uffff\4\2\1\uffff\4\2\1\uffff"+
+			"\4\2\1\uffff\3\2\1\uffff\12\2\1\uffff\1\2\2\uffff\1\2\1\uffff\1\2\3\uffff"+
+			"\1\3",
+			"\1\2\1\uffff\1\2\171\uffff\1\2\13\uffff\1\2\16\uffff\1\2\12\uffff\1"+
+			"\2\24\uffff\1\2\33\uffff\1\2\3\uffff\1\2\1\uffff\1\2\12\uffff\1\2\3\uffff"+
+			"\1\2\5\uffff\1\2\2\uffff\2\2\2\uffff\1\2\11\uffff\1\2\13\uffff\1\2\3"+
+			"\uffff\1\2\32\uffff\1\2\6\uffff\1\2\7\uffff\1\2\13\uffff\1\2\11\uffff"+
+			"\1\2\20\uffff\1\2\17\uffff\1\2\1\uffff\1\2\4\uffff\1\4\20\uffff\1\2",
+			"",
+			"",
+			"\1\2\5\uffff\1\2\6\uffff\1\2\170\uffff\1\2\3\uffff\2\2\1\uffff\2\2\1"+
+			"\uffff\25\2\1\uffff\6\2\1\uffff\1\2\1\uffff\2\2\1\uffff\16\2\1\uffff"+
+			"\3\2\2\uffff\1\2\1\uffff\1\2\1\uffff\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff"+
+			"\3\2\1\uffff\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff\14\2\1\uffff\4\2\1\uffff"+
+			"\12\2\1\uffff\4\2\1\uffff\7\2\1\42\1\2\1\uffff\6\2\1\uffff\1\2\1\uffff"+
+			"\5\2\2\uffff\14\2\1\uffff\16\2\1\uffff\25\2\1\uffff\4\2\1\uffff\4\2\1"+
+			"\uffff\4\2\1\uffff\3\2\1\uffff\12\2\1\uffff\1\2\2\uffff\1\2\1\uffff\1"+
+			"\2\3\uffff\1\2\4\uffff\1\2\6\uffff\1\2\1\uffff\1\2\12\uffff\2\2\1\uffff"+
+			"\1\2\4\uffff\1\2\21\uffff\1\2\5\uffff\1\2\u0160\uffff\2\2\6\uffff\1\2"+
+			"\u0121\uffff\1\2",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+	};
+
+	static final short[] DFA19_eot = DFA.unpackEncodedString(DFA19_eotS);
+	static final short[] DFA19_eof = DFA.unpackEncodedString(DFA19_eofS);
+	static final char[] DFA19_min = DFA.unpackEncodedStringToUnsignedChars(DFA19_minS);
+	static final char[] DFA19_max = DFA.unpackEncodedStringToUnsignedChars(DFA19_maxS);
+	static final short[] DFA19_accept = DFA.unpackEncodedString(DFA19_acceptS);
+	static final short[] DFA19_special = DFA.unpackEncodedString(DFA19_specialS);
+	static final short[][] DFA19_transition;
+
+	static {
+		int numStates = DFA19_transitionS.length;
+		DFA19_transition = new short[numStates][];
+		for (int i=0; i<numStates; i++) {
+			DFA19_transition[i] = DFA.unpackEncodedString(DFA19_transitionS[i]);
+		}
+	}
+
+	protected class DFA19 extends DFA {
+
+		public DFA19(BaseRecognizer recognizer) {
+			this.recognizer = recognizer;
+			this.decisionNumber = 19;
+			this.eot = DFA19_eot;
+			this.eof = DFA19_eof;
+			this.min = DFA19_min;
+			this.max = DFA19_max;
+			this.accept = DFA19_accept;
+			this.special = DFA19_special;
+			this.transition = DFA19_transition;
+		}
+		@Override
+		public String getDescription() {
+			return "146:5: ( ( Identifier LPAREN )=> partitionedTableFunction | tableSource | subQuerySource )";
+		}
+		@Override
+		public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+			TokenStream input = (TokenStream)_input;
+			int _s = s;
+			switch ( s ) {
+					case 0 : 
+						int LA19_4 = input.LA(1);
+						 
+						int index19_4 = input.index();
+						input.rewind();
+						s = -1;
+						if ( (LA19_4==KW_ON) && (synpred1_FromClauseParser())) {s = 34;}
+						else if ( (LA19_4==BigintLiteral||LA19_4==CharSetName||LA19_4==DecimalLiteral||LA19_4==Identifier||(LA19_4 >= KW_ADD && LA19_4 <= KW_AFTER)||(LA19_4 >= KW_ALTER && LA19_4 <= KW_ANALYZE)||(LA19_4 >= KW_ARCHIVE && LA19_4 <= KW_COLLECTION)||(LA19_4 >= KW_COLUMNS && LA19_4 <= KW_CREATE)||LA19_4==KW_CUBE||(LA19_4 >= KW_CURSOR && LA19_4 <= KW_DATA)||(LA19_4 >= KW_DATABASES && LA19_4 <= KW_DISABLE)||(LA19_4 >= KW_DISTRIBUTE && LA19_4 <= KW_DROP)||LA19_4==KW_ELEM_TYPE||LA19_4==KW_ENABLE||LA19_4==KW_ESCAPED||(LA19_4 >= KW_EXCLUSIVE && LA19_4 <= KW_EXPORT)||(LA19_4 >= KW_EXTERNAL && LA19_4 <= KW_FLOAT)||(LA19_4 >= KW_FOR && LA19_4 <= KW_FORMATTED)||LA19_4==KW_FULL||(LA19_4 >= KW_FUNCTIONS && LA19_4 <= KW_GROUPING)||(LA19_4 >= KW_HOLD_DDLTIME && LA19_4 <= KW_INCRE)||(LA19_4 >= KW_INDEX && LA19_4 <= KW_ITEMS)||(LA19_4 >= KW_KEYS && LA19_4 <= KW_LEFT)||(LA19_4 >= KW_LIKE && LA19_4 <= KW_LONG)||(LA19_4 >= KW_MAP && LA19_4 <= KW_MINUS)||(LA19_4 >= KW_MSCK && LA19_4 <= KW_OFFLINE)||LA19_4==KW_OPTION||(LA19_4 >= KW_ORCFILE && LA19_4 <= KW_OUTPUTFORMAT)||LA19_4==KW_OVERWRITE||(LA19_4 >= KW_PARTITION && LA19_4 <= KW_PLUS)||(LA19_4 >= KW_PRETTY && LA19_4 <= KW_RECORDWRITER)||(LA19_4 >= KW_REGEXP && LA19_4 <= KW_SCHEMAS)||(LA19_4 >= KW_SEMI && LA19_4 <= KW_TABLES)||(LA19_4 >= KW_TBLPROPERTIES && LA19_4 <= KW_TEXTFILE)||(LA19_4 >= KW_TIMESTAMP && LA19_4 <= KW_TOUCH)||(LA19_4 >= KW_TRIGGER && LA19_4 <= KW_UNARCHIVE)||(LA19_4 >= KW_UNDO && LA19_4 <= KW_UNIONTYPE)||(LA19_4 >= KW_UNLOCK && LA19_4 <= KW_VALUE_TYPE)||LA19_4==KW_VIEW||LA19_4==KW_WHILE||LA19_4==KW_WITH||LA19_4==LPAREN||LA19_4==MINUS||LA19_4==Number||LA19_4==PLUS||(LA19_4 >= SmallintLiteral && LA19_4 <= StringLiteral)||LA19_4==TILDE||LA19_4==TinyintLiteral||LA19_4==Day||LA19_4==Hour||(LA19_4 >= Minute && LA19_4 <= Month)||LA19_4==Second||LA19_4==Year) ) {s = 2;}
+						 
+						input.seek(index19_4);
+						if ( s>=0 ) return s;
+						break;
+			}
+			if (state.backtracking>0) {state.failed=true; return -1;}
+			NoViableAltException nvae =
+				new NoViableAltException(getDescription(), 19, _s, input);
+			error(nvae);
+			throw nvae;
+		}
+	}
+
 	static final String DFA26_eotS =
-		"\115\uffff";
+		"\124\uffff";
 	static final String DFA26_eofS =
-		"\1\2\114\uffff";
+		"\1\2\123\uffff";
 	static final String DFA26_minS =
-		"\1\32\1\7\34\uffff\1\4\56\uffff";
+		"\1\23\1\11\35\uffff\1\4\64\uffff";
 	static final String DFA26_maxS =
-		"\1\u0119\1\u0121\34\uffff\1\u011f\56\uffff";
+		"\1\u019b\1\u044e\35\uffff\1\u01a4\64\uffff";
 	static final String DFA26_acceptS =
-		"\2\uffff\1\2\62\uffff\3\1\25\uffff";
+		"\2\uffff\1\2\71\uffff\3\1\25\uffff";
 	static final String DFA26_specialS =
-		"\115\uffff}>";
+		"\124\uffff}>";
 	static final String[] DFA26_transitionS = {
-			"\1\2\10\uffff\1\2\16\uffff\1\2\12\uffff\1\2\24\uffff\1\2\31\uffff\1\2"+
-			"\3\uffff\1\2\1\uffff\1\2\11\uffff\1\2\3\uffff\1\2\5\uffff\1\2\2\uffff"+
-			"\2\2\2\uffff\1\2\11\uffff\1\2\13\uffff\1\2\3\uffff\1\2\7\uffff\1\2\22"+
-			"\uffff\1\2\6\uffff\1\2\7\uffff\1\2\13\uffff\1\2\11\uffff\1\2\20\uffff"+
-			"\1\2\17\uffff\1\2\1\uffff\1\2\4\uffff\1\1\11\uffff\1\2",
-			"\1\2\5\uffff\1\2\4\uffff\1\2\7\uffff\3\2\1\uffff\2\2\1\uffff\25\2\1"+
-			"\uffff\6\2\1\uffff\1\2\1\uffff\2\2\1\uffff\16\2\1\uffff\4\2\1\uffff\1"+
-			"\2\1\uffff\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff\3\2\1\uffff\1\2\1\uffff"+
-			"\4\2\1\uffff\23\2\1\uffff\4\2\1\uffff\12\2\1\uffff\4\2\1\uffff\7\2\1"+
-			"\uffff\1\2\1\uffff\6\2\1\uffff\1\2\1\uffff\5\2\2\uffff\14\2\1\uffff\16"+
-			"\2\1\uffff\25\2\1\uffff\4\2\1\uffff\4\2\1\uffff\4\2\1\uffff\3\2\1\uffff"+
-			"\12\2\1\uffff\1\2\2\uffff\1\2\1\uffff\1\2\3\uffff\1\2\2\uffff\1\2\2\uffff"+
-			"\2\2\7\uffff\1\2\1\36\2\2",
+			"\1\2\173\uffff\1\2\13\uffff\1\2\16\uffff\1\2\12\uffff\1\2\24\uffff\1"+
+			"\2\33\uffff\1\2\3\uffff\1\2\1\uffff\1\2\12\uffff\1\2\3\uffff\1\2\5\uffff"+
+			"\1\2\2\uffff\2\2\2\uffff\1\2\11\uffff\1\2\13\uffff\1\2\3\uffff\1\2\7"+
+			"\uffff\1\2\22\uffff\1\2\6\uffff\1\2\7\uffff\1\2\13\uffff\1\2\11\uffff"+
+			"\1\2\20\uffff\1\2\17\uffff\1\2\1\uffff\1\2\4\uffff\1\1\20\uffff\1\2",
+			"\1\2\5\uffff\1\2\6\uffff\1\2\170\uffff\1\2\3\uffff\2\2\1\uffff\2\2\1"+
+			"\uffff\25\2\1\uffff\6\2\1\uffff\1\2\1\uffff\2\2\1\uffff\16\2\1\uffff"+
+			"\3\2\2\uffff\1\2\1\uffff\1\2\1\uffff\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff"+
+			"\3\2\1\uffff\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff\14\2\1\uffff\4\2\1\uffff"+
+			"\12\2\1\uffff\4\2\1\uffff\7\2\1\uffff\1\2\1\uffff\6\2\1\uffff\1\2\1\uffff"+
+			"\5\2\2\uffff\14\2\1\uffff\16\2\1\uffff\25\2\1\uffff\4\2\1\uffff\4\2\1"+
+			"\uffff\4\2\1\uffff\3\2\1\uffff\12\2\1\uffff\1\2\2\uffff\1\2\1\uffff\1"+
+			"\2\3\uffff\1\2\4\uffff\1\2\6\uffff\1\2\1\uffff\1\2\12\uffff\1\2\1\37"+
+			"\1\uffff\1\2\4\uffff\1\2\21\uffff\1\2\5\uffff\1\2\u0160\uffff\2\2\6\uffff"+
+			"\1\2\u0121\uffff\1\2",
 			"",
 			"",
 			"",
@@ -5282,10 +5369,18 @@ public class HiveParser_FromClauseParser extends Parser {
 			"",
 			"",
 			"",
-			"\3\2\3\uffff\1\66\3\uffff\2\2\1\uffff\1\2\2\uffff\1\65\1\2\1\uffff\2"+
-			"\2\7\uffff\1\2\5\uffff\1\2\121\uffff\1\2\13\uffff\1\2\7\uffff\1\2\21"+
-			"\uffff\1\2\6\uffff\1\2\35\uffff\1\2\6\uffff\1\2\102\uffff\2\2\1\uffff"+
-			"\1\2\1\uffff\3\2\1\uffff\1\2\2\uffff\1\67\3\uffff\1\2\1\uffff\1\2",
+			"",
+			"\1\2\2\uffff\2\2\3\uffff\1\75\5\uffff\2\2\1\uffff\1\2\2\uffff\1\74\1"+
+			"\2\3\uffff\2\2\171\uffff\1\2\5\uffff\1\2\123\uffff\1\2\14\uffff\1\2\7"+
+			"\uffff\1\2\21\uffff\1\2\6\uffff\1\2\35\uffff\1\2\6\uffff\1\2\102\uffff"+
+			"\2\2\1\uffff\1\2\3\uffff\1\2\1\uffff\1\2\2\uffff\1\2\3\uffff\1\2\2\uffff"+
+			"\1\76\5\uffff\1\2\2\uffff\1\2",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
 			"",
 			"",
 			"",
@@ -5369,30 +5464,30 @@ public class HiveParser_FromClauseParser extends Parser {
 		}
 	}
 
-	static final String DFA29_eotS =
-		"\117\uffff";
-	static final String DFA29_eofS =
-		"\1\3\1\uffff\1\1\114\uffff";
-	static final String DFA29_minS =
-		"\1\32\1\uffff\1\32\32\uffff\1\7\61\uffff";
-	static final String DFA29_maxS =
-		"\1\u0119\1\uffff\1\u0119\32\uffff\1\u0121\61\uffff";
-	static final String DFA29_acceptS =
-		"\1\uffff\1\1\1\uffff\1\2\64\uffff\27\1";
-	static final String DFA29_specialS =
-		"\117\uffff}>";
-	static final String[] DFA29_transitionS = {
-			"\1\2\10\uffff\1\1\16\uffff\1\3\12\uffff\1\3\24\uffff\1\3\31\uffff\1\3"+
-			"\3\uffff\1\3\1\uffff\1\3\11\uffff\1\3\3\uffff\1\3\5\uffff\1\3\2\uffff"+
+	static final String DFA30_eotS =
+		"\125\uffff";
+	static final String DFA30_eofS =
+		"\1\3\1\uffff\1\1\122\uffff";
+	static final String DFA30_minS =
+		"\1\u008f\1\uffff\1\u008f\32\uffff\1\11\67\uffff";
+	static final String DFA30_maxS =
+		"\1\u019b\1\uffff\1\u019b\32\uffff\1\u044e\67\uffff";
+	static final String DFA30_acceptS =
+		"\1\uffff\1\1\1\uffff\1\2\64\uffff\35\1";
+	static final String DFA30_specialS =
+		"\125\uffff}>";
+	static final String[] DFA30_transitionS = {
+			"\1\2\13\uffff\1\1\16\uffff\1\3\12\uffff\1\3\24\uffff\1\3\33\uffff\1\3"+
+			"\3\uffff\1\3\1\uffff\1\3\12\uffff\1\3\3\uffff\1\3\5\uffff\1\3\2\uffff"+
 			"\2\3\2\uffff\1\3\11\uffff\1\3\13\uffff\1\3\3\uffff\1\3\7\uffff\1\3\22"+
 			"\uffff\1\3\6\uffff\1\3\7\uffff\1\3\13\uffff\1\3\32\uffff\1\3\17\uffff"+
-			"\1\3\1\uffff\1\3\4\uffff\1\3\11\uffff\1\3",
+			"\1\3\1\uffff\1\3\4\uffff\1\3\20\uffff\1\3",
 			"",
-			"\1\1\27\uffff\1\1\12\uffff\1\1\24\uffff\1\1\31\uffff\1\1\3\uffff\1\1"+
-			"\1\uffff\1\1\11\uffff\1\1\3\uffff\1\1\5\uffff\1\1\2\uffff\2\1\2\uffff"+
+			"\1\1\32\uffff\1\1\12\uffff\1\1\24\uffff\1\1\33\uffff\1\1\3\uffff\1\1"+
+			"\1\uffff\1\1\12\uffff\1\1\3\uffff\1\1\5\uffff\1\1\2\uffff\2\1\2\uffff"+
 			"\1\1\11\uffff\1\1\13\uffff\1\1\3\uffff\1\1\7\uffff\1\1\22\uffff\1\1\6"+
 			"\uffff\1\1\7\uffff\1\1\13\uffff\1\1\32\uffff\1\1\17\uffff\1\1\1\uffff"+
-			"\1\1\4\uffff\1\35\11\uffff\1\1",
+			"\1\1\4\uffff\1\35\20\uffff\1\1",
 			"",
 			"",
 			"",
@@ -5419,198 +5514,23 @@ public class HiveParser_FromClauseParser extends Parser {
 			"",
 			"",
 			"",
-			"\1\76\5\uffff\1\102\4\uffff\1\101\7\uffff\1\112\2\113\1\uffff\2\113"+
-			"\1\uffff\1\113\1\106\14\113\1\115\1\114\5\113\1\uffff\6\113\1\uffff\1"+
-			"\113\1\uffff\2\113\1\uffff\1\113\1\73\14\113\1\uffff\4\113\1\uffff\1"+
-			"\113\1\uffff\1\113\1\uffff\4\113\1\uffff\1\113\1\104\5\113\1\uffff\3"+
-			"\113\1\uffff\1\113\1\uffff\4\113\1\uffff\2\113\1\105\20\113\1\uffff\4"+
-			"\113\1\uffff\12\113\1\uffff\1\107\3\113\1\uffff\2\113\1\70\1\113\1\72"+
-			"\2\113\1\uffff\1\113\1\uffff\6\113\1\uffff\1\113\1\uffff\5\113\2\uffff"+
-			"\14\113\1\uffff\16\113\1\uffff\22\113\1\110\2\113\1\uffff\4\113\1\uffff"+
-			"\4\113\1\uffff\1\113\1\103\2\113\1\uffff\2\113\1\111\1\uffff\12\113\1"+
-			"\uffff\1\113\2\uffff\1\113\1\uffff\1\113\3\uffff\1\116\2\uffff\1\71\2"+
-			"\uffff\1\74\1\71\7\uffff\1\77\1\75\1\71\1\100",
+			"\1\104\5\uffff\1\110\6\uffff\1\107\170\uffff\1\120\3\uffff\2\121\1\uffff"+
+			"\2\121\1\uffff\1\121\1\114\14\121\1\123\1\122\5\121\1\uffff\6\121\1\uffff"+
+			"\1\121\1\uffff\2\121\1\uffff\1\121\1\73\14\121\1\uffff\3\121\2\uffff"+
+			"\1\121\1\uffff\1\121\1\uffff\1\121\1\uffff\4\121\1\uffff\1\121\1\112"+
+			"\5\121\1\uffff\3\121\1\uffff\1\121\1\uffff\4\121\1\uffff\2\121\1\113"+
+			"\4\121\1\uffff\14\121\1\uffff\4\121\1\uffff\12\121\1\uffff\1\115\3\121"+
+			"\1\uffff\2\121\1\70\1\121\1\72\2\121\1\uffff\1\121\1\uffff\6\121\1\uffff"+
+			"\1\121\1\uffff\5\121\2\uffff\14\121\1\uffff\16\121\1\uffff\22\121\1\116"+
+			"\2\121\1\uffff\4\121\1\uffff\4\121\1\uffff\1\121\1\111\2\121\1\uffff"+
+			"\2\121\1\117\1\uffff\12\121\1\uffff\1\121\2\uffff\1\121\1\uffff\1\121"+
+			"\3\uffff\1\124\4\uffff\1\71\6\uffff\1\74\1\uffff\1\71\12\uffff\1\105"+
+			"\1\103\1\uffff\1\71\4\uffff\1\106\21\uffff\1\77\5\uffff\1\100\u0160\uffff"+
+			"\1\101\1\76\6\uffff\1\102\u0121\uffff\1\75",
 			"",
 			"",
 			"",
 			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			""
-	};
-
-	static final short[] DFA29_eot = DFA.unpackEncodedString(DFA29_eotS);
-	static final short[] DFA29_eof = DFA.unpackEncodedString(DFA29_eofS);
-	static final char[] DFA29_min = DFA.unpackEncodedStringToUnsignedChars(DFA29_minS);
-	static final char[] DFA29_max = DFA.unpackEncodedStringToUnsignedChars(DFA29_maxS);
-	static final short[] DFA29_accept = DFA.unpackEncodedString(DFA29_acceptS);
-	static final short[] DFA29_special = DFA.unpackEncodedString(DFA29_specialS);
-	static final short[][] DFA29_transition;
-
-	static {
-		int numStates = DFA29_transitionS.length;
-		DFA29_transition = new short[numStates][];
-		for (int i=0; i<numStates; i++) {
-			DFA29_transition[i] = DFA.unpackEncodedString(DFA29_transitionS[i]);
-		}
-	}
-
-	protected class DFA29 extends DFA {
-
-		public DFA29(BaseRecognizer recognizer) {
-			this.recognizer = recognizer;
-			this.decisionNumber = 29;
-			this.eot = DFA29_eot;
-			this.eof = DFA29_eof;
-			this.min = DFA29_min;
-			this.max = DFA29_max;
-			this.accept = DFA29_accept;
-			this.special = DFA29_special;
-			this.transition = DFA29_transition;
-		}
-		@Override
-		public String getDescription() {
-			return "179:68: ( ( KW_AS )? alias= Identifier )?";
-		}
-	}
-
-	static final String DFA30_eotS =
-		"\145\uffff";
-	static final String DFA30_eofS =
-		"\1\uffff\2\4\142\uffff";
-	static final String DFA30_minS =
-		"\1\32\2\21\1\32\55\uffff\1\32\63\uffff";
-	static final String DFA30_maxS =
-		"\1\u010b\2\u0119\1\u011d\55\uffff\1\u011d\63\uffff";
-	static final String DFA30_acceptS =
-		"\4\uffff\1\2\133\uffff\1\1\4\uffff";
-	static final String DFA30_specialS =
-		"\145\uffff}>";
-	static final String[] DFA30_transitionS = {
-			"\1\1\2\2\1\uffff\2\2\1\uffff\16\2\2\uffff\5\2\1\uffff\6\2\1\uffff\1\2"+
-			"\1\uffff\2\2\1\uffff\16\2\1\uffff\4\2\1\uffff\1\2\1\uffff\1\2\1\uffff"+
-			"\4\2\1\uffff\7\2\1\uffff\3\2\1\uffff\1\2\1\uffff\4\2\1\uffff\2\2\1\uffff"+
-			"\20\2\1\uffff\4\2\1\uffff\12\2\2\uffff\3\2\1\uffff\2\2\1\uffff\4\2\1"+
-			"\uffff\1\2\1\uffff\6\2\1\uffff\1\2\1\uffff\5\2\2\uffff\14\2\1\uffff\16"+
-			"\2\1\uffff\25\2\1\uffff\4\2\1\uffff\4\2\1\uffff\4\2\1\uffff\3\2\1\uffff"+
-			"\12\2\1\uffff\1\2\2\uffff\1\2\1\uffff\1\2",
-			"\1\3\10\uffff\1\4\10\uffff\1\4\16\uffff\2\4\4\uffff\2\4\3\uffff\1\4"+
-			"\24\uffff\1\4\7\uffff\2\4\17\uffff\2\4\3\uffff\1\4\1\uffff\1\4\2\uffff"+
-			"\1\4\2\uffff\1\4\3\uffff\1\4\3\uffff\1\4\5\uffff\1\4\2\uffff\2\4\1\uffff"+
-			"\2\4\3\uffff\1\4\5\uffff\1\4\13\uffff\1\4\3\uffff\1\4\7\uffff\2\4\21"+
-			"\uffff\1\4\6\uffff\1\4\3\uffff\1\4\3\uffff\1\4\6\uffff\1\4\2\uffff\1"+
-			"\4\1\uffff\1\4\3\uffff\1\4\5\uffff\2\4\6\uffff\1\4\10\uffff\1\4\17\uffff"+
-			"\1\4\1\uffff\1\4\4\uffff\1\4\11\uffff\1\4",
-			"\1\61\10\uffff\1\4\10\uffff\1\4\16\uffff\2\4\4\uffff\2\4\3\uffff\1\4"+
-			"\24\uffff\1\4\7\uffff\2\4\17\uffff\2\4\3\uffff\1\4\1\uffff\1\4\2\uffff"+
-			"\1\4\2\uffff\1\4\3\uffff\1\4\3\uffff\1\4\5\uffff\1\4\2\uffff\2\4\1\uffff"+
-			"\2\4\3\uffff\1\4\5\uffff\1\4\13\uffff\1\4\3\uffff\1\4\7\uffff\2\4\21"+
-			"\uffff\1\4\6\uffff\1\4\3\uffff\1\4\3\uffff\1\4\6\uffff\1\4\2\uffff\1"+
-			"\4\1\uffff\1\4\3\uffff\1\4\5\uffff\2\4\6\uffff\1\4\10\uffff\1\4\17\uffff"+
-			"\1\4\1\uffff\1\4\4\uffff\1\4\11\uffff\1\4",
-			"\3\140\1\uffff\2\140\1\uffff\16\140\2\uffff\5\140\1\uffff\6\140\1\uffff"+
-			"\1\140\1\uffff\2\140\1\uffff\16\140\1\uffff\4\140\1\uffff\1\140\1\uffff"+
-			"\1\140\1\uffff\4\140\1\uffff\7\140\1\uffff\3\140\1\uffff\1\140\1\uffff"+
-			"\4\140\1\uffff\2\140\1\uffff\20\140\1\uffff\4\140\1\uffff\12\140\2\uffff"+
-			"\3\140\1\uffff\2\140\1\uffff\4\140\1\uffff\1\140\1\uffff\6\140\1\uffff"+
-			"\1\140\1\uffff\5\140\2\uffff\14\140\1\uffff\16\140\1\uffff\25\140\1\uffff"+
-			"\4\140\1\uffff\4\140\1\uffff\4\140\1\uffff\3\140\1\uffff\12\140\1\uffff"+
-			"\1\140\2\uffff\1\140\1\uffff\1\140\21\uffff\1\4",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"",
-			"\3\140\1\uffff\2\140\1\uffff\16\140\2\uffff\5\140\1\uffff\6\140\1\uffff"+
-			"\1\140\1\uffff\2\140\1\uffff\16\140\1\uffff\4\140\1\uffff\1\140\1\uffff"+
-			"\1\140\1\uffff\4\140\1\uffff\7\140\1\uffff\3\140\1\uffff\1\140\1\uffff"+
-			"\4\140\1\uffff\2\140\1\uffff\20\140\1\uffff\4\140\1\uffff\12\140\2\uffff"+
-			"\3\140\1\uffff\2\140\1\uffff\4\140\1\uffff\1\140\1\uffff\6\140\1\uffff"+
-			"\1\140\1\uffff\5\140\2\uffff\14\140\1\uffff\16\140\1\uffff\25\140\1\uffff"+
-			"\4\140\1\uffff\4\140\1\uffff\4\140\1\uffff\3\140\1\uffff\12\140\1\uffff"+
-			"\1\140\2\uffff\1\140\1\uffff\1\140\21\uffff\1\4",
 			"",
 			"",
 			"",
@@ -5695,33 +5615,53 @@ public class HiveParser_FromClauseParser extends Parser {
 		}
 		@Override
 		public String getDescription() {
-			return "183:1: tableName : (db= identifier DOT tab= identifier -> ^( TOK_TABNAME $db $tab) |tab= identifier -> ^( TOK_TABNAME $tab) );";
+			return "179:91: ( ( KW_AS )? alias= Identifier )?";
 		}
 	}
 
-	static final String DFA39_eotS =
-		"\116\uffff";
-	static final String DFA39_eofS =
-		"\1\2\1\35\114\uffff";
-	static final String DFA39_minS =
-		"\2\32\32\uffff\1\7\61\uffff";
-	static final String DFA39_maxS =
-		"\2\u0119\32\uffff\1\u0121\61\uffff";
-	static final String DFA39_acceptS =
-		"\2\uffff\1\2\32\uffff\1\1\31\uffff\27\1";
-	static final String DFA39_specialS =
-		"\116\uffff}>";
-	static final String[] DFA39_transitionS = {
-			"\1\1\27\uffff\1\2\12\uffff\1\2\24\uffff\1\2\31\uffff\1\2\3\uffff\1\2"+
-			"\1\uffff\1\2\11\uffff\1\2\3\uffff\1\2\5\uffff\1\2\2\uffff\2\2\2\uffff"+
-			"\1\2\11\uffff\1\2\13\uffff\1\2\3\uffff\1\2\7\uffff\1\2\22\uffff\1\2\6"+
-			"\uffff\1\2\7\uffff\1\2\13\uffff\1\2\32\uffff\1\2\17\uffff\1\2\1\uffff"+
-			"\1\2\4\uffff\1\2\11\uffff\1\2",
-			"\1\35\27\uffff\1\35\12\uffff\1\35\24\uffff\1\35\31\uffff\1\35\3\uffff"+
-			"\1\35\1\uffff\1\35\11\uffff\1\35\3\uffff\1\35\5\uffff\1\35\2\uffff\2"+
-			"\35\2\uffff\1\35\11\uffff\1\35\13\uffff\1\35\3\uffff\1\35\7\uffff\1\35"+
-			"\22\uffff\1\35\6\uffff\1\35\7\uffff\1\35\13\uffff\1\35\32\uffff\1\35"+
-			"\17\uffff\1\35\1\uffff\1\35\4\uffff\1\34\11\uffff\1\35",
+	static final String DFA31_eotS =
+		"\147\uffff";
+	static final String DFA31_eofS =
+		"\1\uffff\2\4\144\uffff";
+	static final String DFA31_minS =
+		"\1\u008f\2\23\1\u008f\56\uffff\1\u008f\64\uffff";
+	static final String DFA31_maxS =
+		"\1\u0186\2\u019b\1\u01a1\56\uffff\1\u01a1\64\uffff";
+	static final String DFA31_acceptS =
+		"\4\uffff\1\2\135\uffff\1\1\4\uffff";
+	static final String DFA31_specialS =
+		"\147\uffff}>";
+	static final String[] DFA31_transitionS = {
+			"\1\1\3\uffff\2\2\1\uffff\2\2\1\uffff\16\2\2\uffff\5\2\1\uffff\6\2\1\uffff"+
+			"\1\2\1\uffff\2\2\1\uffff\16\2\1\uffff\3\2\2\uffff\1\2\1\uffff\1\2\1\uffff"+
+			"\1\2\1\uffff\4\2\1\uffff\7\2\1\uffff\3\2\1\uffff\1\2\1\uffff\4\2\1\uffff"+
+			"\2\2\1\uffff\4\2\1\uffff\14\2\1\uffff\4\2\1\uffff\12\2\2\uffff\3\2\1"+
+			"\uffff\2\2\1\uffff\4\2\1\uffff\1\2\1\uffff\6\2\1\uffff\1\2\1\uffff\5"+
+			"\2\2\uffff\14\2\1\uffff\16\2\1\uffff\25\2\1\uffff\4\2\1\uffff\4\2\1\uffff"+
+			"\4\2\1\uffff\3\2\1\uffff\12\2\1\uffff\1\2\2\uffff\1\2\1\uffff\1\2",
+			"\1\4\1\uffff\1\3\171\uffff\1\4\13\uffff\1\4\16\uffff\2\4\4\uffff\2\4"+
+			"\3\uffff\1\4\24\uffff\1\4\11\uffff\2\4\17\uffff\2\4\3\uffff\1\4\1\uffff"+
+			"\1\4\2\uffff\1\4\2\uffff\1\4\4\uffff\1\4\3\uffff\1\4\5\uffff\1\4\2\uffff"+
+			"\2\4\1\uffff\2\4\3\uffff\1\4\5\uffff\1\4\13\uffff\1\4\3\uffff\1\4\7\uffff"+
+			"\2\4\21\uffff\1\4\6\uffff\1\4\3\uffff\1\4\3\uffff\1\4\6\uffff\1\4\2\uffff"+
+			"\1\4\1\uffff\1\4\3\uffff\1\4\5\uffff\2\4\6\uffff\1\4\10\uffff\1\4\17"+
+			"\uffff\1\4\1\uffff\1\4\4\uffff\1\4\20\uffff\1\4",
+			"\1\4\1\uffff\1\62\171\uffff\1\4\13\uffff\1\4\16\uffff\2\4\4\uffff\2"+
+			"\4\3\uffff\1\4\24\uffff\1\4\11\uffff\2\4\17\uffff\2\4\3\uffff\1\4\1\uffff"+
+			"\1\4\2\uffff\1\4\2\uffff\1\4\4\uffff\1\4\3\uffff\1\4\5\uffff\1\4\2\uffff"+
+			"\2\4\1\uffff\2\4\3\uffff\1\4\5\uffff\1\4\13\uffff\1\4\3\uffff\1\4\7\uffff"+
+			"\2\4\21\uffff\1\4\6\uffff\1\4\3\uffff\1\4\3\uffff\1\4\6\uffff\1\4\2\uffff"+
+			"\1\4\1\uffff\1\4\3\uffff\1\4\5\uffff\2\4\6\uffff\1\4\10\uffff\1\4\17"+
+			"\uffff\1\4\1\uffff\1\4\4\uffff\1\4\20\uffff\1\4",
+			"\1\142\3\uffff\2\142\1\uffff\2\142\1\uffff\16\142\2\uffff\5\142\1\uffff"+
+			"\6\142\1\uffff\1\142\1\uffff\2\142\1\uffff\16\142\1\uffff\3\142\2\uffff"+
+			"\1\142\1\uffff\1\142\1\uffff\1\142\1\uffff\4\142\1\uffff\7\142\1\uffff"+
+			"\3\142\1\uffff\1\142\1\uffff\4\142\1\uffff\2\142\1\uffff\4\142\1\uffff"+
+			"\14\142\1\uffff\4\142\1\uffff\12\142\2\uffff\3\142\1\uffff\2\142\1\uffff"+
+			"\4\142\1\uffff\1\142\1\uffff\6\142\1\uffff\1\142\1\uffff\5\142\2\uffff"+
+			"\14\142\1\uffff\16\142\1\uffff\25\142\1\uffff\4\142\1\uffff\4\142\1\uffff"+
+			"\4\142\1\uffff\3\142\1\uffff\12\142\1\uffff\1\142\2\uffff\1\142\1\uffff"+
+			"\1\142\32\uffff\1\4",
 			"",
 			"",
 			"",
@@ -5748,17 +5688,38 @@ public class HiveParser_FromClauseParser extends Parser {
 			"",
 			"",
 			"",
-			"\1\75\5\uffff\1\101\4\uffff\1\100\7\uffff\1\111\2\112\1\uffff\2\112"+
-			"\1\uffff\1\112\1\105\14\112\1\114\1\113\5\112\1\uffff\6\112\1\uffff\1"+
-			"\112\1\uffff\2\112\1\uffff\1\112\1\72\14\112\1\uffff\4\112\1\uffff\1"+
-			"\112\1\uffff\1\112\1\uffff\4\112\1\uffff\1\112\1\103\5\112\1\uffff\3"+
-			"\112\1\uffff\1\112\1\uffff\4\112\1\uffff\2\112\1\104\20\112\1\uffff\4"+
-			"\112\1\uffff\12\112\1\uffff\1\106\3\112\1\uffff\2\112\1\67\1\112\1\71"+
-			"\2\112\1\uffff\1\112\1\uffff\6\112\1\uffff\1\112\1\uffff\5\112\2\uffff"+
-			"\14\112\1\uffff\16\112\1\uffff\22\112\1\107\2\112\1\uffff\4\112\1\uffff"+
-			"\4\112\1\uffff\1\112\1\102\2\112\1\uffff\2\112\1\110\1\uffff\12\112\1"+
-			"\uffff\1\112\2\uffff\1\112\1\uffff\1\112\3\uffff\1\115\2\uffff\1\70\2"+
-			"\uffff\1\73\1\70\7\uffff\1\76\1\74\1\70\1\77",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\142\3\uffff\2\142\1\uffff\2\142\1\uffff\16\142\2\uffff\5\142\1\uffff"+
+			"\6\142\1\uffff\1\142\1\uffff\2\142\1\uffff\16\142\1\uffff\3\142\2\uffff"+
+			"\1\142\1\uffff\1\142\1\uffff\1\142\1\uffff\4\142\1\uffff\7\142\1\uffff"+
+			"\3\142\1\uffff\1\142\1\uffff\4\142\1\uffff\2\142\1\uffff\4\142\1\uffff"+
+			"\14\142\1\uffff\4\142\1\uffff\12\142\2\uffff\3\142\1\uffff\2\142\1\uffff"+
+			"\4\142\1\uffff\1\142\1\uffff\6\142\1\uffff\1\142\1\uffff\5\142\2\uffff"+
+			"\14\142\1\uffff\16\142\1\uffff\25\142\1\uffff\4\142\1\uffff\4\142\1\uffff"+
+			"\4\142\1\uffff\3\142\1\uffff\12\142\1\uffff\1\142\2\uffff\1\142\1\uffff"+
+			"\1\142\32\uffff\1\4",
+			"",
+			"",
+			"",
 			"",
 			"",
 			"",
@@ -5810,34 +5771,188 @@ public class HiveParser_FromClauseParser extends Parser {
 			""
 	};
 
-	static final short[] DFA39_eot = DFA.unpackEncodedString(DFA39_eotS);
-	static final short[] DFA39_eof = DFA.unpackEncodedString(DFA39_eofS);
-	static final char[] DFA39_min = DFA.unpackEncodedStringToUnsignedChars(DFA39_minS);
-	static final char[] DFA39_max = DFA.unpackEncodedStringToUnsignedChars(DFA39_maxS);
-	static final short[] DFA39_accept = DFA.unpackEncodedString(DFA39_acceptS);
-	static final short[] DFA39_special = DFA.unpackEncodedString(DFA39_specialS);
-	static final short[][] DFA39_transition;
+	static final short[] DFA31_eot = DFA.unpackEncodedString(DFA31_eotS);
+	static final short[] DFA31_eof = DFA.unpackEncodedString(DFA31_eofS);
+	static final char[] DFA31_min = DFA.unpackEncodedStringToUnsignedChars(DFA31_minS);
+	static final char[] DFA31_max = DFA.unpackEncodedStringToUnsignedChars(DFA31_maxS);
+	static final short[] DFA31_accept = DFA.unpackEncodedString(DFA31_acceptS);
+	static final short[] DFA31_special = DFA.unpackEncodedString(DFA31_specialS);
+	static final short[][] DFA31_transition;
 
 	static {
-		int numStates = DFA39_transitionS.length;
-		DFA39_transition = new short[numStates][];
+		int numStates = DFA31_transitionS.length;
+		DFA31_transition = new short[numStates][];
 		for (int i=0; i<numStates; i++) {
-			DFA39_transition[i] = DFA.unpackEncodedString(DFA39_transitionS[i]);
+			DFA31_transition[i] = DFA.unpackEncodedString(DFA31_transitionS[i]);
 		}
 	}
 
-	protected class DFA39 extends DFA {
+	protected class DFA31 extends DFA {
 
-		public DFA39(BaseRecognizer recognizer) {
+		public DFA31(BaseRecognizer recognizer) {
 			this.recognizer = recognizer;
-			this.decisionNumber = 39;
-			this.eot = DFA39_eot;
-			this.eof = DFA39_eof;
-			this.min = DFA39_min;
-			this.max = DFA39_max;
-			this.accept = DFA39_accept;
-			this.special = DFA39_special;
-			this.transition = DFA39_transition;
+			this.decisionNumber = 31;
+			this.eot = DFA31_eot;
+			this.eof = DFA31_eof;
+			this.min = DFA31_min;
+			this.max = DFA31_max;
+			this.accept = DFA31_accept;
+			this.special = DFA31_special;
+			this.transition = DFA31_transition;
+		}
+		@Override
+		public String getDescription() {
+			return "183:1: tableName : (db= identifier DOT tab= identifier -> ^( TOK_TABNAME $db $tab) |tab= identifier -> ^( TOK_TABNAME $tab) );";
+		}
+	}
+
+	static final String DFA40_eotS =
+		"\124\uffff";
+	static final String DFA40_eofS =
+		"\1\2\1\35\122\uffff";
+	static final String DFA40_minS =
+		"\2\u008f\32\uffff\1\11\67\uffff";
+	static final String DFA40_maxS =
+		"\2\u019b\32\uffff\1\u044e\67\uffff";
+	static final String DFA40_acceptS =
+		"\2\uffff\1\2\32\uffff\1\1\31\uffff\35\1";
+	static final String DFA40_specialS =
+		"\124\uffff}>";
+	static final String[] DFA40_transitionS = {
+			"\1\1\32\uffff\1\2\12\uffff\1\2\24\uffff\1\2\33\uffff\1\2\3\uffff\1\2"+
+			"\1\uffff\1\2\12\uffff\1\2\3\uffff\1\2\5\uffff\1\2\2\uffff\2\2\2\uffff"+
+			"\1\2\11\uffff\1\2\13\uffff\1\2\3\uffff\1\2\7\uffff\1\2\22\uffff\1\2\6"+
+			"\uffff\1\2\7\uffff\1\2\13\uffff\1\2\32\uffff\1\2\17\uffff\1\2\1\uffff"+
+			"\1\2\4\uffff\1\2\20\uffff\1\2",
+			"\1\35\32\uffff\1\35\12\uffff\1\35\24\uffff\1\35\33\uffff\1\35\3\uffff"+
+			"\1\35\1\uffff\1\35\12\uffff\1\35\3\uffff\1\35\5\uffff\1\35\2\uffff\2"+
+			"\35\2\uffff\1\35\11\uffff\1\35\13\uffff\1\35\3\uffff\1\35\7\uffff\1\35"+
+			"\22\uffff\1\35\6\uffff\1\35\7\uffff\1\35\13\uffff\1\35\32\uffff\1\35"+
+			"\17\uffff\1\35\1\uffff\1\35\4\uffff\1\34\20\uffff\1\35",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"\1\103\5\uffff\1\107\6\uffff\1\106\170\uffff\1\117\3\uffff\2\120\1\uffff"+
+			"\2\120\1\uffff\1\120\1\113\14\120\1\122\1\121\5\120\1\uffff\6\120\1\uffff"+
+			"\1\120\1\uffff\2\120\1\uffff\1\120\1\72\14\120\1\uffff\3\120\2\uffff"+
+			"\1\120\1\uffff\1\120\1\uffff\1\120\1\uffff\4\120\1\uffff\1\120\1\111"+
+			"\5\120\1\uffff\3\120\1\uffff\1\120\1\uffff\4\120\1\uffff\2\120\1\112"+
+			"\4\120\1\uffff\14\120\1\uffff\4\120\1\uffff\12\120\1\uffff\1\114\3\120"+
+			"\1\uffff\2\120\1\67\1\120\1\71\2\120\1\uffff\1\120\1\uffff\6\120\1\uffff"+
+			"\1\120\1\uffff\5\120\2\uffff\14\120\1\uffff\16\120\1\uffff\22\120\1\115"+
+			"\2\120\1\uffff\4\120\1\uffff\4\120\1\uffff\1\120\1\110\2\120\1\uffff"+
+			"\2\120\1\116\1\uffff\12\120\1\uffff\1\120\2\uffff\1\120\1\uffff\1\120"+
+			"\3\uffff\1\123\4\uffff\1\70\6\uffff\1\73\1\uffff\1\70\12\uffff\1\104"+
+			"\1\102\1\uffff\1\70\4\uffff\1\105\21\uffff\1\76\5\uffff\1\77\u0160\uffff"+
+			"\1\100\1\75\6\uffff\1\101\u0121\uffff\1\74",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			"",
+			""
+	};
+
+	static final short[] DFA40_eot = DFA.unpackEncodedString(DFA40_eotS);
+	static final short[] DFA40_eof = DFA.unpackEncodedString(DFA40_eofS);
+	static final char[] DFA40_min = DFA.unpackEncodedStringToUnsignedChars(DFA40_minS);
+	static final char[] DFA40_max = DFA.unpackEncodedStringToUnsignedChars(DFA40_maxS);
+	static final short[] DFA40_accept = DFA.unpackEncodedString(DFA40_acceptS);
+	static final short[] DFA40_special = DFA.unpackEncodedString(DFA40_specialS);
+	static final short[][] DFA40_transition;
+
+	static {
+		int numStates = DFA40_transitionS.length;
+		DFA40_transition = new short[numStates][];
+		for (int i=0; i<numStates; i++) {
+			DFA40_transition[i] = DFA.unpackEncodedString(DFA40_transitionS[i]);
+		}
+	}
+
+	protected class DFA40 extends DFA {
+
+		public DFA40(BaseRecognizer recognizer) {
+			this.recognizer = recognizer;
+			this.decisionNumber = 40;
+			this.eot = DFA40_eot;
+			this.eof = DFA40_eof;
+			this.min = DFA40_min;
+			this.max = DFA40_max;
+			this.accept = DFA40_accept;
+			this.special = DFA40_special;
+			this.transition = DFA40_transition;
 		}
 		@Override
 		public String getDescription() {
@@ -5846,148 +5961,149 @@ public class HiveParser_FromClauseParser extends Parser {
 	}
 
 	public static final BitSet FOLLOW_STAR_in_tableAllColumns57 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_tableName_in_tableAllColumns79 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_DOT_in_tableAllColumns81 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000020000000L});
+	public static final BitSet FOLLOW_tableName_in_tableAllColumns79 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_DOT_in_tableAllColumns81 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000200000000L});
 	public static final BitSet FOLLOW_STAR_in_tableAllColumns83 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_identifier_in_tableOrColumn131 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_expressionList170 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_expressionList173 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_expressionList175 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_identifier_in_aliasList217 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_aliasList220 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_aliasList222 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_FROM_in_fromClause266 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFFBDEF7FFFFDFFFBL,0x0000000000008A5FL});
+	public static final BitSet FOLLOW_expression_in_expressionList170 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_expressionList173 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_expressionList175 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_identifier_in_aliasList217 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_aliasList220 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_aliasList222 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_FROM_in_fromClause266 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFFDEF7BFFFFEFFFL,0x0000000000000452L});
 	public static final BitSet FOLLOW_joinSource_in_fromClause268 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_fromSource_in_joinSource303 = new BitSet(new long[]{0x2000000000000002L,0x1000100000000000L,0x0000000000000440L,0x0000000000000200L});
-	public static final BitSet FOLLOW_joinToken_in_joinSource307 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000008A5FL});
-	public static final BitSet FOLLOW_fromSource_in_joinSource310 = new BitSet(new long[]{0x2000000000000002L,0x1000100000000000L,0x0000000800000440L,0x0000000000000200L});
-	public static final BitSet FOLLOW_KW_ON_in_joinSource313 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_joinSource316 = new BitSet(new long[]{0x2000000000000002L,0x1000100000000000L,0x0000000000000440L,0x0000000000000200L});
-	public static final BitSet FOLLOW_uniqueJoinToken_in_joinSource329 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFEFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000008A5FL});
-	public static final BitSet FOLLOW_uniqueJoinSource_in_joinSource332 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_COMMA_in_joinSource335 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFEFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000008A5FL});
-	public static final BitSet FOLLOW_uniqueJoinSource_in_joinSource338 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_PRESERVE_in_uniqueJoinSource367 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000008A5FL});
-	public static final BitSet FOLLOW_fromSource_in_uniqueJoinSource370 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_fromSource_in_joinSource303 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0020000000000000L,0x0080004000000000L,0x0000000000000022L,0x0000000000000010L});
+	public static final BitSet FOLLOW_joinToken_in_joinSource307 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000452L});
+	public static final BitSet FOLLOW_fromSource_in_joinSource310 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0020000000000000L,0x0080004000000000L,0x0000000040000022L,0x0000000000000010L});
+	public static final BitSet FOLLOW_KW_ON_in_joinSource313 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_joinSource316 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0020000000000000L,0x0080004000000000L,0x0000000000000022L,0x0000000000000010L});
+	public static final BitSet FOLLOW_uniqueJoinToken_in_joinSource329 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFF7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000452L});
+	public static final BitSet FOLLOW_uniqueJoinSource_in_joinSource332 = new BitSet(new long[]{0x0000000000001000L});
+	public static final BitSet FOLLOW_COMMA_in_joinSource335 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFF7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000452L});
+	public static final BitSet FOLLOW_uniqueJoinSource_in_joinSource338 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_PRESERVE_in_uniqueJoinSource367 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000452L});
+	public static final BitSet FOLLOW_fromSource_in_uniqueJoinSource370 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
 	public static final BitSet FOLLOW_uniqueJoinExpr_in_uniqueJoinSource372 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAREN_in_uniqueJoinExpr399 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_uniqueJoinExpr403 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_uniqueJoinExpr406 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_uniqueJoinExpr410 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_LPAREN_in_uniqueJoinExpr399 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_uniqueJoinExpr403 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_uniqueJoinExpr406 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_uniqueJoinExpr410 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_uniqueJoinExpr414 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_UNIQUEJOIN_in_uniqueJoinToken457 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken489 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_INNER_in_joinToken522 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_INNER_in_joinToken522 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken524 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_CROSS_in_joinToken548 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_CROSS_in_joinToken548 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken550 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_LEFT_in_joinToken574 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000040L});
-	public static final BitSet FOLLOW_KW_OUTER_in_joinToken578 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_LEFT_in_joinToken574 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000002L});
+	public static final BitSet FOLLOW_KW_OUTER_in_joinToken578 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken582 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_RIGHT_in_joinToken594 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000040L});
-	public static final BitSet FOLLOW_KW_OUTER_in_joinToken597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_RIGHT_in_joinToken594 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000002L});
+	public static final BitSet FOLLOW_KW_OUTER_in_joinToken597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken601 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_FULL_in_joinToken613 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000040L});
-	public static final BitSet FOLLOW_KW_OUTER_in_joinToken617 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_FULL_in_joinToken613 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000002L});
+	public static final BitSet FOLLOW_KW_OUTER_in_joinToken617 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken621 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_LEFT_in_joinToken633 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000040000L});
-	public static final BitSet FOLLOW_KW_SEMI_in_joinToken635 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
+	public static final BitSet FOLLOW_KW_LEFT_in_joinToken633 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000002000L});
+	public static final BitSet FOLLOW_KW_SEMI_in_joinToken635 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
 	public static final BitSet FOLLOW_KW_JOIN_in_joinToken637 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_LATERAL_in_lateralView671 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-	public static final BitSet FOLLOW_KW_VIEW_in_lateralView673 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000020000000000L});
-	public static final BitSet FOLLOW_KW_OUTER_in_lateralView675 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_function_in_lateralView677 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_tableAlias_in_lateralView679 = new BitSet(new long[]{0x0000000800000002L});
-	public static final BitSet FOLLOW_KW_AS_in_lateralView682 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_lateralView684 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_lateralView687 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_lateralView689 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_KW_LATERAL_in_lateralView721 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000040L});
-	public static final BitSet FOLLOW_KW_VIEW_in_lateralView723 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7B7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_function_in_lateralView725 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_tableAlias_in_lateralView727 = new BitSet(new long[]{0x0000000800000002L});
-	public static final BitSet FOLLOW_KW_AS_in_lateralView730 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_lateralView732 = new BitSet(new long[]{0x0000000000000402L});
-	public static final BitSet FOLLOW_COMMA_in_lateralView735 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_lateralView737 = new BitSet(new long[]{0x0000000000000402L});
+	public static final BitSet FOLLOW_KW_LATERAL_in_lateralView671 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_VIEW_in_lateralView673 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000001000000000L});
+	public static final BitSet FOLLOW_KW_OUTER_in_lateralView675 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_function_in_lateralView677 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_tableAlias_in_lateralView679 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_AS_in_lateralView682 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_lateralView684 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_lateralView687 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_lateralView689 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_KW_LATERAL_in_lateralView721 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_VIEW_in_lateralView723 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBDBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_function_in_lateralView725 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_tableAlias_in_lateralView727 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_AS_in_lateralView730 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_lateralView732 = new BitSet(new long[]{0x0000000000001002L});
+	public static final BitSet FOLLOW_COMMA_in_lateralView735 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_lateralView737 = new BitSet(new long[]{0x0000000000001002L});
 	public static final BitSet FOLLOW_identifier_in_tableAlias791 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_partitionedTableFunction_in_fromSource838 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_tableSource_in_fromSource842 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_subQuerySource_in_fromSource846 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_lateralView_in_fromSource850 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000200L});
-	public static final BitSet FOLLOW_KW_TABLESAMPLE_in_tableBucketSample884 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_tableBucketSample886 = new BitSet(new long[]{0x0000080000000000L});
-	public static final BitSet FOLLOW_KW_BUCKET_in_tableBucketSample888 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000200000L});
-	public static final BitSet FOLLOW_Number_in_tableBucketSample893 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000010000000000L});
-	public static final BitSet FOLLOW_KW_OUT_in_tableBucketSample896 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000200000000L});
-	public static final BitSet FOLLOW_KW_OF_in_tableBucketSample898 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000200000L});
-	public static final BitSet FOLLOW_Number_in_tableBucketSample903 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_KW_ON_in_tableBucketSample907 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_tableBucketSample911 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_tableBucketSample914 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_tableBucketSample918 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_partitionedTableFunction_in_fromSource838 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_tableSource_in_fromSource842 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_subQuerySource_in_fromSource846 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_lateralView_in_fromSource850 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000010L});
+	public static final BitSet FOLLOW_KW_TABLESAMPLE_in_tableBucketSample884 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_tableBucketSample886 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+	public static final BitSet FOLLOW_KW_BUCKET_in_tableBucketSample888 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_Number_in_tableBucketSample893 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
+	public static final BitSet FOLLOW_KW_OUT_in_tableBucketSample896 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000010000000L});
+	public static final BitSet FOLLOW_KW_OF_in_tableBucketSample898 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_Number_in_tableBucketSample903 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000040000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_ON_in_tableBucketSample907 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_tableBucketSample911 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_tableBucketSample914 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_tableBucketSample918 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_tableBucketSample924 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_TABLESAMPLE_in_splitSample971 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_splitSample973 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000200000L});
-	public static final BitSet FOLLOW_Number_in_splitSample979 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0004000000000000L,0x0000000000004000L});
-	public static final BitSet FOLLOW_KW_PERCENT_in_splitSample985 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_KW_ROWS_in_splitSample987 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_TABLESAMPLE_in_splitSample971 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_splitSample973 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000400000L});
+	public static final BitSet FOLLOW_Number_in_splitSample979 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000200000000000L,0x0000000000000200L});
+	public static final BitSet FOLLOW_KW_PERCENT_in_splitSample985 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_KW_ROWS_in_splitSample987 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_splitSample990 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_TABLESAMPLE_in_splitSample1034 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_splitSample1036 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_ByteLengthLiteral_in_splitSample1042 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
+	public static final BitSet FOLLOW_KW_TABLESAMPLE_in_splitSample1034 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_splitSample1036 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_ByteLengthLiteral_in_splitSample1042 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
 	public static final BitSet FOLLOW_RPAREN_in_splitSample1045 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_tableBucketSample_in_tableSample1091 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_splitSample_in_tableSample1099 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_tableName_in_tableSource1128 = new BitSet(new long[]{0x0000000804000002L,0x0000000000000000L,0x0000000000000000L,0x0000008000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_tableProperties_in_tableSource1133 = new BitSet(new long[]{0x0000000804000002L,0x0000000000000000L,0x0000000000000000L,0x0000008000000000L});
-	public static final BitSet FOLLOW_tableSample_in_tableSource1140 = new BitSet(new long[]{0x0000000804000002L});
-	public static final BitSet FOLLOW_KW_AS_in_tableSource1145 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_Identifier_in_tableSource1150 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identifier_in_tableName1210 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_DOT_in_tableName1212 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_tableName1216 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identifier_in_tableName1246 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_identifier_in_viewName1293 = new BitSet(new long[]{0x0000000000020000L});
-	public static final BitSet FOLLOW_DOT_in_viewName1295 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_viewName1301 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_LPAREN_in_subQuerySource1349 = new BitSet(new long[]{0x0000000000000000L,0x0000080000000000L,0x0000000000800001L,0x0000000000020004L});
-	public static final BitSet FOLLOW_queryStatementExpression_in_subQuerySource1351 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_subQuerySource1353 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000000A5FL});
-	public static final BitSet FOLLOW_identifier_in_subQuerySource1355 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_partitionByClause_in_partitioningSpec1396 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000008000000000L});
-	public static final BitSet FOLLOW_orderByClause_in_partitioningSpec1398 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_orderByClause_in_partitioningSpec1417 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_distributeByClause_in_partitioningSpec1432 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000020000000L});
-	public static final BitSet FOLLOW_sortByClause_in_partitioningSpec1434 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_sortByClause_in_partitioningSpec1453 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_clusterByClause_in_partitioningSpec1468 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_subQuerySource_in_partitionTableFunctionSource1505 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_tableSource_in_partitionTableFunctionSource1512 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_partitionedTableFunction_in_partitionTableFunctionSource1519 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1550 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_partitionedTableFunction1555 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000800000000L});
-	public static final BitSet FOLLOW_KW_ON_in_partitionedTableFunction1557 = new BitSet(new long[]{0x5FBE7FFEDC000000L,0xFFDBD77F7ABDFFFBL,0xFFCFAFD7B73FF7BFL,0xFBBDEF7FFFFDFFFBL,0x0000000000008A5FL});
-	public static final BitSet FOLLOW_partitionTableFunctionSource_in_partitionedTableFunction1561 = new BitSet(new long[]{0x0004000004000000L,0x0000000000040000L,0x0000808000000000L,0x0000000020000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_partitioningSpec_in_partitionedTableFunction1563 = new BitSet(new long[]{0x0000000004000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1585 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_partitionedTableFunction1587 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_partitionedTableFunction1589 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_partitionedTableFunction1591 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_COMMA_in_partitionedTableFunction1595 = new BitSet(new long[]{0x0000000004000000L});
-	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1597 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_partitionedTableFunction1599 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_partitionedTableFunction1601 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_partitionedTableFunction1603 = new BitSet(new long[]{0x0000000000000400L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_partitionedTableFunction1613 = new BitSet(new long[]{0x0000000004000002L});
-	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1617 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_KW_WHERE_in_whereClause1677 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_searchCondition_in_whereClause1679 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_expression_in_searchCondition1718 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_synpred1_FromClauseParser832 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_tableName_in_tableSource1128 = new BitSet(new long[]{0x0000000000080002L,0x0000000000000000L,0x0000000008008000L,0x0000000000000000L,0x0000000000000000L,0x0000000400000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_tableProperties_in_tableSource1133 = new BitSet(new long[]{0x0000000000080002L,0x0000000000000000L,0x0000000008008000L,0x0000000000000000L,0x0000000000000000L,0x0000000400000000L});
+	public static final BitSet FOLLOW_tableSample_in_tableSource1140 = new BitSet(new long[]{0x0000000000080002L,0x0000000000000000L,0x0000000008008000L});
+	public static final BitSet FOLLOW_incrementalClause_in_tableSource1147 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000008008000L});
+	public static final BitSet FOLLOW_KW_AS_in_tableSource1151 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_Identifier_in_tableSource1156 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identifier_in_tableName1221 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_DOT_in_tableName1223 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_tableName1227 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identifier_in_tableName1257 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_identifier_in_viewName1304 = new BitSet(new long[]{0x0000000000200000L});
+	public static final BitSet FOLLOW_DOT_in_viewName1306 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_viewName1312 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_LPAREN_in_subQuerySource1360 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0800002000000000L,0x2000000000040000L,0x0000000000001000L});
+	public static final BitSet FOLLOW_queryStatementExpression_in_subQuerySource1362 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_subQuerySource1364 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000052L});
+	public static final BitSet FOLLOW_identifier_in_subQuerySource1366 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_partitionByClause_in_partitioningSpec1407 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000400000000L});
+	public static final BitSet FOLLOW_orderByClause_in_partitioningSpec1409 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_orderByClause_in_partitioningSpec1428 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_distributeByClause_in_partitioningSpec1443 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000001000000L});
+	public static final BitSet FOLLOW_sortByClause_in_partitioningSpec1445 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_sortByClause_in_partitioningSpec1464 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_clusterByClause_in_partitioningSpec1479 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_subQuerySource_in_partitionTableFunctionSource1516 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_tableSource_in_partitionTableFunctionSource1523 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_partitionedTableFunction_in_partitionTableFunctionSource1530 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1561 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_partitionedTableFunction1566 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000040000000L});
+	public static final BitSet FOLLOW_KW_ON_in_partitionedTableFunction1568 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0xFB5FBE7FFED88000L,0xFFEF6F5DFDEA9DFFL,0xDFFE7D7EBDB9FFBDL,0xFFDDEF7BFFFFEFFFL,0x0000000000000452L});
+	public static final BitSet FOLLOW_partitionTableFunctionSource_in_partitionedTableFunction1572 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000040000008000L,0x0000000000000400L,0x0000040400000000L,0x0000000001000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_partitioningSpec_in_partitionedTableFunction1574 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1596 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_partitionedTableFunction1598 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_partitionedTableFunction1600 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_partitionedTableFunction1602 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_COMMA_in_partitionedTableFunction1606 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1608 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_partitionedTableFunction1610 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_partitionedTableFunction1612 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_partitionedTableFunction1614 = new BitSet(new long[]{0x0000000000001000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_partitionedTableFunction1624 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000000000008000L});
+	public static final BitSet FOLLOW_Identifier_in_partitionedTableFunction1628 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_KW_WHERE_in_whereClause1688 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_searchCondition_in_whereClause1690 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_expression_in_searchCondition1729 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_synpred1_FromClauseParser832 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
 	public static final BitSet FOLLOW_LPAREN_in_synpred1_FromClauseParser834 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_Identifier_in_synpred2_FromClauseParser1573 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000008000L});
-	public static final BitSet FOLLOW_LPAREN_in_synpred2_FromClauseParser1575 = new BitSet(new long[]{0x5FBFFFFEDC042080L,0xFFFBD77F7ABDFFFBL,0xFFCFAFD7F7BFF7BFL,0xFBBDEF7FFFFDFFFBL,0x00000003C0648A5FL});
-	public static final BitSet FOLLOW_expression_in_synpred2_FromClauseParser1577 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000002000000L});
-	public static final BitSet FOLLOW_RPAREN_in_synpred2_FromClauseParser1579 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_Identifier_in_synpred2_FromClauseParser1584 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000400L});
+	public static final BitSet FOLLOW_LPAREN_in_synpred2_FromClauseParser1586 = new BitSet(new long[]{0x0000000000408200L,0x0000000000000000L,0xFB5FBFFFFED88000L,0xFFEFEF5DFDEA9DFFL,0xDFFE7D7EBFBDFFBDL,0xFFDDEF7BFFFFEFFFL,0x2000085801408452L,0x0000000000000008L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000103000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000004000L});
+	public static final BitSet FOLLOW_expression_in_synpred2_FromClauseParser1588 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000000000000L,0x0000000008000000L});
+	public static final BitSet FOLLOW_RPAREN_in_synpred2_FromClauseParser1590 = new BitSet(new long[]{0x0000000000000002L});
 }

@@ -222,13 +222,7 @@ constant
 @init { gParent.msgs.push("constant"); }
 @after { gParent.msgs.pop(); }
     :
-    Number
-    | Year
-    | Month
-    | Day
-    | Hour
-    | Minute
-    | Second
+     Number
     | dateLiteral
     | StringLiteral
     | stringLiteralSequence

@@ -2,11 +2,7 @@ parser grammar NumericRules;
 
 options
 {
-tokenVocab=HiveLexer;
 output=AST;
-ASTLabelType=CommonTree;
-backtrack=false;
-k=3;
 }
 
 

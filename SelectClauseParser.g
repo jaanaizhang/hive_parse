@@ -24,6 +24,10 @@ backtrack=false;
 k=3;
 }
 
+tokens {
+INT;
+}
+
 @members {
   @Override
   public Object recoverFromMismatchedSet(IntStream input,
@@ -158,6 +162,7 @@ selectExpressionList
     selectExpression (COMMA selectExpression)* -> ^(TOK_EXPLIST selectExpression+)
     ;
 
+  
 //---------------------- Rules for incremental  -------------------------------
 
 incrementalClause
@@ -172,28 +177,50 @@ incrementalArgs
 @init { gParent.msgs.push("incremental arguments"); }
 @after { gParent.msgs.pop(); }
     :
-    date=incrementalDate
-     -> ^(TOK_DATE $date)
-    |
-     KW_EACH KW_INCREFREQUENCY (incre=Number) KW_DURING (date=incrementalDate)
-     -> ^(TOK_DATE $date TOK_INCREFREQUENCY $incre)
+    date=betweenDate (interval=KW_INTERVAL numerator=Number)?
+    -> {interval != null}?^(TOK_DATE $date TOK_INTERVAL $numerator)
+    -> ^(TOK_DATE $date)
+    | KW_BEFORE date=startDate
+    ->^(TOK_DATE $date)
     ;
-    
-incrementalDate
-@init { gParent.msgs.push("incremental date"); }
+  
+betweenDate
+@init { gParent.msgs.push("between Date "); }
 @after { gParent.msgs.pop(); }
     :
     stime=dateArgs MINUS  etime=dateArgs
     ->^(TOK_STARTTIME $stime  TOK_STOPTIME $etime)
     ;
 
-date
-@init { gParent.msgs.push("date argument name"); }
+startDate
+@init { gParent.msgs.push("startDate "); }
 @after { gParent.msgs.pop(); }
     :
-     date+=Year (date+=Month)? (date+=Day)?
-      ->$date* 
+     stime=dateArgs
+    ->^(TOK_STARTTIME $stime )
     ;
+
+dateArgs
+@init { gParent.msgs.push("incremental arguments"); }
+@after { gParent.msgs.pop(); }
+    :
+    indefinite_time ->^(TOK_DATETIME indefinite_time )
+    | it=indefinite_time COMMA et=explicit_time ->^(TOK_DATETIME $it $et)
+    ;
+    
+indefinite_time
+@init { gParent.msgs.push("incremental argument name"); }
+@after { gParent.msgs.pop(); }
+    :
+    year=Number DIVIDE month=Number DIVIDE day=Number
+      -> ^(TOK_DATE  $year DIVIDE $month DIVIDE $day)
+    ;
+
+explicit_time
+ : hour=Number COLON minute=Number (COLON second=Number)? 
+      -> ^(TOK_TIME $hour $minute $second?) 
+ ;
+ 
 
 //---------------------- Rules for windowing clauses -------------------------------
 window_clause 

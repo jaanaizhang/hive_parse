@@ -28,6 +28,7 @@ import IdentifiersParser,SelectClauseParser, FromClauseParser;
 
 tokens {
 
+TOK_TIME;
 TOK_YEAR;
 TOK_MONTH;
 TOK_DAY;
@@ -36,7 +37,7 @@ TOK_MINUTE;
 TOK_SECOND;
 TOK_STARTTIME;
 TOK_STOPTIME;
-TOK_INCREFREQUENCY;
+TOK_INTERVAL;
 TOK_INCRE;
 
 TOK_INSERT;
