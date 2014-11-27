@@ -16,7 +16,7 @@
  * limitations under the License.
  */
 
-package parse;
+package org.apache.hadoop.hive.ql.parse;
 
 import org.antlr.runtime.RecognitionException;
 import org.antlr.runtime.Token;

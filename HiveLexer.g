@@ -31,7 +31,11 @@ KW_LIKE : 'LIKE';
 KW_IF : 'IF';
 KW_EXISTS : 'EXISTS';
 
-
+KW_DAY : 'D';
+KW_HOUR :'H';
+KW_MINUTE : 'M';
+KW_SECOND : 'S';
+KW_CONSTANT : 'CONSTANT';
 KW_INTERVAL : 'INTERVAL';
 KW_INCRE : 'INCREMENTAL';
 KW_ASC : 'ASC';
@@ -413,6 +417,11 @@ ByteLengthLiteral
 Number
     :
     (Digit)+ ( DOT (Digit)* (Exponent)? | Exponent)?
+    ;
+
+TimeUnit
+    :
+    (Digit)+ (DOT (Digit)*)? '(' ('d' | 'h' | 'm' | 's' | 'D' | 'H' | 'M' | 'S') ')'
     ;
     
 Identifier

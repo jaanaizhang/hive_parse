@@ -223,6 +223,7 @@ constant
 @after { gParent.msgs.pop(); }
     :
      Number
+    | TimeUnit
     | dateLiteral
     | StringLiteral
     | stringLiteralSequence

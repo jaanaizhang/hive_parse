@@ -177,13 +177,17 @@ incrementalArgs
 @init { gParent.msgs.push("incremental arguments"); }
 @after { gParent.msgs.pop(); }
     :
-    date=betweenDate (interval=KW_INTERVAL numerator=Number)?
-    -> {interval != null}?^(TOK_DATE $date TOK_INTERVAL $numerator)
-    -> ^(TOK_DATE $date)
-    | KW_BEFORE date=startDate
-    ->^(TOK_DATE $date)
+     bdate=betweenDate 
+    -> ^(TOK_DATE $bdate)
+    | KW_CONSTANT time=TimeUnit (interval=KW_INTERVAL numerator=Number DIVIDE unit1=(KW_DAY|KW_HOUR|KW_MINUTE|KW_SECOND))? 
+     ->{interval != null}?^(TOK_CONSTANT  $time  TOK_INTERVAL $numerator $unit1) 
+     ->^(TOK_CONSTANT  $time  ) 
+    | KW_AFTER sdate=startDate (interval=KW_INTERVAL numerator=Number DIVIDE unit2=(KW_DAY|KW_HOUR|KW_MINUTE|KW_SECOND))?
+     ->{interval != null}?^(TOK_DATE $sdate TOK_INTERVAL $numerator $unit2)
+     ->^(TOK_DATE $sdate)
     ;
-  
+
+
 betweenDate
 @init { gParent.msgs.push("between Date "); }
 @after { gParent.msgs.pop(); }
@@ -204,19 +208,29 @@ dateArgs
 @init { gParent.msgs.push("incremental arguments"); }
 @after { gParent.msgs.pop(); }
     :
-    indefinite_time ->^(TOK_DATETIME indefinite_time )
-    | it=indefinite_time COMMA et=explicit_time ->^(TOK_DATETIME $it $et)
+     it=indefinite_date (c=COMMA et=explicit_time)?
+     ->{c != null}?^(TOK_DATETIME $it $et)
+     ->^(TOK_DATETIME $it )
     ;
     
-indefinite_time
-@init { gParent.msgs.push("incremental argument name"); }
+indefinite_date
+@init { gParent.msgs.push("indefinite_time"); }
 @after { gParent.msgs.pop(); }
     :
-    year=Number DIVIDE month=Number DIVIDE day=Number
-      -> ^(TOK_DATE  $year DIVIDE $month DIVIDE $day)
+   (expr+=year_or_month)* day=Number
+     ->^(TOK_DATE  $expr*  $day)
     ;
 
+year_or_month
+@init { gParent.msgs.push("year_month"); }
+@after { gParent.msgs.pop(); } 
+     :
+      Number DIVIDE 
+     ;
+     
 explicit_time
+@init { gParent.msgs.push("explicit_time"); }
+@after { gParent.msgs.pop(); }
  : hour=Number COLON minute=Number (COLON second=Number)? 
       -> ^(TOK_TIME $hour $minute $second?) 
  ;
